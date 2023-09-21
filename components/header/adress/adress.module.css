@@ -1,0 +1,27 @@
+.row {
+  padding: 5px 0 0 0;
+  font-size: 12px;
+  background-color: var(--color-bg-input);
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+.adress {
+  display: flex;
+  gap: 4px;
+}
+.email {
+  display: flex;
+  gap: 4px;
+}
+.mailImage {
+  width: 16px;
+  height: 16px;
+  background: url(../../../public/image/mail.svg);
+}
+.locationImage {
+  width: 16px;
+  height: 16px;
+  background: url(../../../public/image/location.svg);
+}
