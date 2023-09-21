@@ -1,5 +1,5 @@
 import React from 'react';
-import { flex, inputContainer, input, search, logo, tel, text } from './main.module.css';
+import { flex, inputContainer, input, search, logo, tel, text } from './content.module.css';
 import Image from 'next/image';
 
 const Content = () => {
@@ -9,6 +9,7 @@ const Content = () => {
         src='/image/logo.gif'
         width={100}
         height={40}
+        priority={true}
         alt='Товарный знак HMG'
         className={logo}></Image>
       <div className={inputContainer}>

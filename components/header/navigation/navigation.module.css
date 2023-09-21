@@ -1,0 +1,16 @@
+.row {
+  padding: 10px 0;
+  font-size: 12px;
+  background-color: var(--color-bg-main);
+}
+.list {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+}
+.item {
+  padding: 1px 0;
+}

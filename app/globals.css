@@ -18,6 +18,7 @@ body {
 }
 
 :root {
+  --color-bg-main: #10498f;
   --color-main-title: #222;
   --color-main-text: #333;
   --color-bg-input: #f5f5f5;
