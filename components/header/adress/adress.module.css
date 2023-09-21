@@ -1,5 +1,5 @@
 .row {
-  padding: 5px 0 0 0;
+  padding: 5px 0 5px 0;
   font-size: 12px;
   background-color: var(--color-bg-input);
 }
@@ -10,10 +10,12 @@
 .adress {
   display: flex;
   gap: 4px;
+  color: var(--color-main-text);
 }
 .email {
   display: flex;
   gap: 4px;
+  color: var(--color-main-text);
 }
 .mailImage {
   width: 16px;

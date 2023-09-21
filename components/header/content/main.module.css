@@ -1,0 +1,47 @@
+.flex {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+.logo {
+  flex-shrink: 0;
+  object-fit: contain;
+}
+.inputContainer {
+  width: 100%;
+  position: relative;
+}
+.input {
+  padding: 5px 12px;
+  height: 40px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  background: var(--color-bg-input);
+}
+.input::placeholder {
+  color: var(--color-input-text);
+}
+.search {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 4px;
+  right: 8px;
+  background: url(../../../public/image/search.svg);
+}
+
+.tel {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  text-wrap: nowrap;
+  color: var(--color-main-title);
+}
+.text {
+  font-size: 12px;
+  font-weight: 700;
+  text-align: right;
+  color: var(--color-main-title);
+}
