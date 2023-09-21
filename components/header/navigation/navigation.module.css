@@ -7,10 +7,14 @@
   display: flex;
   justify-content: space-between;
   list-style-type: none;
+}
+.item {
+  padding: 1px 0;
+  text-decoration: none;
   font-size: 14px;
   font-weight: 500;
   color: #fff;
 }
-.item {
-  padding: 1px 0;
+.item:visited {
+  color: #fff;
 }
