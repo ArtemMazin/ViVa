@@ -10,6 +10,8 @@
 }
 .item {
   padding: 1px 0;
+  display: block;
+  position: relative;
   text-decoration: none;
   font-size: 14px;
   font-weight: 500;
@@ -20,4 +22,14 @@
 }
 .active {
   border-bottom: 1px solid #fff;
+}
+
+.side {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  list-style-type: none;
+  background-color: var(--color-bg-main);
 }

@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { header } from './header.module.css';
 import Adress from './adress/Adress';
