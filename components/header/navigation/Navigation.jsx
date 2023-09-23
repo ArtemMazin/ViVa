@@ -1,24 +1,23 @@
 'use client';
 
 import React, { useState } from 'react';
-import { row, list, item, active, side } from './navigation.module.css';
+import { row, list, item, active, link } from './navigation.module.css';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import navLinks from '@/utils/constants';
+import SideMenu from '../side-menu/SideMenu';
+import Triangle from '../triangle/Triangle';
 
 const Navigation = () => {
   const [showGoodsSideMenu, setShowGoodsSideMenu] = useState(false);
   const [showContactsSideMenu, setShowContactsSideMenu] = useState(false);
   const pathname = usePathname();
 
-  const onMouseEnterHandler = (e) => {
-    e.target.pathname === '/goods' && setShowGoodsSideMenu(true);
-    e.target.pathname === '/contacts' && setShowContactsSideMenu(true);
+  const onClickGoodsHandler = () => {
+    setShowGoodsSideMenu(!showGoodsSideMenu);
   };
-
-  const onMouseLeaveHandler = () => {
-    setShowGoodsSideMenu(false);
-    setShowContactsSideMenu(false);
+  const onClickContactsHandler = () => {
+    setShowContactsSideMenu(!showContactsSideMenu);
   };
 
   return (
@@ -27,31 +26,24 @@ const Navigation = () => {
         {navLinks.map(({ href, name }) => {
           const isActive = pathname === href;
           return (
-            <li key={name}>
+            <li
+              key={name}
+              className={item}>
               <Link
-                href={href}
-                className={isActive ? `${item} ${active}` : `${item}`}
-                onMouseEnter={onMouseEnterHandler}>
+                className={isActive ? `${active} ${link}` : `${link}`}
+                href={href}>
                 {name}
-                {showGoodsSideMenu && href === '/goods' && (
-                  <ul
-                    className={side}
-                    onMouseLeave={onMouseLeaveHandler}>
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
-                  </ul>
-                )}
-                {showContactsSideMenu && href === '/contacts' && (
-                  <ul
-                    className={side}
-                    onMouseLeave={onMouseLeaveHandler}>
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
-                  </ul>
-                )}
               </Link>
+              <Triangle
+                href={href}
+                onClickGoodsHandler={onClickGoodsHandler}
+                onClickContactsHandler={onClickContactsHandler}
+              />
+              <SideMenu
+                showGoodsSideMenu={showGoodsSideMenu}
+                showContactsSideMenu={showContactsSideMenu}
+                href={href}
+              />
             </li>
           );
         })}

@@ -1,0 +1,6 @@
+.triangle {
+  width: 20px;
+  height: 20px;
+  background: url('../../../public/image/triangle-down.svg');
+  cursor: pointer;
+}
