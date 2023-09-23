@@ -1,22 +1,12 @@
 import React from 'react';
-import { side } from './sideMenu.module.css';
+import { contactsLinks, goodsLinks } from '@/utils/constants';
+import Links from './links/Links';
 
 const SideMenu = ({ showGoodsSideMenu, showContactsSideMenu, href }) => {
   return (
     <>
-      {showGoodsSideMenu && href === '/goods' && (
-        <ul className={side}>
-          <li>Втулки</li>
-          <li>Шайбы</li>
-          <li>Лента</li>
-        </ul>
-      )}
-      {showContactsSideMenu && href === '/contacts' && (
-        <ul className={side}>
-          <li>Офис</li>
-          <li>Склад</li>
-        </ul>
-      )}
+      {showGoodsSideMenu && href === '/goods' && <Links array={goodsLinks} />}
+      {showContactsSideMenu && href === '/contacts' && <Links array={contactsLinks} />}
     </>
   );
 };

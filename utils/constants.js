@@ -6,4 +6,14 @@ const navLinks = [
   { name: 'Контакты', href: '/contacts' },
 ];
 
-export default navLinks;
+const goodsLinks = [
+  { name: 'Втулки', href: '/' },
+  { name: 'Шайбы', href: '/goods' },
+  { name: 'Лента', href: '/delivery' },
+];
+const contactsLinks = [
+  { name: 'Офис', href: '/' },
+  { name: 'Склад', href: '/goods' },
+];
+
+export { navLinks, goodsLinks, contactsLinks };

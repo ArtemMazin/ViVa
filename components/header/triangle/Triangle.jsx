@@ -1,17 +1,17 @@
 import React from 'react';
-import { triangle } from './triangle.module.css';
+import { triangle, active } from './triangle.module.css';
 
-const Triangle = ({ href, onClickGoodsHandler, onClickContactsHandler }) => {
+const Triangle = ({ href, onClickGoodsHandler, onClickContactsHandler, showGoodsSideMenu, showContactsSideMenu }) => {
   return (
     <>
       {href === '/goods' && (
         <div
-          className={triangle}
+          className={`${triangle} ${showGoodsSideMenu && active}`}
           onClick={onClickGoodsHandler}></div>
       )}
       {href === '/contacts' && (
         <div
-          className={triangle}
+          className={`${triangle} ${showContactsSideMenu && active}`}
           onClick={onClickContactsHandler}></div>
       )}
     </>

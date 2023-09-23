@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { row, list, item, active, link } from './navigation.module.css';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
-import navLinks from '@/utils/constants';
+import { navLinks } from '@/utils/constants';
 import SideMenu from '../side-menu/SideMenu';
 import Triangle from '../triangle/Triangle';
 
@@ -30,7 +30,7 @@ const Navigation = () => {
               key={name}
               className={item}>
               <Link
-                className={isActive ? `${active} ${link}` : `${link}`}
+                className={`${link} ${isActive ? active : ``}`}
                 href={href}>
                 {name}
               </Link>
@@ -38,6 +38,8 @@ const Navigation = () => {
                 href={href}
                 onClickGoodsHandler={onClickGoodsHandler}
                 onClickContactsHandler={onClickContactsHandler}
+                showGoodsSideMenu={showGoodsSideMenu}
+                showContactsSideMenu={showContactsSideMenu}
               />
               <SideMenu
                 showGoodsSideMenu={showGoodsSideMenu}
