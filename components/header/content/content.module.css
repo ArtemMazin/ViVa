@@ -33,14 +33,14 @@
 }
 
 .tel {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 600;
   line-height: 24px;
   text-wrap: nowrap;
   color: var(--color-main-title);
 }
 .text {
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 600;
   text-align: right;
   color: var(--color-main-title);

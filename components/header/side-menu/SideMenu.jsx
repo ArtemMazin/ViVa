@@ -5,8 +5,18 @@ import Links from './links/Links';
 const SideMenu = ({ showGoodsSideMenu, showContactsSideMenu, href }) => {
   return (
     <>
-      {showGoodsSideMenu && href === '/goods' && <Links array={goodsLinks} />}
-      {showContactsSideMenu && href === '/contacts' && <Links array={contactsLinks} />}
+      {href === '/goods' && (
+        <Links
+          array={goodsLinks}
+          isActive={showGoodsSideMenu}
+        />
+      )}
+      {href === '/contacts' && (
+        <Links
+          array={contactsLinks}
+          isActive={showContactsSideMenu}
+        />
+      )}
     </>
   );
 };

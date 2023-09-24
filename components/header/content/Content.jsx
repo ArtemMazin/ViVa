@@ -21,8 +21,8 @@ const Content = () => {
         <div className={search}></div>
       </div>
       <div>
+        <p className={text}>Отдел продаж:</p>
         <p className={tel}>(495)926-07-74</p>
-        <p className={text}>Консультант</p>
       </div>
     </div>
   );
