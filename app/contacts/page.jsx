@@ -1,3 +1,4 @@
+import { contacts } from './contacts.module.css';
 export default function Contacts() {
-  return <main className='container'>Contacts</main>;
+  return <main className={`container ${contacts}`}>Contacts</main>;
 }

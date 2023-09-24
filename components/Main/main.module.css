@@ -1,0 +1,10 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.image {
+  flex-grow: 1;
+  max-height: 500px;
+  background: url('../../public/image/main.jpg') no-repeat center/cover;
+}
