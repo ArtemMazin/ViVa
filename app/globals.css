@@ -6,7 +6,6 @@
 
 html,
 body {
-  height: 100%;
   scroll-behavior: smooth;
   scroll-padding-top: 20px;
   scrollbar-gutter: stable;
@@ -25,14 +24,15 @@ body {
   max-width: 1240px;
 }
 .wrapper {
-  min-height: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
 :root {
   --color-main: #fff;
-  --color-bg-main: #005da8;
+  --color-bg-main: #edeef0;
+  --color-bg-blue: #005da8;
   --color-main-title: #222;
   --color-main-text: #333;
   --color-bg-input: #f5f5f5;

@@ -10,7 +10,7 @@
   flex-direction: column;
   gap: 10px;
   list-style-type: none;
-  background-color: var(--color-bg-main);
+  background-color: var(--color-bg-blue);
   transition: 0.6s;
 }
 
@@ -27,7 +27,7 @@
 }
 .item:hover {
   background-color: var(--color-main);
-  color: var(--color-bg-main);
+  color: var(--color-bg-blue);
 }
 .link {
   width: 60px;

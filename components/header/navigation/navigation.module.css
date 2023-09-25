@@ -1,7 +1,7 @@
 .row {
   padding: 6px 0;
   font-size: 12px;
-  background-color: var(--color-bg-main);
+  background-color: var(--color-bg-blue);
 }
 .list {
   display: flex;
