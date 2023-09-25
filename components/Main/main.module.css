@@ -1,10 +1,9 @@
-.main {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
+.slider {
 }
 .image {
-  flex-grow: 1;
-  max-height: 500px;
+  padding-top: 33.3%;
+  height: 120px;
   background: url('../../public/image/main.jpg') no-repeat center/cover;
+}
+.presentation {
 }

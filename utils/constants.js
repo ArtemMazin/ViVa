@@ -16,4 +16,6 @@ const contactsLinks = [
   { name: 'Склад', href: '/goods' },
 ];
 
+const presentation = [{}];
+
 export { navLinks, goodsLinks, contactsLinks };
