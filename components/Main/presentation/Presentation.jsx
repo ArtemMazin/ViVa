@@ -1,5 +1,5 @@
 import React from 'react';
-import { presentation, title, text, images } from './presentation.module.css';
+import { presentation, title, text, images, item } from './presentation.module.css';
 import { presentationImage } from '@/utils/constants';
 import Image from 'next/image';
 
@@ -16,12 +16,13 @@ const Presentation = () => {
       <ul className={images}>
         {presentationImage.map(({ name, img }) => {
           return (
-            <li key={name}>
+            <li
+              key={name}
+              className={item}>
               <Image
                 src={img}
-                width={300}
-                height={200}
-                priority={true}
+                fill
+                sizes='(max-width: 1269px) 50vw, 22.5vw'
                 alt={name}
               />
             </li>

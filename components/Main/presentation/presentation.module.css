@@ -31,10 +31,19 @@
 }
 
 .images {
+  width: 100%;
   padding: 20px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 10px;
   list-style-type: none;
+}
+.item {
+  padding-left: 22.5%;
+  padding-top: 28%;
+  max-width: 330px;
+  width: 300px;
+  height: 350px;
+  position: relative;
 }

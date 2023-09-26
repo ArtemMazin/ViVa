@@ -18,36 +18,36 @@ const contactsLinks = [
 
 const presentationImage = [
   {
-    name: 'Педаль велосипеда',
-    img: '/image/pr1_002.jpg',
+    name: 'Подшипники HMG-50',
+    img: '/image/materials/50.jpg',
   },
   {
-    name: 'Амортизатор',
-    img: '/image/pr1_003.jpg',
+    name: 'Подшипники HMG-TEX',
+    img: '/image/materials/tex.jpg',
   },
   {
-    name: 'Втулка',
-    img: '/image/pr1_004.jpg',
+    name: 'Подшипники HMG-650',
+    img: '/image/materials/650.jpg',
   },
   {
-    name: 'Руль велосипеда',
-    img: '/image/pr1_005.jpg',
+    name: 'Подшипники HMG-800',
+    img: '/image/materials/800.jpg',
   },
   {
-    name: 'Багажник',
-    img: '/image/pr1_006.jpg',
+    name: 'Подшипники HMG-EPB',
+    img: '/image/materials/epb.jpg',
   },
   {
-    name: 'Диск',
-    img: '/image/pr1_007.jpg',
+    name: 'Подшипники HMG-Hydraulic',
+    img: '/image/materials/hydraulic.jpg',
   },
   {
-    name: 'Дисковые тормоза',
-    img: '/image/pr1_008.jpg',
+    name: 'Подшипники HMG-Steel',
+    img: '/image/materials/steel.jpg',
   },
   {
-    name: 'Набор деталей',
-    img: '/image/pr1_009.jpg',
+    name: 'Другие материалы HMG',
+    img: '/image/materials/other.jpg',
   },
 ];
 
