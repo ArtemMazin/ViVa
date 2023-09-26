@@ -6,18 +6,20 @@ import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { navLinks } from '@/utils/constants';
 import SideMenu from '../side-menu/SideMenu';
-import Triangle from '../triangle/Triangle';
 
 const Navigation = () => {
   const [showGoodsSideMenu, setShowGoodsSideMenu] = useState(false);
   const [showContactsSideMenu, setShowContactsSideMenu] = useState(false);
   const pathname = usePathname();
 
-  const onClickGoodsHandler = () => {
-    setShowGoodsSideMenu(!showGoodsSideMenu);
+  const onMouseEnterHandler = (href) => {
+    href === '/goods' && setShowGoodsSideMenu(true);
+    href === '/contacts' && setShowContactsSideMenu(true);
   };
-  const onClickContactsHandler = () => {
-    setShowContactsSideMenu(!showContactsSideMenu);
+
+  const onMouseLeaveHandler = () => {
+    setShowGoodsSideMenu(false);
+    setShowContactsSideMenu(false);
   };
 
   return (
@@ -28,19 +30,14 @@ const Navigation = () => {
           return (
             <li
               key={name}
-              className={item}>
+              className={item}
+              onMouseEnter={() => onMouseEnterHandler(href)}
+              onMouseLeave={onMouseLeaveHandler}>
               <Link
                 className={`${link} ${isActive ? active : ``}`}
                 href={href}>
                 {name}
               </Link>
-              <Triangle
-                href={href}
-                onClickGoodsHandler={onClickGoodsHandler}
-                onClickContactsHandler={onClickContactsHandler}
-                showGoodsSideMenu={showGoodsSideMenu}
-                showContactsSideMenu={showContactsSideMenu}
-              />
               <SideMenu
                 showGoodsSideMenu={showGoodsSideMenu}
                 showContactsSideMenu={showContactsSideMenu}

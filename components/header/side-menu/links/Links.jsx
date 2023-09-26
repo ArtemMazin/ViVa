@@ -1,12 +1,11 @@
 import Link from 'next/link';
 import React from 'react';
 import { side, link, active, item } from './links.module.css';
-import Image from 'next/image';
 
 const Links = ({ array, isActive }) => {
   return (
     <ul className={`${side} ${isActive ? active : ''} `}>
-      {array.map(({ name, href, img }) => {
+      {array.map(({ name, href }) => {
         return (
           <li
             key={name}
@@ -16,15 +15,6 @@ const Links = ({ array, isActive }) => {
               className={link}>
               {name}
             </Link>
-            {img && (
-              <Image
-                src={img}
-                width={80}
-                height={70}
-                priority={true}
-                alt={name}
-              />
-            )}
           </li>
         );
       })}

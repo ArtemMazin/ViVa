@@ -7,9 +7,9 @@ const navLinks = [
 ];
 
 const goodsLinks = [
-  { name: 'Втулки', href: '/', img: '/image/MU_P_p.jpg' },
-  { name: 'Шайбы', href: '/goods', img: '/image/MU_W_p.jpg' },
-  { name: 'Лента', href: '/delivery', img: '/image/MU_S_p.jpg' },
+  { name: 'Втулки', href: '/' },
+  { name: 'Шайбы', href: '/goods' },
+  { name: 'Лента', href: '/delivery' },
 ];
 const contactsLinks = [
   { name: 'Офис', href: '/' },
