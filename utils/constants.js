@@ -51,4 +51,6 @@ const presentationImage = [
   },
 ];
 
-export { navLinks, goodsLinks, contactsLinks, presentationImage };
+const sliderImages = [{ img: 'main.jpg' }, { img: 'hmg-650.jpg' }];
+
+export { navLinks, goodsLinks, contactsLinks, presentationImage, sliderImages };

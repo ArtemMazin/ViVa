@@ -1,0 +1,15 @@
+.slideList {
+  display: flex;
+  transition: transform 0.7s ease-in-out;
+}
+
+.item {
+  flex: 1 0 100%;
+  position: relative;
+}
+
+.slideImage {
+  display: flex;
+  padding-top: 33.3%;
+  height: 120px;
+}

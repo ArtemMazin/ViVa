@@ -1,7 +1,4 @@
 .slider {
-}
-.image {
-  padding-top: 33.3%;
-  height: 120px;
-  background: url('../../../public/image/main.jpg') no-repeat center/cover;
+  overflow: hidden;
+  position: relative;
 }

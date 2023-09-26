@@ -1,0 +1,12 @@
+.dotsWrapper {
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 20px);
+}
+.dots {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  position: relative;
+  z-index: 2;
+}

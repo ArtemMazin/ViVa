@@ -1,0 +1,15 @@
+.dot {
+  margin: 5px;
+  height: 10px;
+  width: 10px;
+  border: 1px solid var(--color-bg-blue);
+  background-color: var(--color-main);
+  transition: 0.4s;
+}
+.dot:hover {
+  cursor: pointer;
+}
+.selected {
+  width: 20px;
+  background-color: var(--color-bg-blue);
+}
