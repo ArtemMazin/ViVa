@@ -10,6 +10,7 @@ const Slider = () => {
   const [items, setItems] = useState([]);
   const [slide, setSlide] = useState(0);
   const [touchPosition, setTouchPosition] = useState(null);
+  const [mousePosition, setMousePosition] = useState(null);
 
   useEffect(() => {
     setItems(sliderImages);
@@ -36,6 +37,11 @@ const Slider = () => {
 
     setTouchPosition(touchDown);
   };
+  const handleMouseDown = (e) => {
+    const mouseDown = e.clientX;
+
+    setMousePosition(mouseDown);
+  };
 
   const handleTouchMove = (e) => {
     if (touchPosition === null) {
@@ -45,15 +51,34 @@ const Slider = () => {
     const currentPosition = e.touches[0].clientX;
     const direction = touchPosition - currentPosition;
 
-    if (direction > 10) {
+    if (direction > 5) {
       changeSlide(1);
     }
 
-    if (direction < -10) {
+    if (direction < -5) {
       changeSlide(-1);
     }
 
     setTouchPosition(null);
+  };
+
+  const handleMouseMove = (e) => {
+    if (mousePosition === null) {
+      return;
+    }
+
+    const currentPosition = e.clientX;
+    const direction = mousePosition - currentPosition;
+
+    if (direction > 0) {
+      changeSlide(1);
+    }
+
+    if (direction < 0) {
+      changeSlide(-1);
+    }
+
+    setMousePosition(null);
   };
 
   useEffect(() => {
@@ -71,7 +96,9 @@ const Slider = () => {
       <div
         className={slider}
         onTouchStart={handleTouchStart}
-        onTouchMove={handleTouchMove}>
+        onTouchMove={handleTouchMove}
+        onMouseDown={handleMouseDown}
+        onMouseMove={handleMouseMove}>
         <SlidesList
           slideNumber={slide}
           items={items}
