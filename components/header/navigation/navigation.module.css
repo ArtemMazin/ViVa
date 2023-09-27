@@ -17,6 +17,9 @@
   width: 100%;
   border-right: 1px solid var(--color-main);
 }
+.item:hover .link {
+  transform: translateY(-3px);
+}
 .item:first-child {
   border-left: 1px solid var(--color-main);
 }
@@ -28,6 +31,7 @@
   font-size: 16px;
   font-weight: 500;
   color: var(--color-main);
+  transition: var(--transition);
 }
 .link:visited {
   color: var(--color-main);

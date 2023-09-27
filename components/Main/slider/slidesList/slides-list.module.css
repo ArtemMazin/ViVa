@@ -1,6 +1,6 @@
 .slideList {
   display: flex;
-  transition: transform 0.7s ease-in-out;
+  transition: transform var(--transition) ease-in-out;
 }
 
 .item {

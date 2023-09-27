@@ -1,7 +1,6 @@
 .main {
-  padding: 10px 0;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  background-color: var(--color-bg-main);
+  background-color: var(--color-main);
 }
