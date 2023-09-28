@@ -20,34 +20,42 @@ const presentationImage = [
   {
     name: 'Подшипники HMG-50',
     img: '/image/materials/50.jpg',
+    href: '/goods/hmg-50',
   },
   {
     name: 'Подшипники HMG-TEX',
     img: '/image/materials/tex.jpg',
+    href: '/goods/hmg-tex',
   },
   {
     name: 'Подшипники HMG-650',
     img: '/image/materials/650.jpg',
+    href: '/goods/hmg-650',
   },
   {
     name: 'Подшипники HMG-800',
     img: '/image/materials/800.jpg',
+    href: '/goods/hmg-800',
   },
   {
     name: 'Подшипники HMG-EPB',
     img: '/image/materials/epb.jpg',
+    href: '/goods/hmg-epb',
   },
   {
     name: 'Подшипники HMG-Hydraulic',
     img: '/image/materials/hydraulic.jpg',
+    href: '/goods/hmg-hydraulic',
   },
   {
     name: 'Подшипники HMG-Steel',
     img: '/image/materials/steel.jpg',
+    href: '/goods/hmg-steel',
   },
   {
     name: 'Другие материалы HMG',
     img: '/image/materials/other.jpg',
+    href: '/goods/hmg-50',
   },
 ];
 
