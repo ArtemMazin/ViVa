@@ -70,11 +70,11 @@ const Slider = () => {
     const currentPosition = e.clientX;
     const direction = mousePosition - currentPosition;
 
-    if (direction > 0) {
+    if (direction > 0.7) {
       changeSlide(1);
     }
 
-    if (direction < 0) {
+    if (direction < -0.7) {
       changeSlide(-1);
     }
 

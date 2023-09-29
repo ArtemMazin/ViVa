@@ -18,44 +18,44 @@ const contactsLinks = [
 
 const presentationImage = [
   {
-    name: 'Подшипники HMG-50',
+    name: 'Металлополимерные самосмазывающиеся подшипники',
     img: '/image/materials/50.jpg',
-    href: '/goods/hmg-50',
+    href: '/goods/products01',
   },
   {
-    name: 'Подшипники HMG-TEX',
+    name: 'Металлополимерные подшипники, требующие смазки',
     img: '/image/materials/tex.jpg',
-    href: '/goods/hmg-tex',
+    href: '/goods/products02',
   },
   {
-    name: 'Подшипники HMG-650',
+    name: 'Металлические самосмазывающиеся подшипники',
     img: '/image/materials/650.jpg',
-    href: '/goods/hmg-650',
+    href: '/goods/products03',
   },
   {
-    name: 'Подшипники HMG-800',
+    name: 'Биметаллические подшипники, требующие смазки',
     img: '/image/materials/800.jpg',
-    href: '/goods/hmg-800',
+    href: '/goods/products04',
   },
   {
-    name: 'Подшипники HMG-EPB',
+    name: 'Неметаллические самосмазывающиеся подшипники',
     img: '/image/materials/epb.jpg',
-    href: '/goods/hmg-epb',
+    href: '/goods/products05',
   },
   {
-    name: 'Подшипники HMG-Hydraulic',
+    name: 'Гидравлические компоненты',
     img: '/image/materials/hydraulic.jpg',
-    href: '/goods/hmg-hydraulic',
+    href: '/goods/products06',
   },
   {
-    name: 'Подшипники HMG-Steel',
+    name: 'Высокопроизводительные стальные самосмазывающиеся подшипники',
     img: '/image/materials/steel.jpg',
-    href: '/goods/hmg-steel',
+    href: '/goods/products07',
   },
   {
-    name: 'Другие материалы HMG',
+    name: 'Другие самосмазывающиеся подшипники и сопутствующие компоненты',
     img: '/image/materials/other.jpg',
-    href: '/goods/hmg-50',
+    href: '/goods/products08',
   },
 ];
 

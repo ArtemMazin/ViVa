@@ -1,8 +1,9 @@
 .row {
   padding: 6px 0;
   font-size: 12px;
-  background-color: var(--color-bg-blue);
+  background: var(--color-gradient);
 }
+
 .list {
   display: flex;
   justify-content: space-between;
@@ -18,7 +19,7 @@
   border-right: 1px solid var(--color-main);
 }
 .item:hover .link {
-  transform: translateY(-3px);
+  opacity: 0.4;
 }
 .item:first-child {
   border-left: 1px solid var(--color-main);
