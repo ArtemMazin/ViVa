@@ -6,7 +6,7 @@ const Content = () => {
   return (
     <div className={`${flex} container`}>
       <Image
-        src='/image/logo.gif'
+        src='/image/logo.png'
         width={100}
         height={40}
         priority={true}

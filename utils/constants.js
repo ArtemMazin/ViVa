@@ -14,47 +14,47 @@ const contactsLinks = [
 const presentationImage = [
   {
     name: 'Металлополимерные самосмазывающиеся подшипники',
-    img: '/image/materials/50.jpg',
+    img: '/image/materials/p01.jpg',
     href: '/goods/products01',
   },
   {
     name: 'Металлополимерные подшипники, требующие смазки',
-    img: '/image/materials/tex.jpg',
+    img: '/image/materials/p02.jpg',
     href: '/goods/products02',
   },
   {
     name: 'Металлические самосмазывающиеся подшипники',
-    img: '/image/materials/650.jpg',
+    img: '/image/materials/p03.jpg',
     href: '/goods/products03',
   },
   {
     name: 'Биметаллические подшипники, требующие смазки',
-    img: '/image/materials/800.jpg',
+    img: '/image/materials/p04.jpg',
     href: '/goods/products04',
   },
   {
     name: 'Неметаллические самосмазывающиеся подшипники',
-    img: '/image/materials/epb.jpg',
+    img: '/image/materials/p05.jpg',
     href: '/goods/products05',
   },
   {
     name: 'Гидравлические компоненты',
-    img: '/image/materials/hydraulic.jpg',
+    img: '/image/materials/p06.jpg',
     href: '/goods/products06',
   },
   {
     name: 'Высокопроизводительные стальные самосмазывающиеся подшипники',
-    img: '/image/materials/steel.jpg',
+    img: '/image/materials/p07.jpg',
     href: '/goods/products07',
   },
   {
     name: 'Другие самосмазывающиеся подшипники и сопутствующие компоненты',
-    img: '/image/materials/other.jpg',
+    img: '/image/materials/p08.jpg',
     href: '/goods/products08',
   },
 ];
 
-const sliderImages = [{ img: 'main.jpg' }, { img: 'hmg-650.jpg' }];
+const sliderImages = [{ img: 'slider01.png' }, { img: 'slider02.png' }, { img: 'slider03.png' }];
 
 const productList01 = [
   {

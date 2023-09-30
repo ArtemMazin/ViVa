@@ -11,7 +11,7 @@ const SlidesList = ({ slideNumber, items }) => {
           className={item}
           key={index}>
           <div
-            style={{ background: `url(/image/${slide.img}) no-repeat center/cover` }}
+            style={{ background: `url(/image/${slide.img}) no-repeat center/contain` }}
             className={slideImage}
           />
           <div className={likeImage}></div>
