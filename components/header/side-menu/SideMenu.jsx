@@ -1,5 +1,5 @@
 import React from 'react';
-import { contactsLinks, goodsLinks } from '@/utils/constants';
+import { contactsLinks, presentationImage } from '@/utils/constants';
 import Links from './links/Links';
 
 const SideMenu = ({ showGoodsSideMenu, showContactsSideMenu, href }) => {
@@ -7,7 +7,7 @@ const SideMenu = ({ showGoodsSideMenu, showContactsSideMenu, href }) => {
     <>
       {href === '/goods' && (
         <Links
-          array={goodsLinks}
+          array={presentationImage}
           isActive={showGoodsSideMenu}
         />
       )}

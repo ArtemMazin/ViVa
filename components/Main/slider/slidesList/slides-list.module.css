@@ -13,3 +13,11 @@
   padding-top: 33.3%;
   height: 360px;
 }
+.likeImage {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  background: url(../../../../public/image/like.svg) no-repeat center/cover;
+}

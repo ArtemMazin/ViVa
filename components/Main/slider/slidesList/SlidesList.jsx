@@ -1,5 +1,5 @@
 import React from 'react';
-import { slideList, item, slideImage } from './slides-list.module.css';
+import { slideList, item, slideImage, likeImage } from './slides-list.module.css';
 
 const SlidesList = ({ slideNumber, items }) => {
   return (
@@ -14,6 +14,7 @@ const SlidesList = ({ slideNumber, items }) => {
             style={{ background: `url(/image/${slide.img}) no-repeat center/cover` }}
             className={slideImage}
           />
+          <div className={likeImage}></div>
         </div>
       ))}
     </div>

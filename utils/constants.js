@@ -6,11 +6,6 @@ const navLinks = [
   { name: 'Контакты', href: '/contacts' },
 ];
 
-const goodsLinks = [
-  { name: 'Втулки', href: '/' },
-  { name: 'Шайбы', href: '/goods' },
-  { name: 'Лента', href: '/delivery' },
-];
 const contactsLinks = [
   { name: 'Офис', href: '/' },
   { name: 'Склад', href: '/goods' },
@@ -61,4 +56,22 @@ const presentationImage = [
 
 const sliderImages = [{ img: 'main.jpg' }, { img: 'hmg-650.jpg' }];
 
-export { navLinks, goodsLinks, contactsLinks, presentationImage, sliderImages };
+const productList01 = [
+  {
+    name: 'Подшипники HMG-50',
+    img: '/image/products01/hmg-50.jpg',
+    href: '/goods/products01/hmg-50',
+  },
+  {
+    name: 'Подшипники HMG-11',
+    img: '/image/products01/hmg-11.jpg',
+    href: '/goods/products01/hmg-11',
+  },
+  {
+    name: 'Подшипники HMG-FR',
+    img: '/image/products01/hmg-fr.jpg',
+    href: '/goods/products01/hmg-fr',
+  },
+];
+
+export { navLinks, contactsLinks, presentationImage, sliderImages, productList01 };
