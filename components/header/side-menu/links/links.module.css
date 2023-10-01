@@ -30,7 +30,7 @@
   color: var(--color-bg-blue);
 }
 .link {
-  width: 60px;
+  width: 100%;
   display: block;
   text-decoration: none;
   font-size: 14px;

@@ -34,9 +34,9 @@ const Navigation = () => {
               onMouseEnter={() => onMouseEnterHandler(href)}
               onMouseLeave={onMouseLeaveHandler}>
               <Link
-                className={`${link} ${isActive ? active : ``}`}
+                className={link}
                 href={href}>
-                {name}
+                <p className={`${isActive ? active : ``}`}>{name}</p>
               </Link>
               <SideMenu
                 showGoodsSideMenu={showGoodsSideMenu}
