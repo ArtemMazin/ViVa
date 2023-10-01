@@ -56,22 +56,4 @@ const presentationImage = [
 
 const sliderImages = [{ img: 'slider01.png' }, { img: 'slider02.png' }, { img: 'slider03.png' }];
 
-const productList01 = [
-  {
-    name: 'Подшипники HMG-50',
-    img: '/image/products01/hmg-50.jpg',
-    href: '/goods/products01/hmg-50',
-  },
-  {
-    name: 'Подшипники HMG-11',
-    img: '/image/products01/hmg-11.jpg',
-    href: '/goods/products01/hmg-11',
-  },
-  {
-    name: 'Подшипники HMG-FR',
-    img: '/image/products01/hmg-fr.jpg',
-    href: '/goods/products01/hmg-fr',
-  },
-];
-
-export { navLinks, contactsLinks, presentationImage, sliderImages, productList01 };
+export { navLinks, contactsLinks, presentationImage, sliderImages };
