@@ -45,7 +45,7 @@
 .catalogItem {
   padding-left: 21.5%;
   padding-top: 28%;
-  width: 300px;
+  width: 350px;
   height: 350px;
   position: relative;
 }
@@ -57,7 +57,7 @@
   top: 0;
   left: 0;
   z-index: 1;
-  background-color: rgba(17, 94, 172, 0.4);
+  background-color: var(--color-bg-light);
   transition: var(--transition);
 }
 .catalogItem:hover:before {

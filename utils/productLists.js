@@ -32,5 +32,54 @@ const productList02 = [
     href: '/goods/products02/hmg-80',
   },
 ];
+const productList03 = [
+  {
+    name: 'Подшипники HMG-650',
+    img: '/image/products03/hmg-650.jpg',
+    href: '/goods/products03/hmg-650',
+  },
+  {
+    name: 'Подшипники HMG-650GT',
+    img: '/image/products03/hmg-650GT.jpg',
+    href: '/goods/products03/hmg-650GT',
+  },
+  {
+    name: 'Подшипники HMG-85HF',
+    img: '/image/products03/hmg-85HF.jpg',
+    href: '/goods/products03/hmg-85HF',
+  },
+];
+const productList04 = [
+  {
+    name: 'Подшипники HMG-800/815',
+    img: '/image/products04/hmg-800.jpg',
+    href: '/goods/products04/hmg-800',
+  },
+  {
+    name: 'Подшипники HMG-090',
+    img: '/image/products04/hmg-090.jpg',
+    href: '/goods/products04/hmg-090',
+  },
+  {
+    name: 'Подшипники HMG-T90',
+    img: '/image/products04/hmg-T90.jpg',
+    href: '/goods/products04/hmg-T90',
+  },
+  {
+    name: 'Подшипники HMG-600',
+    img: '/image/products04/hmg-600.jpg',
+    href: '/goods/products04/hmg-600',
+  },
+  {
+    name: 'Подшипники HMG-200C',
+    img: '/image/products04/hmg-200C.jpg',
+    href: '/goods/products04/hmg-200C',
+  },
+  {
+    name: 'Подшипники HMG-260',
+    img: '/image/products04/hmg-260.jpg',
+    href: '/goods/products04/hmg-260',
+  },
+];
 
-export { productList01, productList02 };
+export { productList01, productList02, productList03, productList04 };
