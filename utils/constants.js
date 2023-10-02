@@ -1,5 +1,6 @@
 const navLinks = [
   { name: 'Главная', href: '/' },
+  { name: 'О компании', href: '/about' },
   { name: 'Товары', href: '/goods' },
   { name: 'Доставка и оплата', href: '/delivery' },
   { name: 'Каталог', href: '/catalog' },

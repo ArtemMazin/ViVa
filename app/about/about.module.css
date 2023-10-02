@@ -1,0 +1,24 @@
+.about {
+  flex-grow: 1;
+}
+.subtitle {
+  padding-left: 10px;
+  margin: 0 0 20px;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 38px;
+  letter-spacing: -1px;
+  border-left: 3px solid var(--color-bg-blue);
+}
+.text {
+  margin: 0 0 20px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+}
+.image {
+  margin: 0 0 20px 0;
+  width: 100%;
+  height: 380px;
+  background: url('../../public/image/timeLine.png') no-repeat center/contain;
+}
