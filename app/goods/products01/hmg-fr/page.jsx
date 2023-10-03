@@ -48,8 +48,8 @@ const hmgFR = () => {
         <div className={scroll}>
           <table
             border='1'
-            cellpadding='0'
-            cellspacing='0'
+            cellPadding='0'
+            cellSpacing='0'
             width='100%'
             className={table}>
             <tbody>
@@ -73,7 +73,7 @@ const hmgFR = () => {
                   HMG-FRS / Сетка из нержавеющей стали
                 </td>
                 <td
-                  rowspan='4'
+                  rowSpan='4'
                   style={{ width: '4%' }}
                   className={cell}>
                   &nbsp;
@@ -109,7 +109,7 @@ const hmgFR = () => {
                   <span>*</span>
                 </td>
                 <td
-                  colspan='2'
+                  colSpan='2'
                   className={cell}>
                   Диапазон рабочих температур
                 </td>
@@ -120,7 +120,7 @@ const hmgFR = () => {
                 <td className={cell}>*</td>
                 <td className={cell}>&nbsp;</td>
                 <td
-                  colspan='2'
+                  colSpan='2'
                   className={cell}>
                   Коэффициент трения
                 </td>

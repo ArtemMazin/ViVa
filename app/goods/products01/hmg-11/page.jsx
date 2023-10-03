@@ -55,14 +55,14 @@ const hmg11 = () => {
         <div className={scroll}>
           <table
             border='1'
-            cellpadding='0'
-            cellspacing='0'
+            cellPadding='0'
+            cellSpacing='0'
             width='100%'
             className={table}>
             <tbody>
               <tr>
                 <td
-                  rowspan='3'
+                  rowSpan='3'
                   style={{ width: '16%' }}
                   className={cell}>
                   <span style={{ width: '33%' }}>Макс. нагрузка</span>
@@ -78,12 +78,12 @@ const hmg11 = () => {
                   250 Н/мм<sup>2</sup>
                 </td>
                 <td
-                  rowspan='6'
+                  rowSpan='6'
                   className={cell}>
                   &nbsp;
                 </td>
                 <td
-                  colspan='2'
+                  colSpan='2'
                   style={{ width: '28%' }}
                   className={cell}>
                   <span style={{ width: '33%' }}>Коэффициент трения</span>
@@ -102,7 +102,7 @@ const hmg11 = () => {
                   140 Н/мм<sup>2</sup>
                 </td>
                 <td
-                  rowspan='2'
+                  rowSpan='2'
                   className={cell}>
                   Макс.<span style={{ fontSize: '12pt' }}>скорость</span>
                 </td>
@@ -125,7 +125,7 @@ const hmg11 = () => {
               </tr>
               <tr>
                 <td
-                  rowspan='2'
+                  rowSpan='2'
                   className={cell}>
                   <span style={{ width: '33%' }}>Макс. PV Сухой режим</span>
                 </td>
@@ -136,7 +136,7 @@ const hmg11 = () => {
                   3.6 Н/мм<sup>2</sup>*м/с
                 </td>
                 <td
-                  colspan='2'
+                  colSpan='2'
                   className={cell}>
                   <span style={{ width: '33%' }}>Теплопроводность</span>
                 </td>
@@ -152,7 +152,7 @@ const hmg11 = () => {
                   1.8 Н/мм<sup>2</sup>*м/с
                 </td>
                 <td
-                  colspan='2'
+                  colSpan='2'
                   className={cell}>
                   <span style={{ width: '33%' }}>Коэффициент температурного расширения</span>
                 </td>
@@ -162,13 +162,13 @@ const hmg11 = () => {
               </tr>
               <tr>
                 <td
-                  colspan='2'
+                  colSpan='2'
                   className={cell}>
                   <span style={{ width: '33%' }}>Диапазон рабочих температур</span>
                 </td>
                 <td className={cell}>-195℃～+280℃</td>
                 <td
-                  colspan='2'
+                  colSpan='2'
                   className={cell}>
                   &nbsp;
                 </td>
