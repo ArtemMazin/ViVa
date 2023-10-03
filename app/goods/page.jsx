@@ -3,6 +3,11 @@ import { goods, items, item, row, title, titleContainer, imageContainer, image, 
 import Image from 'next/image';
 import { presentationImage } from '@/utils/constants';
 
+export const metadata = {
+  title: 'Продукция компании ООО "ВиВа Групп"',
+  description: 'Продукция компании ООО "ВиВа Групп"',
+};
+
 export default function Goods() {
   return (
     <main className={`container ${goods}`}>

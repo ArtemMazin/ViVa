@@ -3,6 +3,11 @@ import { productList01 } from '@/utils/productLists';
 import { presentationImage } from '@/utils/constants';
 import Products from '@/components/products/Products';
 
+export const metadata = {
+  title: 'Металлополимерные самосмазывающиеся подшипники',
+  description: 'Металлополимерные самосмазывающиеся подшипники ООО "ВиВа Групп"',
+};
+
 const products01 = () => {
   const title = presentationImage[0].name;
   const description = `Двухслойный металлополимерный самосмазывающийся подшипник состоит из металлической основы с компаундом из ПТФЭ

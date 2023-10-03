@@ -76,7 +76,7 @@ const hmg50 = () => {
                 <td
                   style={{ width: '16%' }}
                   className={cell}>
-                  250 Н/мм²
+                  250 Н/мм<sup>2</sup>
                 </td>
                 <td
                   rowspan='6'
@@ -99,7 +99,9 @@ const hmg50 = () => {
                 <td className={cell}>
                   <span style={{ width: '33%' }}>Низкоскоростной режим</span>
                 </td>
-                <td className={cell}>140 Н/мм²</td>
+                <td className={cell}>
+                  140 Н/мм<sup>2</sup>
+                </td>
                 <td
                   rowspan='2'
                   className={cell}>
@@ -114,7 +116,9 @@ const hmg50 = () => {
                 <td className={cell}>
                   <span style={{ width: '33%' }}>Вращательно - колебательный режим</span>
                 </td>
-                <td className={cell}>60 Н/мм²</td>
+                <td className={cell}>
+                  60 Н/мм<sup>2</sup>
+                </td>
                 <td className={cell}>
                   <span style={{ width: '33%' }}>Гидродинамический режим</span>
                 </td>
@@ -129,7 +133,9 @@ const hmg50 = () => {
                 <td className={cell}>
                   <span style={{ width: '33%' }}>Кратковременная эксплуатация</span>
                 </td>
-                <td className={cell}>3.6 Н/мм²*м/с</td>
+                <td className={cell}>
+                  3.6 Н/мм<sup>2</sup>*м/с
+                </td>
                 <td
                   colspan='2'
                   className={cell}>
@@ -143,7 +149,9 @@ const hmg50 = () => {
                 <td className={cell}>
                   <span style={{ width: '33%' }}>Непрерывная работа</span>
                 </td>
-                <td className={cell}>1.8 Н/мм²*м/с</td>
+                <td className={cell}>
+                  1.8 Н/мм<sup>2</sup>*м/с
+                </td>
                 <td
                   colspan='2'
                   className={cell}>

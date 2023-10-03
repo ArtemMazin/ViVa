@@ -1,4 +1,10 @@
 import { catalog, subtitle, text } from './catalog.module.css';
+
+export const metadata = {
+  title: 'Каталог подшипников',
+  description: 'Каталог подшипников ООО "ВиВа Групп"',
+};
+
 export default function Catalog() {
   return (
     <main className={`container ${catalog}`}>

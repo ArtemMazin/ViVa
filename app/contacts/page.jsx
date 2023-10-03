@@ -1,5 +1,10 @@
 import { contacts } from './contacts.module.css';
 
+export const metadata = {
+  title: 'Контакты ООО "ВиВа Групп"',
+  description: 'Контакты ООО "ВиВа Групп"',
+};
+
 export default function Contacts() {
   return (
     <main className={`${contacts}`}>

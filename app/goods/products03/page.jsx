@@ -3,6 +3,11 @@ import { productList03 } from '@/utils/productLists';
 import { presentationImage } from '@/utils/constants';
 import Products from '@/components/products/Products';
 
+export const metadata = {
+  title: 'Металлические самосмазывающиеся подшипники',
+  description: 'Металлические самосмазывающиеся подшипники ООО "ВиВа Групп"',
+};
+
 const products03 = () => {
   const title = presentationImage[2].name;
   const description = `Износостойкая металлическая задняя часть с твердыми смазочными материалами может непрерывно обеспечивать источник смазки во время работы подшипника для достижения функции самосмазывания. Благодаря сочетанию высокой нагрузки и ударопрочности металла, а также низкого коэффициента трения неметалла, этот материал подходит для различных условий работы.`;

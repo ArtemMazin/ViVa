@@ -1,6 +1,11 @@
 import React from 'react';
 import { about, subtitle, text, image } from './about.module.css';
 
+export const metadata = {
+  title: 'ООО "ВиВа Групп"',
+  description: 'Информация о компании ООО "ВиВа Групп"',
+};
+
 const page = () => {
   return (
     <main className={`container ${about}`}>
