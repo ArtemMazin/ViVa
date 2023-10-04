@@ -21,3 +21,11 @@
   left: 10%;
   background: url(../../../../public/image/like.svg) no-repeat center/cover;
 }
+@media (max-width: 768px) {
+  .likeImage {
+    width: 140px;
+    height: 140px;
+    top: 2%;
+    left: 2%;
+  }
+}

@@ -53,12 +53,7 @@ const hmg11 = () => {
       <section>
         <h2 className={subtitle}>Технические данные</h2>
         <div className={scroll}>
-          <table
-            border='1'
-            cellPadding='0'
-            cellSpacing='0'
-            width='100%'
-            className={table}>
+          <table className={table}>
             <tbody>
               <tr>
                 <td

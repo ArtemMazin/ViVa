@@ -1,11 +1,12 @@
 'use client';
 
 import React, { useState } from 'react';
-import { row, list, item, active, link } from './navigation.module.css';
+import { row, list, item, active, link, relative } from './navigation.module.css';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { navLinks } from '@/utils/constants';
 import SideMenu from '../side-menu/SideMenu';
+import useScreenWidth from '@/hooks/useScreenWidth';
 
 const Navigation = () => {
   const [showGoodsSideMenu, setShowGoodsSideMenu] = useState(false);
@@ -22,6 +23,8 @@ const Navigation = () => {
     setShowContactsSideMenu(false);
   };
 
+  const { device } = useScreenWidth();
+
   return (
     <nav className={row}>
       <ul className={`${list} container`}>
@@ -30,7 +33,7 @@ const Navigation = () => {
           return (
             <li
               key={name}
-              className={item}
+              className={`${device === 'pc' ? relative : ''} ${item}`}
               onMouseEnter={() => onMouseEnterHandler(href)}
               onMouseLeave={onMouseLeaveHandler}>
               <Link

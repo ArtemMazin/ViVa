@@ -8,9 +8,9 @@
   display: flex;
   justify-content: space-between;
   list-style-type: none;
+  position: relative;
 }
 .item {
-  position: relative;
   padding: 1px 0;
   display: flex;
   justify-content: center;
@@ -39,4 +39,7 @@
 }
 .link:visited {
   color: var(--color-main);
+}
+.relative {
+  position: relative;
 }
