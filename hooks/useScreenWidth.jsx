@@ -4,9 +4,10 @@ import { useEffect, useState } from 'react';
 
 const useScreenWidth = () => {
   const [device, setDevice] = useState('');
-  const screenWidth = window.screen.width;
 
   useEffect(() => {
+    const screenWidth = window.screen.width;
+
     if (screenWidth >= 1280) {
       setDevice('pc');
     } else if (screenWidth >= 980 && screenWidth < 1280) {
@@ -16,7 +17,7 @@ const useScreenWidth = () => {
     } else {
       setDevice('mobile');
     }
-  }, [screenWidth, device]);
+  }, [device]);
   return { device };
 };
 export default useScreenWidth;

@@ -8,3 +8,19 @@
   background-color: var(--color-main);
   z-index: 10;
 }
+.logo {
+  flex-shrink: 0;
+  object-fit: contain;
+}
+.headerMobile {
+  padding: 10px 20px;
+  margin: 0 0 30px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: var(--color-main);
+  z-index: 10;
+}
