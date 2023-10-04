@@ -8,6 +8,7 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata = {
   title: 'Подшипники HMG',
   description: 'Подшипники скольжения HMG',
+  keywords: 'подшипники скольжения, втулки скольжения, самосмазывающие подшипники',
 };
 
 export default function RootLayout({ children }) {

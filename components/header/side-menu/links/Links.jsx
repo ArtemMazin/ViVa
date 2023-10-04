@@ -4,7 +4,7 @@ import { side, link, active, item } from './links.module.css';
 
 const Links = ({ array, isActive }) => {
   return (
-    <ul className={`${side} ${isActive ? active : ''} `}>
+    <ul className={`${side} ${isActive && active} `}>
       {array.map(({ name, href }) => {
         return (
           <li

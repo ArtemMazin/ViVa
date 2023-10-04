@@ -1,11 +1,7 @@
 .buttonHamburger {
   padding: 0;
-  width: 44px;
-  height: 44px;
-  /* display: none; */
-  /* position: fixed;
-  top: 15px;
-  right: 30px; */
+  width: 32px;
+  height: 32px;
   z-index: 5;
   border: none;
   background: url('../../../public/image/burger-open.svg') no-repeat center/cover;
@@ -13,36 +9,33 @@
 }
 .buttonHamburgerClose {
   padding: 0;
-  width: 44px;
-  height: 44px;
-  /* position: fixed;
-  top: 22px;
-  right: 30px; */
+  width: 32px;
+  height: 32px;
   z-index: 5;
   border: none;
   background: url('../../../public/image/burger-close.svg') no-repeat center/cover;
-  background-position: center;
   cursor: pointer;
 }
 .hideWrapper {
   padding: 20px;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   min-height: 100vh;
   width: 100%;
   visibility: hidden;
-  background: var(--color-bg-blue);
+  background: var(--color-main);
+  transform: translateX(110%);
   transition: var(--transition);
 }
 .hideActive {
   visibility: visible;
+  transform: translateX(0);
 }
 
 .list {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   gap: 20px;
   list-style-type: none;
   position: relative;
@@ -56,21 +49,20 @@
 }
 
 .active {
-  display: inline;
-  border-bottom: 1px solid var(--color-main);
+  background: var(--color-bg-light);
 }
 .link {
-  width: 100%;
-  text-align: center;
+  padding: 8px 16px;
+  border-radius: 10px;
   text-decoration: none;
-  font-size: 26px;
-  line-height: 38px;
+  font-size: 20px;
+  line-height: 120%;
   letter-spacing: -1px;
   font-weight: 500;
-  color: var(--color-main);
+  color: var(--color-main-title);
 }
 .link:visited {
-  color: var(--color-main);
+  color: var(--color-main-title);
 }
 .relative {
   position: relative;

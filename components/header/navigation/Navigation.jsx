@@ -33,13 +33,13 @@ const Navigation = () => {
           return (
             <li
               key={name}
-              className={`${device === 'pc' ? relative : ''} ${item}`}
+              className={`${device === 'pc' && relative} ${item}`}
               onMouseEnter={() => onMouseEnterHandler(href)}
               onMouseLeave={onMouseLeaveHandler}>
               <Link
                 className={link}
                 href={href}>
-                <p className={`${isActive ? active : ``}`}>{name}</p>
+                <span className={`${isActive && active}`}>{name}</span>
               </Link>
               <SideMenu
                 showGoodsSideMenu={showGoodsSideMenu}

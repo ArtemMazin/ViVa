@@ -35,7 +35,6 @@
 }
 .catalogImages {
   width: 100%;
-  padding: 20px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -91,10 +90,18 @@
 @media (max-width: 768px) {
   .image {
     margin: 0 0 20px;
+    width: 100%;
+    padding-left: 0;
   }
   .title {
     font-size: 28px;
     line-height: 38px;
     letter-spacing: -0.5px;
+  }
+  .text {
+    text-align: left;
+  }
+  .catalogItem {
+    width: 100%;
   }
 }

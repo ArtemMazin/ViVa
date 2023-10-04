@@ -13,7 +13,7 @@
   object-fit: contain;
 }
 .headerMobile {
-  padding: 10px 20px;
+  padding: 20px;
   margin: 0 0 30px;
   display: flex;
   justify-content: space-between;

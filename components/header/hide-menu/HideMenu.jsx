@@ -14,6 +14,7 @@ import {
 import Link from 'next/link';
 import { navLinks } from '@/utils/constants';
 import { usePathname } from 'next/navigation';
+import Image from 'next/image';
 
 const HideMenu = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -39,24 +40,33 @@ const HideMenu = () => {
           tabIndex={1}
         />
       )}
-      <nav className={`${hideWrapper} ${isMenuOpen && hideActive}`}>
-        <ul className={`${list} container`}>
-          {navLinks.map(({ href, name }) => {
-            const isActive = pathname === href;
-            return (
-              <li
-                key={name}
-                className={item}>
-                <Link
-                  className={link}
-                  href={href}>
-                  <p className={`${isActive ? active : ``}`}>{name}</p>
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
-      </nav>
+      <div className={`${hideWrapper} ${isMenuOpen && hideActive}`}>
+        <Image
+          src='/image/logo.png'
+          width={100}
+          height={40}
+          priority={true}
+          alt='Товарный знак HMG'></Image>
+        <nav>
+          <ul className={`${list} container`}>
+            {navLinks.map(({ href, name }) => {
+              const isActive = pathname === href;
+              return (
+                <li
+                  key={name}
+                  className={item}>
+                  <Link
+                    className={`${isActive && active} ${link}`}
+                    href={href}
+                    onClick={toggleHideMenu}>
+                    <span>{name}</span>
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        </nav>
+      </div>
     </>
   );
 };
