@@ -30,7 +30,7 @@
 .image {
   margin: 0 0 30px;
   display: flex;
-  padding-top: 33.3%;
+  padding-left: 33.3%;
   height: 360px;
 }
 .catalogImages {
@@ -87,4 +87,14 @@
   font-size: 22px;
   line-height: 28px;
   transition: var(--transition);
+}
+@media (max-width: 768px) {
+  .image {
+    margin: 0 0 20px;
+  }
+  .title {
+    font-size: 28px;
+    line-height: 38px;
+    letter-spacing: -0.5px;
+  }
 }
