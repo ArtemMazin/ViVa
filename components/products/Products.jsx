@@ -12,6 +12,7 @@ import {
   catalogImages,
   catalogNameContainer,
   catalogName,
+  li,
 } from './products.module.css';
 
 const Products = ({ titleProducts, descriptionProducts, backgroundImage, productList }) => {
@@ -31,15 +32,14 @@ const Products = ({ titleProducts, descriptionProducts, backgroundImage, product
             return (
               <li
                 key={name}
-                className={catalogItem}
-                as={'image'}>
+                className={li}>
                 <Link
-                  // className={link}
+                  className={catalogItem}
                   href={href}>
                   <Image
                     src={img}
                     fill
-                    // sizes='(max-width: 1269px) 50vw, 22.5vw'
+                    sizes='(max-width: 1269px) 50vw, 22.5vw'
                     alt={name}
                     className={catalogImage}
                     priority={true}

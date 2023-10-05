@@ -8,12 +8,10 @@ const hmg50 = () => {
       <section className={flex}>
         <Image
           src='/image/pages/hmg50/hmg50.jpg'
-          // fill
           width={600}
           height={450}
           alt='Подшипники HMG-50'
           className={image}
-          priority={true}
         />
         <div>
           <h1 className={title}>HMG-50</h1>
@@ -43,12 +41,9 @@ const hmg50 = () => {
 
         <Image
           src='/image/pages/hmg50/hmg50structure.png'
-          // fill
           width={300}
           height={240}
           alt='Структура материала HMG-50'
-          // className={image}
-          priority={true}
         />
       </section>
       <section>

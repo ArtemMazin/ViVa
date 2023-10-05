@@ -35,7 +35,6 @@ const Presentation = () => {
                   sizes='(max-width: 1269px) 50vw, 22.5vw'
                   alt={name}
                   className={image}
-                  priority={true}
                 />
                 <div className={materialNameContainer}>
                   <h2 className={materialName}>{name}</h2>

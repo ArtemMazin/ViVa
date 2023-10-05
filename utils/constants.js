@@ -55,6 +55,6 @@ const presentationImage = [
   },
 ];
 
-const sliderImages = [{ img: 'slider01.png' }, { img: 'slider02.png' }, { img: 'slider03.png' }];
+const sliderImages = [{ img: '/image/slider01.png' }, { img: '/image/slider02.png' }, { img: '/image/slider03.png' }];
 
 export { navLinks, contactsLinks, presentationImage, sliderImages };

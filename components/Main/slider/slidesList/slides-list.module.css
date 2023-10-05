@@ -4,14 +4,14 @@
 }
 
 .item {
+  padding-top: 33.3%;
+  height: 360px;
   flex: 1 0 100%;
   position: relative;
 }
 
 .slideImage {
-  display: flex;
-  padding-top: 33.3%;
-  height: 360px;
+  object-fit: contain;
 }
 .likeImage {
   width: 200px;
@@ -21,11 +21,9 @@
   left: 10%;
   background: url(../../../../public/image/like.svg) no-repeat center/cover;
 }
-@media (max-width: 768px) {
+@media (max-width: 1080px) {
   .likeImage {
-    width: 140px;
-    height: 140px;
-    top: 2%;
-    left: 2%;
+    width: 100px;
+    height: 100px;
   }
 }

@@ -8,7 +8,6 @@ const hmg11 = () => {
       <section className={flex}>
         <Image
           src='/image/pages/hmg11/hmg11.jpg'
-          // fill
           width={600}
           height={450}
           alt='Подшипники HMG-11'
@@ -42,12 +41,9 @@ const hmg11 = () => {
 
         <Image
           src='/image/pages/hmg11/hmg11structure.png'
-          // fill
           width={300}
           height={240}
           alt='Структура материала HMG-11'
-          // className={image}
-          priority={true}
         />
       </section>
       <section>
