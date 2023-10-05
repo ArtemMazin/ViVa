@@ -11,13 +11,13 @@ export const metadata = {
 const products05 = () => {
   const title = presentationImage[4].name;
   const description = `К неметаллическим самосмазывающимся подшипникам относятся пластиковые подшипники HMG-EPB и подшипники с накрученной нитью серии HMG-FWB, они подходят для применения с сухой смазкой. Подшипники серии HMG-EPB изготавливаются методом впрыскивания из высокоэффективного инженерного пластика, смешанного с соответствующими усилителями и смазочными материалами, что может значительно улучшить несущую способность подшипника и ударопрочность подшипника. Встроенные смазочные материалы могут значительно снизить коэффициент трения.`;
-  const image = `products05/pro05.jpg`;
+  const image = `/image/products05/pro05.jpg`;
 
   return (
     <Products
       titleProducts={title}
       descriptionProducts={description}
-      backgroundImage={image}
+      productsImage={image}
       productList={productList05}
     />
   );

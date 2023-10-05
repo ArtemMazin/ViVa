@@ -11,13 +11,13 @@ export const metadata = {
 const products07 = () => {
   const title = presentationImage[6].name;
   const description = `Благодаря использованию специальной обработки поверхности и технологии обработки традиционных стальных гильз повышается износостойкость, противозадирные свойства, ударопрочность и коррозионная стойкость. В то же время особая структура поверхности снижает частоту смазки. При подходящих условиях уплотнения эти высокоточные стальные втулки имеют даже лучшие характеристики, чем самосмазывающиеся подшипники из медного сплава для наружного применения в строительной технике, сельскохозяйственном оборудовании, портовой технике и т. д.`;
-  const image = `products07/pro07.jpg`;
+  const image = `/image/products07/pro07.jpg`;
 
   return (
     <Products
       titleProducts={title}
       descriptionProducts={description}
-      backgroundImage={image}
+      productsImage={image}
       productList={productList07}
     />
   );

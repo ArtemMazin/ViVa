@@ -11,13 +11,13 @@ export const metadata = {
 const products03 = () => {
   const title = presentationImage[2].name;
   const description = `Износостойкая металлическая задняя часть с твердыми смазочными материалами может непрерывно обеспечивать источник смазки во время работы подшипника для достижения функции самосмазывания. Благодаря сочетанию высокой нагрузки и ударопрочности металла, а также низкого коэффициента трения неметалла, этот материал подходит для различных условий работы.`;
-  const image = `products03/pro03.jpg`;
+  const image = `/image/products03/pro03.jpg`;
 
   return (
     <Products
       titleProducts={title}
       descriptionProducts={description}
-      backgroundImage={image}
+      productsImage={image}
       productList={productList03}
     />
   );

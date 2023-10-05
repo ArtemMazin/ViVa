@@ -13,15 +13,20 @@ import {
   catalogNameContainer,
   catalogName,
   li,
+  imageContainer,
 } from './products.module.css';
 
-const Products = ({ titleProducts, descriptionProducts, backgroundImage, productList }) => {
+const Products = ({ titleProducts, descriptionProducts, productsImage, productList }) => {
   return (
     <main className={`container ${main}`}>
-      <div
-        className={image}
-        style={{ background: `url(/image/${backgroundImage}) no-repeat center/cover` }}></div>
-
+      <div className={imageContainer}>
+        <Image
+          src={productsImage}
+          fill
+          sizes='(max-width: 1269px) 50vw, 22.5vw'
+          alt={titleProducts}
+          className={image}></Image>
+      </div>
       <div>
         <h1 className={title}>{titleProducts}</h1>
         <p className={text}>{descriptionProducts}</p>
@@ -42,7 +47,6 @@ const Products = ({ titleProducts, descriptionProducts, backgroundImage, product
                     sizes='(max-width: 1269px) 50vw, 22.5vw'
                     alt={name}
                     className={catalogImage}
-                    priority={true}
                   />
                   <div className={catalogNameContainer}>
                     <h2 className={catalogName}>{name}</h2>

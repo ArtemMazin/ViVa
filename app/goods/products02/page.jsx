@@ -15,13 +15,13 @@ const products02 = () => {
   может улучшить гибкость установки, а также соответствовать более широкому расчетному диапазону допусков. Кроме
   того, улучшены износостойкость и шумопоглощение, а также может быть установлен более широкий диапазон
   изменения крутящего момента.`;
-  const image = `products02/pro02.jpg`;
+  const image = `/image/products02/pro02.jpg`;
 
   return (
     <Products
       titleProducts={title}
       descriptionProducts={description}
-      backgroundImage={image}
+      productsImage={image}
       productList={productList02}
     />
   );

@@ -11,13 +11,13 @@ export const metadata = {
 const products04 = () => {
   const title = presentationImage[3].name;
   const description = `Биметаллический композитный материал подшипника HMG представляет собой стальную оболочку с низким коэффициентом трения и превосходной износостойкостью, бронзовый порошок в качестве несущего слоя, разработанные масляные карманы, канавки и отверстия подходят для применения со смазкой, чтобы улучшить значение PV. Несущие слои включают свинцовую бронзу, бессвинцовую бронзу и бессвинцовую бронзу с твердой смазкой для обеспечения высокой производительности.`;
-  const image = `products04/pro04.jpg`;
+  const image = `/image/products04/pro04.jpg`;
 
   return (
     <Products
       titleProducts={title}
       descriptionProducts={description}
-      backgroundImage={image}
+      productsImage={image}
       productList={productList04}
     />
   );
