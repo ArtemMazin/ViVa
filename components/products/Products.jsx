@@ -25,7 +25,9 @@ const Products = ({ titleProducts, descriptionProducts, productsImage, productLi
           fill
           sizes='(max-width: 1269px) 50vw, 22.5vw'
           alt={titleProducts}
-          className={image}></Image>
+          className={image}
+          priority={true}
+        />
       </div>
       <div>
         <h1 className={title}>{titleProducts}</h1>
