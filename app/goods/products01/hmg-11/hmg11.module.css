@@ -49,7 +49,9 @@
 .scroll {
   overflow-x: auto;
 }
-
+.image {
+  flex-shrink: 0;
+}
 @media (max-width: 1096px) {
   .image {
     width: 450px;

@@ -10,9 +10,10 @@ const page = () => {
           src='/image/pages/hmg20/hmg20.jpg'
           width={600}
           height={450}
+          sizes='(max-width: 520px) 45vw, (max-width: 768px) 50vw, (max-width: 1280px) 25vw, 40vw'
+          priority={true}
           alt='Подшипники HMG-20'
           className={image}
-          priority={true}
         />
         <div>
           <h1 className={title}>HMG-20</h1>
@@ -45,6 +46,8 @@ const page = () => {
           src='/image/pages/hmg20/hmg20structure.png'
           width={300}
           height={240}
+          sizes='(max-width: 520px) 45vw, (max-width: 768px) 30vw, 20vw'
+          priority={true}
           alt='Структура материала HMG-20'
         />
       </section>

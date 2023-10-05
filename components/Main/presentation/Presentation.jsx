@@ -32,8 +32,9 @@ const Presentation = () => {
                 <Image
                   src={img}
                   fill
-                  sizes='(max-width: 1269px) 50vw, 22.5vw'
+                  sizes='(max-width: 520px) 30vw, (max-width: 768px) 50vw, 100vw'
                   alt={name}
+                  priority={true}
                   className={image}
                 />
                 <div className={materialNameContainer}>

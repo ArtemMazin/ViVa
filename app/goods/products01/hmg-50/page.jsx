@@ -10,6 +10,8 @@ const hmg50 = () => {
           src='/image/pages/hmg50/hmg50.jpg'
           width={600}
           height={450}
+          sizes='(max-width: 520px) 45vw, (max-width: 768px) 50vw, (max-width: 1280px) 25vw, 40vw'
+          priority={true}
           alt='Подшипники HMG-50'
           className={image}
         />
@@ -43,6 +45,8 @@ const hmg50 = () => {
           src='/image/pages/hmg50/hmg50structure.png'
           width={300}
           height={240}
+          sizes='(max-width: 520px) 45vw, (max-width: 768px) 30vw, 20vw'
+          priority={true}
           alt='Структура материала HMG-50'
         />
       </section>

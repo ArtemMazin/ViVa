@@ -10,6 +10,8 @@ const page = () => {
           src='/image/pages/hmg22/hmg22.jpg'
           width={600}
           height={450}
+          sizes='(max-width: 520px) 45vw, (max-width: 768px) 50vw, (max-width: 1280px) 25vw, 40vw'
+          priority={true}
           alt='Подшипники HMG-22'
           className={image}
         />
@@ -41,6 +43,8 @@ const page = () => {
           src='/image/pages/hmg22/hmg22structure.png'
           width={300}
           height={240}
+          sizes='(max-width: 520px) 45vw, (max-width: 768px) 30vw, 20vw'
+          priority={true}
           alt='Структура материала HMG-22'
         />
       </section>

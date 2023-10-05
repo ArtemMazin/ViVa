@@ -23,10 +23,10 @@ const Products = ({ titleProducts, descriptionProducts, productsImage, productLi
         <Image
           src={productsImage}
           fill
-          sizes='(max-width: 1269px) 50vw, 22.5vw'
+          sizes='(max-width: 1280px) 60vw, 100vw'
+          priority={true}
           alt={titleProducts}
           className={image}
-          priority={true}
         />
       </div>
       <div>
@@ -46,7 +46,8 @@ const Products = ({ titleProducts, descriptionProducts, productsImage, productLi
                   <Image
                     src={img}
                     fill
-                    sizes='(max-width: 1269px) 50vw, 22.5vw'
+                    sizes='(max-width: 520px) 40vw, (max-width: 768px) 50vw, (max-width: 1280px) 20vw, 15vw'
+                    priority={true}
                     alt={name}
                     className={catalogImage}
                   />

@@ -10,7 +10,9 @@ const hmgFR = () => {
           src='/image/pages/hmgFR/hmgFR.jpg'
           width={600}
           height={450}
-          alt='Подшипники HMG-50'
+          sizes='(max-width: 520px) 45vw, (max-width: 768px) 50vw, (max-width: 1280px) 25vw, 40vw'
+          priority={true}
+          alt='Подшипники HMG-FR'
           className={image}
         />
         <div>
@@ -35,7 +37,9 @@ const hmgFR = () => {
           src='/image/pages/hmgFR/hmgFRstructure.png'
           width={300}
           height={240}
-          alt='Структура материала HMG-50'
+          sizes='(max-width: 520px) 45vw, (max-width: 768px) 30vw, 20vw'
+          priority={true}
+          alt='Структура материала HMG-FR'
         />
       </section>
       <section>
