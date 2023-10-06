@@ -96,6 +96,12 @@
 @media (max-width: 670px) {
   .presentation {
     margin: 0;
+    padding: 0;
+  }
+  .title {
+    font-size: 30px;
+    line-height: 38px;
+    letter-spacing: -1px;
   }
   .images {
     gap: 1px;

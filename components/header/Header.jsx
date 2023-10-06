@@ -6,6 +6,7 @@ import {
   head,
   headerMobile,
   buttonHamburger,
+  buttonHamburgerClose,
   contacts,
   tel,
   email,
@@ -65,10 +66,17 @@ const Header = () => {
                 </Link>
               </div>
             </div>
-            <button
-              className={buttonHamburger}
-              onClick={toggleHideMenu}
-            />
+            {isMenuOpen ? (
+              <button
+                className={buttonHamburgerClose}
+                onClick={toggleHideMenu}
+              />
+            ) : (
+              <button
+                className={buttonHamburger}
+                onClick={toggleHideMenu}
+              />
+            )}
           </div>
           <HideMenu
             toggleHideMenu={toggleHideMenu}

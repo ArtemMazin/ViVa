@@ -6,3 +6,23 @@
   flex-shrink: 0;
   object-fit: contain;
 }
+.mapContainer {
+  position: relative;
+}
+.mapContainer::before {
+  visibility: visible;
+  opacity: 1;
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: var(--color-bg-light);
+  transition: var(--transition);
+}
+.mapContainer:hover::before {
+  visibility: hidden;
+  opacity: 0;
+}

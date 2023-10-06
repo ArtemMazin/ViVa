@@ -1,7 +1,7 @@
 .dotsWrapper {
   position: absolute;
   bottom: 0;
-  left: calc(50% - 20px);
+  left: calc(50% - 30px);
 }
 .dots {
   display: flex;
