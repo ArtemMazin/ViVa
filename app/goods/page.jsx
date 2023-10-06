@@ -9,8 +9,8 @@ import {
   imageContainer,
   image,
   link,
-  breadСrumbs,
-  breadСrumbs__link,
+  breadCrumbs,
+  breadCrumbs__link,
 } from './goods.module.css';
 import Image from 'next/image';
 import { presentationImage } from '@/utils/constants';
@@ -23,12 +23,12 @@ export const metadata = {
 export default function Goods() {
   return (
     <main className={`container ${goods}`}>
-      <ul className={breadСrumbs}>
+      <ul className={breadCrumbs}>
         <li>
           <Link
             href='https://vi-va.vercel.app/'
             title='Главнaя'
-            className={breadСrumbs__link}>
+            className={breadCrumbs__link}>
             Главнaя
           </Link>
         </li>

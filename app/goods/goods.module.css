@@ -67,30 +67,35 @@
   bottom: -2px;
   background-color: var(--color-bg-blue);
 }
-.breadСrumbs {
+.breadCrumbs {
   margin: 0 0 20px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 10px;
   list-style-type: none;
 }
-.breadСrumbs__link {
+.breadCrumbs__link {
   font-weight: 400;
   font-size: 16px;
   line-height: 26px;
   color: var(--color-main-text);
 }
-.breadСrumbs__link:visited {
+.breadCrumbs__link:visited {
   color: var(--color-main-text);
 }
-.breadСrumbs li::after {
-  content: '› ';
+.breadCrumbs li::after {
+  content: '\203A ';
   margin-left: 10px;
 }
-.breadСrumbs li:last-child::after {
+.breadCrumbs li:last-child::after {
   content: '';
   margin-left: 0;
 }
+.breadCrumbs li:last-child {
+  color: var(--color-input-text);
+}
+
 @media (max-width: 768px) {
   .row {
     flex-direction: column;

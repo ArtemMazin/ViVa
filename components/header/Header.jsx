@@ -1,13 +1,24 @@
 'use client';
 
 import React, { useState } from 'react';
-import { header, head, headerMobile, buttonHamburger } from './header.module.css';
+import {
+  header,
+  head,
+  headerMobile,
+  buttonHamburger,
+  contacts,
+  tel,
+  email,
+  mailImage,
+  mailLink,
+} from './header.module.css';
 import Adress from './adress/Adress';
 import Content from './content/Content';
 import Navigation from './navigation/Navigation';
 import HideMenu from './hide-menu/HideMenu';
 import useScreenWidth from '@/hooks/useScreenWidth';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -35,7 +46,25 @@ const Header = () => {
               height={32}
               priority={true}
               alt='Товарный знак HMG'></Image>
-
+            <div className={contacts}>
+              <Link
+                href='tel:+74959260774'
+                title='Позвонить'
+                rel='nofollow'
+                className={tel}>
+                <span>+7 (495) 926-07-74</span>
+              </Link>
+              <div className={email}>
+                <div className={mailImage}></div>
+                <Link
+                  href='mailto:info@gidmash.ru'
+                  title='Написать письмо'
+                  rel='nofollow'
+                  className={mailLink}>
+                  <span>info@gidmash.ru</span>
+                </Link>
+              </div>
+            </div>
             <button
               className={buttonHamburger}
               onClick={toggleHideMenu}
