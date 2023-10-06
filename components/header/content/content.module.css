@@ -41,6 +41,9 @@
   text-wrap: nowrap;
   color: var(--color-main-title);
 }
+.tel:hover {
+  text-decoration: none;
+}
 .text {
   font-size: 13px;
   font-weight: 600;

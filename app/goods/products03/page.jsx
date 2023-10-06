@@ -1,7 +1,9 @@
 import React from 'react';
 import { productList03 } from '@/utils/productLists';
 import { presentationImage } from '@/utils/constants';
+import { breadСrumbs, breadСrumbs__link } from './products03.module.css';
 import Products from '@/components/products/Products';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'Металлические самосмазывающиеся подшипники',
@@ -14,12 +16,33 @@ const products03 = () => {
   const image = `/image/products03/pro03.jpg`;
 
   return (
-    <Products
-      titleProducts={title}
-      descriptionProducts={description}
-      productsImage={image}
-      productList={productList03}
-    />
+    <main className='container'>
+      <ul className={breadСrumbs}>
+        <li>
+          <Link
+            href='https://vi-va.vercel.app/'
+            title='Главнaя'
+            className={breadСrumbs__link}>
+            Главнaя
+          </Link>
+        </li>
+        <li>
+          <Link
+            href='https://vi-va.vercel.app/goods'
+            title='Товары'
+            className={breadСrumbs__link}>
+            Товары
+          </Link>
+        </li>
+        <li>{title}</li>
+      </ul>
+      <Products
+        titleProducts={title}
+        descriptionProducts={description}
+        productsImage={image}
+        productList={productList03}
+      />
+    </main>
   );
 };
 

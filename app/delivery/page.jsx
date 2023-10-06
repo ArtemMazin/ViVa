@@ -1,4 +1,5 @@
-import { delivery } from './delivery.module.css';
+import Link from 'next/link';
+import { delivery, breadСrumbs, breadСrumbs__link } from './delivery.module.css';
 
 export const metadata = {
   title: 'Оплата и доставка',
@@ -6,5 +7,19 @@ export const metadata = {
 };
 
 export default function Delivery() {
-  return <main className={`container ${delivery}`}>Delivery</main>;
+  return (
+    <main className={`container ${delivery}`}>
+      <ul className={breadСrumbs}>
+        <li>
+          <Link
+            href='https://vi-va.vercel.app/'
+            title='Главнaя'
+            className={breadСrumbs__link}>
+            Главнaя
+          </Link>
+        </li>
+        <li>Доставка и оплата</li>
+      </ul>
+    </main>
+  );
 }

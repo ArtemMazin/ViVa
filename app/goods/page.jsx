@@ -1,5 +1,17 @@
 import Link from 'next/link';
-import { goods, items, item, row, title, titleContainer, imageContainer, image, link } from './goods.module.css';
+import {
+  goods,
+  items,
+  item,
+  row,
+  title,
+  titleContainer,
+  imageContainer,
+  image,
+  link,
+  breadСrumbs,
+  breadСrumbs__link,
+} from './goods.module.css';
 import Image from 'next/image';
 import { presentationImage } from '@/utils/constants';
 
@@ -11,6 +23,17 @@ export const metadata = {
 export default function Goods() {
   return (
     <main className={`container ${goods}`}>
+      <ul className={breadСrumbs}>
+        <li>
+          <Link
+            href='https://vi-va.vercel.app/'
+            title='Главнaя'
+            className={breadСrumbs__link}>
+            Главнaя
+          </Link>
+        </li>
+        <li>Товары</li>
+      </ul>
       <ul className={items}>
         {presentationImage.map(({ name, img, href }) => {
           return (

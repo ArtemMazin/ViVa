@@ -18,7 +18,7 @@ import {
 
 const Products = ({ titleProducts, descriptionProducts, productsImage, productList }) => {
   return (
-    <main className={`container ${main}`}>
+    <div className={main}>
       <div className={imageContainer}>
         <Image
           src={productsImage}
@@ -60,7 +60,7 @@ const Products = ({ titleProducts, descriptionProducts, productsImage, productLi
           })}
         </ul>
       </div>
-    </main>
+    </div>
   );
 };
 

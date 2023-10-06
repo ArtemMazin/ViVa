@@ -1,4 +1,5 @@
-import { catalog, subtitle, text } from './catalog.module.css';
+import Link from 'next/link';
+import { catalog, subtitle, text, breadСrumbs, breadСrumbs__link } from './catalog.module.css';
 
 export const metadata = {
   title: 'Каталог подшипников',
@@ -8,6 +9,17 @@ export const metadata = {
 export default function Catalog() {
   return (
     <main className={`container ${catalog}`}>
+      <ul className={breadСrumbs}>
+        <li>
+          <Link
+            href='https://vi-va.vercel.app/'
+            title='Главнaя'
+            className={breadСrumbs__link}>
+            Главнaя
+          </Link>
+        </li>
+        <li>Каталог</li>
+      </ul>
       <h1 className={subtitle}>Каталог подшипников скольжения</h1>
       <p className={text}>
         Наша компания предлагает как стандартные повсеместно используемые подшипники скольжения: цилиндрические втулки,
