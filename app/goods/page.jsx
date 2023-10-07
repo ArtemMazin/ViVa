@@ -1,19 +1,9 @@
 import Link from 'next/link';
-import {
-  goods,
-  items,
-  item,
-  row,
-  titleContainer,
-  imageContainer,
-  image,
-  link,
-  breadCrumbs,
-  breadCrumbs__link,
-} from './goods.module.css';
+import { goods, items, item, row, titleContainer, imageContainer, image, link } from './goods.module.css';
 import Image from 'next/image';
 import { presentationImage } from '@/utils/constants';
 import Htag from '@/components/Htag/Htag';
+import BreadCrumbs from '@/components/BreadCrumbs/BreadCrumbs';
 
 export const metadata = {
   title: 'Продукция компании ООО "ВиВа Групп"',
@@ -23,17 +13,10 @@ export const metadata = {
 export default function Goods() {
   return (
     <main className={`container ${goods}`}>
-      <ul className={breadCrumbs}>
-        <li>
-          <Link
-            href='https://vi-va.vercel.app/'
-            title='Главнaя'
-            className={breadCrumbs__link}>
-            Главнaя
-          </Link>
-        </li>
-        <li>Товары</li>
-      </ul>
+      <BreadCrumbs
+        currentLink='Товары'
+        links={[{ href: 'https://vi-va.vercel.app/', name: 'Главнaя' }]}
+      />
       <Htag tag='h1underline'>Наша продукция</Htag>
       <ul className={items}>
         {presentationImage.map(({ name, img, href }) => {

@@ -1,8 +1,8 @@
 import React from 'react';
-import { about, image, breadСrumbs, breadСrumbs__link } from './about.module.css';
-import Link from 'next/link';
+import { about, image } from './about.module.css';
 import Htag from '@/components/Htag/Htag';
 import Ptag from '@/components/Ptag/Ptag';
+import BreadCrumbs from '@/components/BreadCrumbs/BreadCrumbs';
 
 export const metadata = {
   title: 'ООО "ВиВа Групп"',
@@ -12,17 +12,10 @@ export const metadata = {
 const page = () => {
   return (
     <main className={`container ${about}`}>
-      <ul className={breadСrumbs}>
-        <li>
-          <Link
-            href='https://vi-va.vercel.app/'
-            title='Главнaя'
-            className={breadСrumbs__link}>
-            Главнaя
-          </Link>
-        </li>
-        <li>О компании</li>
-      </ul>
+      <BreadCrumbs
+        currentLink='О компании'
+        links={[{ href: 'https://vi-va.vercel.app/', name: 'Главнaя' }]}
+      />
       <Htag tag='h1underline'>О компании</Htag>
       <Ptag tag='p'>
         ООО «ВиВа Групп» представляет в России, странах СНГ и Восточной Европы одного из ведущих мировых производителей

@@ -1,0 +1,33 @@
+.crumbs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0 0 20px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  list-style-type: none;
+}
+
+.crumb {
+  margin-right: 10px;
+  color: var(--color-main-text);
+}
+
+.crumb:visited {
+  color: var(--color-main-text);
+}
+
+.crumbs li::before {
+  margin-right: 10px;
+  content: '\203A ';
+}
+
+.crumbs li:first-child::before {
+  margin-right: 0;
+  content: '';
+}
+
+.crumbs li:last-child {
+  color: var(--color-input-text);
+}

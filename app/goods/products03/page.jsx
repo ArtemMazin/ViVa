@@ -1,9 +1,8 @@
 import React from 'react';
 import { productList03 } from '@/utils/productLists';
 import { presentationImage } from '@/utils/constants';
-import { breadСrumbs, breadСrumbs__link } from './products03.module.css';
 import Products from '@/components/products/Products';
-import Link from 'next/link';
+import BreadCrumbs from '@/components/BreadCrumbs/BreadCrumbs';
 
 export const metadata = {
   title: 'Металлические самосмазывающиеся подшипники',
@@ -17,25 +16,13 @@ const products03 = () => {
 
   return (
     <main className='container'>
-      <ul className={breadСrumbs}>
-        <li>
-          <Link
-            href='https://vi-va.vercel.app/'
-            title='Главнaя'
-            className={breadСrumbs__link}>
-            Главнaя
-          </Link>
-        </li>
-        <li>
-          <Link
-            href='https://vi-va.vercel.app/goods'
-            title='Товары'
-            className={breadСrumbs__link}>
-            Товары
-          </Link>
-        </li>
-        <li>{title}</li>
-      </ul>
+      <BreadCrumbs
+        currentLink={title}
+        links={[
+          { href: 'https://vi-va.vercel.app/', name: 'Главнaя' },
+          { href: 'https://vi-va.vercel.app/goods', name: 'Товары' },
+        ]}
+      />
       <Products
         titleProducts={title}
         descriptionProducts={description}

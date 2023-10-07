@@ -3,10 +3,19 @@ import React from 'react';
 import { flex, table, cell, image, section, scroll } from './hmg20.module.css';
 import Htag from '@/components/Htag/Htag';
 import Ptag from '@/components/Ptag/Ptag';
+import BreadCrumbs from '@/components/BreadCrumbs/BreadCrumbs';
 
 const page = () => {
   return (
     <main className={`${section} container`}>
+      <BreadCrumbs
+        currentLink='Подшипники HMG-20'
+        links={[
+          { href: 'https://vi-va.vercel.app/', name: 'Главнaя' },
+          { href: 'https://vi-va.vercel.app/goods', name: 'Товары' },
+          { href: 'https://vi-va.vercel.app/goods/products02', name: 'Металлополимерные подшипники, требующие смазки' },
+        ]}
+      />
       <section className={flex}>
         <Image
           src='/image/pages/hmg20/hmg20.jpg'

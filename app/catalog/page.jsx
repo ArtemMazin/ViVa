@@ -1,7 +1,7 @@
-import Link from 'next/link';
-import { catalog, downloadLink, breadСrumbs, breadСrumbs__link } from './catalog.module.css';
+import { catalog, downloadLink } from './catalog.module.css';
 import Htag from '@/components/Htag/Htag';
 import Ptag from '@/components/Ptag/Ptag';
+import BreadCrumbs from '@/components/BreadCrumbs/BreadCrumbs';
 
 export const metadata = {
   title: 'Каталог подшипников',
@@ -11,17 +11,11 @@ export const metadata = {
 export default function Catalog() {
   return (
     <main className={`container ${catalog}`}>
-      <ul className={breadСrumbs}>
-        <li>
-          <Link
-            href='https://vi-va.vercel.app/'
-            title='Главнaя'
-            className={breadСrumbs__link}>
-            Главнaя
-          </Link>
-        </li>
-        <li>Каталог</li>
-      </ul>
+      <BreadCrumbs
+        currentLink='Каталог'
+        links={[{ href: 'https://vi-va.vercel.app/', name: 'Главнaя' }]}
+      />
+
       <Htag tag='h1underline'>Каталог подшипников скольжения</Htag>
       <Ptag tag='p'>
         Наша компания предлагает как стандартные повсеместно используемые подшипники скольжения: цилиндрические втулки,

@@ -1,5 +1,8 @@
 import React from 'react';
-import { main } from './products08.module.css';
+import Products from '@/components/products/Products';
+import { presentationImage } from '@/utils/constants';
+import { productList08 } from '@/utils/productLists';
+import BreadCrumbs from '@/components/BreadCrumbs/BreadCrumbs';
 
 export const metadata = {
   title: 'Другие самосмазывающиеся подшипники и сопутствующие компоненты',
@@ -7,7 +10,28 @@ export const metadata = {
 };
 
 const products08 = () => {
-  return <main className={`container ${main}`}>products08</main>;
+  const title = presentationImage[7].name;
+  const description = `Благодаря использованию специальной обработки поверхности и технологии обработки традиционных стальных гильз повышается износостойкость, противозадирные свойства, ударопрочность и коррозионная стойкость. В то же время особая структура поверхности снижает частоту смазки. При подходящих условиях уплотнения эти высокоточные стальные втулки имеют даже лучшие характеристики, чем самосмазывающиеся подшипники из медного сплава для наружного применения в строительной технике, сельскохозяйственном оборудовании, портовой технике и т. д.`;
+  const image = `/image/products07/pro07.jpg`;
+
+  return (
+    <main className='container'>
+      <BreadCrumbs
+        currentLink={title}
+        links={[
+          { href: 'https://vi-va.vercel.app/', name: 'Главнaя' },
+          { href: 'https://vi-va.vercel.app/goods', name: 'Товары' },
+        ]}
+      />
+
+      <Products
+        titleProducts={title}
+        descriptionProducts={description}
+        productsImage={image}
+        productList={productList08}
+      />
+    </main>
+  );
 };
 
 export default products08;

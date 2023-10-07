@@ -57,40 +57,6 @@
   color: var(--color-bg-blue);
 }
 
-.breadCrumbs {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  margin: 0 0 20px;
-  gap: 10px;
-  list-style-type: none;
-}
-
-.breadCrumbs__link {
-  color: var(--color-main-text);
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 26px;
-}
-
-.breadCrumbs__link:visited {
-  color: var(--color-main-text);
-}
-
-.breadCrumbs li::after {
-  margin-left: 10px;
-  content: '\203A ';
-}
-
-.breadCrumbs li:last-child::after {
-  margin-left: 0;
-  content: '';
-}
-
-.breadCrumbs li:last-child {
-  color: var(--color-input-text);
-}
-
 @media (width <= 768px) {
   .row {
     flex-direction: column;

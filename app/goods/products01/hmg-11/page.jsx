@@ -3,10 +3,19 @@ import React from 'react';
 import { flex, table, cell, image, section, scroll } from './hmg11.module.css';
 import Htag from '@/components/Htag/Htag';
 import Ptag from '@/components/Ptag/Ptag';
+import BreadCrumbs from '@/components/BreadCrumbs/BreadCrumbs';
 
 const hmg11 = () => {
   return (
     <main className={`${section} container`}>
+      <BreadCrumbs
+        currentLink='Подшипники HMG-11'
+        links={[
+          { href: 'https://vi-va.vercel.app/', name: 'Главнaя' },
+          { href: 'https://vi-va.vercel.app/goods', name: 'Товары' },
+          { href: 'https://vi-va.vercel.app/goods/products01', name: 'Металлополимерные самосмазывающиеся подшипники' },
+        ]}
+      />
       <section className={flex}>
         <Image
           src='/image/pages/hmg11/hmg11.jpg'
@@ -47,7 +56,7 @@ const hmg11 = () => {
           width={300}
           height={240}
           sizes='(max-width: 520px) 45vw, (max-width: 768px) 30vw, (max-width: 1096px) 10vw, 35vw'
-          priority={true}
+          priority={false}
           alt='Структура материала HMG-11'
         />
       </section>
