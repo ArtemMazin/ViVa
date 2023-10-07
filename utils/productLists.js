@@ -93,6 +93,13 @@ const productList05 = [
     href: '/goods/products05/hmg-FWB',
   },
 ];
+const productList06 = [
+  {
+    name: '',
+    img: '/image/products05/hmg-FWB.jpg',
+    href: '/goods/products05/hmg-FWB',
+  },
+];
 const productList07 = [
   {
     name: 'Подшипники HMG-200C',
@@ -105,5 +112,20 @@ const productList07 = [
     href: '/goods/products07/hmg-260',
   },
 ];
-
-export { productList01, productList02, productList03, productList04, productList05, productList07 };
+const productList08 = [
+  {
+    name: '',
+    img: '/image/products07/hmg-260.jpg',
+    href: '/goods/products07/hmg-260',
+  },
+];
+export {
+  productList01,
+  productList02,
+  productList03,
+  productList04,
+  productList05,
+  productList06,
+  productList07,
+  productList08,
+};
