@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
-import { flex, title, subtitle, text, table, cell, image, section, scroll } from './hmg22.module.css';
+import { flex, text, table, cell, image, section, scroll } from './hmg22.module.css';
+import Htag from '@/components/Htag/Htag';
 
 const page = () => {
   return (
@@ -16,8 +17,8 @@ const page = () => {
           className={image}
         />
         <div>
-          <h1 className={title}>HMG-22</h1>
-          <h2 className={subtitle}>Описание</h2>
+          <Htag tag='h1'>HMG-22</Htag>
+          <Htag tag='h2'>Описание</Htag>
           <p className={text}>
             Подходит для эксплуатации со смазкой. Перед сборкой рекомендуется смазать детали консистентной смазкой.
             HMG-22M представляет собой материал ПВДФ толщиной 0,1-0,2 мм без масляных отверстий, после сборки поддается
@@ -27,7 +28,7 @@ const page = () => {
       </section>
       <section className={flex}>
         <div>
-          <h2 className={subtitle}>Структура</h2>
+          <Htag tag='h2'>Структура</Htag>
           <p className={text}>
             1. Толщина ПВДФ 0,20–0,35 мм обеспечивает хорошую износостойкость и более низкие коэффициенты трения даже
             при плохих условиях смазки.
@@ -49,7 +50,7 @@ const page = () => {
         />
       </section>
       <section>
-        <h2 className={subtitle}>Технические данные</h2>
+        <Htag tag='h2'>Технические данные</Htag>
         <div className={scroll}>
           <table className={table}>
             <tbody>
@@ -168,7 +169,7 @@ const page = () => {
         </div>
       </section>
       <section>
-        <h2 className={subtitle}>Типичные области применения</h2>
+        <Htag tag='h2'>Типичные области применения</Htag>
         <p className={text}>
           Материал обладает хорошей износостойкостью и подходит для применений со средними и высокими нагрузками в
           условиях ударной нагрузки и пыльной среды. Перед сборкой необходима предварительная смазка. Этот материал

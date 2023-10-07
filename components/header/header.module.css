@@ -1,83 +1,94 @@
 .header {
-  margin: 0 0 30px;
+  position: sticky;
+  z-index: 10;
+  top: -86px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  position: sticky;
-  top: -86px;
+  margin: 0 0 30px;
   background-color: var(--color-main);
-  z-index: 10;
+  gap: 10px;
 }
+
 .logo {
   flex-shrink: 0;
   object-fit: contain;
 }
+
 .headerMobile {
-  padding: 15px 20px;
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
   position: sticky;
+  z-index: 10;
   top: 0;
   left: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
   background-color: var(--color-main);
-  z-index: 10;
+  gap: 10px;
 }
+
 .head {
   display: flex;
-  gap: 10px;
   flex-grow: 1;
   justify-content: space-between;
+  gap: 10px;
 }
+
 .buttonHamburger {
-  padding: 0;
+  z-index: 99;
   width: 32px;
   height: 32px;
-  z-index: 99;
+  padding: 0;
   border: none;
   background: url('../../public/image/burger-open.svg') no-repeat center/cover;
   cursor: pointer;
 }
+
 .buttonHamburgerClose {
-  padding: 0;
+  z-index: 99;
   width: 32px;
   height: 32px;
-  z-index: 99;
+  padding: 0;
   border: none;
   background: url('../../public/image/burger-close.svg') no-repeat center/cover;
   cursor: pointer;
 }
+
 .contacts {
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
   align-items: center;
   justify-content: center;
+  gap: 15px;
 }
+
 .tel {
+  color: var(--color-main-title);
   font-size: 15px;
   font-weight: 400;
   line-height: 24px;
   text-wrap: nowrap;
-  color: var(--color-main-title);
 }
+
 .email {
   display: flex;
   align-items: center;
   gap: 4px;
 }
+
 .mailImage {
   width: 16px;
   height: 16px;
-  background: url(../../public/image/mail.svg) no-repeat center/cover;
+  background: url("../../public/image/mail.svg") no-repeat center/cover;
 }
+
 .mailLink {
+  color: var(--color-main-text);
   font-size: 15px;
   font-weight: 400;
   line-height: 24px;
-  color: var(--color-main-text);
 }
-@media (max-width: 560px) {
+
+@media (width <= 560px) {
   .email {
     display: none;
   }

@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
-import { flex, title, subtitle, text, table, cell, image, section, scroll } from './hmgFR.module.css';
+import { flex, text, table, cell, image, section, scroll } from './hmgFR.module.css';
+import Htag from '@/components/Htag/Htag';
 
 const hmgFR = () => {
   return (
@@ -16,8 +17,8 @@ const hmgFR = () => {
           className={image}
         />
         <div>
-          <h1 className={title}>HMG-FR</h1>
-          <h2 className={subtitle}>Описание</h2>
+          <Htag tag='h1'>HMG-FR</Htag>
+          <Htag tag='h2'>Описание</Htag>
           <p className={text}>
             Металлическая тканевая основа обеспечивает износостойкость и самосмазывающиеся свойства, а ее легкий вес
             подходит для ручной и автоматической сборки. Окончательную точность установки и крутящий момент можно
@@ -28,7 +29,7 @@ const hmgFR = () => {
       </section>
       <section className={flex}>
         <div>
-          <h2 className={subtitle}>Структура</h2>
+          <Htag tag='h2'>Структура</Htag>
           <p className={text}>1. Лента из ПТФЭ обеспечивает функцию самосмазывания.</p>
           <p className={text}>2. Металлическая ткань обеспечивает механическую прочность и теплопроводность.</p>
         </div>
@@ -43,7 +44,7 @@ const hmgFR = () => {
         />
       </section>
       <section>
-        <h2 className={subtitle}>Технические данные</h2>
+        <Htag tag='h2'>Технические данные</Htag>
         <div className={scroll}>
           <table className={table}>
             <tbody>
@@ -126,7 +127,7 @@ const hmgFR = () => {
         </div>
       </section>
       <section>
-        <h2 className={subtitle}>Типичные области применения</h2>
+        <Htag tag='h2'>Типичные области применения</Htag>
         <p className={text}>
           Материал подходит для изготовления дверных петель, компонентов клапанов, машин общего назначения и
           текстильного оборудования. Это легкий по весу материал.

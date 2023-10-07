@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
-import { flex, title, subtitle, text, table, cell, image, section, scroll } from './hmg20.module.css';
+import { flex, text, table, cell, image, section, scroll } from './hmg20.module.css';
+import Htag from '@/components/Htag/Htag';
 
 const page = () => {
   return (
@@ -16,8 +17,8 @@ const page = () => {
           className={image}
         />
         <div>
-          <h1 className={title}>HMG-20</h1>
-          <h2 className={subtitle}>Описание</h2>
+          <Htag tag='h1'>HMG-20</Htag>
+          <Htag tag='h2'>Описание</Htag>
           <p className={text}>
             Подходит для работы со смазкой. Перед сборкой рекомендуется смазать детали консистентной смазкой. Масляное
             отверстие может удерживать смазку с оптимизированной матрицей. Смазка во время эксплуатации помогает
@@ -30,7 +31,7 @@ const page = () => {
       </section>
       <section className={flex}>
         <div>
-          <h2 className={subtitle}>Структура</h2>
+          <Htag tag='h2'>Структура</Htag>
           <p className={text}>
             1. Толщина ПОМ 0,30–0,50 мм обеспечивает хорошую износостойкость. На этой опорной поверхности имеется узор
             из круглых углублений, которые при сборке подшипника следует заполнить смазкой.
@@ -52,7 +53,7 @@ const page = () => {
         />
       </section>
       <section>
-        <h2 className={subtitle}>Технические данные</h2>
+        <Htag tag='h2'>Технические данные</Htag>
         <div className={scroll}>
           <table className={table}>
             <tbody>
@@ -183,7 +184,7 @@ const page = () => {
         </div>
       </section>
       <section>
-        <h2 className={subtitle}>Типичные области применения</h2>
+        <Htag tag='h2'>Типичные области применения</Htag>
         <p className={text}>
           Материал обладает хорошей износостойкостью и подходит для средних и высоких нагрузок в условиях работы.
           ударных нагрузок и запыленной среды. Перед сборкой необходима предварительная смазка. Этот материал

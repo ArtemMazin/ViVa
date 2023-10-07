@@ -1,39 +1,42 @@
 .side {
-  padding: 15px 0;
-  width: 100%;
-  opacity: 0;
-  visibility: hidden;
   position: absolute;
   top: 30px;
   left: 0;
   display: flex;
+  width: 100%;
   flex-direction: column;
+  padding: 15px 0;
+  background: var(--color-gradient);
   gap: 10px;
   list-style-type: none;
-  background: var(--color-gradient);
+  opacity: 0;
   transition: var(--transition);
+  visibility: hidden;
 }
 
 .active {
   opacity: 1;
   visibility: visible;
 }
+
 .item {
-  padding: 5px 10px;
   display: flex;
-  gap: 10px;
   justify-content: space-between;
+  padding: 5px 10px;
   color: var(--color-main);
+  gap: 10px;
 }
+
 .item:hover {
   background-color: var(--color-main);
   color: var(--color-bg-blue);
 }
+
 .link {
-  width: 100%;
   display: block;
-  text-decoration: none;
+  width: 100%;
+  color: inherit;
   font-size: 14px;
   font-weight: 500;
-  color: inherit;
+  text-decoration: none;
 }

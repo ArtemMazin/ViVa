@@ -1,52 +1,51 @@
 .about {
   flex-grow: 1;
 }
-.subtitle {
-  padding-left: 10px;
-  margin: 0 0 20px;
-  font-weight: 400;
-  font-size: 26px;
-  line-height: 38px;
-  letter-spacing: -1px;
-  border-left: 3px solid var(--color-bg-blue);
-}
+
 .text {
   margin: 0 0 20px;
-  font-weight: 400;
   font-size: 16px;
+  font-weight: 400;
   line-height: 26px;
 }
+
 .image {
-  margin: 0 0 20px 0;
   width: 100%;
   height: 380px;
+  margin: 0 0 20px;
   background: url('../../public/image/timeLine.png') no-repeat center/contain;
 }
+
 .breadСrumbs {
-  margin: 0 0 20px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  margin: 0 0 20px;
   gap: 10px;
   list-style-type: none;
 }
+
 .breadСrumbs__link {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 26px;
   color: var(--color-main-text);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
 }
+
 .breadСrumbs__link:visited {
   color: var(--color-main-text);
 }
+
 .breadСrumbs li::after {
-  content: '\203A ';
   margin-left: 10px;
+  content: '\203A ';
 }
+
 .breadСrumbs li:last-child::after {
-  content: '';
   margin-left: 0;
+  content: '';
 }
+
 .breadСrumbs li:last-child {
   color: var(--color-input-text);
 }

@@ -3,7 +3,7 @@ import { slideList, item, slideImage, likeImage } from './slides-list.module.css
 import Image from 'next/image';
 import { sliderImages } from '@/utils/constants';
 
-const SlidesList = ({ slideNumber, items }) => {
+const SlidesList = ({ slideNumber }) => {
   return (
     <div
       className={slideList}

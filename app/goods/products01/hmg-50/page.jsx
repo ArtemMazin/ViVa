@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
-import { flex, title, subtitle, text, table, cell, image, section, scroll } from './hmg50.module.css';
+import { flex, text, table, cell, image, section, scroll } from './hmg50.module.css';
+import Htag from '@/components/Htag/Htag';
 
 const hmg50 = () => {
   return (
@@ -16,8 +17,8 @@ const hmg50 = () => {
           className={image}
         />
         <div>
-          <h1 className={title}>HMG-50</h1>
-          <h2 className={subtitle}>Описание</h2>
+          <Htag tag='h1'>HMG-50</Htag>
+          <Htag tag='h2'>Описание</Htag>
           <p className={text}>
             Материал обладает хорошей износостойкостью, низким коэффициентом трения, коррозионной стойкостью и высокой
             химической стойкостью. Подходит для применений, где смазка затруднена или недоступна. Требования к
@@ -28,7 +29,7 @@ const hmg50 = () => {
       </section>
       <section className={flex}>
         <div>
-          <h2 className={subtitle}>Структура</h2>
+          <Htag tag='h2'>Структура</Htag>
           <p className={text}>
             1. Толщина смеси ПТФЭ/волокна 0,01–0,03 мм обеспечивает превосходную первоначальную переносимую пленку,
             которая эффективно покрывает сопрягаемые поверхности подшипникового узла, обеспечивая самосмазывающиеся
@@ -51,7 +52,7 @@ const hmg50 = () => {
         />
       </section>
       <section>
-        <h2 className={subtitle}>Технические данные</h2>
+        <Htag tag='h2'>Технические данные</Htag>
         <div className={scroll}>
           <table className={table}>
             <tbody>
@@ -174,7 +175,7 @@ const hmg50 = () => {
         </div>
       </section>
       <section>
-        <h2 className={subtitle}>Типичные области применения</h2>
+        <Htag tag='h2'>Типичные области применения</Htag>
         <p className={text}>
           Автомобильные применения включают систему рулевого управления, амортизаторы, дверные петли, кресла с наклоном
           спинки, рамы сидений и магнитные клапаны. Он широко используется в общей промышленности, например, в

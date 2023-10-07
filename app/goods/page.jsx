@@ -14,6 +14,7 @@ import {
 } from './goods.module.css';
 import Image from 'next/image';
 import { presentationImage } from '@/utils/constants';
+import Htag from '@/components/Htag/Htag';
 
 export const metadata = {
   title: 'Продукция компании ООО "ВиВа Групп"',
@@ -34,13 +35,14 @@ export default function Goods() {
         </li>
         <li>Товары</li>
       </ul>
+      <Htag tag='h1'>НАША ПРОДУКЦИЯ</Htag>
+      <Htag tag='h2'>HMG/ВТУЛКИ/ШАЙБЫ/ЛЕНТА</Htag>
       <ul className={items}>
         {presentationImage.map(({ name, img, href }) => {
           return (
             <li
               key={name}
-              className={item}
-              as={'image'}>
+              className={item}>
               <div className={row}>
                 <Link
                   className={imageContainer}
@@ -48,7 +50,7 @@ export default function Goods() {
                   <Image
                     src={img}
                     fill
-                    // sizes='(max-width: 1269px) 50vw, 22.5vw'
+                    sizes='(max-width: 520px) 30vw, (max-width: 768px) 50vw, 100vw'
                     alt={name}
                     className={image}
                     priority={true}
@@ -58,7 +60,7 @@ export default function Goods() {
                   <Link
                     href={href}
                     className={link}>
-                    <h2 className={title}>{name}</h2>
+                    <Htag tag='h3'>{name}</Htag>
                   </Link>
                 </div>
               </div>

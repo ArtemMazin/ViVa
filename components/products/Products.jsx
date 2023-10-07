@@ -3,7 +3,6 @@ import Link from 'next/link';
 import React from 'react';
 import {
   main,
-  title,
   text,
   image,
   catalog,
@@ -11,10 +10,10 @@ import {
   catalogItem,
   catalogImages,
   catalogNameContainer,
-  catalogName,
   li,
   imageContainer,
 } from './products.module.css';
+import Htag from '../Htag/Htag';
 
 const Products = ({ titleProducts, descriptionProducts, productsImage, productList }) => {
   return (
@@ -30,7 +29,7 @@ const Products = ({ titleProducts, descriptionProducts, productsImage, productLi
         />
       </div>
       <div>
-        <h1 className={title}>{titleProducts}</h1>
+        <Htag tag='h1'>{titleProducts}</Htag>
         <p className={text}>{descriptionProducts}</p>
       </div>
       <div className={catalog}>
@@ -52,7 +51,7 @@ const Products = ({ titleProducts, descriptionProducts, productsImage, productLi
                     className={catalogImage}
                   />
                   <div className={catalogNameContainer}>
-                    <h2 className={catalogName}>{name}</h2>
+                    <Htag tag='h3'>{name}</Htag>
                   </div>
                 </Link>
               </li>

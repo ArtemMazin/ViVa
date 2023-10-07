@@ -1,6 +1,7 @@
 import React from 'react';
-import { about, subtitle, text, image, breadСrumbs, breadСrumbs__link } from './about.module.css';
+import { about, text, image, breadСrumbs, breadСrumbs__link } from './about.module.css';
 import Link from 'next/link';
+import Htag from '@/components/Htag/Htag';
 
 export const metadata = {
   title: 'ООО "ВиВа Групп"',
@@ -21,7 +22,7 @@ const page = () => {
         </li>
         <li>О компании</li>
       </ul>
-      <h1 className={subtitle}>О компании</h1>
+      <Htag tag='h1'>О компании</Htag>
       <p className={text}>
         ООО «ВиВа Групп» представляет в России, странах СНГ и Восточной Европы одного из ведущих мировых производителей
         подшипников скольжения. Офис расположен в Москве. Клиентами компании становятся предприятия и организации, для

@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
-import { flex, title, subtitle, text, table, cell, image, section, scroll } from './hmg11.module.css';
+import { flex, text, table, cell, image, section, scroll } from './hmg11.module.css';
+import Htag from '@/components/Htag/Htag';
 
 const hmg11 = () => {
   return (
@@ -16,8 +17,8 @@ const hmg11 = () => {
           className={image}
         />
         <div>
-          <h1 className={title}>HMG-11</h1>
-          <h2 className={subtitle}>Описание</h2>
+          <Htag tag='h1'>HMG-11</Htag>
+          <Htag tag='h2'>Описание</Htag>
           <p className={text}>
             Материал имеет те же характеристики, что и стандартные полимерные композитные подшипники со стальной опорой.
             Кроме того, бронзовая задняя часть обеспечивает лучшую коррозионную стойкость и теплопроводность. Поэтому
@@ -27,7 +28,7 @@ const hmg11 = () => {
       </section>
       <section className={flex}>
         <div>
-          <h2 className={subtitle}>Структура</h2>
+          <Htag tag='h2'>Структура</Htag>
           <p className={text}>
             1. Толщина смеси ПТФЭ/волокна 0,01–0,03 мм обеспечивает превосходную первоначальную переносимую пленку,
             которая эффективно покрывает сопрягаемые поверхности подшипникового узла, обеспечивая самосмазывающиеся
@@ -50,7 +51,7 @@ const hmg11 = () => {
         />
       </section>
       <section>
-        <h2 className={subtitle}>Технические данные</h2>
+        <Htag tag='h2'>Технические данные</Htag>
         <div className={scroll}>
           <table className={table}>
             <tbody>
@@ -173,7 +174,7 @@ const hmg11 = () => {
         </div>
       </section>
       <section>
-        <h2 className={subtitle}>Типичные области применения</h2>
+        <Htag tag='h2'>Типичные области применения</Htag>
         <p className={text}>
           Материал подходит для изготовления дверных петель, петель капота, петель багажника, стеклоочистителей, сцепных
           устройств прицепа, подъемных машин, морских лебедок, судовых цепей, рукавов вала плотины, печей, текстильных

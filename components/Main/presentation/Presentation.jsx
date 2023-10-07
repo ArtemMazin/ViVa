@@ -1,31 +1,21 @@
 import React from 'react';
-import {
-  presentation,
-  title,
-  text,
-  images,
-  item,
-  image,
-  materialNameContainer,
-  materialName,
-  link,
-} from './presentation.module.css';
+import { presentation, images, item, image, materialNameContainer, link } from './presentation.module.css';
 import { presentationImage } from '@/utils/constants';
 import Image from 'next/image';
 import Link from 'next/link';
+import Htag from '@/components/Htag/Htag';
 
 const Presentation = () => {
   return (
     <section className={`${presentation} container`}>
-      <h2 className={`container ${title}`}>НАША ПРОДУКЦИЯ</h2>
-      <p className={`container ${text}`}>HMG/ВТУЛКИ/ШАЙБЫ/ЛЕНТА</p>
+      <Htag tag='h1'>НАША ПРОДУКЦИЯ</Htag>
+      <Htag tag='h2'>HMG/ВТУЛКИ/ШАЙБЫ/ЛЕНТА</Htag>
       <ul className={images}>
         {presentationImage.map(({ name, img, href }) => {
           return (
             <li
               key={name}
-              className={item}
-              as={'image'}>
+              className={item}>
               <Link
                 className={link}
                 href={href}>
@@ -38,7 +28,7 @@ const Presentation = () => {
                   className={image}
                 />
                 <div className={materialNameContainer}>
-                  <h2 className={materialName}>{name}</h2>
+                  <Htag tag='h3'>{name}</Htag>
                 </div>
               </Link>
             </li>

@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { catalog, subtitle, text, breadСrumbs, breadСrumbs__link } from './catalog.module.css';
+import { catalog, text, breadСrumbs, breadСrumbs__link } from './catalog.module.css';
+import Htag from '@/components/Htag/Htag';
 
 export const metadata = {
   title: 'Каталог подшипников',
@@ -20,7 +21,7 @@ export default function Catalog() {
         </li>
         <li>Каталог</li>
       </ul>
-      <h1 className={subtitle}>Каталог подшипников скольжения</h1>
+      <Htag tag='h1'>Каталог подшипников скольжения</Htag>
       <p className={text}>
         Наша компания предлагает как стандартные повсеместно используемые подшипники скольжения: цилиндрические втулки,
         фланцевые втулки, аксиальные (упорные) кольца, ленту и т.д., так и специальные детали согласно чертежам и

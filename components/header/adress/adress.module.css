@@ -1,34 +1,41 @@
 .row {
   padding: 5px 0;
-  font-size: 13px;
   background-color: var(--color-bg-input);
+  font-size: 13px;
 }
+
 .flex {
   display: flex;
   justify-content: space-between;
 }
+
 .adress {
   display: flex;
-  gap: 4px;
   color: var(--color-main-text);
+  gap: 4px;
 }
+
 .email {
   display: flex;
   gap: 4px;
 }
+
 .mailImage {
   width: 16px;
   height: 16px;
-  background: url(../../../public/image/mail.svg);
+  background: url("../../../public/image/mail.svg");
 }
+
 .mailLink {
   color: var(--color-main-text);
 }
+
 .mailLink:hover {
   text-decoration: none;
 }
+
 .locationImage {
   width: 16px;
   height: 16px;
-  background: url(../../../public/image/location.svg);
+  background: url("../../../public/image/location.svg");
 }
