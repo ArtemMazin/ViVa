@@ -3,7 +3,6 @@ import Link from 'next/link';
 import React from 'react';
 import {
   main,
-  text,
   image,
   catalog,
   catalogImage,
@@ -14,6 +13,7 @@ import {
   imageContainer,
 } from './products.module.css';
 import Htag from '../Htag/Htag';
+import Ptag from '../Ptag/Ptag';
 
 const Products = ({ titleProducts, descriptionProducts, productsImage, productList }) => {
   return (
@@ -29,8 +29,8 @@ const Products = ({ titleProducts, descriptionProducts, productsImage, productLi
         />
       </div>
       <div>
-        <Htag tag='h1'>{titleProducts}</Htag>
-        <p className={text}>{descriptionProducts}</p>
+        <Htag tag='h1underline'>{titleProducts}</Htag>
+        <Ptag tag='p'>{descriptionProducts}</Ptag>
       </div>
       <div className={catalog}>
         <ul className={catalogImages}>

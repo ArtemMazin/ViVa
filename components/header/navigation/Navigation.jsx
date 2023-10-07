@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { row, list, item, active, link, relative } from './navigation.module.css';
+import { row, list, item, active, link } from './navigation.module.css';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { navLinks } from '@/utils/constants';
@@ -12,18 +12,17 @@ const Navigation = () => {
   const [showGoodsSideMenu, setShowGoodsSideMenu] = useState(false);
   const [showContactsSideMenu, setShowContactsSideMenu] = useState(false);
   const pathname = usePathname();
+  const { device } = useScreenWidth();
 
   const onMouseEnterHandler = (href) => {
-    href === '/goods' && setShowGoodsSideMenu(true);
-    href === '/contacts' && setShowContactsSideMenu(true);
+    device === 'pc' && href === '/goods' && setShowGoodsSideMenu(true);
+    device === 'pc' && href === '/contacts' && setShowContactsSideMenu(true);
   };
 
   const onMouseLeaveHandler = () => {
     setShowGoodsSideMenu(false);
     setShowContactsSideMenu(false);
   };
-
-  const { device } = useScreenWidth();
 
   return (
     <nav className={row}>
@@ -33,7 +32,7 @@ const Navigation = () => {
           return (
             <li
               key={name}
-              className={`${device === 'pc' && relative} ${item}`}
+              className={item}
               onMouseEnter={() => onMouseEnterHandler(href)}
               onMouseLeave={onMouseLeaveHandler}>
               <Link

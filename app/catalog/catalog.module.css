@@ -2,11 +2,10 @@
   flex-grow: 1;
 }
 
-.text {
-  margin: 0 0 20px;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 26px;
+.downloadLink {
+  display: block;
+  margin-bottom: 20px;
+  color: var(--color-bg-blue);
 }
 
 .breadСrumbs {

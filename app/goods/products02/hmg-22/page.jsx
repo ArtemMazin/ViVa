@@ -1,7 +1,8 @@
 import Image from 'next/image';
 import React from 'react';
-import { flex, text, table, cell, image, section, scroll } from './hmg22.module.css';
+import { flex, table, cell, image, section, scroll } from './hmg22.module.css';
 import Htag from '@/components/Htag/Htag';
+import Ptag from '@/components/Ptag/Ptag';
 
 const page = () => {
   return (
@@ -18,26 +19,26 @@ const page = () => {
         />
         <div>
           <Htag tag='h1'>HMG-22</Htag>
-          <Htag tag='h2'>Описание</Htag>
-          <p className={text}>
+          <Htag tag='h2border'>Описание</Htag>
+          <Ptag tag='p'>
             Подходит для эксплуатации со смазкой. Перед сборкой рекомендуется смазать детали консистентной смазкой.
             HMG-22M представляет собой материал ПВДФ толщиной 0,1-0,2 мм без масляных отверстий, после сборки поддается
             механической обработке.
-          </p>
+          </Ptag>
         </div>
       </section>
       <section className={flex}>
         <div>
-          <Htag tag='h2'>Структура</Htag>
-          <p className={text}>
+          <Htag tag='h2border'>Структура</Htag>
+          <Ptag tag='p'>
             1. Толщина ПВДФ 0,20–0,35 мм обеспечивает хорошую износостойкость и более низкие коэффициенты трения даже
             при плохих условиях смазки.
-          </p>
-          <p className={text}>
+          </Ptag>
+          <Ptag tag='p'>
             2. Толщина спеченной бронзы 0,20-0,35 мм обеспечивает прочное механическое соединение и отличную
             теплопроводность.
-          </p>
-          <p className={text}>3. Низкоуглеродистая сталь, обеспечивает механическую прочность и теплопроводность.</p>
+          </Ptag>
+          <Ptag tag='p'>3. Низкоуглеродистая сталь, обеспечивает механическую прочность и теплопроводность.</Ptag>
         </div>
 
         <Image
@@ -50,7 +51,7 @@ const page = () => {
         />
       </section>
       <section>
-        <Htag tag='h2'>Технические данные</Htag>
+        <Htag tag='h2border'>Технические данные</Htag>
         <div className={scroll}>
           <table className={table}>
             <tbody>
@@ -169,14 +170,14 @@ const page = () => {
         </div>
       </section>
       <section>
-        <Htag tag='h2'>Типичные области применения</Htag>
-        <p className={text}>
+        <Htag tag='h2border'>Типичные области применения</Htag>
+        <Ptag tag='p'>
           Материал обладает хорошей износостойкостью и подходит для применений со средними и высокими нагрузками в
           условиях ударной нагрузки и пыльной среды. Перед сборкой необходима предварительная смазка. Этот материал
           применяется в оси коммерческого транспорта, тормозной системе, системе подвески, воздушных компрессорах,
           гидравлических поршневых насосах, двигателях, а также в сельскохозяйственной технике, лесной технике и
           погрузочно-разгрузочных машинах.
-        </p>
+        </Ptag>
       </section>
     </main>
   );

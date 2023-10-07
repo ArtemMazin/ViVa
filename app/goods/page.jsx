@@ -4,7 +4,6 @@ import {
   items,
   item,
   row,
-  title,
   titleContainer,
   imageContainer,
   image,
@@ -35,8 +34,7 @@ export default function Goods() {
         </li>
         <li>Товары</li>
       </ul>
-      <Htag tag='h1'>НАША ПРОДУКЦИЯ</Htag>
-      <Htag tag='h2'>HMG/ВТУЛКИ/ШАЙБЫ/ЛЕНТА</Htag>
+      <Htag tag='h1underline'>Наша продукция</Htag>
       <ul className={items}>
         {presentationImage.map(({ name, img, href }) => {
           return (
@@ -60,7 +58,7 @@ export default function Goods() {
                   <Link
                     href={href}
                     className={link}>
-                    <Htag tag='h3'>{name}</Htag>
+                    <Htag tag='h2'>{name}</Htag>
                   </Link>
                 </div>
               </div>

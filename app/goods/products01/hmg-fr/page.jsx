@@ -1,7 +1,8 @@
 import Image from 'next/image';
 import React from 'react';
-import { flex, text, table, cell, image, section, scroll } from './hmgFR.module.css';
+import { flex, table, cell, image, section, scroll } from './hmgFR.module.css';
 import Htag from '@/components/Htag/Htag';
+import Ptag from '@/components/Ptag/Ptag';
 
 const hmgFR = () => {
   return (
@@ -18,20 +19,20 @@ const hmgFR = () => {
         />
         <div>
           <Htag tag='h1'>HMG-FR</Htag>
-          <Htag tag='h2'>Описание</Htag>
-          <p className={text}>
+          <Htag tag='h2border'>Описание</Htag>
+          <Ptag tag='p'>
             Металлическая тканевая основа обеспечивает износостойкость и самосмазывающиеся свойства, а ее легкий вес
             подходит для ручной и автоматической сборки. Окончательную точность установки и крутящий момент можно
             отрегулировать путем калибровки после установки втулки. Доступны два материала: CSB-FR — тканевая основа из
             бронзы и CSB-FRS — тканевая основа из нержавеющей стали. Последний имеет лучшую устойчивость к коррозии.
-          </p>
+          </Ptag>
         </div>
       </section>
       <section className={flex}>
         <div>
-          <Htag tag='h2'>Структура</Htag>
-          <p className={text}>1. Лента из ПТФЭ обеспечивает функцию самосмазывания.</p>
-          <p className={text}>2. Металлическая ткань обеспечивает механическую прочность и теплопроводность.</p>
+          <Htag tag='h2border'>Структура</Htag>
+          <Ptag tag='p'>1. Лента из ПТФЭ обеспечивает функцию самосмазывания.</Ptag>
+          <Ptag tag='p'>2. Металлическая ткань обеспечивает механическую прочность и теплопроводность.</Ptag>
         </div>
 
         <Image
@@ -44,7 +45,7 @@ const hmgFR = () => {
         />
       </section>
       <section>
-        <Htag tag='h2'>Технические данные</Htag>
+        <Htag tag='h2border'>Технические данные</Htag>
         <div className={scroll}>
           <table className={table}>
             <tbody>
@@ -127,11 +128,11 @@ const hmgFR = () => {
         </div>
       </section>
       <section>
-        <Htag tag='h2'>Типичные области применения</Htag>
-        <p className={text}>
+        <Htag tag='h2border'>Типичные области применения</Htag>
+        <Ptag tag='p'>
           Материал подходит для изготовления дверных петель, компонентов клапанов, машин общего назначения и
           текстильного оборудования. Это легкий по весу материал.
-        </p>
+        </Ptag>
       </section>
     </main>
   );

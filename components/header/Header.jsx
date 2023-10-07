@@ -53,7 +53,7 @@ const Header = () => {
                 title='Позвонить'
                 rel='nofollow'
                 className={tel}>
-                <span>+7 (495) 926-07-74</span>
+                <span> +7 (495) 926-07-74</span>
               </Link>
               <div className={email}>
                 <div className={mailImage}></div>

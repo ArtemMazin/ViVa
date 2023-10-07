@@ -5,32 +5,19 @@
 }
 
 .list {
-  position: relative;
   display: flex;
   justify-content: space-between;
   list-style-type: none;
 }
 
 .item {
+  position: relative;
   display: flex;
   width: 100%;
   justify-content: center;
   padding: 1px 0;
   border-right: 1px solid var(--color-main);
   gap: 10px;
-}
-
-.item:hover .link {
-  opacity: 0.4;
-}
-
-.item:first-child {
-  border-left: 1px solid var(--color-main);
-}
-
-.active {
-  display: inline;
-  border-bottom: 1px solid var(--color-main);
 }
 
 .link {
@@ -47,6 +34,15 @@
   color: var(--color-main);
 }
 
-.relative {
-  position: relative;
+.item:hover .link {
+  opacity: 0.4;
+}
+
+.item:first-child {
+  border-left: 1px solid var(--color-main);
+}
+
+.active {
+  display: inline;
+  border-bottom: 1px solid var(--color-main);
 }

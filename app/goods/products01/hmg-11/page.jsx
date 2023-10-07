@@ -1,7 +1,8 @@
 import Image from 'next/image';
 import React from 'react';
-import { flex, text, table, cell, image, section, scroll } from './hmg11.module.css';
+import { flex, table, cell, image, section, scroll } from './hmg11.module.css';
 import Htag from '@/components/Htag/Htag';
+import Ptag from '@/components/Ptag/Ptag';
 
 const hmg11 = () => {
   return (
@@ -18,27 +19,27 @@ const hmg11 = () => {
         />
         <div>
           <Htag tag='h1'>HMG-11</Htag>
-          <Htag tag='h2'>Описание</Htag>
-          <p className={text}>
+          <Htag tag='h2border'>Описание</Htag>
+          <Ptag tag='p'>
             Материал имеет те же характеристики, что и стандартные полимерные композитные подшипники со стальной опорой.
             Кроме того, бронзовая задняя часть обеспечивает лучшую коррозионную стойкость и теплопроводность. Поэтому
             его легче собирать и он имеет лучшую магнитную устойчивость.
-          </p>
+          </Ptag>
         </div>
       </section>
       <section className={flex}>
         <div>
-          <Htag tag='h2'>Структура</Htag>
-          <p className={text}>
+          <Htag tag='h2border'>Структура</Htag>
+          <Ptag tag='p'>
             1. Толщина смеси ПТФЭ/волокна 0,01–0,03 мм обеспечивает превосходную первоначальную переносимую пленку,
             которая эффективно покрывает сопрягаемые поверхности подшипникового узла, обеспечивая самосмазывающиеся
             свойства.
-          </p>
-          <p className={text}>
+          </Ptag>
+          <Ptag tag='p'>
             2. Толщина порошка спеченной бронзы 0,20-0,35 мм обеспечивает прочное механическое соединение и отличную
             теплопроводность.
-          </p>
-          <p className={text}>3. Бронзовая основа обеспечивает механическую прочность и корозионную стойкость.</p>
+          </Ptag>
+          <Ptag tag='p'>3. Бронзовая основа обеспечивает механическую прочность и корозионную стойкость.</Ptag>
         </div>
 
         <Image
@@ -51,7 +52,7 @@ const hmg11 = () => {
         />
       </section>
       <section>
-        <Htag tag='h2'>Технические данные</Htag>
+        <Htag tag='h2border'>Технические данные</Htag>
         <div className={scroll}>
           <table className={table}>
             <tbody>
@@ -174,12 +175,12 @@ const hmg11 = () => {
         </div>
       </section>
       <section>
-        <Htag tag='h2'>Типичные области применения</Htag>
-        <p className={text}>
+        <Htag tag='h2border'>Типичные области применения</Htag>
+        <Ptag tag='p'>
           Материал подходит для изготовления дверных петель, петель капота, петель багажника, стеклоочистителей, сцепных
           устройств прицепа, подъемных машин, морских лебедок, судовых цепей, рукавов вала плотины, печей, текстильных
           машин, металлургического оборудования и проушин для штоков цилиндров.
-        </p>
+        </Ptag>
       </section>
     </main>
   );
