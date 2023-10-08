@@ -17,7 +17,11 @@ export default function Goods() {
         currentLink='Товары'
         links={[{ href: 'https://vi-va.vercel.app/', name: 'Главнaя' }]}
       />
-      <Htag tag='h1underline'>Наша продукция</Htag>
+      <Htag
+        tag='h1'
+        border='left'>
+        Наша продукция
+      </Htag>
       <ul className={items}>
         {presentationImage.map(({ name, img, href }) => {
           return (

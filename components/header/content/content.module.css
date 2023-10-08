@@ -36,10 +36,11 @@
   right: 8px;
   width: 30px;
   height: 30px;
-  background: url("../../../public/image/search.svg");
+  background: url('../../../public/image/search.svg');
 }
 
-.tel {
+.contacts {
+  text-align: right;
   color: var(--color-main-title);
   font-size: 15px;
   font-weight: 600;
@@ -47,13 +48,11 @@
   text-wrap: nowrap;
 }
 
-.tel:hover {
-  text-decoration: none;
+.tel {
+  display: block;
+  color: var(--color-main-title);
 }
 
-.text {
-  color: var(--color-main-title);
-  font-size: 13px;
-  font-weight: 600;
-  text-align: right;
+.tel:hover {
+  text-decoration: none;
 }

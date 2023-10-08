@@ -29,7 +29,11 @@ const Products = ({ titleProducts, descriptionProducts, productsImage, productLi
         />
       </div>
       <div>
-        <Htag tag='h1underline'>{titleProducts}</Htag>
+        <Htag
+          tag='h1'
+          border='left'>
+          {titleProducts}
+        </Htag>
         <Ptag tag='p'>{descriptionProducts}</Ptag>
       </div>
       <div className={catalog}>

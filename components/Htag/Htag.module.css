@@ -24,13 +24,34 @@
   transition: var(--transition);
 }
 
-.border {
+.borderLeft {
+  display: inline-block;
   padding-left: 10px;
   border-left: 3px solid var(--color-bg-blue);
 }
 
-.underline {
+.borderDown {
   display: inline-block;
   padding-bottom: 10px;
   border-bottom: 3px solid var(--color-bg-blue);
+}
+
+@media (width <= 768px) {
+  .h1 {
+    text-align: left;
+    font-size: 24px;
+    letter-spacing: -1px;
+    line-height: 32px;
+  }
+
+  .h2 {
+    font-size: 22px;
+    letter-spacing: -0.7px;
+    line-height: 28px;
+  }
+  .h3 {
+    font-size: 20px;
+    letter-spacing: -0.5px;
+    line-height: 22px;
+  }
 }

@@ -1,6 +1,15 @@
-.footer {
-  padding: 10px 0;
-  background-color: var(--color-main);
+.content {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 30px;
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-wrap: nowrap;
 }
 
 .logo {
@@ -29,4 +38,98 @@
 .mapContainer:hover::before {
   opacity: 0;
   visibility: hidden;
+}
+
+.side {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 5px;
+  list-style-type: circle;
+}
+
+.item {
+  margin: 0 10px;
+}
+
+.link {
+  display: block;
+  min-width: 400px;
+  color: var(--color-bg-blue);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.link:hover {
+  color: var(--color-main-title);
+}
+
+.contacts {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 15px;
+}
+
+.tel {
+  color: var(--color-main-title);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  text-wrap: nowrap;
+}
+
+.tel:hover {
+  text-decoration: none;
+}
+
+.email {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.mailImage {
+  width: 16px;
+  height: 16px;
+  background: url('../../public/image/mail.svg') no-repeat center/cover;
+}
+
+.mailLink {
+  color: var(--color-main-text);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.mailLink:hover {
+  text-decoration: none;
+}
+
+@media (width <= 900px) {
+  .side {
+    display: none;
+  }
+
+  .content {
+    justify-content: space-around;
+  }
+}
+
+@media (width <= 460px) {
+  .content {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .copy {
+    align-items: center;
+    gap: 20px;
+  }
+
+  .contacts {
+    text-align: center;
+  }
 }

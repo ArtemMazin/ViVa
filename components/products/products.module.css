@@ -15,6 +15,7 @@
 }
 
 .catalogImages {
+  margin: 0 0 20px;
   display: flex;
   width: 100%;
   flex-wrap: wrap;

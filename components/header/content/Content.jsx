@@ -1,5 +1,5 @@
 import React from 'react';
-import { flex, inputContainer, input, search, logo, tel, text } from './content.module.css';
+import { flex, inputContainer, input, search, logo, contacts, tel } from './content.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -21,8 +21,8 @@ const Content = () => {
         />
         <div className={search}></div>
       </div>
-      <div>
-        <span className={text}>Отдел продаж:</span>
+      <div className={contacts}>
+        <span>Отдел продаж:</span>
         <Link
           href='tel:+74959260774'
           title='Позвонить'

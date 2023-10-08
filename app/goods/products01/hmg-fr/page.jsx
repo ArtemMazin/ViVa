@@ -28,7 +28,11 @@ const hmgFR = () => {
         />
         <div>
           <Htag tag='h1'>HMG-FR</Htag>
-          <Htag tag='h2border'>Описание</Htag>
+          <Htag
+            tag='h2'
+            border='left'>
+            Описание
+          </Htag>
           <Ptag tag='p'>
             Металлическая тканевая основа обеспечивает износостойкость и самосмазывающиеся свойства, а ее легкий вес
             подходит для ручной и автоматической сборки. Окончательную точность установки и крутящий момент можно
@@ -39,7 +43,11 @@ const hmgFR = () => {
       </section>
       <section className={flex}>
         <div>
-          <Htag tag='h2border'>Структура</Htag>
+          <Htag
+            tag='h2'
+            border='left'>
+            Структура
+          </Htag>
           <Ptag tag='p'>1. Лента из ПТФЭ обеспечивает функцию самосмазывания.</Ptag>
           <Ptag tag='p'>2. Металлическая ткань обеспечивает механическую прочность и теплопроводность.</Ptag>
         </div>
@@ -54,7 +62,11 @@ const hmgFR = () => {
         />
       </section>
       <section>
-        <Htag tag='h2border'>Технические данные</Htag>
+        <Htag
+          tag='h2'
+          border='left'>
+          Технические данные
+        </Htag>
         <div className={scroll}>
           <table className={table}>
             <tbody>
@@ -137,7 +149,11 @@ const hmgFR = () => {
         </div>
       </section>
       <section>
-        <Htag tag='h2border'>Типичные области применения</Htag>
+        <Htag
+          tag='h2'
+          border='left'>
+          Типичные области применения
+        </Htag>
         <Ptag tag='p'>
           Материал подходит для изготовления дверных петель, компонентов клапанов, машин общего назначения и
           текстильного оборудования. Это легкий по весу материал.

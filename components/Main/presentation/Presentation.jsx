@@ -8,7 +8,11 @@ import Htag from '@/components/Htag/Htag';
 const Presentation = () => {
   return (
     <section className={`${presentation} container`}>
-      <Htag tag='h1underline'>НАША ПРОДУКЦИЯ</Htag>
+      <Htag
+        tag='h1'
+        border='down'>
+        НАША ПРОДУКЦИЯ
+      </Htag>
       <Htag tag='h2'>HMG/ВТУЛКИ/ШАЙБЫ/ЛЕНТА</Htag>
       <ul className={images}>
         {presentationImage.map(({ name, img, href }) => {
