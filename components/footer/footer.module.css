@@ -1,7 +1,12 @@
+.footer {
+  background: var(--color-gradient);
+}
+
 .content {
   display: flex;
   justify-content: space-between;
   padding: 20px;
+  margin: 0 auto;
   gap: 30px;
 }
 
@@ -14,7 +19,6 @@
 
 .logo {
   flex-shrink: 0;
-  object-fit: contain;
 }
 
 .mapContainer {
@@ -45,7 +49,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 5px;
-  list-style-type: circle;
+  list-style-type: none;
 }
 
 .item {
@@ -55,15 +59,15 @@
 .link {
   display: block;
   min-width: 400px;
-  color: var(--color-bg-blue);
+  color: var(--color-main-title);
   font-size: 14px;
   font-weight: 500;
-  text-decoration: none;
+  text-decoration: underline;
   transition: var(--transition);
 }
 
 .link:hover {
-  color: var(--color-main-title);
+  color: var(--color-bg-blue);
 }
 
 .contacts {

@@ -33,7 +33,7 @@ const Footer = () => {
       <div className={`${content} container`}>
         <div className={copy}>
           <Image
-            src='/image/logo.png'
+            src='/image/logo-black.svg'
             width={100}
             height={40}
             priority={true}

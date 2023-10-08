@@ -1,3 +1,4 @@
+import Htag from '@/components/Htag/Htag';
 import { delivery } from './delivery.module.css';
 import BreadCrumbs from '@/components/BreadCrumbs/BreadCrumbs';
 
@@ -13,6 +14,11 @@ export default function Delivery() {
         currentLink='Доставка и оплата'
         links={[{ href: 'https://vi-va.vercel.app/', name: 'Главнaя' }]}
       />
+      <Htag
+        tag='h1'
+        border='left'>
+        Наша продукция
+      </Htag>
     </main>
   );
 }

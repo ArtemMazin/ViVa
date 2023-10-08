@@ -15,7 +15,7 @@ const HideMenu = ({ toggleHideMenu, isMenuOpen }) => {
       <div className={overflowWrapper}>
         <div className={head}>
           <Image
-            src='/image/logo.png'
+            src='/image/logo-white.svg'
             width={80}
             height={32}
             priority={true}

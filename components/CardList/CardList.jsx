@@ -7,12 +7,15 @@ const CardList = ({ array }) => {
     <ul className={styles.images}>
       {array.map(({ name, img, href }) => {
         return (
-          <Card
-            href={href}
-            img={img}
-            name={name}
+          <li
             key={name}
-          />
+            className={styles.item}>
+            <Card
+              href={href}
+              img={img}
+              name={name}
+            />
+          </li>
         );
       })}
     </ul>

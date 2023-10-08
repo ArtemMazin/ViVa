@@ -7,7 +7,7 @@ const Content = () => {
   return (
     <div className={`${flex} container`}>
       <Image
-        src='/image/logo.png'
+        src='/image/logo-white.svg'
         width={100}
         height={40}
         priority={true}
