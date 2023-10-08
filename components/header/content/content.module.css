@@ -40,11 +40,11 @@
 }
 
 .contacts {
-  text-align: right;
   color: var(--color-main-title);
   font-size: 15px;
   font-weight: 600;
   line-height: 24px;
+  text-align: right;
   text-wrap: nowrap;
 }
 

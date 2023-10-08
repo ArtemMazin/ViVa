@@ -1,0 +1,15 @@
+.images {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1px 0;
+  gap: 30px;
+  list-style-type: none;
+}
+
+@media (width <= 670px) {
+  .images {
+    gap: 1px;
+  }
+}

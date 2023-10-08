@@ -3,6 +3,7 @@ import { about, image } from './about.module.css';
 import Htag from '@/components/Htag/Htag';
 import Ptag from '@/components/Ptag/Ptag';
 import BreadCrumbs from '@/components/BreadCrumbs/BreadCrumbs';
+import Image from 'next/image';
 
 export const metadata = {
   title: 'ООО "ВиВа Групп"',
@@ -27,7 +28,16 @@ const page = () => {
         которых высокое качество, гибкая ценовая политика и оперативность поставок – необходимые составляющие
         партнерства. За 10 лет работы нашими партнерами стали более двух сотен компаний.
       </Ptag>
-      <div className={image}></div>
+      <div className={image}>
+        <Image
+          src={'/image/timeLine.png'}
+          fill
+          sizes='(max-width: 520px) 30vw, (max-width: 768px) 50vw, 100vw'
+          alt=''
+          priority={false}
+          objectFit='contain'
+        />
+      </div>
       <Ptag tag='p'>
         Компания поставляет стандартные подшипники скольжения широкого спектра использования (цилиндрические втулки,
         фланцевые втулки, аксиальные кольца, лента и т.д.), а также специальные детали на заказ согласно чертежам и
