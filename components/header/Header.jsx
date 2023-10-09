@@ -42,7 +42,7 @@ const Header = () => {
         <header className={headerMobile}>
           <div className={head}>
             <Image
-              src='/image/logo-white.svg'
+              src='/image/logo-black.svg'
               width={80}
               height={32}
               priority={true}

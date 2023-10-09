@@ -4,6 +4,7 @@ import {
   content,
   copy,
   logo,
+  contentContainer,
   mapContainer,
   side,
   item,
@@ -30,51 +31,53 @@ const Footer = () => {
           aria-hidden='true'
           title='Встроенные Яндекс Карты'></iframe>
       </div>
-      <div className={`${content} container`}>
-        <div className={copy}>
-          <Image
-            src='/image/logo-black.svg'
-            width={100}
-            height={40}
-            priority={true}
-            alt='Товарный знак HMG'
-            className={logo}></Image>
-          <span>&#169; ООО «ВиВа Групп» 2023</span>
-        </div>
+      <div className={contentContainer}>
+        <div className={`${content} container`}>
+          <div className={copy}>
+            <Image
+              src='/image/logo-white.svg'
+              width={100}
+              height={40}
+              priority={true}
+              alt='Товарный знак HMG'
+              className={logo}></Image>
+            <span>&#169; ООО «ВиВа Групп» 2023</span>
+          </div>
 
-        <ul className={side}>
-          {presentationImage.map(({ name, href }) => {
-            return (
-              <li
-                key={name}
-                className={item}>
-                <Link
-                  href={href}
-                  className={link}>
-                  {name}
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
-        <div className={contacts}>
-          <span>Отдел продаж:</span>
-          <Link
-            href='tel:+74959260774'
-            title='Позвонить'
-            rel='nofollow'
-            className={tel}>
-            <span> +7 (495) 926-07-74</span>
-          </Link>
-          <div className={email}>
-            <div className={mailImage}></div>
+          <ul className={side}>
+            {presentationImage.map(({ name, href }) => {
+              return (
+                <li
+                  key={name}
+                  className={item}>
+                  <Link
+                    href={href}
+                    className={link}>
+                    {name}
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+          <div className={contacts}>
+            <span>Отдел продаж:</span>
             <Link
-              href='mailto:info@gidmash.ru'
-              title='Написать письмо'
+              href='tel:+74959260774'
+              title='Позвонить'
               rel='nofollow'
-              className={mailLink}>
-              <span>info@gidmash.ru</span>
+              className={tel}>
+              <span> +7 (495) 926-07-74</span>
             </Link>
+            <div className={email}>
+              <div className={mailImage}></div>
+              <Link
+                href='mailto:info@gidmash.ru'
+                title='Написать письмо'
+                rel='nofollow'
+                className={mailLink}>
+                <span>info@gidmash.ru</span>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
