@@ -1,6 +1,8 @@
 .contacts {
   width: 100%;
-  flex-grow: 1;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
 }
 
 .contactList {
@@ -9,4 +11,26 @@
   margin: 0 0 20px;
   gap: 5px;
   list-style-type: none;
+}
+
+.contact {
+  display: flex;
+  gap: 4px;
+}
+
+.mailLink {
+  color: var(--color-main-text);
+}
+
+.mailLink:hover {
+  text-decoration: none;
+}
+
+.tel {
+  display: block;
+  color: var(--color-main-title);
+}
+
+.tel:hover {
+  text-decoration: none;
 }

@@ -1,4 +1,16 @@
 .delivery {
   width: 100%;
-  flex-grow: 1;
+}
+
+.places {
+  list-style-type: none;
+}
+
+.companies {
+  list-style-type: none;
+}
+
+.company {
+  display: block;
+  margin: 0 0 20px;
 }

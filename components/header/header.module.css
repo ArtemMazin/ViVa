@@ -1,7 +1,7 @@
 .header {
   position: sticky;
   z-index: 10;
-  top: -86px;
+  top: -95px;
   display: flex;
   flex-direction: column;
   margin: 0 0 30px;
@@ -78,7 +78,7 @@
 .mailImage {
   width: 16px;
   height: 16px;
-  background: url("../../public/image/mail.svg") no-repeat center/cover;
+  background: url('../../public/image/mail.svg') no-repeat center/cover;
 }
 
 .mailLink {

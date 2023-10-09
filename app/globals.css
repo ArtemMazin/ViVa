@@ -22,12 +22,6 @@ body {
   margin: 0 auto;
 }
 
-.wrapper {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-}
-
 :root {
   --color-main: #fff;
   --color-gradient: linear-gradient(rgb(4 110 219 / 80%) 15%, rgb(0 0 0 / 70%));
