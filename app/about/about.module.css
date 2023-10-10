@@ -9,6 +9,10 @@
   margin: 0 0 20px;
 }
 
+.timeLine {
+  object-fit: contain;
+}
+
 @media (width<=768px) {
   .image {
     height: 280px;

@@ -18,6 +18,12 @@
   gap: 4px;
 }
 
+.downloadLink {
+  display: block;
+  margin-bottom: 20px;
+  color: var(--color-bg-blue);
+}
+
 .mailLink {
   color: var(--color-main-text);
 }

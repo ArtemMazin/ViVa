@@ -12,13 +12,13 @@ const Adress = () => {
         </div>
         <div className={email}>
           <div className={mailImage}></div>
-          <Link
+          <a
             href='mailto:info@gidmash.ru'
             title='Написать письмо'
             rel='nofollow'
             className={mailLink}>
             <span>info@gidmash.ru</span>
-          </Link>
+          </a>
         </div>
       </div>
     </div>

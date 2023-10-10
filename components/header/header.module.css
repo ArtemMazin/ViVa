@@ -69,7 +69,19 @@
   text-wrap: nowrap;
 }
 
-.email {
+.telImage {
+  width: 16px;
+  height: 16px;
+  background: url('../../public/image/phone.svg') no-repeat center/cover;
+}
+
+.contactMail {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.contactTel {
   display: flex;
   align-items: center;
   gap: 4px;
@@ -89,7 +101,7 @@
 }
 
 @media (width <= 560px) {
-  .email {
+  .contactMail {
     display: none;
   }
 }

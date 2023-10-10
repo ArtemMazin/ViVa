@@ -1,7 +1,6 @@
-import { contacts, contactList, contact, mailLink, tel } from './contacts.module.css';
+import { contacts, contactList, contact, mailLink, tel, downloadLink } from './contacts.module.css';
 import BreadCrumbs from '@/components/BreadCrumbs/BreadCrumbs';
 import Htag from '@/components/Htag/Htag';
-import Link from 'next/link';
 
 export const metadata = {
   title: 'Контакты ООО "ВиВа Групп"',
@@ -32,30 +31,56 @@ export default function Contacts() {
         <li>
           <div className={contact}>
             <strong>Тел./факс:</strong>
-            <Link
+            <a
               href='tel:+74959260774'
               title='Позвонить'
               rel='nofollow'
               className={tel}>
               <span> +7 (495) 926-07-74</span>
-            </Link>
+            </a>
           </div>
         </li>
         <li>
           <div className={contact}>
             <strong>Email:</strong>
-            <Link
+            <a
               href='mailto:info@gidmash.ru'
               title='Написать письмо'
               rel='nofollow'
               className={mailLink}>
               <span>info@gidmash.ru</span>
-            </Link>
+            </a>
           </div>
         </li>
         <li>
           <span>
             <strong>График работы:</strong> ПН - ПТ: 10:00 - 17:00
+          </span>
+        </li>
+        <li>
+          <span>
+            <strong>Реквизиты:</strong> <br />
+            ООО «ВиВа Групп»
+            <br />
+            115088, г.Москва, ул.Шарикоподшипниковская д.1 <br />
+            ОКПО 66475124
+            <br />
+            ОГРН 1107746428547
+            <br />
+            Расчетный счет 40702810102080002688
+            <br />
+            в АО «АЛЬФА-БАНК» г. Москва
+            <br />
+            БИК 044525593
+            <br />
+            Кор.счет 30101810200000000593
+            <br />
+            <a
+              href={'/download/cardViVa.doc'}
+              download={true}
+              className={downloadLink}>
+              Скачать карточку компании
+            </a>
           </span>
         </li>
       </ul>

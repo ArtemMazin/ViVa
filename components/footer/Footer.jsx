@@ -61,22 +61,22 @@ const Footer = () => {
           </ul>
           <div className={contacts}>
             <span>Отдел продаж:</span>
-            <Link
+            <a
               href='tel:+74959260774'
               title='Позвонить'
               rel='nofollow'
               className={tel}>
               <span> +7 (495) 926-07-74</span>
-            </Link>
+            </a>
             <div className={email}>
               <div className={mailImage}></div>
-              <Link
+              <a
                 href='mailto:info@gidmash.ru'
                 title='Написать письмо'
                 rel='nofollow'
                 className={mailLink}>
                 <span>info@gidmash.ru</span>
-              </Link>
+              </a>
             </div>
           </div>
         </div>

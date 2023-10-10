@@ -9,7 +9,9 @@ import {
   buttonHamburgerClose,
   contacts,
   tel,
-  email,
+  telImage,
+  contactTel,
+  contactMail,
   mailImage,
   mailLink,
 } from './header.module.css';
@@ -48,22 +50,26 @@ const Header = () => {
               priority={true}
               alt='Товарный знак HMG'></Image>
             <div className={contacts}>
-              <Link
-                href='tel:+74959260774'
-                title='Позвонить'
-                rel='nofollow'
-                className={tel}>
-                <span> +7 (495) 926-07-74</span>
-              </Link>
-              <div className={email}>
+              <div className={contactTel}>
+                <div className={telImage}></div>
+                <a
+                  href='tel:+74959260774'
+                  title='Позвонить'
+                  rel='nofollow'
+                  className={tel}>
+                  +7 (495) 926-07-74
+                </a>
+              </div>
+
+              <div className={contactMail}>
                 <div className={mailImage}></div>
-                <Link
+                <a
                   href='mailto:info@gidmash.ru'
                   title='Написать письмо'
                   rel='nofollow'
                   className={mailLink}>
                   <span>info@gidmash.ru</span>
-                </Link>
+                </a>
               </div>
             </div>
             {isMenuOpen ? (

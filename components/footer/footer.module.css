@@ -26,6 +26,7 @@
 
 .mapContainer {
   position: relative;
+  display: flex;
 }
 
 .mapContainer::before {
@@ -42,7 +43,26 @@
   visibility: visible;
 }
 
+.mapContainer::after {
+  position: absolute;
+  z-index: 5;
+  top: calc(50% - 16px);
+  left: calc(50% - 16px);
+  width: 32px;
+  height: 32px;
+  background: url('../../public/image/click.svg');
+  content: '';
+  opacity: 1;
+  transition: var(--transition);
+  visibility: visible;
+}
+
 .mapContainer:hover::before {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.mapContainer:hover::after {
   opacity: 0;
   visibility: hidden;
 }

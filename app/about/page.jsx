@@ -1,5 +1,5 @@
 import React from 'react';
-import { about, image } from './about.module.css';
+import { about, image, timeLine } from './about.module.css';
 import Htag from '@/components/Htag/Htag';
 import Ptag from '@/components/Ptag/Ptag';
 import BreadCrumbs from '@/components/BreadCrumbs/BreadCrumbs';
@@ -35,7 +35,7 @@ const page = () => {
           sizes='(max-width: 520px) 30vw, (max-width: 768px) 50vw, 100vw'
           alt=''
           priority={false}
-          objectFit='contain'
+          className={timeLine}
         />
       </div>
       <Ptag tag='p'>
