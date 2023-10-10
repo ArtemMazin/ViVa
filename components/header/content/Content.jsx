@@ -1,7 +1,7 @@
 import React from 'react';
-import { flex, inputContainer, input, search, logo, contacts, tel } from './content.module.css';
+import { flex, logo, contacts, tel } from './content.module.css';
 import Image from 'next/image';
-import Link from 'next/link';
+import Search from '@/components/Search/Search';
 
 const Content = () => {
   return (
@@ -13,14 +13,7 @@ const Content = () => {
         priority={true}
         alt='Товарный знак HMG'
         className={logo}></Image>
-      <div className={inputContainer}>
-        <input
-          type='text'
-          placeholder='Поиск'
-          className={input}
-        />
-        <div className={search}></div>
-      </div>
+      <Search />
       <div className={contacts}>
         <span>Отдел продаж:</span>
         <a

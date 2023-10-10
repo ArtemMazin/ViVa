@@ -119,6 +119,17 @@ const productList08 = [
     href: '/goods/products07/hmg-260',
   },
 ];
+
+const allProducts = productList01.concat(
+  productList02,
+  productList03,
+  productList04,
+  productList05,
+  productList06,
+  productList07,
+  productList08
+);
+
 export {
   productList01,
   productList02,
@@ -128,4 +139,5 @@ export {
   productList06,
   productList07,
   productList08,
+  allProducts,
 };
