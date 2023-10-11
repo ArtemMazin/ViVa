@@ -12,7 +12,8 @@ const Content = () => {
         height={40}
         priority={true}
         alt='Товарный знак HMG'
-        className={logo}></Image>
+        className={logo}
+      />
       <Search />
       <div className={contacts}>
         <span>Отдел продаж:</span>

@@ -17,8 +17,17 @@ const Card = ({ href, img, name }) => {
         priority={true}
         className={styles.image}
       />
-      <div className={styles.materialNameContainer}>
-        <Htag tag='h3'>{name}</Htag>
+      <div className={styles.descriptionContainer}>
+        <div className={styles.description}>
+          <Htag tag='h3'>{name}</Htag>
+          <Image
+            src='/image/logo-card.svg'
+            width={100}
+            height={40}
+            priority={true}
+            alt='Товарный знак HMG'
+          />
+        </div>
       </div>
     </Link>
   );

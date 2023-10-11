@@ -22,7 +22,7 @@
   object-fit: cover;
 }
 
-.materialNameContainer {
+.descriptionContainer {
   position: absolute;
   z-index: 2;
   top: 0;
@@ -35,13 +35,17 @@
   padding: 10px;
   color: var(--color-main);
 }
+.description {
+  text-align: center;
+  transition: var(--transition);
+}
 
 @media (any-hover: hover) {
   .link:hover::before {
     background-color: var(--color-bg-blue);
   }
 
-  .materialNameContainer:hover h3 {
-    transform: translateY(-20px);
+  .descriptionContainer:hover div {
+    transform: translateY(-10px);
   }
 }

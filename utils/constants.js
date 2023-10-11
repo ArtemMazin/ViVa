@@ -7,11 +7,6 @@ const navLinks = [
   { name: 'Контакты', href: '/contacts' },
 ];
 
-const contactsLinks = [
-  { name: 'Офис', href: '/' },
-  { name: 'Склад', href: '/goods' },
-];
-
 const presentationImage = [
   {
     name: 'Металлополимерные самосмазывающиеся подшипники',
@@ -57,4 +52,4 @@ const presentationImage = [
 
 const sliderImages = [{ img: '/image/slider01.png' }, { img: '/image/slider02.png' }, { img: '/image/slider03.png' }];
 
-export { navLinks, contactsLinks, presentationImage, sliderImages };
+export { navLinks, presentationImage, sliderImages };

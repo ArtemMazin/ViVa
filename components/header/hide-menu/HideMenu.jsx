@@ -1,11 +1,12 @@
 'use client';
 
 import React from 'react';
-import { hideWrapper, hideActive, list, item, active, link, head, overflowWrapper } from './hideMenu.module.css';
+import { hideWrapper, hideActive, list, item, active, link, head, overflowWrapper, logo } from './hideMenu.module.css';
 import Link from 'next/link';
 import { navLinks } from '@/utils/constants';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
+import Search from '@/components/Search/Search';
 
 const HideMenu = ({ toggleHideMenu, isMenuOpen }) => {
   const pathname = usePathname();
@@ -19,7 +20,10 @@ const HideMenu = ({ toggleHideMenu, isMenuOpen }) => {
             width={80}
             height={32}
             priority={true}
-            alt='Товарный знак HMG'></Image>
+            alt='Товарный знак HMG'
+            className={logo}
+          />
+          <Search callback={toggleHideMenu} />
         </div>
         <nav>
           <ul className={list}>

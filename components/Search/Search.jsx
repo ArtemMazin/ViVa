@@ -4,7 +4,7 @@ import React, { useCallback, useState } from 'react';
 import styles from './Search.module.css';
 import { useRouter, useSearchParams } from 'next/navigation';
 
-const Search = () => {
+const Search = ({ callback }) => {
   const [search, setSearch] = useState('');
 
   const router = useRouter();
@@ -23,13 +23,14 @@ const Search = () => {
   const goToSearch = () => {
     router.push('/search' + '?' + createQueryString('filter', search));
     setSearch('');
+    callback && callback();
   };
 
   return (
     <div className={styles.form}>
       <input
         type='text'
-        placeholder='Поиск... например, HMG-50'
+        placeholder='Поиск...'
         className={styles.input}
         value={search}
         onChange={(e) => setSearch(e.target.value)}
