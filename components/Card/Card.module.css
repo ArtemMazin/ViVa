@@ -35,6 +35,7 @@
   padding: 10px;
   color: var(--color-main);
 }
+
 .description {
   text-align: center;
   transition: var(--transition);

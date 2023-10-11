@@ -32,6 +32,12 @@ export default function Delivery() {
             <strong>Наш склад:</strong> Московская область, Раменский городской округ, аэродром Мячково <br />
             <strong>График работы:</strong> ПН-ПТ 09:00 - 17:00
           </Ptag>
+          <a
+            href={'/download/sklad.doc'}
+            download={true}
+            className={styles.downloadLink}>
+            Скачать схему проезда на склад
+          </a>
         </li>
         <li>
           <Ptag tag='p'>

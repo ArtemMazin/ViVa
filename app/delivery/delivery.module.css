@@ -6,6 +6,12 @@
   list-style-type: none;
 }
 
+.downloadLink {
+  display: block;
+  margin-bottom: 20px;
+  color: var(--color-bg-blue);
+}
+
 .companies {
   list-style-type: none;
 }

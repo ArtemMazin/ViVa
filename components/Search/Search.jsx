@@ -20,6 +20,12 @@ const Search = ({ callback }) => {
     [searchParams]
   );
 
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter') {
+      goToSearch();
+    }
+  };
+
   const goToSearch = () => {
     router.push('/search' + '?' + createQueryString('filter', search));
     setSearch('');
@@ -34,6 +40,7 @@ const Search = ({ callback }) => {
         className={styles.input}
         value={search}
         onChange={(e) => setSearch(e.target.value)}
+        onKeyDown={handleKeyDown}
       />
       <button
         className={styles.button}
