@@ -1,5 +1,5 @@
 import React from 'react';
-import FilteredCards from './CardList/FilteredCards';
+import FilteredCards from './FilteredCards/FilteredCards';
 import BreadCrumbs from '@/components/BreadCrumbs/BreadCrumbs';
 import styles from './Search.module.css';
 import Htag from '@/components/Htag/Htag';

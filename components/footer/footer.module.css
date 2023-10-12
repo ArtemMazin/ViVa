@@ -1,3 +1,7 @@
+.footer {
+  margin-top: auto;
+}
+
 .contentContainer {
   background: var(--color-gradient);
 }
