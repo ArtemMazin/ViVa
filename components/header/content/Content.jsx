@@ -14,7 +14,9 @@ const Content = () => {
         alt='Товарный знак HMG'
         className={styles.logo}
       />
+
       <Search />
+
       <div className={styles.contacts}>
         <span>Отдел продаж:</span>
         <a
