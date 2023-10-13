@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
-import { flex, table, cell, image, section, scroll } from './hmg090.module.css';
+import { flex, table, cell, image, section, scroll } from './hmgT90.module.css';
 import Htag from '@/components/Htag/Htag';
 import Ptag from '@/components/Ptag/Ptag';
 import BreadCrumbs from '@/components/BreadCrumbs/BreadCrumbs';
@@ -9,7 +9,7 @@ const hmgFR = () => {
   return (
     <main className={`${section} container`}>
       <BreadCrumbs
-        currentLink='Подшипники HMG-090'
+        currentLink='Подшипники HMG-T90'
         links={[
           { href: 'https://vi-va.vercel.app/', name: 'Главнaя' },
           { href: 'https://vi-va.vercel.app/goods', name: 'Товары' },
@@ -18,26 +18,27 @@ const hmgFR = () => {
       />
       <section className={flex}>
         <Image
-          src='/image/pages/hmg090/hmg090.jpg'
+          src='/image/pages/hmgT90/hmgT90.jpg'
           width={600}
           height={450}
           sizes='(max-width: 520px) 45vw, (max-width: 768px) 50vw, (max-width: 1280px) 25vw, 40vw'
           priority={true}
-          alt='Подшипники HMG-090'
+          alt='Подшипники HMG-T90'
           className={image}
         />
         <div>
-          <Htag tag='h1'>HMG-090</Htag>
+          <Htag tag='h1'>HMG-T90</Htag>
           <Htag
             tag='h2'
             border='left'>
             Описание
           </Htag>
           <Ptag tag='p'>
-            Это тонкостенная свёртная втулка. Внутренняя насечка удерживает смазку для образования смазочной пленки во
-            время начальной обкатки. Внутренний диаметр втулки может быть обработан после сборки. Бронзовый сплав
-            обеспечивает хорошую коррозионную стойкость и теплопроводность. Он подходит для средних и низких нагрузок и
-            низких скоростей, поэтому рекомендуется периодически смазывать.
+            Это тонкостенная втулка с оберткой. Он подходит для экономичного решения, при этом требования к допускам не
+            являются критическими. Отложения алмазного масла удерживают смазку для образования смазочной пленки во время
+            начальной обкатки. Внутренний диаметр втулки может быть обработан после сборки. Бронзовый сплав обеспечивает
+            хорошую коррозионную стойкость и теплопроводность. Он подходит для средних и низких нагрузок и низких
+            скоростей; рекомендуется периодически смазывать легким маслом.
           </Ptag>
         </div>
       </section>
@@ -56,12 +57,12 @@ const hmgFR = () => {
         </div>
 
         <Image
-          src='/image/pages/hmg090/hmg090structure.png'
+          src='/image/pages/hmgT90/hmgT90structure.png'
           width={300}
           height={240}
           sizes='(max-width: 520px) 45vw, (max-width: 768px) 30vw, 20vw'
           priority={true}
-          alt='Структура материала HMG-090'
+          alt='Структура материала HMG-T90'
         />
       </section>
       <section>
@@ -82,7 +83,7 @@ const hmgFR = () => {
                 <td className={cell}>Zn %</td>
               </tr>
               <tr>
-                <td className={cell}>HMG-090</td>
+                <td className={cell}>HMG-T90</td>
                 <td className={cell}>91.3</td>
                 <td className={cell}>8.5</td>
                 <td className={cell}>0.2</td>

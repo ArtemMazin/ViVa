@@ -21,6 +21,7 @@
 .tel {
   display: block;
   color: var(--color-main-title);
+  text-wrap: nowrap;
 }
 
 .tel:hover {
