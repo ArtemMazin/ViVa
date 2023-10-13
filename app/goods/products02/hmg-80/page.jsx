@@ -82,7 +82,7 @@ const page = () => {
             <tbody>
               <tr>
                 <td
-                  rowspan='3'
+                  rowSpan='3'
                   style={{ width: '16%' }}
                   className={cell}>
                   <span style={{ width: '33%' }}>Макс. нагрузка</span>
@@ -98,12 +98,12 @@ const page = () => {
                   250 Н/мм<sup>2</sup>
                 </td>
                 <td
-                  rowspan='6'
+                  rowSpan='6'
                   className={cell}>
                   &nbsp;
                 </td>
                 <td
-                  colspan='2'
+                  colSpan='2'
                   style={{ width: '28%' }}
                   className={cell}>
                   <span style={{ width: '33%' }}>Коэффициент трения</span>
@@ -122,7 +122,7 @@ const page = () => {
                   140 Н/мм<sup>2</sup>
                 </td>
                 <td
-                  rowspan='2'
+                  rowSpan='2'
                   className={cell}>
                   Макс. скорость
                 </td>
@@ -145,7 +145,7 @@ const page = () => {
               </tr>
               <tr>
                 <td
-                  rowspan='2'
+                  rowSpan='2'
                   className={cell}>
                   <span style={{ width: '33%' }}>Макс. PV Режим без смазки</span>
                 </td>
@@ -156,7 +156,7 @@ const page = () => {
                   3.6 Н/мм<sup>2</sup>*м/с
                 </td>
                 <td
-                  colspan='2'
+                  colSpan='2'
                   className={cell}>
                   <span style={{ width: '33%' }}>Теплопроводность</span>
                 </td>
@@ -172,7 +172,7 @@ const page = () => {
                   1.8 Н/мм<sup>2</sup>*м/с
                 </td>
                 <td
-                  colspan='2'
+                  colSpan='2'
                   className={cell}>
                   <span style={{ width: '33%' }}>Коэффициент температурного расширения</span>
                 </td>
@@ -182,13 +182,13 @@ const page = () => {
               </tr>
               <tr>
                 <td
-                  colspan='2'
+                  colSpan='2'
                   className={cell}>
                   <span style={{ width: '33%' }}>Диапазон рабочих температур</span>
                 </td>
                 <td className={cell}>-150℃～+250℃</td>
                 <td
-                  colspan='2'
+                  colSpan='2'
                   className={cell}>
                   &nbsp;
                 </td>

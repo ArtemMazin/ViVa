@@ -118,7 +118,7 @@ const page = () => {
               </tr>
               <tr>
                 <td
-                  colspan='2'
+                  colSpan='2'
                   className={cell}>
                   Макс. скорость (со смазкой)
                 </td>
@@ -128,7 +128,7 @@ const page = () => {
               </tr>
               <tr>
                 <td
-                  colspan='2'
+                  colSpan='2'
                   className={cell}>
                   Макс. PV
                 </td>
@@ -142,7 +142,7 @@ const page = () => {
               </tr>
               <tr>
                 <td
-                  colspan='2'
+                  colSpan='2'
                   className={cell}>
                   Предел прочности
                 </td>
