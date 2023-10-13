@@ -1,5 +1,5 @@
 import React from 'react';
-import Products from '@/components/products/Products';
+import Products from '@/components/Products/Products';
 import { productList06 } from '@/utils/productLists';
 import { presentationImage } from '@/utils/constants';
 import BreadCrumbs from '@/components/BreadCrumbs/BreadCrumbs';

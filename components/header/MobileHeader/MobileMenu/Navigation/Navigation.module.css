@@ -1,0 +1,35 @@
+.list {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 0 30px;
+  border-left: 1px solid var(--color-bg-blue);
+  gap: 10px;
+  list-style-type: none;
+}
+
+.item {
+  display: flex;
+  width: 100%;
+  padding: 1px 0;
+  gap: 10px;
+}
+
+.active {
+  background: var(--color-bg-light);
+}
+
+.link {
+  padding: 8px 16px;
+  border-radius: 10px;
+  color: var(--color-main-title);
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -1px;
+  line-height: 120%;
+  text-decoration: none;
+}
+
+.link:visited {
+  color: var(--color-main-title);
+}

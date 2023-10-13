@@ -1,22 +1,21 @@
 import React from 'react';
-import { row, adress, email, mailImage, locationImage, flex, mailLink } from './adress.module.css';
-import Link from 'next/link';
+import styles from './Adress.module.css';
 
 const Adress = () => {
   return (
-    <div className={row}>
-      <div className={`${flex} container`}>
-        <div className={adress}>
-          <div className={locationImage}></div>
+    <div className={styles.row}>
+      <div className={`${styles.flex} container`}>
+        <div className={styles.adress}>
+          <div className={styles.locationImage}></div>
           <span>г.Москва, ул.Шарикоподшипниковская, д.1</span>
         </div>
-        <div className={email}>
-          <div className={mailImage}></div>
+        <div className={styles.email}>
+          <div className={styles.mailImage}></div>
           <a
             href='mailto:info@gidmash.ru'
             title='Написать письмо'
             rel='nofollow'
-            className={mailLink}>
+            className={styles.mailLink}>
             <span>info@gidmash.ru</span>
           </a>
         </div>

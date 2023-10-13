@@ -1,7 +1,7 @@
 import React from 'react';
 import { productList01 } from '@/utils/productLists';
 import { presentationImage } from '@/utils/constants';
-import Products from '@/components/products/Products';
+import Products from '@/components/Products/Products';
 import BreadCrumbs from '@/components/BreadCrumbs/BreadCrumbs';
 
 export const metadata = {

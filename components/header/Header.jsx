@@ -1,94 +1,26 @@
 'use client';
 
-import React, { useState } from 'react';
-import {
-  header,
-  head,
-  headerMobile,
-  buttonHamburger,
-  buttonHamburgerClose,
-  contacts,
-  tel,
-  telImage,
-  contactTel,
-  contactMail,
-  mailImage,
-  mailLink,
-} from './header.module.css';
-import Adress from './adress/Adress';
-import Content from './content/Content';
-import Navigation from './navigation/Navigation';
-import HideMenu from './hide-menu/HideMenu';
+import React from 'react';
+import styles from './Header.module.css';
+import Adress from './Adress/Adress';
+import Content from './Content/Content';
+import Navigation from './Navigation/Navigation';
 import useScreenWidth from '@/hooks/useScreenWidth';
-import Image from 'next/image';
-import Link from 'next/link';
+import MobileHeader from './MobileHeader/MobileHeader';
 
 const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   const { device } = useScreenWidth();
-
-  function toggleHideMenu() {
-    setIsMenuOpen(!isMenuOpen);
-  }
 
   return (
     <>
       {device === 'pc' || device === 'notebook' ? (
-        <header className={header}>
+        <header className={styles.wrapper}>
           <Adress />
           <Content />
           <Navigation />
         </header>
       ) : (
-        <header className={headerMobile}>
-          <div className={head}>
-            <Image
-              src='/image/logo-black.svg'
-              width={80}
-              height={32}
-              priority={true}
-              alt='Товарный знак HMG'></Image>
-            <div className={contacts}>
-              <div className={contactTel}>
-                <div className={telImage}></div>
-                <a
-                  href='tel:+74959260774'
-                  title='Позвонить'
-                  rel='nofollow'
-                  className={tel}>
-                  +7 (495) 926-07-74
-                </a>
-              </div>
-
-              <div className={contactMail}>
-                <div className={mailImage}></div>
-                <a
-                  href='mailto:info@gidmash.ru'
-                  title='Написать письмо'
-                  rel='nofollow'
-                  className={mailLink}>
-                  <span>info@gidmash.ru</span>
-                </a>
-              </div>
-            </div>
-            {isMenuOpen ? (
-              <button
-                className={buttonHamburgerClose}
-                onClick={toggleHideMenu}
-              />
-            ) : (
-              <button
-                className={buttonHamburger}
-                onClick={toggleHideMenu}
-              />
-            )}
-          </div>
-          <HideMenu
-            toggleHideMenu={toggleHideMenu}
-            isMenuOpen={isMenuOpen}
-          />
-        </header>
+        <MobileHeader />
       )}
     </>
   );
