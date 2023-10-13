@@ -10,6 +10,7 @@
 }
 
 .contacts {
+  min-width: 155px;
   color: var(--color-main-title);
   font-size: 15px;
   font-weight: 600;
@@ -21,7 +22,6 @@
 .tel {
   display: block;
   color: var(--color-main-title);
-  text-wrap: nowrap;
 }
 
 .tel:hover {
