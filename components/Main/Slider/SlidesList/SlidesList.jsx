@@ -1,5 +1,5 @@
 import React from 'react';
-import { slideList, item, slideImage, likeImage } from './slides-list.module.css';
+import { slideList, item, slideImage, likeImage } from './SlidesList.module.css';
 import Image from 'next/image';
 import { sliderImages } from '@/utils/constants';
 
