@@ -1,5 +1,5 @@
 import React from 'react';
-import { dot, selected } from './dot.module.css';
+import { dot, selected } from './Dot.module.css';
 
 const Dot = ({ goToSlide, slideNumber, number }) => {
   return (

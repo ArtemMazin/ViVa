@@ -1,10 +1,10 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import { slider } from './slider.module.css';
-import SlidesList from './slidesList/SlidesList';
+import { slider } from './Slider.module.css';
+import SlidesList from './SlidesList/SlidesList';
 import { sliderImages } from '@/utils/constants';
-import Dots from './dots/Dots';
+import Dots from './Dots/Dots';
 
 const Slider = () => {
   const [items, setItems] = useState([]);

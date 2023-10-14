@@ -1,6 +1,6 @@
 import React from 'react';
-import Dot from './dot/Dot';
-import { dotsWrapper, dots } from './dots.module.css';
+import Dot from './Dot/Dot';
+import { dotsWrapper, dots } from './Dots.module.css';
 
 const Dots = ({ slidesCount, goToSlide, slideNumber }) => {
   const renderDots = () => {

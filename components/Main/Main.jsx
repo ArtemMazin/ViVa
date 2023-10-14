@@ -1,6 +1,6 @@
 import React from 'react';
-import Slider from './slider/Slider';
-import Presentation from './presentation/Presentation';
+import Slider from './Slider/Slider';
+import Presentation from './Presentation/Presentation';
 
 const Main = () => {
   return (

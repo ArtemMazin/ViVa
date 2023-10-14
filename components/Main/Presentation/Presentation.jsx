@@ -1,5 +1,5 @@
 import React from 'react';
-import { presentation } from './presentation.module.css';
+import { presentation } from './Presentation.module.css';
 import { presentationImage } from '@/utils/constants';
 import Htag from '@/components/Htag/Htag';
 import CardList from '@/components/CardList/CardList';
