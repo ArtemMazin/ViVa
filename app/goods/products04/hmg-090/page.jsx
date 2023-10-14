@@ -13,7 +13,7 @@ const hmgFR = () => {
         links={[
           { href: 'https://vi-va.vercel.app/', name: 'Главнaя' },
           { href: 'https://vi-va.vercel.app/goods', name: 'Товары' },
-          { href: 'https://vi-va.vercel.app/goods/products01', name: 'Металлополимерные самосмазывающиеся подшипники' },
+          { href: 'https://vi-va.vercel.app/goods/products04', name: 'Биметаллические подшипники, требующие смазки' },
         ]}
       />
       <section className={flex}>
@@ -115,7 +115,9 @@ const hmgFR = () => {
                 <td
                   style={{ width: '16%' }}
                   className={cell}>
-                  <span style={{ width: '16%' }}>120 Н/мм</span>
+                  <span style={{ width: '16%' }}>
+                    120 Н/мм<sup>2</sup>
+                  </span>
                 </td>
                 <td
                   rowSpan='6'
@@ -136,7 +138,9 @@ const hmgFR = () => {
               <tr>
                 <td className={cell}>Динамический режим</td>
                 <td className={cell}>
-                  <span style={{ width: '16%' }}>40 Н/мм</span>
+                  <span style={{ width: '16%' }}>
+                    40 Н/мм<sup>2</sup>
+                  </span>
                 </td>
                 <td className={cell}>Диапазон рабочих температур</td>
                 <td className={cell}>-100℃~+200℃</td>
