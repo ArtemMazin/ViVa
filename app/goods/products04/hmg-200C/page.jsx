@@ -126,7 +126,7 @@ const page = () => {
                 <td className={cell}>0.1~0.25</td>
               </tr>
               <tr>
-                <td className={cell}>Max. PV</td>
+                <td className={cell}>Макс. PV</td>
                 <td className={cell}>Со смазкой</td>
                 <td className={cell}>
                   1.5 Н/мм<sup>2</sup>*м/с

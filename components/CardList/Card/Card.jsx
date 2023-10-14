@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import Htag from '../Htag/Htag';
+import Htag from '../../Htag/Htag';
 import styles from './Card.module.css';
 
 const Card = ({ href, img, name }) => {
