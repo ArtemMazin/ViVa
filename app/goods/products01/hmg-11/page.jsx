@@ -5,7 +5,7 @@ import Htag from '@/components/Htag/Htag';
 import Ptag from '@/components/Ptag/Ptag';
 import BreadCrumbs from '@/components/BreadCrumbs/BreadCrumbs';
 
-const hmg11 = () => {
+const page = () => {
   return (
     <main className={`${section} container`}>
       <BreadCrumbs
@@ -211,4 +211,4 @@ const hmg11 = () => {
   );
 };
 
-export default hmg11;
+export default page;
