@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from './MobileMenu.module.css';
 import Image from 'next/image';
-import Search from '@/components/Search/Search';
 import Navigation from './Navigation/Navigation';
 
 const MobileMenu = ({ toggleHideMenu, isMenuOpen }) => {
@@ -17,7 +16,6 @@ const MobileMenu = ({ toggleHideMenu, isMenuOpen }) => {
             alt='Товарный знак HMG'
             className={styles.logo}
           />
-          <Search callback={toggleHideMenu} />
         </div>
         <Navigation toggleHideMenu={toggleHideMenu} />
       </div>

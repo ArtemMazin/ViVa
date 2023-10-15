@@ -4,7 +4,7 @@ import React, { useCallback, useState } from 'react';
 import styles from './Search.module.css';
 import { useRouter, useSearchParams } from 'next/navigation';
 
-const Search = ({ callback }) => {
+const Search = () => {
   const [search, setSearch] = useState('');
 
   const router = useRouter();
@@ -29,7 +29,6 @@ const Search = ({ callback }) => {
   const goToSearch = () => {
     router.push('/search' + '?' + createQueryString('filter', search));
     setSearch('');
-    callback && callback();
   };
 
   return (

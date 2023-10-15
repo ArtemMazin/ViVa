@@ -6,16 +6,19 @@ import Htag from '@/components/Htag/Htag';
 
 const page = () => {
   return (
-    <main className={`container ${styles.search}`}>
-      <BreadCrumbs
-        currentLink='Поиск подшипников'
-        links={[{ href: 'https://vi-va.vercel.app/', name: 'Главнaя' }]}
-      />
-      <Htag
-        tag='h1'
-        border='left'>
-        Поиск подшипников
-      </Htag>
+    <main>
+      <div className='container'>
+        <BreadCrumbs
+          currentLink='Поиск подшипников'
+          links={[{ href: 'https://vi-va.vercel.app/', name: 'Главнaя' }]}
+        />
+
+        <Htag
+          tag='h1'
+          border='left'>
+          Поиск подшипников
+        </Htag>
+      </div>
       <FilteredCards />
     </main>
   );

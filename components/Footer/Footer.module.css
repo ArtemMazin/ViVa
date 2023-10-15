@@ -74,18 +74,17 @@
 .side {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   gap: 5px;
   list-style-type: none;
 }
 
 .item {
+  min-width: 400px;
+  max-width: 510px;
   margin: 0 10px;
 }
 
 .link {
-  display: block;
-  min-width: 400px;
   color: var(--color-gray-text);
   font-size: 14px;
   font-weight: 500;

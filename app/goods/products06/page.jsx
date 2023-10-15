@@ -17,6 +17,7 @@ const products06 = () => {
   return (
     <main>
       <BreadCrumbs
+        className={'container'}
         currentLink={title}
         links={[
           { href: 'https://vi-va.vercel.app/', name: 'Главнaя' },

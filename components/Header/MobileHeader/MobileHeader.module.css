@@ -21,6 +21,7 @@
   z-index: 99;
   width: 32px;
   height: 32px;
+  flex-shrink: 0;
   padding: 0;
   border: none;
   cursor: pointer;
@@ -54,6 +55,10 @@
   display: flex;
   align-items: center;
   gap: 4px;
+}
+
+.logo {
+  flex-shrink: 0;
 }
 
 @media (width <= 560px) {

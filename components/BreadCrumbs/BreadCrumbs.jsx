@@ -1,10 +1,11 @@
 import Link from 'next/link';
 import React from 'react';
 import styles from './BreadCrumbs.module.css';
+import cn from 'classnames';
 
-const BreadCrumbs = ({ currentLink, links }) => {
+const BreadCrumbs = ({ currentLink, links, className }) => {
   return (
-    <ul className={`${styles.crumbs} container`}>
+    <ul className={cn(styles.crumbs, className)}>
       {links.map((link) => {
         return (
           <li key={link.name}>
