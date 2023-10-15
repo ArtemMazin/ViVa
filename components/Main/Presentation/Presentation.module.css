@@ -7,7 +7,7 @@
   text-align: center;
 }
 
-@media (width <= 670px) {
+@media (width <= 768px) {
   .presentation {
     padding: 0;
     margin: 0;

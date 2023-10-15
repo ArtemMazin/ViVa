@@ -12,7 +12,7 @@ const Card = ({ href, img, name }) => {
       <Image
         src={img}
         fill
-        sizes='(max-width: 520px) 30vw, (max-width: 768px) 50vw, 100vw'
+        sizes='(max-width: 730px) 60vw, (max-width: 1280px) 30vw, 100vw'
         alt={name}
         priority={true}
         className={styles.image}

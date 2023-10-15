@@ -18,7 +18,7 @@ const Products = ({ titleProducts, descriptionProducts, productsImage, productLi
           className={styles.image}
         />
       </div>
-      <div>
+      <div className='container'>
         <Htag
           tag='h1'
           border='left'>

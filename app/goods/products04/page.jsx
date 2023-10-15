@@ -5,8 +5,8 @@ import Products from '@/components/Products/Products';
 import BreadCrumbs from '@/components/BreadCrumbs/BreadCrumbs';
 
 export const metadata = {
-  title: 'Биметаллические подшипники, требующие смазки',
-  description: 'Биметаллические подшипники ООО "ВиВа Групп", требующие смазки',
+  title: 'Металлические подшипники, требующие смазки',
+  description: 'Металлические подшипники ООО "ВиВа Групп", требующие смазки',
 };
 
 const products04 = () => {
@@ -15,7 +15,7 @@ const products04 = () => {
   const image = `/image/products04/pro04.jpg`;
 
   return (
-    <main className='container'>
+    <main>
       <BreadCrumbs
         currentLink={title}
         links={[

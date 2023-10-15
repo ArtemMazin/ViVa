@@ -15,7 +15,7 @@ const products03 = () => {
   const image = `/image/products03/pro03.jpg`;
 
   return (
-    <main className='container'>
+    <main>
       <BreadCrumbs
         currentLink={title}
         links={[

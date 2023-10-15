@@ -35,7 +35,7 @@ export default function Goods() {
                   <Image
                     src={img}
                     fill
-                    sizes='(max-width: 520px) 30vw, (max-width: 768px) 50vw, 100vw'
+                    sizes='(max-width: 520px) 60vw, (max-width: 768px) 30vw, (max-width: 1280px) 40vw, 100vw'
                     alt={name}
                     className={image}
                     priority={true}

@@ -4,7 +4,7 @@ import styles from './BreadCrumbs.module.css';
 
 const BreadCrumbs = ({ currentLink, links }) => {
   return (
-    <ul className={styles.crumbs}>
+    <ul className={`${styles.crumbs} container`}>
       {links.map((link) => {
         return (
           <li key={link.name}>

@@ -70,16 +70,6 @@ const productList04 = [
     img: '/image/products04/hmg-600.jpg',
     href: '/goods/products04/hmg-600',
   },
-  {
-    name: 'Подшипники HMG-200C',
-    img: '/image/products04/hmg-200C.jpg',
-    href: '/goods/products04/hmg-200C',
-  },
-  {
-    name: 'Подшипники HMG-260',
-    img: '/image/products04/hmg-260.jpg',
-    href: '/goods/products04/hmg-260',
-  },
 ];
 const productList05 = [
   {
@@ -95,49 +85,17 @@ const productList05 = [
 ];
 const productList06 = [
   {
-    name: '',
-    img: '/image/products05/hmg-FWB.jpg',
-    href: '/goods/products05/hmg-FWB',
-  },
-];
-const productList07 = [
-  {
     name: 'Подшипники HMG-200C',
-    img: '/image/products07/hmg-200C.jpg',
-    href: '/goods/products07/hmg-200C',
+    img: '/image/products06/hmg-200C.jpg',
+    href: '/goods/products06/hmg-200C',
   },
   {
     name: 'Подшипники HMG-260',
-    img: '/image/products07/hmg-260.jpg',
-    href: '/goods/products07/hmg-260',
-  },
-];
-const productList08 = [
-  {
-    name: '',
-    img: '/image/products07/hmg-260.jpg',
-    href: '/goods/products07/hmg-260',
+    img: '/image/products06/hmg-260.jpg',
+    href: '/goods/products06/hmg-260',
   },
 ];
 
-const allProducts = productList01.concat(
-  productList02,
-  productList03,
-  productList04,
-  productList05,
-  productList06,
-  productList07,
-  productList08
-);
+const allProducts = productList01.concat(productList02, productList03, productList04, productList05, productList06);
 
-export {
-  productList01,
-  productList02,
-  productList03,
-  productList04,
-  productList05,
-  productList06,
-  productList07,
-  productList08,
-  allProducts,
-};
+export { productList01, productList02, productList03, productList04, productList05, productList06, allProducts };
