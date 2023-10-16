@@ -1,5 +1,6 @@
 import { contacts, contactList, contact, mailLink, tel, downloadLink } from './contacts.module.css';
 import BreadCrumbs from '@/components/BreadCrumbs/BreadCrumbs';
+import ContactForm from '@/components/ContactForm/ContactForm';
 import Htag from '@/components/Htag/Htag';
 
 export const metadata = {
@@ -19,6 +20,7 @@ export default function Contacts() {
         border='left'>
         Контакты
       </Htag>
+      <ContactForm />
       <ul className={contactList}>
         <li>
           <span>ООО «ВиВа Групп»</span>

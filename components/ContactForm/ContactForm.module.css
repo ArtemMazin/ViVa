@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.form {
+  display: flex;
+  width: 50rem;
+  flex-direction: column;
+}
+
+.inputField {
+  padding: 5px 7px;
+  margin: 10px 0;
+}
+
+.button {
+  padding: 10px 0;
+  cursor: pointer;
+}
