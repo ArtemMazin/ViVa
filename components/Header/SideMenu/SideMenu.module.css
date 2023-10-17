@@ -3,7 +3,7 @@
   top: 30px;
   left: 0;
   display: flex;
-  width: 150%;
+  width: 100%;
   flex-direction: column;
   padding: 15px 0;
   background: var(--color-gradient);

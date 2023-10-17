@@ -19,8 +19,8 @@ export async function POST(request) {
       to: 'starrail.honkai@yandex.ru',
       subject: `Сообщение от ${name}`,
       html: `
-        <p><strong>Email: </strong> ${email}</p><br>
-        <p><strong>Message: </strong> ${message}</p><br>
+        <p><strong>Email: </strong> ${email}</p>
+        <p><strong>Message: </strong> ${message}</p>
       `,
     });
   } catch (error) {

@@ -45,7 +45,7 @@ export default function ContactForm() {
 
         setForm({
           state: 'success',
-          message: 'Your message was sent successfully.',
+          message: 'Заявка отправлена',
         });
         setInputs({
           name: '',
@@ -55,7 +55,7 @@ export default function ContactForm() {
       } catch (error) {
         setForm({
           state: 'error',
-          message: 'Something went wrong',
+          message: 'Что-то пошло не так...',
         });
       }
     }
@@ -71,7 +71,7 @@ export default function ContactForm() {
           value={inputs.name}
           onChange={handleChange}
           className={styles.inputField}
-          placeholder='Name'
+          placeholder='Ваше имя'
           required
         />
         <input
@@ -80,7 +80,7 @@ export default function ContactForm() {
           value={inputs.email}
           onChange={handleChange}
           className={styles.inputField}
-          placeholder='Email'
+          placeholder='Ваш e-mail'
           required
         />
         <textarea
@@ -89,7 +89,7 @@ export default function ContactForm() {
           value={inputs.message}
           onChange={handleChange}
           className={styles.inputField}
-          placeholder='Message'
+          placeholder='Введите сообщение'
           rows='5'
           required
         />
@@ -102,7 +102,7 @@ export default function ContactForm() {
         ) : form.state === 'error' ? (
           <div>{form.message}</div>
         ) : (
-          form.state === 'success' && <div>Sent successfully</div>
+          form.state === 'success' && <div>Заявка отправлена</div>
         )}
       </form>
     </div>

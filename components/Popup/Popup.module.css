@@ -1,0 +1,62 @@
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  min-height: 100%;
+  align-items: center;
+  justify-content: center;
+  background: rgb(0 0 0 / 50%);
+  opacity: 0;
+  transition: all var(--transition);
+  visibility: hidden;
+}
+
+.opened {
+  z-index: 99;
+  opacity: 1;
+  visibility: visible;
+}
+
+.button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 32px;
+  height: 32px;
+  box-sizing: border-box;
+  padding: 0;
+  border: none;
+  background: url('../../public/image/burger-close.svg') no-repeat center;
+  background-size: cover;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.button:hover {
+  opacity: 0.6;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 430px;
+  padding: 35px;
+  margin: 0 19px;
+  background: #fff;
+  box-shadow: 0 0 25px rgb(0 0 0 / 15%);
+}
+
+@media (width <= 526px) {
+  .button {
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+  }
+
+  .container {
+    padding: 25px 22px;
+  }
+}

@@ -1,9 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './Content.module.css';
 import Image from 'next/image';
 import Search from '@/components/Search/Search';
+import Popup from '@/components/Popup/Popup';
+import ContactForm from '@/components/ContactForm/ContactForm';
 
 const Content = () => {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+  function openPopup() {
+    setIsPopupOpen(true);
+  }
+  function closePopup() {
+    setIsPopupOpen(false);
+  }
+
   return (
     <div className={`${styles.flex} container`}>
       <Image
@@ -16,6 +27,14 @@ const Content = () => {
       />
 
       <Search />
+
+      <button onClick={openPopup}>Оставить заявку</button>
+
+      <Popup
+        isOpen={isPopupOpen}
+        onClose={closePopup}>
+        <ContactForm />
+      </Popup>
 
       <div className={styles.contacts}>
         <span>Отдел продаж:</span>

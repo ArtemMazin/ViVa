@@ -12,6 +12,7 @@
 .inputField {
   padding: 5px 7px;
   margin: 10px 0;
+  resize: none;
 }
 
 .button {
