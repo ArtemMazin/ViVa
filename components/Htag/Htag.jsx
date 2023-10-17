@@ -10,7 +10,8 @@ const Htag = ({ tag, border, children, className, ...props }) => {
           className={cn(styles.h1, className, {
             [styles.borderLeft]: border === 'left',
             [styles.borderDown]: border === 'down',
-          })}>
+          })}
+          {...props}>
           {children}
         </h1>
       );

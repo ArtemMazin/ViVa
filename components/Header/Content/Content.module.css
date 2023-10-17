@@ -5,15 +5,11 @@
   gap: 28px;
 }
 
-.logo {
-  flex-shrink: 0;
-}
-
 .contacts {
   min-width: 155px;
   color: var(--color-main-title);
   font-size: 15px;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 24px;
   text-align: right;
   text-wrap: nowrap;

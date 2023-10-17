@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import styles from './ContactForm.module.css';
+import Button from '../Button/Button';
 
 export default function ContactForm() {
   const [inputs, setInputs] = useState({
@@ -93,10 +94,13 @@ export default function ContactForm() {
           rows='5'
           required
         />
-        <input
+
+        <Button
           type='submit'
-          className={styles.button}
-        />
+          size='l'>
+          <span>Отправить</span>
+        </Button>
+
         {form.state === 'loading' ? (
           <div>Отправка....</div>
         ) : form.state === 'error' ? (

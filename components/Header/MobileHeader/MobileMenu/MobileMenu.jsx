@@ -1,22 +1,16 @@
 import React from 'react';
 import styles from './MobileMenu.module.css';
-import Image from 'next/image';
 import Navigation from './Navigation/Navigation';
+import Logo from '@/components/Logo/Logo';
 
 const MobileMenu = ({ toggleHideMenu, isMenuOpen }) => {
   return (
     <div className={`${styles.wrapper} ${isMenuOpen && styles.visible}`}>
       <div className={styles.container}>
         <div className={styles.header}>
-          <Image
-            src='/image/logo-black.svg'
-            width={80}
-            height={32}
-            priority={true}
-            alt='Товарный знак HMG'
-            className={styles.logo}
-          />
+          <Logo src='/image/logo-black.svg' />
         </div>
+
         <Navigation toggleHideMenu={toggleHideMenu} />
       </div>
     </div>

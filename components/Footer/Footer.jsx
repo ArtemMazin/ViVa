@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './Footer.module.css';
-import Image from 'next/image';
 import Link from 'next/link';
 import { presentationImage } from '@/utils/constants';
+import Logo from '../Logo/Logo';
 
 const Footer = () => {
   return (
@@ -19,14 +19,7 @@ const Footer = () => {
       <div className={styles.contentContainer}>
         <div className={`${styles.content} container`}>
           <div className={styles.copy}>
-            <Image
-              src='/image/logo-white.svg'
-              width={100}
-              height={40}
-              priority={true}
-              alt='Товарный знак HMG'
-              className={styles.logo}
-            />
+            <Logo src='/image/logo-white.svg' />
             <span>&#169; ООО «ВиВа Групп» 2023</span>
           </div>
 

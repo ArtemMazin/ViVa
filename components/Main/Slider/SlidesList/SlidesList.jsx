@@ -15,7 +15,7 @@ const SlidesList = ({ slideNumber }) => {
           <Image
             src={img}
             fill
-            sizes='(max-width: 520px) 30vw, (max-width: 768px) 50vw, 100vw'
+            sizes='(max-width: 520px) 60vw, (max-width: 920px) 75vw, 100vw'
             alt=''
             priority={true}
             className={slideImage}

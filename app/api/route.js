@@ -8,8 +8,8 @@ export async function POST(request) {
     port: 465,
     secure: true,
     auth: {
-      user: 'starrail.honkai@yandex.ru',
-      pass: 'trhvrguhnhgxvuhx',
+      user: process.env.SMTP_USER,
+      pass: process.env.SMTP_PASSWORD,
     },
   });
 
