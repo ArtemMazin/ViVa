@@ -65,35 +65,42 @@ export default function ContactForm() {
     <div className={styles.container}>
       <form
         className={styles.form}
+        method='POST'
         onSubmit={(e) => onSubmitForm(e)}>
-        <input
-          id='name'
-          type='text'
-          value={inputs.name}
-          onChange={handleChange}
-          className={styles.inputField}
-          placeholder='Ваше имя'
-          required
-        />
-        <input
-          id='email'
-          type='email'
-          value={inputs.email}
-          onChange={handleChange}
-          className={styles.inputField}
-          placeholder='Ваш e-mail'
-          required
-        />
-        <textarea
-          id='message'
-          type='text'
-          value={inputs.message}
-          onChange={handleChange}
-          className={styles.inputField}
-          placeholder='Введите сообщение'
-          rows='5'
-          required
-        />
+        <label className={styles.label}>
+          Ваше имя:
+          <input
+            id='name'
+            type='text'
+            value={inputs.name}
+            onChange={handleChange}
+            className={styles.inputField}
+            required
+          />
+        </label>
+        <label className={styles.label}>
+          Ваша почта:
+          <input
+            id='email'
+            type='email'
+            value={inputs.email}
+            onChange={handleChange}
+            className={styles.inputField}
+            required
+          />
+        </label>
+        <label className={styles.label}>
+          Введите сообщение:
+          <textarea
+            id='message'
+            type='text'
+            value={inputs.message}
+            onChange={handleChange}
+            className={styles.inputField}
+            rows='5'
+            required
+          />
+        </label>
 
         <Button
           type='submit'
