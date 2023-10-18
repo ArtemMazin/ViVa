@@ -8,8 +8,8 @@ export async function POST(request) {
     port: 465,
     secure: true,
     auth: {
-      user: process.env.SMTP_USER,
-      pass: process.env.SMTP_PASSWORD,
+      user: process.env.USER_EMAIL,
+      pass: process.env.USER_PASS,
     },
   });
 
@@ -25,8 +25,6 @@ export async function POST(request) {
     });
   } catch (error) {
     return Response.json({ error: error.message || error.toString() });
-    // return res.status(500).json({ error: error.message || error.toString() });
   }
   return Response.json({ error: '' });
-  // return res.status(200).json({ error: '' });
 }
