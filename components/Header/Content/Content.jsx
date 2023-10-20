@@ -22,12 +22,6 @@ const Content = () => {
 
       <Search />
 
-      <Button
-        type='button'
-        onClick={openPopup}>
-        <span>Оставить заявку</span>
-      </Button>
-
       <div className={styles.contacts}>
         <span>Отдел продаж:</span>
         <a
@@ -38,6 +32,12 @@ const Content = () => {
           +7 (495) 926-07-74
         </a>
       </div>
+
+      <Button
+        type='button'
+        onClick={openPopup}>
+        <span>Оставить заявку</span>
+      </Button>
 
       <Popup
         isOpen={isPopupOpen}

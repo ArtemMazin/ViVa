@@ -13,7 +13,10 @@ const page = () => {
         links={[
           { href: 'https://vi-va.vercel.app/', name: 'Главнaя' },
           { href: 'https://vi-va.vercel.app/goods', name: 'Товары' },
-          { href: 'https://vi-va.vercel.app/goods/products04', name: 'Биметаллические подшипники, требующие смазки' },
+          {
+            href: 'https://vi-va.vercel.app/goods/products06',
+            name: 'Высокопроизводительные стальные самосмазывающиеся подшипники',
+          },
         ]}
       />
       <section className={flex}>

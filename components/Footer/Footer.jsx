@@ -3,7 +3,6 @@ import styles from './Footer.module.css';
 import Link from 'next/link';
 import { presentationImage } from '@/utils/constants';
 import Logo from '../Logo/Logo';
-import Script from 'next/script';
 
 const Footer = () => {
   return (

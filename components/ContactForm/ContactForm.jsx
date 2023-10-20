@@ -67,6 +67,10 @@ export default function ContactForm() {
         className={styles.form}
         method='POST'
         onSubmit={(e) => onSubmitForm(e)}>
+        <span className={styles.title}>ОСТАВИТЬ ЗАЯВКУ</span>
+        <span className={styles.subtitle}>
+          Оставьте свои контактные данные, и мы свяжемся с вами в ближайшее время.
+        </span>
         <label className={styles.label}>
           Ваше имя:
           <input

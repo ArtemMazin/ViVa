@@ -16,6 +16,7 @@
 
 .copy {
   display: flex;
+  min-width: 190px;
   flex-direction: column;
   justify-content: space-between;
   color: var(--color-gray-text);
@@ -94,6 +95,7 @@
 
 .contacts {
   display: flex;
+  min-width: 145px;
   flex-flow: column wrap;
   color: var(--color-gray-text);
   font-size: 14px;

@@ -17,10 +17,26 @@
   color: var(--color-main-text);
 }
 
+.title {
+  margin: 0 0 5px;
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: -1.5px;
+  line-height: 42px;
+}
+
+.subtitle {
+  margin: 0 0 10px;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: -0.5px;
+  line-height: 18px;
+}
+
 .inputField {
   padding: 7px;
   border: 1px solid var(--color-gray-text);
-  margin: 10px 0;
+  margin: 5px 0;
   resize: none;
 }
 
@@ -33,6 +49,7 @@
   display: flex;
   flex-direction: column;
   margin: 0 0 20px;
+  font-size: 18px;
 }
 
 @media (width <= 440px) {

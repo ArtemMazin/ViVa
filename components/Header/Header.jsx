@@ -7,12 +7,21 @@ import Content from './Content/Content';
 import Navigation from './Navigation/Navigation';
 import useScreenWidth from '@/hooks/useScreenWidth';
 import MobileHeader from './MobileHeader/MobileHeader';
+import { Suspense } from 'react';
+
+function FakeHeader() {
+  return (
+    <>
+      <Adress />
+    </>
+  );
+}
 
 const Header = () => {
   const { device } = useScreenWidth();
 
   return (
-    <>
+    <Suspense fallback={<FakeHeader />}>
       {device === 'pc' || device === 'notebook' ? (
         <header className={styles.wrapper}>
           <Adress />
@@ -22,7 +31,7 @@ const Header = () => {
       ) : (
         <MobileHeader />
       )}
-    </>
+    </Suspense>
   );
 };
 
