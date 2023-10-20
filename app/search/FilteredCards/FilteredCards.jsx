@@ -2,22 +2,17 @@
 
 import CardList from '@/components/CardList/CardList';
 import Htag from '@/components/Htag/Htag';
-import { allProducts } from '@/utils/productLists';
 import { useSearchParams } from 'next/navigation';
 import styles from './FilteredCards.module.css';
 import React from 'react';
+import { filterCards } from '@/services/filterService';
 
 const FilteredCards = () => {
   const searchParams = useSearchParams();
 
   const search = searchParams.get('filter');
 
-  const filteredCards = Array.from(allProducts).filter((item) => {
-    if (!search) {
-      return;
-    }
-    return item.name.toLowerCase().trim().includes(search.toLowerCase().trim());
-  });
+  const filteredCards = filterCards(search);
 
   return (
     <>

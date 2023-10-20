@@ -50,7 +50,7 @@
 .mapContainer::after {
   position: absolute;
   z-index: 5;
-  top: calc(50% - 16px);
+  top: calc(70% - 16px);
   left: calc(50% - 16px);
   width: 32px;
   height: 32px;
