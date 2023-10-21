@@ -8,19 +8,20 @@ export default function ContactForm() {
   const [inputs, setInputs] = useState({
     name: '',
     email: '',
+    tel: '',
     message: '',
   });
 
   const [form, setForm] = useState('');
 
-  const handleChange = (e) => {
-    setInputs((prev) => ({
+  const handleChange = e => {
+    setInputs(prev => ({
       ...prev,
       [e.target.id]: e.target.value,
     }));
   };
 
-  const onSubmitForm = async (e) => {
+  const onSubmitForm = async e => {
     e.preventDefault();
 
     if (inputs.name && inputs.email && inputs.message) {
@@ -51,6 +52,7 @@ export default function ContactForm() {
         setInputs({
           name: '',
           email: '',
+          tel: '',
           message: '',
         });
       } catch (error) {
@@ -65,17 +67,19 @@ export default function ContactForm() {
     <div className={styles.container}>
       <form
         className={styles.form}
-        method='POST'
-        onSubmit={(e) => onSubmitForm(e)}>
+        method="POST"
+        onSubmit={e => onSubmitForm(e)}
+      >
         <span className={styles.title}>ОСТАВИТЬ ЗАЯВКУ</span>
         <span className={styles.subtitle}>
-          Оставьте свои контактные данные, и мы свяжемся с вами в ближайшее время.
+          Оставьте свои контактные данные, и мы свяжемся с вами в ближайшее
+          время.
         </span>
         <label className={styles.label}>
           Ваше имя:
           <input
-            id='name'
-            type='text'
+            id="name"
+            type="text"
             value={inputs.name}
             onChange={handleChange}
             className={styles.inputField}
@@ -85,9 +89,20 @@ export default function ContactForm() {
         <label className={styles.label}>
           Ваша почта:
           <input
-            id='email'
-            type='email'
+            id="email"
+            type="email"
             value={inputs.email}
+            onChange={handleChange}
+            className={styles.inputField}
+            required
+          />
+        </label>
+        <label className={styles.label}>
+          Ваш телефон:
+          <input
+            id="tel"
+            type="tel"
+            value={inputs.tel}
             onChange={handleChange}
             className={styles.inputField}
             required
@@ -96,19 +111,17 @@ export default function ContactForm() {
         <label className={styles.label}>
           Введите сообщение:
           <textarea
-            id='message'
-            type='text'
+            id="message"
+            type="text"
             value={inputs.message}
             onChange={handleChange}
             className={styles.inputField}
-            rows='5'
+            rows="5"
             required
           />
         </label>
 
-        <Button
-          type='submit'
-          size='l'>
+        <Button type="submit" size="l">
           <span>Отправить</span>
         </Button>
 

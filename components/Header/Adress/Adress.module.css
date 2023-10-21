@@ -20,22 +20,10 @@
   gap: 4px;
 }
 
-.mailImage {
-  width: 16px;
-  height: 16px;
-  background: url("../../../public/image/mail.svg");
-}
-
 .mailLink {
   color: var(--color-main-text);
 }
 
 .mailLink:hover {
   text-decoration: none;
-}
-
-.locationImage {
-  width: 16px;
-  height: 16px;
-  background: url("../../../public/image/location.svg");
 }

@@ -1,7 +1,7 @@
 .form {
   position: relative;
   width: 100%;
-  margin: 0 10px 0 0;
+  margin: 0 15px 0 0;
 }
 
 .input {
@@ -19,6 +19,11 @@
   color: var(--color-input-text);
 }
 
+.input::-webkit-search-cancel-button {
+  appearance: none;
+  appearance: none;
+}
+
 .button {
   position: absolute;
   top: 0;
@@ -26,6 +31,14 @@
   width: 30px;
   height: 30px;
   border: none;
-  background: url('../../public/image/search.svg');
   cursor: pointer;
+}
+
+.icon {
+  background-color: var(--color-bg-input);
+  transition: var(--transition);
+}
+
+.icon:hover {
+  fill: var(--color-bg-blue);
 }

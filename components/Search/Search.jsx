@@ -3,6 +3,7 @@
 import React, { useCallback, useState } from 'react';
 import styles from './Search.module.css';
 import { useRouter, useSearchParams } from 'next/navigation';
+import Icon from '../../public/image/search.svg';
 
 const Search = () => {
   const [search, setSearch] = useState('');
@@ -17,34 +18,35 @@ const Search = () => {
 
       return params.toString();
     },
-    [searchParams]
+    [searchParams],
   );
 
-  const handleKeyDown = (e) => {
+  const handleKeyDown = e => {
     if (e.key === 'Enter') {
-      goToSearch();
+      goToSearch(e);
     }
   };
 
-  const goToSearch = () => {
+  const goToSearch = e => {
+    e.preventDefault();
     router.push('/search' + '?' + createQueryString('filter', search));
     setSearch('');
   };
 
   return (
-    <div className={styles.form}>
+    <form className={styles.form} onSubmit={goToSearch}>
       <input
-        type='text'
-        placeholder='Поиск...'
+        type="search"
+        placeholder="Поиск..."
         className={styles.input}
         value={search}
-        onChange={(e) => setSearch(e.target.value)}
+        onChange={e => setSearch(e.target.value)}
         onKeyDown={handleKeyDown}
       />
-      <button
-        className={styles.button}
-        onClick={goToSearch}></button>
-    </div>
+      <button type="submit" className={styles.button}>
+        <Icon className={styles.icon} />
+      </button>
+    </form>
   );
 };
 

@@ -21,6 +21,8 @@
     "stylelint-config-standard": "^34.0.0"
   },
   "devDependencies": {
+    "@svgr/webpack": "^8.1.0",
+    "eslint-config-prettier": "^9.0.0",
     "stylelint": "^15.10.3",
     "stylelint-config-idiomatic-order": "^9.0.0"
   }

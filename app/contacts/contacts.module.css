@@ -17,6 +17,7 @@
   width: 100%;
   max-width: 540px;
   flex-direction: column;
+  padding: 10px;
   gap: 5px;
   list-style-type: none;
 }

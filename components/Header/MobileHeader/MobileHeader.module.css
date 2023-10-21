@@ -28,41 +28,13 @@
 }
 
 .button_open {
-  background: url('../../../public/image/burger-open.svg') no-repeat center/cover;
+  background-color: var(--color-main);
 }
 
 .button_close {
-  background: url('../../../public/image/burger-close.svg') no-repeat center/cover;
-}
-
-.contacts {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-}
-
-.link {
-  color: var(--color-main-title);
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 24px;
-  text-wrap: nowrap;
-}
-
-.contact {
-  display: flex;
-  align-items: center;
-  gap: 4px;
+  background-color: var(--color-main);
 }
 
 .logo {
   flex-shrink: 0;
-}
-
-@media (width <= 560px) {
-  .contact {
-    display: none;
-  }
 }

@@ -20,7 +20,6 @@
   left: 10%;
   width: 200px;
   height: 200px;
-  background: url("../../../../public/image/like.svg") no-repeat center/cover;
 }
 
 @media (width <= 1080px) {

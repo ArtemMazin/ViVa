@@ -7,7 +7,6 @@ const Main = () => {
     <>
       <Slider />
       <Presentation />
-      <section></section>
     </>
   );
 };
