@@ -98,16 +98,13 @@
   transition: var(--transition);
 }
 
-.email {
+.mailLink {
   display: flex;
   align-items: center;
-  gap: 4px;
-}
-
-.mailLink {
   color: var(--color-gray-text);
   font-size: 15px;
   font-weight: 400;
+  gap: 4px;
   line-height: 24px;
   transition: var(--transition);
 }

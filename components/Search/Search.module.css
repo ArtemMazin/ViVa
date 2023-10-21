@@ -21,24 +21,24 @@
 
 .input::-webkit-search-cancel-button {
   appearance: none;
-  appearance: none;
 }
 
 .button {
   position: absolute;
-  top: 0;
+  top: 4px;
   right: 10px;
-  width: 30px;
-  height: 30px;
+  width: 24px;
+  height: 24px;
   border: none;
+  background-color: var(--color-bg-input);
   cursor: pointer;
 }
 
 .icon {
-  background-color: var(--color-bg-input);
+  color: var(--color-main-text);
   transition: var(--transition);
 }
 
 .icon:hover {
-  fill: var(--color-bg-blue);
+  color: var(--color-bg-blue);
 }

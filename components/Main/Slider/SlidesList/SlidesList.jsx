@@ -1,13 +1,7 @@
 import React from 'react';
-import {
-  slideList,
-  item,
-  slideImage,
-  likeImage,
-} from './SlidesList.module.css';
+import { slideList, item, slideImage } from './SlidesList.module.css';
 import Image from 'next/image';
 import { sliderImages } from '@/utils/constants';
-import LikeIcon from '../../../../public/image/like.svg';
 
 const SlidesList = ({ slideNumber }) => {
   return (
@@ -25,7 +19,6 @@ const SlidesList = ({ slideNumber }) => {
             priority={true}
             className={slideImage}
           />
-          <LikeIcon className={likeImage}></LikeIcon>
         </div>
       ))}
     </div>

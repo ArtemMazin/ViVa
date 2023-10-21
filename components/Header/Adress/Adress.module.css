@@ -15,15 +15,15 @@
   gap: 4px;
 }
 
-.email {
-  display: flex;
-  gap: 4px;
-}
-
 .mailLink {
+  display: flex;
+  align-items: center;
   color: var(--color-main-text);
+  gap: 4px;
+  transition: all var(--transition);
 }
 
 .mailLink:hover {
+  color: var(--color-bg-blue);
   text-decoration: none;
 }

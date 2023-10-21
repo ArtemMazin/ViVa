@@ -13,18 +13,3 @@
 .slideImage {
   object-fit: contain;
 }
-
-.likeImage {
-  position: absolute;
-  top: 10%;
-  left: 10%;
-  width: 200px;
-  height: 200px;
-}
-
-@media (width <= 1080px) {
-  .likeImage {
-    width: 100px;
-    height: 100px;
-  }
-}

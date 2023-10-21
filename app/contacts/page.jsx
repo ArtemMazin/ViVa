@@ -2,6 +2,7 @@ import styles from './contacts.module.css';
 import BreadCrumbs from '@/components/BreadCrumbs/BreadCrumbs';
 import ContactForm from '@/components/ContactForm/ContactForm';
 import Htag from '@/components/Htag/Htag';
+import { Mail } from 'lucide-react';
 
 export const metadata = {
   title: 'Контакты ООО "ВиВа Групп"',
@@ -12,56 +13,54 @@ export default function Contacts() {
   return (
     <main className={`${styles.contacts} container`}>
       <BreadCrumbs
-        currentLink='Контакты'
+        currentLink="Контакты"
         links={[{ href: 'https://vi-va.vercel.app/', name: 'Главнaя' }]}
       />
-      <Htag
-        tag='h1'
-        border='left'>
+      <Htag tag="h1" border="left">
         Контакты
       </Htag>
       <div className={styles.content}>
         <ul className={styles.contactList}>
-          <li>
+          <li className={styles.item}>
             <span>ООО «ВиВа Групп»</span>
           </li>
-          <li>
+          <li className={styles.item}>
             <span>
-              <strong>Адрес:</strong> 115088 г. Москва, ул. Шарикоподшипниковская, д.1,
+              <strong>Адрес:</strong> 115088 г. Москва, ул.
+              Шарикоподшипниковская, д.1,
               <br />
               БЦ «Прогресс Плаза», 7 этаж
             </span>
           </li>
-          <li>
-            <div className={styles.contact}>
-              <strong>Тел./факс:</strong>
-              <a
-                href='tel:+74959260774'
-                title='Позвонить'
-                rel='nofollow'
-                className={styles.tel}>
-                <span> +7 (495) 926-07-74</span>
-              </a>
-            </div>
+          <li className={styles.item}>
+            <strong>Тел./факс:</strong>
+            <a
+              href="tel:+74959260774"
+              title="Позвонить"
+              rel="nofollow"
+              className={styles.tel}
+            >
+              <span> +7 (495) 926-07-74</span>
+            </a>
           </li>
-          <li>
-            <div className={styles.contact}>
-              <strong>Email:</strong>
-              <a
-                href='mailto:info@gidmash.ru'
-                title='Написать письмо'
-                rel='nofollow'
-                className={styles.mailLink}>
-                <span>info@gidmash.ru</span>
-              </a>
-            </div>
+          <li className={styles.item}>
+            <strong>Email:</strong>
+            <a
+              href="mailto:info@gidmash.ru"
+              title="Написать письмо"
+              rel="nofollow"
+              className={styles.mailLink}
+            >
+              <Mail size={16} className={styles.mailIcon} />
+              <span>info@gidmash.ru</span>
+            </a>
           </li>
-          <li>
+          <li className={styles.item}>
             <span>
               <strong>График работы:</strong> ПН - ПТ: 10:00 - 17:00
             </span>
           </li>
-          <li>
+          <li className={styles.item}>
             <span>
               <strong>Реквизиты:</strong> <br />
               ООО «ВиВа Групп»
@@ -82,7 +81,8 @@ export default function Contacts() {
               <a
                 href={'/download/cardViVa.doc'}
                 download={true}
-                className={styles.downloadLink}>
+                className={styles.downloadLink}
+              >
                 Скачать карточку компании
               </a>
             </span>

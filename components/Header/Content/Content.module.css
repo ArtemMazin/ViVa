@@ -18,8 +18,10 @@
 .tel {
   display: block;
   color: var(--color-main-title);
+  transition: var(--transition);
 }
 
 .tel:hover {
+  color: var(--color-bg-blue);
   text-decoration: none;
 }

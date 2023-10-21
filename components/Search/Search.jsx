@@ -3,9 +3,9 @@
 import React, { useCallback, useState } from 'react';
 import styles from './Search.module.css';
 import { useRouter, useSearchParams } from 'next/navigation';
-import Icon from '../../public/image/search.svg';
+import { Search } from 'lucide-react';
 
-const Search = () => {
+const SearchBar = () => {
   const [search, setSearch] = useState('');
 
   const router = useRouter();
@@ -44,10 +44,10 @@ const Search = () => {
         onKeyDown={handleKeyDown}
       />
       <button type="submit" className={styles.button}>
-        <Icon className={styles.icon} />
+        <Search size={24} className={styles.icon} />
       </button>
     </form>
   );
 };
 
-export default Search;
+export default SearchBar;

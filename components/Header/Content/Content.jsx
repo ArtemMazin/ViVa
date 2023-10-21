@@ -18,30 +18,27 @@ const Content = () => {
 
   return (
     <div className={`${styles.flex} container`}>
-      <Logo src='/image/logo-black.svg' />
+      <Logo src="/image/logo-black.svg" />
 
       <Search />
 
       <div className={styles.contacts}>
         <span>Отдел продаж:</span>
         <a
-          href='tel:+74959260774'
-          title='Позвонить'
-          rel='nofollow'
-          className={styles.tel}>
+          href="tel:+74959260774"
+          title="Позвонить"
+          rel="nofollow"
+          className={styles.tel}
+        >
           +7 (495) 926-07-74
         </a>
       </div>
 
-      <Button
-        type='button'
-        onClick={openPopup}>
+      <Button type="button" onClick={openPopup}>
         <span>Оставить заявку</span>
       </Button>
 
-      <Popup
-        isOpen={isPopupOpen}
-        onClose={closePopup}>
+      <Popup isOpen={isPopupOpen} onClose={closePopup}>
         <ContactForm />
       </Popup>
     </div>
