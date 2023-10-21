@@ -7,7 +7,7 @@ const Adress = () => {
     <div className={styles.row}>
       <div className={`${styles.flex} container`}>
         <div className={styles.adress}>
-          <MapPinned size={16} color="#333" />
+          <MapPinned size={16} className={styles.location} />
           <span>г.Москва, ул.Шарикоподшипниковская, д.1</span>
         </div>
 

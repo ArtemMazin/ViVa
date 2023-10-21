@@ -17,6 +17,10 @@
   gap: 10px;
 }
 
+.logo {
+  flex-shrink: 0;
+}
+
 .button {
   z-index: 99;
   width: 32px;
@@ -24,17 +28,25 @@
   flex-shrink: 0;
   padding: 0;
   border: none;
+  background-color: transparent;
   cursor: pointer;
 }
 
-.button_open {
-  background-color: var(--color-main);
+.icon line {
+  stroke-width: 1;
+  transition: var(--transition);
 }
 
-.button_close {
-  background-color: var(--color-main);
+.active line:nth-child(1) {
+  opacity: 0;
 }
 
-.logo {
-  flex-shrink: 0;
+.active line:nth-child(2) {
+  transform: rotate(45deg);
+  transform-origin: 15% 40%;
+}
+
+.active line:nth-child(3) {
+  transform: rotate(-45deg);
+  transform-origin: 25% 65%;
 }

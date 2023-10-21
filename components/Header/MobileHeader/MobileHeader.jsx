@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
 import MobileMenu from './MobileMenu/MobileMenu';
 import styles from './MobileHeader.module.css';
-import Search from '@/components/Search/Search';
 import Logo from '@/components/Logo/Logo';
-import IconOpen from '../../../public/image/burger-open.svg';
-import IconClose from '../../../public/image/burger-close.svg';
 import SearchBar from '@/components/Search/Search';
+import { Menu } from 'lucide-react';
 
 const MobileHeader = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,11 +20,10 @@ const MobileHeader = () => {
         <SearchBar />
 
         <button className={styles.button} onClick={toggleHideMenu}>
-          {isMenuOpen ? (
-            <IconClose className={styles.button_close} />
-          ) : (
-            <IconOpen className={styles.button_open} />
-          )}
+          <Menu
+            size={32}
+            className={`${styles.icon} ${isMenuOpen ? styles.active : ''}`}
+          />
         </button>
       </div>
       <MobileMenu toggleHideMenu={toggleHideMenu} isMenuOpen={isMenuOpen} />

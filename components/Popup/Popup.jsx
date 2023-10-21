@@ -2,12 +2,13 @@
 
 import { useEffect } from 'react';
 import styles from './Popup.module.css';
+import { X } from 'lucide-react';
 
 // создаем отдельный компонент `Popup` для обертки любых попапов
 const Popup = ({ isOpen, onClose, children }) => {
   useEffect(() => {
     if (!isOpen) return;
-    const closeByEscape = (e) => {
+    const closeByEscape = e => {
       if (e.key === 'Escape') {
         onClose();
       }
@@ -18,7 +19,7 @@ const Popup = ({ isOpen, onClose, children }) => {
   }, [isOpen, onClose]);
 
   // создаем обработчик оверлея
-  const handleOverlay = (e) => {
+  const handleOverlay = e => {
     if (e.target === e.currentTarget) {
       onClose();
     }
@@ -28,15 +29,14 @@ const Popup = ({ isOpen, onClose, children }) => {
   return (
     <div
       className={`${styles.popup} ${isOpen ? styles.opened : ''}`}
-      onClick={handleOverlay}>
+      onClick={handleOverlay}
+    >
       {/* добавляем контейнер для контента попапа с возможностью изменения типа, чтобы ImagePopup можно было сделать с другими размерами */}
       <div className={styles.container}>
         {children}
-        <button
-          className={styles.button}
-          type='button'
-          onClick={onClose}
-        />
+        <button className={styles.button} type="button" onClick={onClose}>
+          <X size={32} />
+        </button>
       </div>
     </div>
   );

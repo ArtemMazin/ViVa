@@ -35,10 +35,13 @@
 }
 
 .icon {
-  color: var(--color-main-text);
+  stroke: var(--color-bg-blue);
+  stroke-dasharray: 100 0;
+  stroke-width: 1;
   transition: var(--transition);
 }
 
 .icon:hover {
-  color: var(--color-bg-blue);
+  stroke-dasharray: 35 100;
+  stroke-width: 2;
 }

@@ -109,6 +109,16 @@
   transition: var(--transition);
 }
 
+.mailIcon {
+  stroke-dasharray: 100 0;
+  stroke-width: 1;
+  transition: var(--transition);
+}
+
+.mailLink:hover .mailIcon {
+  stroke-dasharray: 32 50;
+}
+
 @media (any-hover: hover) {
   .link:hover {
     color: var(--color-main);
