@@ -18,26 +18,3 @@
 .location {
   stroke-width: 1;
 }
-
-.mailLink {
-  display: flex;
-  align-items: center;
-  color: var(--color-main-text);
-  gap: 4px;
-  transition: var(--transition);
-}
-
-.mailLink:hover {
-  color: var(--color-bg-blue);
-  text-decoration: none;
-}
-
-.mailIcon {
-  stroke-dasharray: 100 0;
-  stroke-width: 1;
-  transition: var(--transition);
-}
-
-.mailLink:hover .mailIcon {
-  stroke-dasharray: 32 50;
-}

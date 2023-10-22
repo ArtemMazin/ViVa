@@ -36,12 +36,19 @@
 
 .icon {
   stroke: var(--color-bg-blue);
-  stroke-dasharray: 100 0;
   stroke-width: 1;
-  transition: var(--transition);
 }
 
 .icon:hover {
-  stroke-dasharray: 35 100;
-  stroke-width: 2;
+  animation: search 0.8s both;
+}
+
+@keyframes search {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+
+  100% {
+    stroke-dasharray: 100 0;
+  }
 }

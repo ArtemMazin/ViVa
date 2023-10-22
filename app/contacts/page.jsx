@@ -2,7 +2,8 @@ import styles from './contacts.module.css';
 import BreadCrumbs from '@/components/BreadCrumbs/BreadCrumbs';
 import ContactForm from '@/components/ContactForm/ContactForm';
 import Htag from '@/components/Htag/Htag';
-import { Mail } from 'lucide-react';
+import MailLink from '@/components/Links/Mail/MailLink';
+import TelLink from '@/components/Links/Tel/TelLink';
 
 export const metadata = {
   title: 'Контакты ООО "ВиВа Групп"',
@@ -34,26 +35,11 @@ export default function Contacts() {
           </li>
           <li className={styles.item}>
             <strong>Тел./факс:</strong>
-            <a
-              href="tel:+74959260774"
-              title="Позвонить"
-              rel="nofollow"
-              className={styles.tel}
-            >
-              <span> +7 (495) 926-07-74</span>
-            </a>
+            <TelLink color="black" />
           </li>
           <li className={styles.item}>
             <strong>Email:</strong>
-            <a
-              href="mailto:info@gidmash.ru"
-              title="Написать письмо"
-              rel="nofollow"
-              className={styles.mailLink}
-            >
-              <Mail size={16} className={styles.mailIcon} />
-              <span>info@gidmash.ru</span>
-            </a>
+            <MailLink color="black" />
           </li>
           <li className={styles.item}>
             <span>

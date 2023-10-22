@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Adress.module.css';
-import { Mail, MapPinned } from 'lucide-react';
+import { MapPinned } from 'lucide-react';
+import MailLink from '@/components/Links/Mail/MailLink';
 
 const Adress = () => {
   return (
@@ -11,15 +12,7 @@ const Adress = () => {
           <span>г.Москва, ул.Шарикоподшипниковская, д.1</span>
         </div>
 
-        <a
-          href="mailto:info@gidmash.ru"
-          title="Написать письмо"
-          rel="nofollow"
-          className={styles.mailLink}
-        >
-          <Mail size={16} className={styles.mailIcon} />
-          <span>info@gidmash.ru</span>
-        </a>
+        <MailLink color="black" />
       </div>
     </div>
   );

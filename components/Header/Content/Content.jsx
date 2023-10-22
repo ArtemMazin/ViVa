@@ -5,6 +5,7 @@ import Popup from '@/components/Popup/Popup';
 import ContactForm from '@/components/ContactForm/ContactForm';
 import Button from '@/components/Button/Button';
 import Logo from '@/components/Logo/Logo';
+import TelLink from '@/components/Links/Tel/TelLink';
 
 const Content = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -24,14 +25,7 @@ const Content = () => {
 
       <div className={styles.contacts}>
         <span>Отдел продаж:</span>
-        <a
-          href="tel:+74959260774"
-          title="Позвонить"
-          rel="nofollow"
-          className={styles.tel}
-        >
-          +7 (495) 926-07-74
-        </a>
+        <TelLink color="black" />
       </div>
 
       <Button type="button" onClick={openPopup}>

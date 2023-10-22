@@ -1,0 +1,25 @@
+.black {
+  color: var(--color-main-text);
+}
+
+.white {
+  color: var(--color-gray-text);
+}
+
+.tel {
+  display: block;
+  text-wrap: nowrap;
+  transition: var(--transition);
+}
+
+@media (any-hover: hover) {
+  .black:hover {
+    color: var(--color-bg-blue);
+    text-decoration: none;
+  }
+
+  .white:hover {
+    color: var(--color-main);
+    text-decoration: none;
+  }
+}

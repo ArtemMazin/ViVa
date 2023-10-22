@@ -3,7 +3,8 @@ import styles from './Footer.module.css';
 import Link from 'next/link';
 import { presentationImage } from '@/utils/constants';
 import Logo from '../Logo/Logo';
-import { Mail } from 'lucide-react';
+import MailLink from '../Links/Mail/MailLink';
+import TelLink from '../Links/Tel/TelLink';
 
 const Footer = () => {
   return (
@@ -38,23 +39,8 @@ const Footer = () => {
           </ul>
           <div className={styles.contacts}>
             <span>Отдел продаж:</span>
-            <a
-              href="tel:+74959260774"
-              title="Позвонить"
-              rel="nofollow"
-              className={styles.tel}
-            >
-              <span> +7 (495) 926-07-74</span>
-            </a>
-            <a
-              href="mailto:info@gidmash.ru"
-              title="Написать письмо"
-              rel="nofollow"
-              className={styles.mailLink}
-            >
-              <Mail size={16} className={styles.mailIcon} />
-              <span>info@gidmash.ru</span>
-            </a>
+            <TelLink color="white" />
+            <MailLink color="white" />
           </div>
         </div>
       </div>

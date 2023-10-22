@@ -89,47 +89,10 @@
   gap: 15px;
 }
 
-.tel {
-  color: var(--color-gray-text);
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 24px;
-  text-wrap: nowrap;
-  transition: var(--transition);
-}
-
-.mailLink {
-  display: flex;
-  align-items: center;
-  color: var(--color-gray-text);
-  font-size: 15px;
-  font-weight: 400;
-  gap: 4px;
-  line-height: 24px;
-  transition: var(--transition);
-}
-
-.mailIcon {
-  stroke-dasharray: 100 0;
-  stroke-width: 1;
-  transition: var(--transition);
-}
-
-.mailLink:hover .mailIcon {
-  stroke-dasharray: 32 50;
-}
-
 @media (any-hover: hover) {
   .link:hover {
     color: var(--color-main);
-  }
-
-  .tel:hover {
-    color: var(--color-main);
-  }
-
-  .mailLink:hover {
-    color: var(--color-main);
+    text-decoration: none;
   }
 }
 

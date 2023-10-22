@@ -8,10 +8,10 @@ const MobileMenu = ({ toggleHideMenu, isMenuOpen }) => {
     <div className={`${styles.wrapper} ${isMenuOpen && styles.visible}`}>
       <div className={styles.container}>
         <div className={styles.header}>
-          <Logo src='/image/logo-black.svg' />
+          <Logo src="/image/logo-black.svg" />
         </div>
 
-        <Navigation toggleHideMenu={toggleHideMenu} />
+        <Navigation toggleHideMenu={toggleHideMenu} isMenuOpen={isMenuOpen} />
       </div>
     </div>
   );

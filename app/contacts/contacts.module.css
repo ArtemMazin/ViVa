@@ -33,30 +33,6 @@
   color: var(--color-bg-blue);
 }
 
-.mailLink {
-  display: flex;
-  align-items: center;
-  color: var(--color-main-text);
-  gap: 4px;
-  transition: all var(--transition);
-}
-
-.mailLink:hover {
-  color: var(--color-bg-blue);
-  text-decoration: none;
-}
-
-.tel {
-  display: block;
-  color: var(--color-main-title);
-  transition: var(--transition);
-}
-
-.tel:hover {
-  color: var(--color-bg-blue);
-  text-decoration: none;
-}
-
 @media (width <= 768px) {
   .content {
     flex-direction: column;

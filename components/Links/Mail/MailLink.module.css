@@ -1,0 +1,44 @@
+@keyframes mail {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+
+  100% {
+    stroke-dasharray: 100 0;
+  }
+}
+
+.black {
+  color: var(--color-main-text);
+}
+
+.white {
+  color: var(--color-gray-text);
+}
+
+.mailLink {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: var(--transition);
+}
+
+.mailIcon {
+  stroke-width: 1;
+}
+
+@media (any-hover: hover) {
+  .mailLink:hover .mailIcon {
+    animation: mail 0.8s both;
+  }
+
+  .black:hover {
+    color: var(--color-bg-blue);
+    text-decoration: none;
+  }
+
+  .white:hover {
+    color: var(--color-main);
+    text-decoration: none;
+  }
+}
