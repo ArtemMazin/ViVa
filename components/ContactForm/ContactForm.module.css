@@ -1,7 +1,7 @@
 .container {
   display: flex;
   width: 100%;
-  max-width: 540px;
+  max-width: 500px;
   flex-grow: 1;
   align-items: center;
   background: var(--color-bg-input);
@@ -13,7 +13,7 @@
   height: 100%;
   flex-direction: column;
   justify-content: space-around;
-  padding: 40px;
+  padding: 30px;
   color: var(--color-main-text);
 }
 
@@ -52,12 +52,11 @@
 .label {
   display: flex;
   flex-direction: column;
-  margin: 0 0 5px;
   font-size: 18px;
 }
 
 .error {
-  min-height: 18px;
+  min-height: 32px;
   color: var(--color-red);
   font-size: 12px;
   font-weight: 400;

@@ -19,6 +19,7 @@ export function useValidationForm() {
   }
 
   function handleInput(e, regExp, message) {
+    e.target.setCustomValidity('');
     regExp.test(e.target.value)
       ? e.target.setCustomValidity('')
       : e.target.setCustomValidity(e.target.validationMessage || message);

@@ -3,10 +3,17 @@
 import styles from './ContactForm.module.css';
 import Button from '../Button/Button';
 import { useValidationForm } from '@/hooks/useValidationForm';
+import { REG_EXP_EMAIL, REG_EXP_NAME, messages } from '@/utils/constants';
 
 export default function ContactForm() {
-  const { values, resetForm, errors, isFormValid, handleChangeValidation } =
-    useValidationForm();
+  const {
+    values,
+    resetForm,
+    errors,
+    isFormValid,
+    handleInput,
+    handleChangeValidation,
+  } = useValidationForm();
 
   const onSubmitForm = async e => {
     e.preventDefault();
@@ -46,8 +53,9 @@ export default function ContactForm() {
             name="name"
             type="text"
             value={values.name || ''}
-            onChange={handleChangeValidation}
+            onChange={e => handleInput(e, REG_EXP_NAME, messages.INPUT_NAME)}
             className={styles.inputField}
+            minLength={2}
             required
           />
           <span className={styles.error}>{errors.name || ''}</span>
@@ -58,8 +66,9 @@ export default function ContactForm() {
             name="email"
             type="email"
             value={values.email || ''}
-            onChange={handleChangeValidation}
+            onChange={e => handleInput(e, REG_EXP_EMAIL, messages.INPUT_EMAIL)}
             className={styles.inputField}
+            minLength={2}
             required
           />
           <span className={styles.error}>{errors.email || ''}</span>
@@ -72,6 +81,7 @@ export default function ContactForm() {
             value={values.tel || ''}
             onChange={handleChangeValidation}
             className={styles.inputField}
+            minLength={2}
             required
           />
           <span className={styles.error}>{errors.tel || ''}</span>
@@ -85,6 +95,7 @@ export default function ContactForm() {
             onChange={handleChangeValidation}
             className={styles.inputField}
             rows="5"
+            minLength={2}
             required
           />
           <span className={styles.error}>{errors.message || ''}</span>
