@@ -1,12 +1,13 @@
 'use client';
 
-import React, { useCallback, useState } from 'react';
+import React, { useCallback } from 'react';
 import styles from './Search.module.css';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { Search } from 'lucide-react';
+import { useValidationForm } from '@/hooks/useValidationForm';
 
 const SearchBar = () => {
-  const [search, setSearch] = useState('');
+  const { values, resetForm, handleChangeValidation } = useValidationForm();
 
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -29,18 +30,19 @@ const SearchBar = () => {
 
   const goToSearch = e => {
     e.preventDefault();
-    router.push('/search' + '?' + createQueryString('filter', search));
-    setSearch('');
+    router.push('/search' + '?' + createQueryString('filter', values.search));
+    resetForm();
   };
 
   return (
-    <form className={styles.form} onSubmit={goToSearch}>
+    <form className={styles.form} onSubmit={goToSearch} noValidate>
       <input
         type="search"
+        name="search"
         placeholder="Поиск..."
         className={styles.input}
-        value={search}
-        onChange={e => setSearch(e.target.value)}
+        value={values.search || ''}
+        onChange={handleChangeValidation}
         onKeyDown={handleKeyDown}
       />
       <button type="submit" className={styles.button}>

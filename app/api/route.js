@@ -1,7 +1,7 @@
 import nodemailer from 'nodemailer';
 
 export async function POST(request) {
-  const { name, email, message } = await request.json();
+  const { name, email, tel, message } = await request.json();
 
   const transporter = nodemailer.createTransport({
     host: 'smtp.yandex.ru',
@@ -20,6 +20,7 @@ export async function POST(request) {
       subject: `Сообщение от ${name}`,
       html: `
         <p><strong>Email: </strong> ${email}</p>
+        <p><strong>Tel: </strong> ${tel}</p>
         <p><strong>Message: </strong> ${message}</p>
       `,
     });

@@ -40,6 +40,10 @@
   resize: none;
 }
 
+.star {
+  color: var(--color-red);
+}
+
 .button {
   padding: 10px 0;
   cursor: pointer;
@@ -48,8 +52,17 @@
 .label {
   display: flex;
   flex-direction: column;
-  margin: 0 0 20px;
+  margin: 0 0 5px;
   font-size: 18px;
+}
+
+.error {
+  min-height: 18px;
+  color: var(--color-red);
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: -0.5px;
+  line-height: 16px;
 }
 
 @media (width <= 440px) {

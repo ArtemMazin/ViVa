@@ -1,66 +1,30 @@
 'use client';
 
-import { useState } from 'react';
 import styles from './ContactForm.module.css';
 import Button from '../Button/Button';
+import { useValidationForm } from '@/hooks/useValidationForm';
 
 export default function ContactForm() {
-  const [inputs, setInputs] = useState({
-    name: '',
-    email: '',
-    tel: '',
-    message: '',
-  });
-
-  const [form, setForm] = useState('');
-
-  const handleChange = e => {
-    setInputs(prev => ({
-      ...prev,
-      [e.target.id]: e.target.value,
-    }));
-  };
+  const { values, resetForm, errors, isFormValid, handleChangeValidation } =
+    useValidationForm();
 
   const onSubmitForm = async e => {
     e.preventDefault();
 
-    if (inputs.name && inputs.email && inputs.message) {
-      setForm({ state: 'loading' });
-      try {
-        const res = await fetch(`/api`, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(inputs),
-        });
+    if (values.name && values.email && values.tel && values.message) {
+      const res = await fetch(`/api`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(values),
+      });
 
-        const { error } = await res.json();
-
-        if (error) {
-          setForm({
-            state: 'error',
-            message: error,
-          });
-          return;
-        }
-
-        setForm({
-          state: 'success',
-          message: 'Заявка отправлена',
-        });
-        setInputs({
-          name: '',
-          email: '',
-          tel: '',
-          message: '',
-        });
-      } catch (error) {
-        setForm({
-          state: 'error',
-          message: 'Что-то пошло не так...',
-        });
+      if (!res.ok) {
+        return console.log(res.statusText);
       }
+      resetForm();
+      return res.json();
     }
   };
   return (
@@ -69,6 +33,7 @@ export default function ContactForm() {
         className={styles.form}
         method="POST"
         onSubmit={e => onSubmitForm(e)}
+        noValidate
       >
         <span className={styles.title}>ОСТАВИТЬ ЗАЯВКУ</span>
         <span className={styles.subtitle}>
@@ -78,60 +43,61 @@ export default function ContactForm() {
         <label className={styles.label}>
           Ваше имя:
           <input
-            id="name"
+            name="name"
             type="text"
-            value={inputs.name}
-            onChange={handleChange}
+            value={values.name || ''}
+            onChange={handleChangeValidation}
             className={styles.inputField}
             required
           />
+          <span className={styles.error}>{errors.name || ''}</span>
         </label>
         <label className={styles.label}>
           Ваша почта:
           <input
-            id="email"
+            name="email"
             type="email"
-            value={inputs.email}
-            onChange={handleChange}
+            value={values.email || ''}
+            onChange={handleChangeValidation}
             className={styles.inputField}
             required
           />
+          <span className={styles.error}>{errors.email || ''}</span>
         </label>
         <label className={styles.label}>
           Ваш телефон:
           <input
-            id="tel"
+            name="tel"
             type="tel"
-            value={inputs.tel}
-            onChange={handleChange}
+            value={values.tel || ''}
+            onChange={handleChangeValidation}
             className={styles.inputField}
             required
           />
+          <span className={styles.error}>{errors.tel || ''}</span>
         </label>
         <label className={styles.label}>
           Введите сообщение:
           <textarea
-            id="message"
+            name="message"
             type="text"
-            value={inputs.message}
-            onChange={handleChange}
+            value={values.message || ''}
+            onChange={handleChangeValidation}
             className={styles.inputField}
             rows="5"
             required
           />
+          <span className={styles.error}>{errors.message || ''}</span>
         </label>
 
-        <Button type="submit" size="l">
+        <Button
+          type="submit"
+          size="l"
+          disabled={!isFormValid}
+          isDisable={!isFormValid}
+        >
           <span>Отправить</span>
         </Button>
-
-        {form.state === 'loading' ? (
-          <div>Отправка....</div>
-        ) : form.state === 'error' ? (
-          <div>{form.message}</div>
-        ) : (
-          form.state === 'success' && <div>Заявка отправлена</div>
-        )}
       </form>
     </div>
   );
