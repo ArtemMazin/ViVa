@@ -1,6 +1,14 @@
 import Image from 'next/image';
 import React from 'react';
-import { flex, table, cell, image, section, scroll } from './hmgT90.module.css';
+import {
+  flex,
+  table,
+  cell,
+  image,
+  section,
+  scroll,
+  caption,
+} from './hmgT90.module.css';
 import Htag from '@/components/Htag/Htag';
 import Ptag from '@/components/Ptag/Ptag';
 import BreadCrumbs from '@/components/BreadCrumbs/BreadCrumbs';
