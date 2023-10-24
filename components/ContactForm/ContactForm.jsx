@@ -3,7 +3,13 @@
 import styles from './ContactForm.module.css';
 import Button from '../Button/Button';
 import { useValidationForm } from '@/hooks/useValidationForm';
-import { REG_EXP_EMAIL, REG_EXP_NAME, messages } from '@/utils/constants';
+import {
+  REG_EXP_EMAIL,
+  REG_EXP_NAME,
+  REG_EXP_TEL,
+  messages,
+} from '@/utils/constants';
+import Link from 'next/link';
 
 export default function ContactForm() {
   const {
@@ -47,47 +53,44 @@ export default function ContactForm() {
           Оставьте свои контактные данные, и мы свяжемся с вами в ближайшее
           время.
         </span>
-        <label className={styles.label}>
-          Ваше имя:
+        <label>
+          Ваше имя<span className={styles.star}>*</span>:
           <input
             name="name"
             type="text"
             value={values.name || ''}
             onChange={e => handleInput(e, REG_EXP_NAME, messages.INPUT_NAME)}
             className={styles.inputField}
-            minLength={2}
             required
           />
           <span className={styles.error}>{errors.name || ''}</span>
         </label>
-        <label className={styles.label}>
-          Ваша почта:
+        <label>
+          Ваша почта<span className={styles.star}>*</span>:
           <input
             name="email"
             type="email"
             value={values.email || ''}
             onChange={e => handleInput(e, REG_EXP_EMAIL, messages.INPUT_EMAIL)}
             className={styles.inputField}
-            minLength={2}
             required
           />
           <span className={styles.error}>{errors.email || ''}</span>
         </label>
-        <label className={styles.label}>
-          Ваш телефон:
+        <label>
+          Ваш телефон<span className={styles.star}>*</span>:
           <input
             name="tel"
             type="tel"
             value={values.tel || ''}
-            onChange={handleChangeValidation}
+            onChange={e => handleInput(e, REG_EXP_TEL, messages.INPUT_TEL)}
             className={styles.inputField}
-            minLength={2}
             required
           />
           <span className={styles.error}>{errors.tel || ''}</span>
         </label>
-        <label className={styles.label}>
-          Введите сообщение:
+        <label>
+          Введите сообщение<span className={styles.star}>*</span>:
           <textarea
             name="message"
             type="text"
@@ -95,10 +98,25 @@ export default function ContactForm() {
             onChange={handleChangeValidation}
             className={styles.inputField}
             rows="5"
-            minLength={2}
             required
           />
           <span className={styles.error}>{errors.message || ''}</span>
+        </label>
+        <label>
+          <input
+            type="checkbox"
+            name="checkbox"
+            className={styles.checkbox}
+            onClick={handleChangeValidation}
+            required
+          />
+          <span className={styles.subtitle}>
+            Нажимая кнопку "Отправить", Вы даете согласие на&#160;
+            <Link href="/privacy" className={styles.link}>
+              обработку ваших персональных данных.
+            </Link>
+          </span>
+          <span className={styles.error}>{errors.checkbox || ''}</span>
         </label>
 
         <Button

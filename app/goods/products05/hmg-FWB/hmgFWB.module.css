@@ -18,7 +18,13 @@
 .table {
   width: 100%;
   border: 1px solid var(--color-bg-blue);
-  line-height: 28px;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+}
+
+.caption {
+  text-align: left;
 }
 
 .cell {

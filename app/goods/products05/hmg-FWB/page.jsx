@@ -1,6 +1,14 @@
 import Image from 'next/image';
 import React from 'react';
-import { flex, table, cell, image, section, scroll } from './hmgFWB.module.css';
+import {
+  flex,
+  table,
+  cell,
+  image,
+  section,
+  scroll,
+  caption,
+} from './hmgFWB.module.css';
 import Htag from '@/components/Htag/Htag';
 import Ptag from '@/components/Ptag/Ptag';
 import BreadCrumbs from '@/components/BreadCrumbs/BreadCrumbs';
@@ -9,70 +17,72 @@ const page = () => {
   return (
     <main className={`${section} container`}>
       <BreadCrumbs
-        currentLink='Подшипники HMG-FWB'
+        currentLink="Подшипники HMG-FWB"
         links={[
           { href: 'https://vi-va.vercel.app/', name: 'Главнaя' },
           { href: 'https://vi-va.vercel.app/goods', name: 'Товары' },
-          { href: 'https://vi-va.vercel.app/goods/products05', name: 'Неметаллические самосмазывающиеся подшипники' },
+          {
+            href: 'https://vi-va.vercel.app/goods/products05',
+            name: 'Неметаллические самосмазывающиеся подшипники',
+          },
         ]}
       />
       <section className={flex}>
         <Image
-          src='/image/pages/hmgFWB/hmgFWB.jpg'
+          src="/image/pages/hmgFWB/hmgFWB.jpg"
           width={600}
           height={450}
-          sizes='(max-width: 520px) 45vw, (max-width: 768px) 50vw, (max-width: 1280px) 25vw, 40vw'
+          sizes="(max-width: 520px) 45vw, (max-width: 768px) 50vw, (max-width: 1280px) 25vw, 40vw"
           priority={true}
-          alt='Подшипники HMG-FWB'
+          alt="Подшипники HMG-FWB"
           className={image}
         />
         <div>
-          <Htag tag='h1'>HMG-FWB</Htag>
-          <Htag
-            tag='h2'
-            border='left'>
+          <Htag tag="h1">HMG-FWB</Htag>
+          <Htag tag="h2" border="left">
             Описание
           </Htag>
-          <Ptag tag='p'>
-            Несущий слой со специальным волокном и волокном ПТФЭ обладает хорошей износостойкостью. Подходит для
-            использования в пыльных условиях с высокими нагрузками. ПТФЭ обеспечивает низкий коэффициент трения и
-            функцию самосмазывания. Материал хорош для применения с низкой скоростью и высокой нагрузкой. Стекловолокно
-            и эпоксидная смола обладают хорошей химической стойкостью.
+          <Ptag tag="p">
+            Несущий слой со специальным волокном и волокном ПТФЭ обладает
+            хорошей износостойкостью. Подходит для использования в пыльных
+            условиях с высокими нагрузками. ПТФЭ обеспечивает низкий коэффициент
+            трения и функцию самосмазывания. Материал хорош для применения с
+            низкой скоростью и высокой нагрузкой. Стекловолокно и эпоксидная
+            смола обладают хорошей химической стойкостью.
           </Ptag>
         </div>
       </section>
       <section className={flex}>
         <div>
-          <Htag
-            tag='h2'
-            border='left'>
+          <Htag tag="h2" border="left">
             Структура
           </Htag>
-          <Ptag tag='p'>
-            1. Специальное волокно и слой волокна из ПТФЭ обеспечивают самосмазывающиеся свойства подшипников.
+          <Ptag tag="p">
+            1. Специальное волокно и слой волокна из ПТФЭ обеспечивают
+            самосмазывающиеся свойства подшипников.
           </Ptag>
-          <Ptag tag='p'>
-            2. Укрепите стекловолокно эпоксидной смолой, что обеспечивает механическую прочность и устойчивость к
-            коррозии.
+          <Ptag tag="p">
+            2. Укрепите стекловолокно эпоксидной смолой, что обеспечивает
+            механическую прочность и устойчивость к коррозии.
           </Ptag>
         </div>
         <Image
-          src='/image/pages/hmgFWB/hmgFWBstructure.jpg'
+          src="/image/pages/hmgFWB/hmgFWBstructure.jpg"
           width={300}
           height={240}
-          sizes='(max-width: 520px) 45vw, (max-width: 768px) 30vw, 20vw'
+          sizes="(max-width: 520px) 45vw, (max-width: 768px) 30vw, 20vw"
           priority={true}
-          alt='Структура материала HMG-FWB'
+          alt="Структура материала HMG-FWB"
         />
       </section>
       <section>
-        <Htag
-          tag='h2'
-          border='left'>
-          Технические данные
-        </Htag>
         <div className={scroll}>
           <table className={table}>
+            <caption className={caption}>
+              <Htag tag="h2" border="left">
+                Сводная таблица технических данных материала HMG-FWB
+              </Htag>
+            </caption>
             <tbody>
               <tr>
                 <td className={cell}>Тип материала</td>
@@ -246,69 +256,67 @@ const page = () => {
                 <td className={cell}>40</td>
               </tr>
               <tr>
-                <td
-                  colSpan='3'
-                  className={cell}>
+                <td colSpan="3" className={cell}>
                   Цвет
                 </td>
                 <td className={cell}>
                   <Image
-                    src='/image/pages/hmgFWB/blue.jpg'
+                    src="/image/pages/hmgFWB/blue.jpg"
                     width={100}
                     height={90}
-                    sizes='(max-width: 520px) 45vw, (max-width: 768px) 30vw, 20vw'
+                    sizes="(max-width: 520px) 45vw, (max-width: 768px) 30vw, 20vw"
                     priority={true}
-                    alt='Подшипник HMG-CRM синего цвета'
+                    alt="Подшипник HMG-CRM синего цвета"
                   />
                 </td>
                 <td className={cell}>
                   <Image
-                    src='/image/pages/hmgFWB/cofee.jpg'
+                    src="/image/pages/hmgFWB/cofee.jpg"
                     width={100}
                     height={90}
-                    sizes='(max-width: 520px) 45vw, (max-width: 768px) 30vw, 20vw'
+                    sizes="(max-width: 520px) 45vw, (max-width: 768px) 30vw, 20vw"
                     priority={true}
-                    alt='Подшипник HMG-CRB кофейного цвета'
+                    alt="Подшипник HMG-CRB кофейного цвета"
                   />
                 </td>
                 <td className={cell}>
                   <Image
-                    src='/image/pages/hmgFWB/black.jpg'
+                    src="/image/pages/hmgFWB/black.jpg"
                     width={100}
                     height={90}
-                    sizes='(max-width: 520px) 45vw, (max-width: 768px) 30vw, 20vw'
+                    sizes="(max-width: 520px) 45vw, (max-width: 768px) 30vw, 20vw"
                     priority={true}
-                    alt='Подшипник HMG-CRG черного цвета'
+                    alt="Подшипник HMG-CRG черного цвета"
                   />
                 </td>
                 <td className={cell}>
                   <Image
-                    src='/image/pages/hmgFWB/white.jpg'
+                    src="/image/pages/hmgFWB/white.jpg"
                     width={100}
                     height={90}
-                    sizes='(max-width: 520px) 45vw, (max-width: 768px) 30vw, 20vw'
+                    sizes="(max-width: 520px) 45vw, (max-width: 768px) 30vw, 20vw"
                     priority={true}
-                    alt='Подшипник HMG-CRP белого цвета'
+                    alt="Подшипник HMG-CRP белого цвета"
                   />
                 </td>
                 <td className={cell}>
                   <Image
-                    src='/image/pages/hmgFWB/green.jpg'
+                    src="/image/pages/hmgFWB/green.jpg"
                     width={100}
                     height={90}
-                    sizes='(max-width: 520px) 45vw, (max-width: 768px) 30vw, 20vw'
+                    sizes="(max-width: 520px) 45vw, (max-width: 768px) 30vw, 20vw"
                     priority={true}
-                    alt='Подшипник HMG-CRW зеленого цвета'
+                    alt="Подшипник HMG-CRW зеленого цвета"
                   />
                 </td>
                 <td className={cell}>
                   <Image
-                    src='/image/pages/hmgFWB/grey.jpg'
+                    src="/image/pages/hmgFWB/grey.jpg"
                     width={100}
                     height={90}
-                    sizes='(max-width: 520px) 45vw, (max-width: 768px) 30vw, 20vw'
+                    sizes="(max-width: 520px) 45vw, (max-width: 768px) 30vw, 20vw"
                     priority={true}
-                    alt='Подшипник HMG-CRF серого цвета'
+                    alt="Подшипник HMG-CRF серого цвета"
                   />
                 </td>
               </tr>
@@ -317,15 +325,15 @@ const page = () => {
         </div>
       </section>
       <section>
-        <Htag
-          tag='h2'
-          border='left'>
+        <Htag tag="h2" border="left">
           Типичные области применения
         </Htag>
-        <Ptag tag='p'>
-          Этот тип материалов предназначен для применений, связанных с вращением, колебательным движением и
-          необходимостью частого перезапуска. Они широко используются в сельскохозяйственной технике, подъемных машинах,
-          погрузочно-разгрузочных машинах, строительной технике, судах, соединениях гидроцилиндров и проушинах штоков.
+        <Ptag tag="p">
+          Этот тип материалов предназначен для применений, связанных с
+          вращением, колебательным движением и необходимостью частого
+          перезапуска. Они широко используются в сельскохозяйственной технике,
+          подъемных машинах, погрузочно-разгрузочных машинах, строительной
+          технике, судах, соединениях гидроцилиндров и проушинах штоков.
         </Ptag>
       </section>
     </main>

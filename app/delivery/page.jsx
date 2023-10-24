@@ -1,7 +1,6 @@
 import Htag from '@/components/Htag/Htag';
 import BreadCrumbs from '@/components/BreadCrumbs/BreadCrumbs';
 import styles from './delivery.module.css';
-import Ptag from '@/components/Ptag/Ptag';
 
 export const metadata = {
   title: 'Доставка',
@@ -12,53 +11,53 @@ export default function Delivery() {
   return (
     <main className={`container ${styles.delivery}`}>
       <BreadCrumbs
-        currentLink='Доставка'
+        currentLink="Доставка"
         links={[{ href: 'https://vi-va.vercel.app/', name: 'Главнaя' }]}
       />
-      <Htag
-        tag='h1'
-        border='left'>
+      <Htag tag="h1" border="left">
         Доставка
       </Htag>
-      <Htag tag='h2'>Способы доставки:</Htag>
-      <Htag
-        tag='h3'
-        border='down'>
+      <Htag tag="h2">Способы доставки:</Htag>
+      <Htag tag="h3" border="down">
         Самовывоз
       </Htag>
       <ul className={styles.places}>
         <li>
-          <Ptag tag='p'>
-            <strong>Наш склад:</strong> Московская область, Раменский городской округ, аэродром Мячково <br />
+          <span className={styles.text}>
+            <strong>Наш склад:</strong> Московская область, Раменский городской
+            округ, аэродром Мячково{' '}
+          </span>
+          <span className={styles.text}>
             <strong>График работы:</strong> ПН-ПТ 09:00 - 17:00
-          </Ptag>
+          </span>
           <a
             href={'/download/sklad.doc'}
             download={true}
-            className={styles.downloadLink}>
+            className={styles.downloadLink}
+          >
             Скачать схему проезда на склад
           </a>
         </li>
         <li>
-          <Ptag tag='p'>
-            <strong>Наш офис:</strong> 115088, Москва, ул. Шарикоподшипниковская, д.1, БЦ «Прогресс Плаза», 7 этаж.{' '}
-            <br />
+          <span className={styles.text}>
+            <strong>Наш офис:</strong> 115088, Москва, ул.
+            Шарикоподшипниковская, д.1, БЦ «Прогресс Плаза», 7 этаж.
+          </span>
+          <span className={styles.text}>
             <strong>График работы:</strong> ПН-ПТ 10:00 - 17:00
-          </Ptag>
+          </span>
         </li>
       </ul>
 
-      <Htag
-        tag='h3'
-        border='down'>
+      <Htag tag="h3" border="down">
         Транспортной компанией
       </Htag>
       <ul className={styles.companies}>
         <li>
-          <span className={styles.company}>Деловые Линии</span>
+          <span className={styles.text}>Деловые Линии</span>
         </li>
         <li>
-          <span className={styles.company}>СДЭК</span>
+          <span className={styles.text}>СДЭК</span>
         </li>
       </ul>
     </main>
