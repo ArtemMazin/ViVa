@@ -25,7 +25,7 @@ export default function Delivery() {
         <li>
           <span className={styles.text}>
             <strong>Наш склад:</strong> Московская область, Раменский городской
-            округ, аэродром Мячково{' '}
+            округ, аэродром Мячково
           </span>
           <span className={styles.text}>
             <strong>График работы:</strong> ПН-ПТ 09:00 - 17:00

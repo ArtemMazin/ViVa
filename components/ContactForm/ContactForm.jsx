@@ -111,7 +111,7 @@ export default function ContactForm() {
             required
           />
           <span className={styles.subtitle}>
-            Нажимая кнопку "Отправить", Вы даете согласие на&#160;
+            Нажимая кнопку &quot;Отправить&quot;, Вы даете согласие на{' '}
             <Link href="/privacy" className={styles.link}>
               обработку ваших персональных данных.
             </Link>
