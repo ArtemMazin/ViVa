@@ -44,6 +44,7 @@ export default function Privacy() {
           href="https://vi-va.vercel.app"
           target="_blank"
           rel="noopener noreferrer"
+          className={styles.link}
         >
           https://vi-va.vercel.app
         </a>
@@ -68,6 +69,7 @@ export default function Privacy() {
           href="https://vi-va.vercel.app"
           target="_blank"
           rel="noopener noreferrer"
+          className={styles.link}
         >
           https://vi-va.vercel.app
         </a>
@@ -107,6 +109,7 @@ export default function Privacy() {
           href="https://vi-va.vercel.app"
           target="_blank"
           rel="noopener noreferrer"
+          className={styles.link}
         >
           https://vi-va.vercel.app
         </a>
@@ -126,6 +129,7 @@ export default function Privacy() {
           href="https://vi-va.vercel.app"
           target="_blank"
           rel="noopener noreferrer"
+          className={styles.link}
         >
           https://vi-va.vercel.app
         </a>
@@ -357,7 +361,12 @@ export default function Privacy() {
         8.3. В случае выявления неточностей в персональных данных, Пользователь
         может актуализировать их самостоятельно, путем направления Оператору
         уведомление на адрес электронной почты Оператора{' '}
-        <a href="mailto:info@gidmash.ru" title="Написать письмо" rel="nofollow">
+        <a
+          href="mailto:info@gidmash.ru"
+          title="Написать письмо"
+          rel="nofollow"
+          className={styles.link}
+        >
           info@gidmash.ru
         </a>{' '}
         с пометкой «Актуализация персональных данных».
@@ -369,7 +378,12 @@ export default function Privacy() {
         может в любой момент отозвать свое согласие на обработку персональных
         данных, направив Оператору уведомление посредством электронной почты на
         электронный адрес Оператора{' '}
-        <a href="mailto:info@gidmash.ru" title="Написать письмо" rel="nofollow">
+        <a
+          href="mailto:info@gidmash.ru"
+          title="Написать письмо"
+          rel="nofollow"
+          className={styles.link}
+        >
           info@gidmash.ru
         </a>{' '}
         с пометкой «Отзыв согласия на обработку персональных данных».
@@ -460,7 +474,12 @@ export default function Privacy() {
         12.1. Пользователь может получить любые разъяснения по интересующим
         вопросам, касающимся обработки его персональных данных, обратившись к
         Оператору с помощью электронной почты{' '}
-        <a href="mailto:info@gidmash.ru" title="Написать письмо" rel="nofollow">
+        <a
+          href="mailto:info@gidmash.ru"
+          title="Написать письмо"
+          rel="nofollow"
+          className={styles.link}
+        >
           info@gidmash.ru
         </a>
         .
@@ -477,6 +496,7 @@ export default function Privacy() {
           href="https://vi-va.vercel.app"
           target="_blank"
           rel="noopener noreferrer"
+          className={styles.link}
         >
           https://vi-va.vercel.app
         </a>

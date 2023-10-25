@@ -1,3 +1,11 @@
 .privacy {
   width: 100%;
 }
+
+.link {
+  color: var(--color-bg-blue);
+}
+
+.link:visited {
+  color: var(--color-bg-blue);
+}

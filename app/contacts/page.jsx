@@ -1,6 +1,6 @@
 import styles from './contacts.module.css';
 import BreadCrumbs from '@/components/BreadCrumbs/BreadCrumbs';
-import ContactForm from '@/components/ContactForm/ContactForm';
+import ContactForm from '@/components/ContactUs/ContactForm/ContactForm';
 import Htag from '@/components/Htag/Htag';
 import MailLink from '@/components/Links/Mail/MailLink';
 import TelLink from '@/components/Links/Tel/TelLink';

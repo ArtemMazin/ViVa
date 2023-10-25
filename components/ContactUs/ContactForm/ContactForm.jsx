@@ -1,7 +1,7 @@
 'use client';
 
 import styles from './ContactForm.module.css';
-import Button from '../Button/Button';
+import Button from '../../Button/Button';
 import { useValidationForm } from '@/hooks/useValidationForm';
 import {
   REG_EXP_EMAIL,
