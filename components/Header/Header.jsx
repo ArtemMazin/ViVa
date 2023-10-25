@@ -8,6 +8,7 @@ import Navigation from './Navigation/Navigation';
 import useScreenWidth from '@/hooks/useScreenWidth';
 import MobileHeader from './MobileHeader/MobileHeader';
 import { Suspense } from 'react';
+import ContactUs from '../ContactUs/ContactUs';
 
 function FakeHeader() {
   return (
@@ -31,6 +32,7 @@ const Header = () => {
       ) : (
         <MobileHeader />
       )}
+      <ContactUs />
     </Suspense>
   );
 };

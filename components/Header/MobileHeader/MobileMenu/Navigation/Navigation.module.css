@@ -13,15 +13,6 @@
   width: 100%;
   padding: 1px 0;
   gap: 10px;
-  opacity: 0;
-  transform: translateX(-50px);
-  transition: var(--transition);
-  transition-delay: 0.4s;
-}
-
-.visible {
-  opacity: 1;
-  transform: translateX(0);
 }
 
 .active {

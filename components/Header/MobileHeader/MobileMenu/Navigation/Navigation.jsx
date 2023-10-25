@@ -4,7 +4,7 @@ import Link from 'next/link';
 import React from 'react';
 import { usePathname } from 'next/navigation';
 
-const Navigation = ({ toggleHideMenu, isMenuOpen }) => {
+const Navigation = ({ toggleHideMenu }) => {
   const pathname = usePathname();
 
   return (
@@ -13,10 +13,7 @@ const Navigation = ({ toggleHideMenu, isMenuOpen }) => {
         {navLinks.map(({ href, name }) => {
           const isActive = pathname === href;
           return (
-            <li
-              key={name}
-              className={`${styles.item} ${isMenuOpen && styles.visible}`}
-            >
+            <li key={name} className={styles.item}>
               <Link
                 className={`${isActive && styles.active} ${styles.link}`}
                 href={href}

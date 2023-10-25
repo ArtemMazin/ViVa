@@ -11,7 +11,7 @@ import {
 } from '@/utils/constants';
 import Link from 'next/link';
 
-export default function ContactForm() {
+export default function ContactForm({ onClose }) {
   const {
     values,
     resetForm,
@@ -112,7 +112,7 @@ export default function ContactForm() {
           />
           <span className={styles.subtitle}>
             Нажимая кнопку &quot;Отправить&quot;, Вы даете согласие на{' '}
-            <Link href="/privacy" className={styles.link}>
+            <Link href="/privacy" className={styles.link} onClick={onClose}>
               обработку ваших персональных данных.
             </Link>
           </span>

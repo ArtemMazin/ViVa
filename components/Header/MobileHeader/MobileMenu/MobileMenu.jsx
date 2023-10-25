@@ -11,7 +11,7 @@ const MobileMenu = ({ toggleHideMenu, isMenuOpen }) => {
           <Logo src="/image/logo-black.svg" />
         </div>
 
-        <Navigation toggleHideMenu={toggleHideMenu} isMenuOpen={isMenuOpen} />
+        <Navigation toggleHideMenu={toggleHideMenu} />
       </div>
     </div>
   );
