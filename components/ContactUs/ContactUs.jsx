@@ -7,21 +7,29 @@ import Button from '@/components/Button/Button';
 import styles from './ContactUs.module.css';
 import { Mail } from 'lucide-react';
 import useScreenWidth from '@/hooks/useScreenWidth';
+import Notification from '../Notification/Notification';
 
 const ContactUs = () => {
-  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [isFormOpen, setIsFormOpen] = useState(false);
+  const [isNotificationOpen, setIsNotificationOpen] = useState(false);
+  const [message, setMessage] = useState('');
   const { device } = useScreenWidth();
 
-  function openPopup() {
-    setIsPopupOpen(true);
+  function openForm() {
+    setIsFormOpen(true);
   }
-  function closePopup() {
-    setIsPopupOpen(false);
+  function closeAllPopup() {
+    setIsFormOpen(false);
+    setIsNotificationOpen(false);
+  }
+
+  function openNotification() {
+    setIsNotificationOpen(true);
   }
 
   return (
     <>
-      <Button type="button" fixed onClick={openPopup}>
+      <Button type="button" fixed onClick={openForm}>
         {device === 'mobile' ? (
           <Mail size={30} />
         ) : (
@@ -29,8 +37,15 @@ const ContactUs = () => {
         )}
       </Button>
 
-      <Popup isOpen={isPopupOpen} onClose={closePopup}>
-        <ContactForm onClose={closePopup} />
+      <Popup isOpen={isFormOpen} onClose={closeAllPopup}>
+        <ContactForm
+          onClose={closeAllPopup}
+          setMessage={setMessage}
+          openNotification={openNotification}
+        />
+      </Popup>
+      <Popup isOpen={isNotificationOpen} onClose={closeAllPopup}>
+        <Notification message={message} />
       </Popup>
     </>
   );

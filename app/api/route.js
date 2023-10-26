@@ -25,7 +25,7 @@ export async function POST(request) {
       `,
     });
   } catch (error) {
-    return Response.json({ error: error.message || error.toString() });
+    return Response.json({ message: 'Произошла ошибка, повторите попытку' });
   }
-  return Response.json({ error: '' });
+  return Response.json({ message: 'Заявка успешно отправлена' });
 }
