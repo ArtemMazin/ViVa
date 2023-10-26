@@ -18,8 +18,10 @@ const ContactUs = () => {
   function openForm() {
     setIsFormOpen(true);
   }
-  function closeAllPopup() {
+  function closeForm() {
     setIsFormOpen(false);
+  }
+  function closeNotification() {
     setIsNotificationOpen(false);
   }
 
@@ -37,14 +39,14 @@ const ContactUs = () => {
         )}
       </Button>
 
-      <Popup isOpen={isFormOpen} onClose={closeAllPopup}>
+      <Popup isOpen={isFormOpen} onClose={closeForm} style="form">
         <ContactForm
-          onClose={closeAllPopup}
+          onClose={closeForm}
           setMessage={setMessage}
           openNotification={openNotification}
         />
       </Popup>
-      <Popup isOpen={isNotificationOpen} onClose={closeAllPopup}>
+      <Popup isOpen={isNotificationOpen} onClose={closeNotification}>
         <Notification message={message} />
       </Popup>
     </>

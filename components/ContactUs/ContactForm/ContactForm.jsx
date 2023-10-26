@@ -39,6 +39,7 @@ export default function ContactForm({ onClose, setMessage, openNotification }) {
         openNotification();
       }
       resetForm();
+      onClose();
       const response = await res.json();
       setMessage(response.message);
       openNotification();
