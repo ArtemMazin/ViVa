@@ -21,39 +21,6 @@ const navLinks = [
   { name: 'Контакты', href: '/contacts' },
 ];
 
-const presentationImage = [
-  {
-    name: 'Металлополимерные самосмазывающиеся подшипники',
-    img: '/image/products01/pro01.jpg',
-    href: '/goods/products01',
-  },
-  {
-    name: 'Металлополимерные подшипники, требующие смазки',
-    img: '/image/products02/pro02.jpg',
-    href: '/goods/products02',
-  },
-  {
-    name: 'Металлические самосмазывающиеся подшипники',
-    img: '/image/products03/pro03.jpg',
-    href: '/goods/products03',
-  },
-  {
-    name: 'Металлические подшипники, требующие смазки',
-    img: '/image/products04/pro04.jpg',
-    href: '/goods/products04',
-  },
-  {
-    name: 'Неметаллические самосмазывающиеся подшипники',
-    img: '/image/products05/pro05.jpg',
-    href: '/goods/products05',
-  },
-  {
-    name: 'Высокопроизводительные стальные самосмазывающиеся подшипники',
-    img: '/image/products06/pro06.jpg',
-    href: '/goods/products06',
-  },
-];
-
 const sliderImages = [
   { img: '/image/slider01.png' },
   { img: '/image/slider02.png' },
@@ -62,7 +29,6 @@ const sliderImages = [
 
 export {
   navLinks,
-  presentationImage,
   sliderImages,
   REG_EXP_EMAIL,
   REG_EXP_NAME,

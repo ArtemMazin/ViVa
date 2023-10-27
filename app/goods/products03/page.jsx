@@ -1,18 +1,18 @@
 import React from 'react';
-import { productList03 } from '@/utils/productLists';
-import { presentationImage } from '@/utils/constants';
+import { materialsList03 } from '@/utils/materialsLists';
+import { products } from '@/utils/products';
 import Products from '@/components/Products/Products';
 import BreadCrumbs from '@/components/BreadCrumbs/BreadCrumbs';
 
 export const metadata = {
-  title: 'Металлические самосмазывающиеся подшипники',
-  description: 'Металлические самосмазывающиеся подшипники ООО "ВиВа Групп"',
+  title: products[2].name,
+  description: products[2].name,
 };
 
 const products03 = () => {
-  const title = presentationImage[2].name;
-  const description = `Износостойкая металлическая задняя часть с твердыми смазочными материалами может непрерывно обеспечивать источник смазки во время работы подшипника для достижения функции самосмазывания. Благодаря сочетанию высокой нагрузки и ударопрочности металла, а также низкого коэффициента трения неметалла, этот материал подходит для различных условий работы.`;
-  const image = `/image/products03/pro03.jpg`;
+  const title = products[2].name;
+  const description = products[2].description;
+  const image = products[2].img;
 
   return (
     <main>
@@ -28,7 +28,7 @@ const products03 = () => {
         titleProducts={title}
         descriptionProducts={description}
         productsImage={image}
-        productList={productList03}
+        materialsList={materialsList03}
       />
     </main>
   );

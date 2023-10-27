@@ -28,22 +28,22 @@ const Slider = () => {
     setSlide(slideNumber);
   };
 
-  const goToSlide = (number) => {
+  const goToSlide = number => {
     setSlide(number % items.length);
   };
 
-  const handleTouchStart = (e) => {
+  const handleTouchStart = e => {
     const touchDown = e.touches[0].clientX;
 
     setTouchPosition(touchDown);
   };
-  const handleMouseDown = (e) => {
+  const handleMouseDown = e => {
     const mouseDown = e.clientX;
 
     setMousePosition(mouseDown);
   };
 
-  const handleTouchMove = (e) => {
+  const handleTouchMove = e => {
     if (touchPosition === null) {
       return;
     }
@@ -62,7 +62,7 @@ const Slider = () => {
     setTouchPosition(null);
   };
 
-  const handleMouseMove = (e) => {
+  const handleMouseMove = e => {
     if (mousePosition === null) {
       return;
     }
@@ -94,15 +94,13 @@ const Slider = () => {
   return (
     <section>
       <div
-        className={slider}
+        className={`${slider} container`}
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onMouseDown={handleMouseDown}
-        onMouseMove={handleMouseMove}>
-        <SlidesList
-          slideNumber={slide}
-          items={items}
-        />
+        onMouseMove={handleMouseMove}
+      >
+        <SlidesList slideNumber={slide} items={items} />
         <Dots
           slidesCount={items.length}
           goToSlide={goToSlide}

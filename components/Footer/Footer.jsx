@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Footer.module.css';
 import Link from 'next/link';
-import { presentationImage } from '@/utils/constants';
+import { products } from '@/utils/products';
 import Logo from '../Logo/Logo';
 import MailLink from '../Links/Mail/MailLink';
 import TelLink from '../Links/Tel/TelLink';
@@ -27,7 +27,7 @@ const Footer = () => {
           </div>
 
           <ul className={styles.side}>
-            {presentationImage.map(({ name, href }) => {
+            {products.map(({ name, href }) => {
               return (
                 <li key={name} className={styles.item}>
                   <Link href={href} className={styles.link}>

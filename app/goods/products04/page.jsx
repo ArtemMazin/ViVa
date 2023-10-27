@@ -1,18 +1,18 @@
 import React from 'react';
-import { productList04 } from '@/utils/productLists';
-import { presentationImage } from '@/utils/constants';
+import { materialsList04 } from '@/utils/materialsLists';
+import { products } from '@/utils/products';
 import Products from '@/components/Products/Products';
 import BreadCrumbs from '@/components/BreadCrumbs/BreadCrumbs';
 
 export const metadata = {
-  title: 'Металлические подшипники, требующие смазки',
-  description: 'Металлические подшипники ООО "ВиВа Групп", требующие смазки',
+  title: products[3].name,
+  description: products[3].name,
 };
 
 const products04 = () => {
-  const title = presentationImage[3].name;
-  const description = `Биметаллический композитный материал подшипника HMG представляет собой стальную оболочку с низким коэффициентом трения и превосходной износостойкостью, бронзовый порошок в качестве несущего слоя, разработанные масляные карманы, канавки и отверстия подходят для применения со смазкой, чтобы улучшить значение PV. Несущие слои включают свинцовую бронзу, бессвинцовую бронзу и бессвинцовую бронзу с твердой смазкой для обеспечения высокой производительности.`;
-  const image = `/image/products04/pro04.jpg`;
+  const title = products[3].name;
+  const description = products[3].description;
+  const image = products[3].img;
 
   return (
     <main>
@@ -28,7 +28,7 @@ const products04 = () => {
         titleProducts={title}
         descriptionProducts={description}
         productsImage={image}
-        productList={productList04}
+        materialsList={materialsList04}
       />
     </main>
   );

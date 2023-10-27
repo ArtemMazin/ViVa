@@ -1,18 +1,18 @@
 import React from 'react';
-import { productList05 } from '@/utils/productLists';
-import { presentationImage } from '@/utils/constants';
+import { materialsList05 } from '@/utils/materialsLists';
+import { products } from '@/utils/products';
 import Products from '@/components/Products/Products';
 import BreadCrumbs from '@/components/BreadCrumbs/BreadCrumbs';
 
 export const metadata = {
-  title: 'Неметаллические самосмазывающиеся подшипники',
-  description: 'Неметаллические самосмазывающиеся подшипники ООО "ВиВа Групп"',
+  title: products[4].name,
+  description: products[4].name,
 };
 
 const products05 = () => {
-  const title = presentationImage[4].name;
-  const description = `К неметаллическим самосмазывающимся подшипникам относятся пластиковые подшипники HMG-EPB и подшипники с накрученной нитью серии HMG-FWB, они подходят для применения с сухой смазкой. Подшипники серии HMG-EPB изготавливаются методом впрыскивания из высокоэффективного инженерного пластика, смешанного с соответствующими усилителями и смазочными материалами, что может значительно улучшить несущую способность подшипника и ударопрочность подшипника. Встроенные смазочные материалы могут значительно снизить коэффициент трения.`;
-  const image = `/image/products05/pro05.jpg`;
+  const title = products[4].name;
+  const description = products[4].description;
+  const image = products[4].img;
 
   return (
     <main>
@@ -29,7 +29,7 @@ const products05 = () => {
         titleProducts={title}
         descriptionProducts={description}
         productsImage={image}
-        productList={productList05}
+        materialsList={materialsList05}
       />
     </main>
   );

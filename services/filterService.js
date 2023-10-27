@@ -1,7 +1,7 @@
-import { allProducts } from '@/utils/productLists';
+import { allProducts } from '@/utils/materialsLists';
 
-export const filterCards = (search) =>
-  Array.from(allProducts).filter((item) => {
+export const filterCards = search =>
+  Array.from(allProducts).filter(item => {
     if (!search) {
       return;
     }

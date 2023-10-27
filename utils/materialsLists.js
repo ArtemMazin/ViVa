@@ -1,4 +1,4 @@
-const productList01 = [
+const materialsList01 = [
   {
     name: 'Подшипники HMG-50',
     img: '/image/products01/hmg-50.jpg',
@@ -15,7 +15,7 @@ const productList01 = [
     href: '/goods/products01/hmg-fr',
   },
 ];
-const productList02 = [
+const materialsList02 = [
   {
     name: 'Подшипники HMG-20',
     img: '/image/products02/hmg-20.jpg',
@@ -32,7 +32,7 @@ const productList02 = [
     href: '/goods/products02/hmg-80',
   },
 ];
-const productList03 = [
+const materialsList03 = [
   {
     name: 'Подшипники HMG-650',
     img: '/image/products03/hmg-650.jpg',
@@ -49,7 +49,7 @@ const productList03 = [
     href: '/goods/products03/hmg-85HF',
   },
 ];
-const productList04 = [
+const materialsList04 = [
   {
     name: 'Подшипники HMG-800/815',
     img: '/image/products04/hmg-800.jpg',
@@ -71,7 +71,7 @@ const productList04 = [
     href: '/goods/products04/hmg-600',
   },
 ];
-const productList05 = [
+const materialsList05 = [
   {
     name: 'Подшипники HMG-EPB',
     img: '/image/products05/hmg-EPB.jpg',
@@ -83,7 +83,7 @@ const productList05 = [
     href: '/goods/products05/hmg-FWB',
   },
 ];
-const productList06 = [
+const materialsList06 = [
   {
     name: 'Подшипники HMG-200C',
     img: '/image/products06/hmg-200C.jpg',
@@ -96,6 +96,20 @@ const productList06 = [
   },
 ];
 
-const allProducts = productList01.concat(productList02, productList03, productList04, productList05, productList06);
+const allProducts = materialsList01.concat(
+  materialsList02,
+  materialsList03,
+  materialsList04,
+  materialsList05,
+  materialsList06,
+);
 
-export { productList01, productList02, productList03, productList04, productList05, productList06, allProducts };
+export {
+  materialsList01,
+  materialsList02,
+  materialsList03,
+  materialsList04,
+  materialsList05,
+  materialsList06,
+  allProducts,
+};

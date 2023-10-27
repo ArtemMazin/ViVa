@@ -1,18 +1,18 @@
 import React from 'react';
-import { productList06 } from '@/utils/productLists';
-import { presentationImage } from '@/utils/constants';
+import { materialsList06 } from '@/utils/materialsLists';
+import { products } from '@/utils/products';
 import Products from '@/components/Products/Products';
 import BreadCrumbs from '@/components/BreadCrumbs/BreadCrumbs';
 
 export const metadata = {
-  title: 'Высокопроизводительные стальные самосмазывающиеся подшипники',
-  description: 'Высокопроизводительные стальные самосмазывающиеся подшипники ООО "ВиВа Групп"',
+  title: products[5].name,
+  description: products[5].name,
 };
 
 const products06 = () => {
-  const title = presentationImage[5].name;
-  const description = `Благодаря использованию специальной обработки поверхности и технологии обработки традиционных стальных гильз повышается износостойкость, противозадирные свойства, ударопрочность и коррозионная стойкость. В то же время особая структура поверхности снижает частоту смазки. При подходящих условиях уплотнения эти высокоточные стальные втулки имеют даже лучшие характеристики, чем самосмазывающиеся подшипники из медного сплава для наружного применения в строительной технике, сельскохозяйственном оборудовании, портовой технике и т. д.`;
-  const image = `/image/products06/pro06.jpg`;
+  const title = products[5].name;
+  const description = products[5].description;
+  const image = products[5].img;
 
   return (
     <main>
@@ -29,7 +29,7 @@ const products06 = () => {
         titleProducts={title}
         descriptionProducts={description}
         productsImage={image}
-        productList={productList06}
+        materialsList={materialsList06}
       />
     </main>
   );

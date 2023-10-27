@@ -1,5 +1,5 @@
 import React from 'react';
-import { presentationImage } from '@/utils/constants';
+import { products } from '@/utils/products';
 import styles from './SideMenu.module.css';
 import Link from 'next/link';
 
@@ -8,14 +8,10 @@ const SideMenu = ({ showGoodsSideMenu, href }) => {
     <>
       {href === '/goods' && (
         <ul className={`${styles.side} ${showGoodsSideMenu && styles.active} `}>
-          {presentationImage.map(({ name, href }) => {
+          {products.map(({ name, href }) => {
             return (
-              <li
-                key={name}
-                className={styles.item}>
-                <Link
-                  href={href}
-                  className={styles.link}>
+              <li key={name} className={styles.item}>
+                <Link href={href} className={styles.link}>
                   {name}
                 </Link>
               </li>

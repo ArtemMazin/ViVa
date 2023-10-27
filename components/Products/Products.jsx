@@ -5,28 +5,31 @@ import Htag from '../Htag/Htag';
 import Ptag from '../Ptag/Ptag';
 import CardList from '../CardList/CardList';
 
-const Products = ({ titleProducts, descriptionProducts, productsImage, productList }) => {
+const Products = ({
+  titleProducts,
+  descriptionProducts,
+  productsImage,
+  materialsList,
+}) => {
   return (
     <div className={styles.main}>
       <div className={styles.imageContainer}>
         <Image
           src={productsImage}
           fill
-          sizes='(max-width: 1280px) 60vw, 100vw'
+          sizes="(max-width: 1280px) 60vw, 100vw"
           priority={true}
           alt={titleProducts}
           className={styles.image}
         />
       </div>
-      <div className='container'>
-        <Htag
-          tag='h1'
-          border='left'>
+      <div className="container">
+        <Htag tag="h1" border="left">
           {titleProducts}
         </Htag>
-        <Ptag tag='p'>{descriptionProducts}</Ptag>
+        <Ptag tag="p">{descriptionProducts}</Ptag>
       </div>
-      <CardList array={productList} />
+      <CardList array={materialsList} />
     </div>
   );
 };
