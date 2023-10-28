@@ -20,8 +20,8 @@ const products06 = () => {
         className={'container'}
         currentLink={title}
         links={[
-          { href: 'https://vi-va.vercel.app/', name: 'Главнaя' },
-          { href: 'https://vi-va.vercel.app/goods', name: 'Товары' },
+          { href: process.env.URL, name: 'Главнaя' },
+          { href: `${process.env.URL}/goods`, name: 'Товары' },
         ]}
       />
 

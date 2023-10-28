@@ -14,7 +14,7 @@ export default function Privacy() {
     <main className={`container ${styles.privacy}`}>
       <BreadCrumbs
         currentLink="Политика в отношении обработки персональных данных"
-        links={[{ href: 'https://vi-va.vercel.app/', name: 'Главнaя' }]}
+        links={[{ href: process.env.URL, name: 'Главнaя' }]}
       />
       <Htag tag="h1" border="left">
         Политика в отношении обработки персональных данных

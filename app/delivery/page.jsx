@@ -12,7 +12,7 @@ export default function Delivery() {
     <main className={`container ${styles.delivery}`}>
       <BreadCrumbs
         currentLink="Доставка"
-        links={[{ href: 'https://vi-va.vercel.app/', name: 'Главнaя' }]}
+        links={[{ href: process.env.URL, name: 'Главнaя' }]}
       />
       <Htag tag="h1" border="left">
         Доставка

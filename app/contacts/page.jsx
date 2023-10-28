@@ -15,7 +15,7 @@ export default function Contacts() {
     <main className={`${styles.contacts} container`}>
       <BreadCrumbs
         currentLink="Контакты"
-        links={[{ href: 'https://vi-va.vercel.app/', name: 'Главнaя' }]}
+        links={[{ href: process.env.URL, name: 'Главнaя' }]}
       />
       <Htag tag="h1" border="left">
         Контакты

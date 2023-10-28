@@ -7,15 +7,13 @@ import Htag from '@/components/Htag/Htag';
 const page = () => {
   return (
     <main>
-      <div className='container'>
+      <div className="container">
         <BreadCrumbs
-          currentLink='Поиск подшипников'
-          links={[{ href: 'https://vi-va.vercel.app/', name: 'Главнaя' }]}
+          currentLink="Поиск подшипников"
+          links={[{ href: process.env.URL, name: 'Главнaя' }]}
         />
 
-        <Htag
-          tag='h1'
-          border='left'>
+        <Htag tag="h1" border="left">
           Поиск подшипников
         </Htag>
       </div>

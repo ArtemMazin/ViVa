@@ -1,33 +1,26 @@
 import Image from 'next/image';
 import React from 'react';
-import {
-  flex,
-  table,
-  cell,
-  image,
-  section,
-  scroll,
-  caption,
-} from './hmg11.module.css';
+import styles from './hmg11.module.css';
 import Htag from '@/components/Htag/Htag';
 import Ptag from '@/components/Ptag/Ptag';
 import BreadCrumbs from '@/components/BreadCrumbs/BreadCrumbs';
+import Table from './Table';
 
 const page = () => {
   return (
-    <main className={`${section} container`}>
+    <main className={`${styles.section} container`}>
       <BreadCrumbs
         currentLink="Подшипники HMG-11"
         links={[
-          { href: 'https://vi-va.vercel.app/', name: 'Главнaя' },
-          { href: 'https://vi-va.vercel.app/goods', name: 'Товары' },
+          { href: process.env.URL, name: 'Главнaя' },
+          { href: `${process.env.URL}/goods`, name: 'Товары' },
           {
-            href: 'https://vi-va.vercel.app/goods/products01',
+            href: `${process.env.URL}/goods/products01`,
             name: 'Металлополимерные самосмазывающиеся подшипники',
           },
         ]}
       />
-      <section className={flex}>
+      <section className={styles.flex}>
         <Image
           src="/image/pages/hmg11/hmg11.jpg"
           width={600}
@@ -35,7 +28,7 @@ const page = () => {
           sizes="(max-width: 520px) 45vw, (max-width: 768px) 50vw, (max-width: 1280px) 25vw, 40vw"
           priority={true}
           alt="Подшипники HMG-11"
-          className={image}
+          className={styles.image}
         />
         <div>
           <Htag tag="h1">HMG-11</Htag>
@@ -51,7 +44,7 @@ const page = () => {
           </Ptag>
         </div>
       </section>
-      <section className={flex}>
+      <section className={styles.flex}>
         <div>
           <Htag tag="h2" border="left">
             Структура
@@ -82,112 +75,8 @@ const page = () => {
         />
       </section>
       <section>
-        <div className={scroll}>
-          <table className={table}>
-            <caption className={caption}>
-              <Htag tag="h2" border="left">
-                Сводная таблица технических данных материала HMG-11
-              </Htag>
-            </caption>
-            <tbody>
-              <tr>
-                <td rowSpan="3" style={{ width: '16%' }} className={cell}>
-                  <span style={{ width: '33%' }}>Макс. нагрузка</span>
-                </td>
-                <td style={{ width: '16%' }} className={cell}>
-                  <span style={{ width: '33%' }}>Статический режим</span>
-                </td>
-                <td style={{ width: '16%' }} className={cell}>
-                  250 Н/мм<sup>2</sup>
-                </td>
-                <td rowSpan="6" className={cell}>
-                  &nbsp;
-                </td>
-                <td colSpan="2" style={{ width: '28%' }} className={cell}>
-                  <span style={{ width: '33%' }}>Коэффициент трения</span>
-                </td>
-                <td style={{ width: '20%' }} className={cell}>
-                  0.03~0.20
-                </td>
-              </tr>
-              <tr>
-                <td className={cell}>
-                  <span style={{ width: '33%' }}>Низкоскоростной режим</span>
-                </td>
-                <td className={cell}>
-                  140 Н/мм<sup>2</sup>
-                </td>
-                <td rowSpan="2" className={cell}>
-                  Макс.<span style={{ fontSize: '12pt' }}>скорость</span>
-                </td>
-                <td className={cell}>
-                  <span style={{ width: '33%' }}>Сухой рехим</span>
-                </td>
-                <td className={cell}>2 м/с</td>
-              </tr>
-              <tr>
-                <td className={cell}>
-                  <span style={{ width: '33%' }}>
-                    Вращательно - колебательный режим
-                  </span>
-                </td>
-                <td className={cell}>
-                  60 Н/мм<sup>2</sup>
-                </td>
-                <td className={cell}>
-                  <span style={{ width: '33%' }}>Гидродинамический режим</span>
-                </td>
-                <td className={cell}>&gt;2 м/с</td>
-              </tr>
-              <tr>
-                <td rowSpan="2" className={cell}>
-                  <span style={{ width: '33%' }}>Макс. PV Сухой режим</span>
-                </td>
-                <td className={cell}>
-                  <span style={{ width: '33%' }}>
-                    Кратковременная эксплуатация
-                  </span>
-                </td>
-                <td className={cell}>
-                  3.6 Н/мм<sup>2</sup>*м/с
-                </td>
-                <td colSpan="2" className={cell}>
-                  <span style={{ width: '33%' }}>Теплопроводность</span>
-                </td>
-                <td className={cell}>
-                  60 Вт(м*K)<sup>-1</sup>
-                </td>
-              </tr>
-              <tr>
-                <td className={cell}>
-                  <span style={{ width: '33%' }}>Непрерывная работа</span>
-                </td>
-                <td className={cell}>
-                  1.8 Н/мм<sup>2</sup>*м/с
-                </td>
-                <td colSpan="2" className={cell}>
-                  <span style={{ width: '33%' }}>
-                    Коэффициент температурного расширения
-                  </span>
-                </td>
-                <td className={cell}>
-                  11*10<sup>-6</sup>*K<sup>-1</sup>
-                </td>
-              </tr>
-              <tr>
-                <td colSpan="2" className={cell}>
-                  <span style={{ width: '33%' }}>
-                    Диапазон рабочих температур
-                  </span>
-                </td>
-                <td className={cell}>-195℃～+280℃</td>
-                <td colSpan="2" className={cell}>
-                  &nbsp;
-                </td>
-                <td className={cell}>&nbsp;</td>
-              </tr>
-            </tbody>
-          </table>
+        <div className={styles.scroll}>
+          <Table />
         </div>
       </section>
       <section>

@@ -1,33 +1,26 @@
 import Htag from '@/components/Htag/Htag';
 import Ptag from '@/components/Ptag/Ptag';
 import BreadCrumbs from '@/components/BreadCrumbs/BreadCrumbs';
-import {
-  flex,
-  table,
-  cell,
-  image,
-  section,
-  scroll,
-  caption,
-} from './hmg85HF.module.css';
+import styles from './hmg85HF.module.css';
 import Image from 'next/image';
 import React from 'react';
+import Table from './Table';
 
 const page = () => {
   return (
-    <main className={`${section} container`}>
+    <main className={`${styles.section} container`}>
       <BreadCrumbs
         currentLink="Подшипники HMG-85HF"
         links={[
-          { href: 'https://vi-va.vercel.app/', name: 'Главнaя' },
-          { href: 'https://vi-va.vercel.app/goods', name: 'Товары' },
+          { href: process.env.URL, name: 'Главнaя' },
+          { href: `${process.env.URL}/goods`, name: 'Товары' },
           {
-            href: 'https://vi-va.vercel.app/goods/products03',
+            href: `${process.env.URL}/goods/products03`,
             name: 'Металлические самосмазывающиеся подшипники',
           },
         ]}
       />
-      <section className={flex}>
+      <section className={styles.flex}>
         <Image
           src="/image/pages/hmg85HF/hmg85HF.jpg"
           width={600}
@@ -35,7 +28,7 @@ const page = () => {
           sizes="(max-width: 520px) 45vw, (max-width: 768px) 50vw, (max-width: 1280px) 25vw, 40vw"
           priority={true}
           alt="Подшипники HMG-85HF"
-          className={image}
+          className={styles.image}
         />
         <div>
           <Htag tag="h1">HMG-85HF</Htag>
@@ -55,7 +48,7 @@ const page = () => {
           </Ptag>
         </div>
       </section>
-      <section className={flex}>
+      <section className={styles.flex}>
         <div>
           <Htag tag="h2" border="left">
             Структура
@@ -85,122 +78,8 @@ const page = () => {
         />
       </section>
       <section>
-        <div className={scroll}>
-          <table className={table}>
-            <caption className={caption}>
-              <Htag tag="h2" border="left">
-                Сводная таблица технических данных материала HMG-85HF
-              </Htag>
-            </caption>
-            <tbody>
-              <tr>
-                <td colSpan="3" className={cell}>
-                  Тип материала
-                </td>
-                <td className={cell}>Единицы</td>
-                <td className={cell}>HMG85HHFL</td>
-                <td className={cell}>HMG85HHFH</td>
-              </tr>
-              <tr>
-                <td colSpan="3" className={cell}>
-                  Прочность на сжатие
-                </td>
-                <td className={cell}>МПа</td>
-                <td className={cell}>≥420</td>
-                <td className={cell}>≥550</td>
-              </tr>
-              <tr>
-                <td colSpan="3" className={cell}>
-                  Твердость поверхности
-                </td>
-                <td className={cell}>----</td>
-                <td className={cell}>≥50 HRB</td>
-                <td className={cell}>≥75 HRB</td>
-              </tr>
-              <tr>
-                <td colSpan="3" className={cell}>
-                  Плотность
-                </td>
-                <td className={cell}>
-                  г/см<sup>3</sup>
-                </td>
-                <td className={cell}>6-6.5</td>
-                <td className={cell}>6-6.5</td>
-              </tr>
-              <tr>
-                <td colSpan="3" className={cell}>
-                  Масляная пропитка
-                </td>
-                <td className={cell}>vol%</td>
-                <td className={cell}>16-20%</td>
-                <td className={cell}>16-20%</td>
-              </tr>
-              <tr>
-                <td rowSpan="2" className={cell}>
-                  Макс. нагрузка
-                </td>
-                <td colSpan="2" className={cell}>
-                  Статический
-                </td>
-                <td rowSpan="2" className={cell}>
-                  МПа
-                </td>
-                <td className={cell}>50</td>
-                <td className={cell}>150</td>
-              </tr>
-              <tr>
-                <td colSpan="2" className={cell}>
-                  Динамический
-                </td>
-                <td className={cell}>30</td>
-                <td className={cell}>75</td>
-              </tr>
-              <tr>
-                <td rowSpan="2" className={cell}>
-                  Макс. скорость
-                </td>
-                <td colSpan="2" className={cell}>
-                  Сухой режим
-                </td>
-                <td rowSpan="2" className={cell}>
-                  м/с
-                </td>
-                <td className={cell}>0.5</td>
-                <td className={cell}>0.5</td>
-              </tr>
-              <tr>
-                <td colSpan="2" className={cell}>
-                  Со смазкой
-                </td>
-                <td className={cell}>&gt;1.5</td>
-                <td className={cell}>&gt;1.0</td>
-              </tr>
-              <tr>
-                <td colSpan="2" rowSpan="2" className={cell}>
-                  Макс. PV
-                </td>
-                <td className={cell}>Сухой режим</td>
-                <td rowSpan="2" className={cell}>
-                  Н/мм<sup>2</sup>*м/с
-                </td>
-                <td className={cell}>1.5</td>
-                <td className={cell}>1.5</td>
-              </tr>
-              <tr>
-                <td className={cell}>Со смазкой</td>
-                <td className={cell}>2.5</td>
-                <td className={cell}>2.5</td>
-              </tr>
-              <tr>
-                <td colSpan="3" className={cell}>
-                  Диапазон рабочих температур
-                </td>
-                <td className={cell}>℃</td>
-                <td className={cell}>-40~+120</td>
-                <td className={cell}>-40~+120</td>
-              </tr>
-            </tbody>
-          </table>
+        <div className={styles.scroll}>
+          <Table />
         </div>
       </section>
       <section>

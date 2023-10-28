@@ -24,7 +24,7 @@ export default function Goods() {
     <main className={`container ${goods}`}>
       <BreadCrumbs
         currentLink="Товары"
-        links={[{ href: 'https://vi-va.vercel.app/', name: 'Главнaя' }]}
+        links={[{ href: process.env.URL, name: 'Главнaя' }]}
       />
       <Htag tag="h1" border="left">
         Наша продукция

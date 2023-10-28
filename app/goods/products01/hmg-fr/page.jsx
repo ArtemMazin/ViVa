@@ -1,33 +1,26 @@
 import Image from 'next/image';
 import React from 'react';
-import {
-  flex,
-  table,
-  cell,
-  image,
-  section,
-  scroll,
-  caption,
-} from './hmgFR.module.css';
+import styles from './hmgFR.module.css';
 import Htag from '@/components/Htag/Htag';
 import Ptag from '@/components/Ptag/Ptag';
 import BreadCrumbs from '@/components/BreadCrumbs/BreadCrumbs';
+import Table from './Table';
 
 const page = () => {
   return (
-    <main className={`${section} container`}>
+    <main className={`${styles.section} container`}>
       <BreadCrumbs
         currentLink="Подшипники HMG-FR"
         links={[
-          { href: 'https://vi-va.vercel.app/', name: 'Главнaя' },
-          { href: 'https://vi-va.vercel.app/goods', name: 'Товары' },
+          { href: process.env.URL, name: 'Главнaя' },
+          { href: `${process.env.URL}/goods`, name: 'Товары' },
           {
-            href: 'https://vi-va.vercel.app/goods/products01',
+            href: `${process.env.URL}/goods/products01`,
             name: 'Металлополимерные самосмазывающиеся подшипники',
           },
         ]}
       />
-      <section className={flex}>
+      <section className={styles.flex}>
         <Image
           src="/image/pages/hmgFR/hmgFR.jpg"
           width={600}
@@ -35,7 +28,7 @@ const page = () => {
           sizes="(max-width: 520px) 45vw, (max-width: 768px) 50vw, (max-width: 1280px) 25vw, 40vw"
           priority={true}
           alt="Подшипники HMG-FR"
-          className={image}
+          className={styles.image}
         />
         <div>
           <Htag tag="h1">HMG-FR</Htag>
@@ -53,7 +46,7 @@ const page = () => {
           </Ptag>
         </div>
       </section>
-      <section className={flex}>
+      <section className={styles.flex}>
         <div>
           <Htag tag="h2" border="left">
             Структура
@@ -77,71 +70,8 @@ const page = () => {
         />
       </section>
       <section>
-        <div className={scroll}>
-          <table className={table}>
-            <caption className={caption}>
-              <Htag tag="h2" border="left">
-                Сводная таблица технических данных материала HMG-FR
-              </Htag>
-            </caption>
-            <tbody>
-              <tr></tr>
-            </tbody>
-            <tbody>
-              <tr>
-                <td style={{ width: '16%' }} className={cell}>
-                  Стандартная толщина стенки, мм
-                </td>
-                <td style={{ width: '16%' }} className={cell}>
-                  HMG-FR / Сетка из бронзы
-                </td>
-                <td style={{ width: '16%' }} className={cell}>
-                  HMG-FRS / Сетка из нержавеющей стали
-                </td>
-                <td rowSpan="4" style={{ width: '4%' }} className={cell}>
-                  &nbsp;
-                </td>
-                <td style={{ width: '16%' }} className={cell}>
-                  Максимальная нагрузка
-                </td>
-                <td style={{ width: '16%' }} className={cell}>
-                  Комнатная температура
-                </td>
-                <td style={{ width: '16%' }} className={cell}>
-                  80 Н/мм<sup>2</sup>
-                </td>
-              </tr>
-              <tr>
-                <td className={cell}>0.48</td>
-                <td className={cell}>*</td>
-                <td className={cell}>*</td>
-                <td className={cell}>Максимальная скорость</td>
-                <td className={cell}>Сухой ход</td>
-                <td className={cell}>1 м/с</td>
-              </tr>
-              <tr>
-                <td className={cell}>0.78</td>
-                <td className={cell}>*</td>
-                <td className={cell}>
-                  <span>*</span>
-                </td>
-                <td colSpan="2" className={cell}>
-                  Диапазон рабочих температур
-                </td>
-                <td className={cell}>-195℃~+260℃</td>
-              </tr>
-              <tr>
-                <td className={cell}>0.98</td>
-                <td className={cell}>*</td>
-                <td className={cell}>&nbsp;</td>
-                <td colSpan="2" className={cell}>
-                  Коэффициент трения
-                </td>
-                <td className={cell}>0.03~0.20</td>
-              </tr>
-            </tbody>
-            <tbody></tbody>
-          </table>
+        <div className={styles.scroll}>
+          <Table />
         </div>
       </section>
       <section>

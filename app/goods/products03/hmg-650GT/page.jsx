@@ -1,33 +1,26 @@
 import Htag from '@/components/Htag/Htag';
 import Ptag from '@/components/Ptag/Ptag';
 import BreadCrumbs from '@/components/BreadCrumbs/BreadCrumbs';
-import {
-  flex,
-  table,
-  cell,
-  image,
-  section,
-  scroll,
-  caption,
-} from './hmg650GT.module.css';
+import styles from './hmg650GT.module.css';
 import Image from 'next/image';
 import React from 'react';
+import Table from './Table';
 
 const page = () => {
   return (
-    <main className={`${section} container`}>
+    <main className={`${styles.section} container`}>
       <BreadCrumbs
         currentLink="Подшипники HMG-650GT"
         links={[
-          { href: 'https://vi-va.vercel.app/', name: 'Главнaя' },
-          { href: 'https://vi-va.vercel.app/goods', name: 'Товары' },
+          { href: process.env.URL, name: 'Главнaя' },
+          { href: `${process.env.URL}/goods`, name: 'Товары' },
           {
-            href: 'https://vi-va.vercel.app/goods/products03',
+            href: `${process.env.URL}/goods/products03`,
             name: 'Металлические самосмазывающиеся подшипники',
           },
         ]}
       />
-      <section className={flex}>
+      <section className={styles.flex}>
         <Image
           src="/image/pages/hmg650GT/hmg650GT.jpg"
           width={600}
@@ -35,7 +28,7 @@ const page = () => {
           sizes="(max-width: 520px) 45vw, (max-width: 768px) 50vw, (max-width: 1280px) 25vw, 40vw"
           priority={true}
           alt="Подшипники HMG-650GT"
-          className={image}
+          className={styles.image}
         />
         <div>
           <Htag tag="h1">HMG-650GT</Htag>
@@ -52,7 +45,7 @@ const page = () => {
           </Ptag>
         </div>
       </section>
-      <section className={flex}>
+      <section className={styles.flex}>
         <div>
           <Htag tag="h2" border="left">
             Структура
@@ -82,81 +75,8 @@ const page = () => {
         />
       </section>
       <section>
-        <div className={scroll}>
-          <table className={table}>
-            <caption className={caption}>
-              <Htag tag="h2" border="left">
-                Сводная таблица технических данных материала HMG-650GT
-              </Htag>
-            </caption>
-            <tbody>
-              <tr>
-                <td rowSpan="2" className={cell}>
-                  Макс. нагрузка
-                </td>
-                <td className={cell}>Статическая</td>
-                <td className={cell}>
-                  <span>
-                    250 Н/мм<sup>2</sup>
-                  </span>
-                </td>
-                <td rowSpan="6" className={cell}>
-                  &nbsp;
-                </td>
-                <td className={cell}>Диапазон рабочих температур</td>
-                <td className={cell}>-100℃~+300℃</td>
-              </tr>
-              <tr>
-                <td className={cell}>Динамическая</td>
-                <td className={cell}>
-                  <span>
-                    100 Н/мм<sup>2</sup>
-                  </span>
-                </td>
-                <td className={cell}>Коэффициент трения</td>
-                <td className={cell}>0.03~0.20</td>
-              </tr>
-              <tr>
-                <td rowSpan="2" className={cell}>
-                  Максимальная скорость
-                </td>
-                <td className={cell}>Сухой режим</td>
-                <td className={cell}>0.5 м/с</td>
-                <td className={cell}>Теплопроводность</td>
-                <td className={cell}>
-                  60 Вт(м*К)<sup>-1</sup>
-                </td>
-              </tr>
-              <tr>
-                <td className={cell}>Со смазкой</td>
-                <td className={cell}>1.0 м/с</td>
-                <td className={cell}>Коэф. теплового расширения</td>
-                <td className={cell}>
-                  19*10<sup>-6</sup>*K<sup>-1</sup>
-                </td>
-              </tr>
-              <tr>
-                <td colSpan="2" className={cell}>
-                  Макс. PV
-                </td>
-                <td className={cell}>
-                  3.25 Н/мм<sup>2</sup>*м/с
-                </td>
-                <td className={cell}>Прочность соединения сплавов</td>
-                <td className={cell}>
-                  150 Н/мм<sup>2</sup>
-                </td>
-              </tr>
-              <tr>
-                <td colSpan="2" className={cell}>
-                  Твердость сплава
-                </td>
-                <td className={cell}>HB＞210</td>
-                <td className={cell}>&nbsp;</td>
-                <td className={cell}>&nbsp;</td>
-              </tr>
-            </tbody>
-          </table>
+        <div className={styles.scroll}>
+          <Table />
         </div>
       </section>
       <section>
