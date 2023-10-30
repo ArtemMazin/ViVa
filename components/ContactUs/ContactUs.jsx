@@ -6,14 +6,14 @@ import ContactForm from '@/components/ContactUs/ContactForm/ContactForm';
 import Button from '@/components/Button/Button';
 import styles from './ContactUs.module.css';
 import { Mail } from 'lucide-react';
-import useScreenWidth from '@/hooks/useScreenWidth';
 import Notification from '../Notification/Notification';
+import { useResize } from '@/hooks/useResize';
 
 const ContactUs = () => {
   const [isFormOpen, setIsFormOpen] = useState(false);
   const [isNotificationOpen, setIsNotificationOpen] = useState(false);
   const [message, setMessage] = useState('');
-  const { device } = useScreenWidth();
+  const { isScreenSm } = useResize();
 
   function openForm() {
     setIsFormOpen(true);
@@ -32,11 +32,7 @@ const ContactUs = () => {
   return (
     <>
       <Button type="button" fixed onClick={openForm}>
-        {device === 'mobile' ? (
-          <Mail size={30} />
-        ) : (
-          <span>Оставить заявку</span>
-        )}
+        {isScreenSm ? <Mail size={30} /> : <span>Оставить заявку</span>}
       </Button>
 
       <Popup isOpen={isFormOpen} onClose={closeForm} style="form">

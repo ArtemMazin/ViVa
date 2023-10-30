@@ -5,10 +5,10 @@ import styles from './Header.module.css';
 import Adress from './Adress/Adress';
 import Content from './Content/Content';
 import Navigation from './Navigation/Navigation';
-import useScreenWidth from '@/hooks/useScreenWidth';
 import MobileHeader from './MobileHeader/MobileHeader';
 import { Suspense } from 'react';
 import ContactUs from '../ContactUs/ContactUs';
+import { useResize } from '@/hooks/useResize';
 
 function FakeHeader() {
   return (
@@ -19,18 +19,18 @@ function FakeHeader() {
 }
 
 const Header = () => {
-  const { device } = useScreenWidth();
+  const { isScreenMd } = useResize();
 
   return (
     <Suspense fallback={<FakeHeader />}>
-      {device === 'pc' || device === 'notebook' ? (
+      {isScreenMd ? (
+        <MobileHeader />
+      ) : (
         <header className={styles.wrapper}>
           <Adress />
           <Content />
           <Navigation />
         </header>
-      ) : (
-        <MobileHeader />
       )}
       <ContactUs />
     </Suspense>

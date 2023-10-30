@@ -4,15 +4,15 @@ import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { navLinks } from '@/utils/constants';
 import SideMenu from '../SideMenu/SideMenu';
-import useScreenWidth from '@/hooks/useScreenWidth';
+import { useResize } from '@/hooks/useResize';
 
 const Navigation = () => {
   const [showGoodsSideMenu, setShowGoodsSideMenu] = useState(false);
   const pathname = usePathname();
-  const { device } = useScreenWidth();
+  const { isScreenXxl } = useResize();
 
-  const onMouseEnterHandler = (href) => {
-    device === 'pc' && href === '/goods' && setShowGoodsSideMenu(true);
+  const onMouseEnterHandler = href => {
+    isScreenXxl && href === '/goods' && setShowGoodsSideMenu(true);
   };
 
   const onMouseLeaveHandler = () => {
@@ -29,16 +29,12 @@ const Navigation = () => {
               key={name}
               className={styles.item}
               onMouseEnter={() => onMouseEnterHandler(href)}
-              onMouseLeave={onMouseLeaveHandler}>
-              <Link
-                className={styles.link}
-                href={href}>
+              onMouseLeave={onMouseLeaveHandler}
+            >
+              <Link className={styles.link} href={href}>
                 <span className={`${isActive && styles.active}`}>{name}</span>
               </Link>
-              <SideMenu
-                showGoodsSideMenu={showGoodsSideMenu}
-                href={href}
-              />
+              <SideMenu showGoodsSideMenu={showGoodsSideMenu} href={href} />
             </li>
           );
         })}
