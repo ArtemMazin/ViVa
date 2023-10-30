@@ -6,10 +6,10 @@ import { useSearchParams } from 'next/navigation';
 import styles from './FilteredCards.module.css';
 import React from 'react';
 import { filterCards } from '@/services/filterService';
-import useScreenWidth from '@/hooks/useScreenWidth';
+import { useResize } from '@/hooks/useResize';
 
 const FilteredCards = () => {
-  const { device } = useScreenWidth();
+  const { isScreenXxl } = useResize();
   const searchParams = useSearchParams();
 
   const search = searchParams.get('filter');
@@ -17,9 +17,7 @@ const FilteredCards = () => {
   const filteredCards = filterCards(search);
 
   return (
-    <div
-      className={device === 'pc' || device === 'notebook' ? 'container' : ''}
-    >
+    <div className={isScreenXxl ? 'container' : ''}>
       {filteredCards.length === 0 ? (
         <Htag tag="h2" className={styles.text}>
           Ничего не найдено
