@@ -9,10 +9,10 @@ import { useResize } from '@/hooks/useResize';
 const Navigation = () => {
   const [showGoodsSideMenu, setShowGoodsSideMenu] = useState(false);
   const pathname = usePathname();
-  const { isScreenXxl } = useResize();
+  const { isScreenXl } = useResize();
 
   const onMouseEnterHandler = href => {
-    isScreenXxl && href === '/goods' && setShowGoodsSideMenu(true);
+    isScreenXl && href === '/goods' && setShowGoodsSideMenu(true);
   };
 
   const onMouseLeaveHandler = () => {

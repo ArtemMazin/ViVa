@@ -13,10 +13,7 @@ function FakeHeader() {
 
 const CustomHeader = withScreen({
   ScreenSmComponent: () => <MobileHeader />,
-  ScreenMdComponent: () => <MobileHeader />,
   ScreenLgComponent: () => <DesktopHeader />,
-  ScreenXlComponent: () => <DesktopHeader />,
-  ScreenXxlComponent: () => <DesktopHeader />,
 });
 
 const Header = () => {

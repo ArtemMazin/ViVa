@@ -1,24 +1,14 @@
 import React from 'react';
 import { useResize } from '@/hooks/useResize';
 
-function withScreen({
-  ScreenSmComponent,
-  ScreenMdComponent,
-  ScreenLgComponent,
-  ScreenXlComponent,
-  ScreenXxlComponent,
-}) {
+function withScreen({ ScreenSmComponent, ScreenLgComponent }) {
   return function WithScreenComponent(props) {
-    const { isScreenSm, isScreenMd, isScreenLg, isScreenXl, isScreenXxl } =
-      useResize();
+    const { isScreenSm, isScreenLg } = useResize();
 
     return (
       <>
         {isScreenSm && ScreenSmComponent && <ScreenSmComponent {...props} />}
-        {isScreenMd && ScreenMdComponent && <ScreenMdComponent {...props} />}
         {isScreenLg && ScreenLgComponent && <ScreenLgComponent {...props} />}
-        {isScreenXl && ScreenXlComponent && <ScreenXlComponent {...props} />}
-        {isScreenXxl && ScreenXxlComponent && <ScreenXxlComponent {...props} />}
       </>
     );
   };
