@@ -1,11 +1,10 @@
 'use client';
 
-import { createContext, useContext, useEffect } from 'react';
+import { useContext, useEffect } from 'react';
 import styles from './Popup.module.css';
 import { X } from 'lucide-react';
 import cn from 'classnames';
-
-const PopupContext = createContext();
+import { PopupContext } from '@/contexts/PopupContext';
 
 const PopupCompound = ({ isOpen, onClose, style, children }) => {
   useEffect(() => {

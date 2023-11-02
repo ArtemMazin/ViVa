@@ -1,12 +1,13 @@
 'use client';
 
-import React, { useCallback } from 'react';
+import React, { useCallback, useContext } from 'react';
 import styles from './Search.module.css';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { Search } from 'lucide-react';
 import { useValidationForm } from '@/hooks/useValidationForm';
+import { SearchContext } from '@/contexts/SearchContext';
 
-const SearchBar = () => {
+const SearchCompound = ({ children }) => {
   const { values, resetForm, handleChangeValidation } = useValidationForm();
 
   const router = useRouter();
@@ -35,20 +36,57 @@ const SearchBar = () => {
   };
 
   return (
+    <SearchContext.Provider
+      value={{ handleKeyDown, goToSearch, values, handleChangeValidation }}
+    >
+      {children}
+    </SearchContext.Provider>
+  );
+};
+
+SearchCompound.Form = function Form({ children }) {
+  const { goToSearch } = useContext(SearchContext);
+
+  return (
     <form className={styles.form} onSubmit={goToSearch} noValidate>
-      <input
-        type="search"
-        name="search"
-        placeholder="Поиск..."
-        className={styles.input}
-        value={values.search || ''}
-        onChange={handleChangeValidation}
-        onKeyDown={handleKeyDown}
-      />
-      <button type="submit" className={styles.button}>
-        <Search size={24} className={styles.icon} />
-      </button>
+      {children}
     </form>
+  );
+};
+
+SearchCompound.Input = function Input() {
+  const { handleKeyDown, values, handleChangeValidation } =
+    useContext(SearchContext);
+
+  return (
+    <input
+      type="search"
+      name="search"
+      placeholder="Поиск..."
+      className={styles.input}
+      value={values.search || ''}
+      onChange={handleChangeValidation}
+      onKeyDown={handleKeyDown}
+    />
+  );
+};
+
+SearchCompound.Button = function Button() {
+  return (
+    <button type="submit" className={styles.button}>
+      <Search size={24} className={styles.icon} />
+    </button>
+  );
+};
+
+const SearchBar = () => {
+  return (
+    <SearchCompound>
+      <SearchCompound.Form>
+        <SearchCompound.Input />
+        <SearchCompound.Button />
+      </SearchCompound.Form>
+    </SearchCompound>
   );
 };
 
