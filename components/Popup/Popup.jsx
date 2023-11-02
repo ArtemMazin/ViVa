@@ -1,12 +1,13 @@
 'use client';
 
-import { useEffect } from 'react';
+import { createContext, useContext, useEffect } from 'react';
 import styles from './Popup.module.css';
 import { X } from 'lucide-react';
 import cn from 'classnames';
 
-// создаем отдельный компонент `Popup` для обертки любых попапов
-const Popup = ({ isOpen, onClose, children, style = '' }) => {
+const PopupContext = createContext();
+
+const PopupCompound = ({ isOpen, onClose, style, children }) => {
   useEffect(() => {
     if (!isOpen) return;
     const closeByEscape = e => {
@@ -19,31 +20,62 @@ const Popup = ({ isOpen, onClose, children, style = '' }) => {
     return () => document.removeEventListener('keydown', closeByEscape);
   }, [isOpen, onClose]);
 
-  // создаем обработчик оверлея
   const handleOverlay = e => {
     if (e.target === e.currentTarget) {
       onClose();
     }
   };
+  return (
+    <PopupContext.Provider value={{ isOpen, onClose, handleOverlay, style }}>
+      {children}
+    </PopupContext.Provider>
+  );
+};
 
-  // внутри верстка обертки любого попапа с классом `popup` и добавлением `popup_opened`.
+PopupCompound.Overlay = function Overlay({ children }) {
+  const { isOpen, handleOverlay } = useContext(PopupContext);
   return (
     <div
       className={`${styles.popup} ${isOpen ? styles.opened : ''}`}
       onClick={handleOverlay}
     >
-      {/* добавляем контейнер для контента попапа с возможностью изменения типа, чтобы ImagePopup можно было сделать с другими размерами */}
-      <div
-        className={cn(styles.container, {
-          [styles.form]: style === 'form',
-        })}
-      >
-        {children}
-        <button className={styles.button} type="button" onClick={onClose}>
-          <X size={32} />
-        </button>
-      </div>
+      {children}
     </div>
+  );
+};
+
+PopupCompound.Container = function Container({ children }) {
+  const { style } = useContext(PopupContext);
+  return (
+    <div
+      className={cn(styles.container, {
+        [styles.form]: style === 'form',
+      })}
+    >
+      {children}
+    </div>
+  );
+};
+
+PopupCompound.ButtonClose = function ButtonClose() {
+  const { onClose } = useContext(PopupContext);
+  return (
+    <button className={styles.button} type="button" onClick={onClose}>
+      <X size={32} />
+    </button>
+  );
+};
+
+const Popup = ({ isOpen, onClose, children, style = '' }) => {
+  return (
+    <PopupCompound isOpen={isOpen} onClose={onClose} style={style}>
+      <PopupCompound.Overlay>
+        <PopupCompound.Container>
+          {children}
+          <PopupCompound.ButtonClose />
+        </PopupCompound.Container>
+      </PopupCompound.Overlay>
+    </PopupCompound>
   );
 };
 
