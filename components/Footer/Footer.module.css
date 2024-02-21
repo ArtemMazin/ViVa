@@ -83,6 +83,7 @@
   display: flex;
   min-width: 145px;
   flex-flow: column wrap;
+  align-items: flex-end;
   color: var(--color-gray-text);
   font-size: 14px;
   font-weight: 500;
@@ -119,6 +120,6 @@
   }
 
   .contacts {
-    text-align: center;
+    align-items: center;
   }
 }

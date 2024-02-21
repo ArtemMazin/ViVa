@@ -23,7 +23,7 @@ const Footer = () => {
         <div className={`${styles.content} container`}>
           <div className={styles.copy}>
             <Logo src="/image/logo-white.svg" />
-            <span>&#169; ООО «ВиВа Групп» 2023</span>
+            <span>&#169; ООО «ВиВа Групп» 2024</span>
           </div>
 
           <ul className={styles.side}>
@@ -38,7 +38,7 @@ const Footer = () => {
             })}
           </ul>
           <div className={styles.contacts}>
-            <span>Отдел продаж:</span>
+            <span>Офис продаж:</span>
             <TelLink color="white" />
             <MailLink color="white" />
           </div>
