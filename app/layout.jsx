@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google';
 import Footer from '@/components/Footer/Footer';
 import { Suspense } from 'react';
 import { Metrika } from '@/components/metrika';
+import ContactUs from '@/components/ContactUs/ContactUs';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -21,6 +22,7 @@ export default function RootLayout({ children }) {
         <Header />
         {children}
         <Footer />
+        <ContactUs />
         <Suspense>
           <Metrika />
         </Suspense>

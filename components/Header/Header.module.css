@@ -4,6 +4,6 @@
   top: -74px;
   display: flex;
   flex-direction: column;
-  margin: 0 0 30px;
+  margin: 0 0 20px;
   background-color: var(--color-main);
 }
