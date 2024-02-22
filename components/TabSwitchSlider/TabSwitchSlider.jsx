@@ -1,9 +1,10 @@
 'use client';
 
 import React, { useState } from 'react';
-import styles from './TabSwitchSlider.module.css';
 import { tabSwitchSlides } from '@/utils/tabSwitchSlides';
-import Image from 'next/image';
+import styles from './TabSwitchSlider.module.css';
+import Tabs from './Tabs/Tabs';
+import Slides from './Slides/Slides';
 
 function TabSwitchSlider(props) {
   const [tabActive, setTabActive] = useState(tabSwitchSlides[0].name);
@@ -13,44 +14,10 @@ function TabSwitchSlider(props) {
   };
 
   return (
-    <nav className="container">
-      <ul className={styles.tabs}>
-        {tabSwitchSlides.map(item => (
-          <li key={item.name}>
-            <div
-              className={styles.tab}
-              onMouseEnter={() => toggleTab(item.name)}
-            >
-              <Image
-                src={item.icon}
-                alt={item.name}
-                width={75}
-                height={60}
-                priority={true}
-              />
-              <span
-                className={`${styles.tab_name} ${
-                  tabActive === item.name && styles.tab_name_active
-                }`}
-              >
-                {item.name}
-              </span>
-              <Image
-                src={`${
-                  tabActive === item.name
-                    ? '/tab-switch-slider/points/point_active.jpg'
-                    : '/tab-switch-slider/points/point_hover.jpg'
-                }`}
-                alt={item.name}
-                width={75}
-                height={22}
-                priority={true}
-              />
-            </div>
-          </li>
-        ))}
-      </ul>
-    </nav>
+    <section className={styles.tabSwitchSlider}>
+      <Tabs tabActive={tabActive} toggleTab={toggleTab} />
+      <Slides tabActive={tabActive} />
+    </section>
   );
 }
 

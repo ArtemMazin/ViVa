@@ -31,7 +31,9 @@ body {
 :root {
   --color-main: #fff;
   --color-gradient: linear-gradient(rgb(4 110 219 / 80%) 15%, rgb(0 0 0 / 70%));
-  --color-bg-blue: rgb(49 111 174 / 95%);
+  --color-green-light: rgb(215 235 227);
+  --color-blue-light: rgb(182 217 253);
+  --color-bg-blue: rgba(67 137 207 / 95%);
   --color-bg-light: rgb(98 110 139 / 35%);
   --color-main-title: #222;
   --color-main-text: #333;
