@@ -1,4 +1,4 @@
-import { catalog, downloadLink } from './catalog.module.css';
+import styles from './catalog.module.css';
 import Htag from '@/components/Htag/Htag';
 import Ptag from '@/components/Ptag/Ptag';
 import BreadCrumbs from '@/components/BreadCrumbs/BreadCrumbs';
@@ -10,13 +10,13 @@ export const metadata = {
 
 export default function Catalog() {
   return (
-    <main className={`container ${catalog}`}>
+    <main className={`container ${styles.catalog}`}>
       <BreadCrumbs
         currentLink="Каталог"
         links={[{ href: process.env.URL, name: 'Главнaя' }]}
       />
 
-      <Htag tag="h1" border="left">
+      <Htag tag="h1" border="left" className={styles.main_title}>
         Каталог подшипников скольжения
       </Htag>
       <Ptag tag="p">
@@ -32,7 +32,7 @@ export default function Catalog() {
       <a
         href={'/download/catalog.pdf'}
         download={true}
-        className={downloadLink}
+        className={styles.downloadLink}
       >
         Скачать полный каталог подшипников скольжения (pdf 4.2 Mb)
       </a>

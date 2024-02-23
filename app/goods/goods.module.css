@@ -56,6 +56,14 @@
   color: var(--color-bg-blue);
 }
 
+.main_title {
+  text-shadow: var(--text-shadow-title);
+}
+
+.title {
+  text-shadow: var(--text-shadow-text);
+}
+
 @media (width <= 768px) {
   .row {
     flex-direction: column;

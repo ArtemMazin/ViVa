@@ -13,7 +13,7 @@ const page = () => {
           links={[{ href: process.env.URL, name: 'Главнaя' }]}
         />
 
-        <Htag tag="h1" border="left">
+        <Htag tag="h1" border="left" className={styles.main_title}>
           Поиск подшипников
         </Htag>
       </div>

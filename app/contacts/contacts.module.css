@@ -26,6 +26,10 @@
   color: var(--color-bg-blue);
 }
 
+.main_title {
+  text-shadow: var(--text-shadow-title);
+}
+
 @media (width <= 768px) {
   .content {
     flex-direction: column;

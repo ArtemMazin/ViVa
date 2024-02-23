@@ -17,7 +17,9 @@ const Card = ({ href, img, name }) => {
       />
       <div className={styles.descriptionContainer}>
         <div className={styles.description}>
-          <Htag tag="h3">{name}</Htag>
+          <Htag tag="h3" className={styles.card_title}>
+            {name}
+          </Htag>
           <Image
             src="/image/logo-card.svg"
             width={100}

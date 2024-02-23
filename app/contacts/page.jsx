@@ -1,6 +1,5 @@
 import styles from './contacts.module.css';
 import BreadCrumbs from '@/components/BreadCrumbs/BreadCrumbs';
-import ContactForm from '@/components/ContactUs/ContactForm/ContactForm';
 import Htag from '@/components/Htag/Htag';
 import MailLink from '@/components/Links/Mail/MailLink';
 import TelLink from '@/components/Links/Tel/TelLink';
@@ -17,7 +16,7 @@ export default function Contacts() {
         currentLink="Контакты"
         links={[{ href: process.env.URL, name: 'Главнaя' }]}
       />
-      <Htag tag="h1" border="left">
+      <Htag tag="h1" border="left" className={styles.main_title}>
         Контакты
       </Htag>
 

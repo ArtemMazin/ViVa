@@ -30,10 +30,10 @@ function Slides({ tabActive }) {
               <Image
                 src={item.image}
                 alt={item.name}
+                sizes="(max-width: 520px) 45vw, (max-width: 768px) 50vw, (max-width: 1280px) 25vw, 40vw"
                 fill
                 priority={true}
-                objectFit="contain"
-                objectPosition="bottom"
+                className={styles.image}
               />
             </div>
           </div>

@@ -14,7 +14,7 @@ export default function Delivery() {
         currentLink="Доставка"
         links={[{ href: process.env.URL, name: 'Главнaя' }]}
       />
-      <Htag tag="h1" border="left">
+      <Htag tag="h1" border="left" className={styles.main_title}>
         Доставка
       </Htag>
       <Htag tag="h2">Способы доставки:</Htag>

@@ -41,5 +41,10 @@ body {
   --color-input-text: #a6a6a6;
   --color-gray-text: #ddd;
   --color-red: #ff4d00;
+  --text-shadow-main-title: 2px 2px var(--color-bg-blue),
+    3px 3px var(--color-main-title);
+  --text-shadow-title: 1px 1px var(--color-bg-input),
+    2px 2px var(--color-bg-blue);
+  --text-shadow-text: 1px 1px var(--color-blue-light);
   --transition: 0.4s;
 }

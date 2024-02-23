@@ -1,5 +1,5 @@
 import React from 'react';
-import { about, image, timeLine } from './about.module.css';
+import styles from './about.module.css';
 import Htag from '@/components/Htag/Htag';
 import Ptag from '@/components/Ptag/Ptag';
 import BreadCrumbs from '@/components/BreadCrumbs/BreadCrumbs';
@@ -12,12 +12,12 @@ export const metadata = {
 
 const page = () => {
   return (
-    <main className={`container ${about}`}>
+    <main className={`container ${styles.about}`}>
       <BreadCrumbs
         currentLink="О компании"
         links={[{ href: process.env.URL, name: 'Главнaя' }]}
       />
-      <Htag tag="h1" border="left">
+      <Htag tag="h1" border="left" className={styles.main_title}>
         О компании
       </Htag>
       <Ptag tag="p">
@@ -28,14 +28,14 @@ const page = () => {
         оперативность поставок – необходимые составляющие партнерства. За 10 лет
         работы нашими партнерами стали более двух сотен компаний.
       </Ptag>
-      <div className={image}>
+      <div className={styles.image}>
         <Image
           src={'/image/timeLine.png'}
           fill
           sizes="(max-width: 520px) 30vw, (max-width: 768px) 50vw, 100vw"
           alt=""
           priority={false}
-          className={timeLine}
+          className={styles.timeLine}
         />
       </div>
       <Ptag tag="p">
