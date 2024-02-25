@@ -69,7 +69,9 @@ export default function ContactForm({ onClose, setMessage, openNotification }) {
               className={styles.inputField}
               required
             />
-            <span className={styles.error}>{errors.name || ''}</span>
+            <span className={styles.error} role="alert">
+              {errors.name || ''}
+            </span>
           </label>
           <label>
             Ваша почта<span className={styles.star}>*</span>:
@@ -83,7 +85,9 @@ export default function ContactForm({ onClose, setMessage, openNotification }) {
               className={styles.inputField}
               required
             />
-            <span className={styles.error}>{errors.email || ''}</span>
+            <span className={styles.error} role="alert">
+              {errors.email || ''}
+            </span>
           </label>
           <label>
             Ваш телефон<span className={styles.star}>*</span>:
@@ -95,7 +99,9 @@ export default function ContactForm({ onClose, setMessage, openNotification }) {
               className={styles.inputField}
               required
             />
-            <span className={styles.error}>{errors.tel || ''}</span>
+            <span className={styles.error} role="alert">
+              {errors.tel || ''}
+            </span>
           </label>
           <label>
             Введите сообщение<span className={styles.star}>*</span>:
@@ -108,7 +114,9 @@ export default function ContactForm({ onClose, setMessage, openNotification }) {
               rows="5"
               required
             />
-            <span className={styles.error}>{errors.message || ''}</span>
+            <span className={styles.error} role="alert">
+              {errors.message || ''}
+            </span>
           </label>
           <label>
             <input
@@ -124,7 +132,9 @@ export default function ContactForm({ onClose, setMessage, openNotification }) {
                 обработку ваших персональных данных.
               </Link>
             </span>
-            <span className={styles.error}>{errors.checkbox || ''}</span>
+            <span className={styles.error} role="alert">
+              {errors.checkbox || ''}
+            </span>
           </label>
 
           <Button
