@@ -2,7 +2,14 @@ import React from 'react';
 import styles from './Htag.module.css';
 import cn from 'classnames';
 
-const Htag = ({ tag, border, children, className, ...props }) => {
+type HtagProps = {
+  tag: 'h1' | 'h2' | 'h3';
+  border?: 'left' | 'down';
+  children: React.ReactNode;
+  className?: string;
+};
+
+const Htag = ({ tag, border, children, className, ...props }: HtagProps) => {
   switch (tag) {
     case 'h1':
       return (
@@ -11,7 +18,8 @@ const Htag = ({ tag, border, children, className, ...props }) => {
             [styles.borderLeft]: border === 'left',
             [styles.borderDown]: border === 'down',
           })}
-          {...props}>
+          {...props}
+        >
           {children}
         </h1>
       );
@@ -22,7 +30,8 @@ const Htag = ({ tag, border, children, className, ...props }) => {
           className={cn(styles.h2, className, {
             [styles.borderLeft]: border === 'left',
             [styles.borderDown]: border === 'down',
-          })}>
+          })}
+        >
           {children}
         </h2>
       );
@@ -33,7 +42,8 @@ const Htag = ({ tag, border, children, className, ...props }) => {
           className={cn(styles.h3, className, {
             [styles.borderLeft]: border === 'left',
             [styles.borderDown]: border === 'down',
-          })}>
+          })}
+        >
           {children}
         </h3>
       );

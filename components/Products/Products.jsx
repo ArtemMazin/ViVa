@@ -27,7 +27,7 @@ const Products = ({
         <Htag tag="h1" border="left">
           {titleProducts}
         </Htag>
-        <Ptag tag="p">{descriptionProducts}</Ptag>
+        <Ptag>{descriptionProducts}</Ptag>
       </div>
       <CardList array={materialsList} />
     </div>

@@ -1,25 +1,19 @@
 import { useState, useEffect } from 'react';
-import { SCREEN_MD, SCREEN_XL } from '../utils/constants';
 
 export const useResize = () => {
-  const [width, setWidth] = useState<number>(0);
+  const [isScreenSm, setScreenSm] = useState<boolean>(false);
+  const [isScreenLg, setScreenLg] = useState<boolean>(false);
+  const [isScreenXl, setScreenXl] = useState<boolean>(false);
 
   useEffect(() => {
-    const handleResize = () => {
-      setWidth(window.screen.width);
-    };
-    handleResize();
-
-    window.addEventListener('resize', handleResize);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
+    setScreenSm(window.matchMedia('(max-width: 768px)').matches);
+    setScreenLg(window.matchMedia('(min-width: 768px)').matches);
+    setScreenXl(window.matchMedia('(max-width: 1200px)').matches);
   }, []);
 
   return {
-    width,
-    isScreenSm: width < SCREEN_MD,
-    isScreenLg: width >= SCREEN_MD,
-    isScreenXl: width >= SCREEN_XL,
+    isScreenSm,
+    isScreenLg,
+    isScreenXl,
   };
 };

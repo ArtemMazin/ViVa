@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import FilteredCards from './FilteredCards/FilteredCards';
 import BreadCrumbs from '@/components/BreadCrumbs/BreadCrumbs';
 import styles from './Search.module.css';
@@ -17,7 +17,9 @@ const page = () => {
           Поиск подшипников
         </Htag>
       </div>
-      <FilteredCards />
+      <Suspense fallback={<div>Загрузка...</div>}>
+        <FilteredCards />
+      </Suspense>
     </main>
   );
 };

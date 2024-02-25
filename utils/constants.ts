@@ -27,11 +27,6 @@ const sliderImages = [
   { img: '/image/slider03.png' },
 ];
 
-const SCREEN_SM = 576;
-const SCREEN_MD = 768;
-const SCREEN_LG = 992;
-const SCREEN_XL = 1200;
-
 export {
   navLinks,
   sliderImages,
@@ -39,8 +34,4 @@ export {
   REG_EXP_NAME,
   REG_EXP_TEL,
   messages,
-  SCREEN_SM,
-  SCREEN_MD,
-  SCREEN_LG,
-  SCREEN_XL,
 };

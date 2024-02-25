@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import styles from './Content.module.css';
 import Search from '@/components/Search/Search';
 import MailLink from '@/components/Links/Mail/MailLink';
@@ -10,8 +10,9 @@ const Content = ({ toggleHideMenu, isMenuOpen }) => {
   return (
     <div className={`${styles.container} container`}>
       <Logo src="/image/logo-black.svg" />
-
-      <Search />
+      <Suspense>
+        <Search />
+      </Suspense>
       <div className={styles.row}>
         <span>Офис продаж:</span>
         <div className={styles.adress}>
