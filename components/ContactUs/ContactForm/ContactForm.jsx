@@ -107,7 +107,6 @@ export default function ContactForm({ onClose, setMessage, openNotification }) {
             Введите сообщение<span className={styles.star}>*</span>:
             <textarea
               name="message"
-              type="text"
               value={values.message || ''}
               onChange={handleChangeValidation}
               className={styles.inputField}

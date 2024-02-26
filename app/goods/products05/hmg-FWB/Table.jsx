@@ -193,7 +193,6 @@ const Table = () => {
               width={100}
               height={90}
               sizes="(max-width: 520px) 45vw, (max-width: 768px) 30vw, 20vw"
-              priority={true}
               alt="Подшипник HMG-CRM синего цвета"
             />
           </td>
@@ -203,7 +202,6 @@ const Table = () => {
               width={100}
               height={90}
               sizes="(max-width: 520px) 45vw, (max-width: 768px) 30vw, 20vw"
-              priority={true}
               alt="Подшипник HMG-CRB кофейного цвета"
             />
           </td>
@@ -213,7 +211,6 @@ const Table = () => {
               width={100}
               height={90}
               sizes="(max-width: 520px) 45vw, (max-width: 768px) 30vw, 20vw"
-              priority={true}
               alt="Подшипник HMG-CRG черного цвета"
             />
           </td>
@@ -223,7 +220,6 @@ const Table = () => {
               width={100}
               height={90}
               sizes="(max-width: 520px) 45vw, (max-width: 768px) 30vw, 20vw"
-              priority={true}
               alt="Подшипник HMG-CRP белого цвета"
             />
           </td>
@@ -233,7 +229,6 @@ const Table = () => {
               width={100}
               height={90}
               sizes="(max-width: 520px) 45vw, (max-width: 768px) 30vw, 20vw"
-              priority={true}
               alt="Подшипник HMG-CRW зеленого цвета"
             />
           </td>
@@ -243,7 +238,6 @@ const Table = () => {
               width={100}
               height={90}
               sizes="(max-width: 520px) 45vw, (max-width: 768px) 30vw, 20vw"
-              priority={true}
               alt="Подшипник HMG-CRF серого цвета"
             />
           </td>

@@ -9,13 +9,13 @@ const SlidesList = ({ slideNumber }) => {
       className={slideList}
       style={{ transform: `translateX(-${slideNumber * 100}%)` }}
     >
-      {sliderImages.map(({ img }) => (
+      {sliderImages.map(({ img, name }) => (
         <div className={item} key={img}>
           <Image
             src={img}
             fill
             sizes="(max-width: 520px) 60vw, (max-width: 920px) 75vw, 100vw"
-            alt=""
+            alt={name}
             priority={true}
             className={slideImage}
           />

@@ -22,9 +22,9 @@ const navLinks = [
 ];
 
 const sliderImages = [
-  { img: '/image/slider01.png' },
-  { img: '/image/slider02.png' },
-  { img: '/image/slider03.png' },
+  { img: '/image/slider01.png', name: 'Подшипники скольжения HMG-800/815' },
+  { img: '/image/slider02.png', name: 'Подшипники скольжения HMG-TEX' },
+  { img: '/image/slider03.png', name: 'Подшипники скольжения HMG-650' },
 ];
 
 export {

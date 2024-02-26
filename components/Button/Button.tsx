@@ -2,7 +2,23 @@ import React from 'react';
 import styles from './Button.module.css';
 import cn from 'classnames';
 
-const Button = ({ type, size = 's', isDisable, fixed, children, ...props }) => {
+type ButtonProps = {
+  type?: 'button' | 'submit' | 'reset';
+  size?: 's' | 'm' | 'l';
+  isDisable?: boolean;
+  fixed?: boolean;
+  children: React.ReactNode;
+  className?: string;
+};
+
+const Button = ({
+  type,
+  size = 's',
+  isDisable,
+  fixed,
+  children,
+  ...props
+}: ButtonProps) => {
   return (
     <button
       type={type}

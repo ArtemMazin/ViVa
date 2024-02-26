@@ -8,7 +8,7 @@ export const useResize = () => {
   useEffect(() => {
     setScreenSm(window.matchMedia('(max-width: 768px)').matches);
     setScreenLg(window.matchMedia('(min-width: 768px)').matches);
-    setScreenXl(window.matchMedia('(max-width: 1200px)').matches);
+    setScreenXl(window.matchMedia('(min-width: 1200px)').matches);
   }, []);
 
   return {
