@@ -1,12 +1,14 @@
 import { useState, useCallback, ChangeEvent } from 'react';
 
-export function useValidationForm() {
-  const [values, setValues] = useState({});
+export function useValidationForm<T, P>(initialValues: T, initialValid: P) {
+  const [values, setValues] = useState(initialValues);
   const [isFormValid, setIsFormValid] = useState<boolean>(false);
-  const [inputsValid, setInputsValid] = useState({});
-  const [errors, setErrors] = useState({});
+  const [inputsValid, setInputsValid] = useState(initialValid);
+  const [errors, setErrors] = useState(initialValues);
 
-  function handleChangeValidation(e: ChangeEvent<HTMLInputElement>) {
+  function handleChangeValidation(
+    e: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLTextAreaElement>,
+  ) {
     setIsFormValid(e.target.form.checkValidity());
     //записываем имя инпута и сообщение об ошибке в объект, чтобы потом передать сообщение в <span>
     setErrors({ ...errors, [e.target.name]: e.target.validationMessage });
@@ -30,14 +32,11 @@ export function useValidationForm() {
     handleChangeValidation(e);
   }
 
-  const resetForm = useCallback(
-    (newValues = {}, newErrors = {}, newIsValid = false) => {
-      setValues(newValues);
-      setErrors(newErrors);
-      setIsFormValid(newIsValid);
-    },
-    [setValues, setErrors, setIsFormValid],
-  );
+  const resetForm = useCallback(() => {
+    setValues(initialValues);
+    setErrors(initialValues);
+    setIsFormValid(false);
+  }, [initialValues]);
 
   return {
     isFormValid,

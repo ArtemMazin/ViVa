@@ -3,7 +3,11 @@ import { Mail } from 'lucide-react';
 import cn from 'classnames';
 import styles from './MailLink.module.css';
 
-const MailLink = ({ color = 'white' }) => {
+type MailLinkProps = {
+  color?: 'white' | 'black';
+};
+
+const MailLink = ({ color = 'white' }: MailLinkProps) => {
   return (
     <a
       href="mailto:info@gidmash.ru"

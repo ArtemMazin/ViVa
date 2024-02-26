@@ -7,8 +7,18 @@ import { Search } from 'lucide-react';
 import { useValidationForm } from '@/hooks/useValidationForm';
 import { SearchContext } from '@/contexts/SearchContext';
 
+const initialValues = {
+  search: '',
+};
+const initialValid = {
+  search: false,
+};
+
 const SearchCompound = ({ children }) => {
-  const { values, resetForm, handleChangeValidation } = useValidationForm();
+  const { values, resetForm, handleChangeValidation } = useValidationForm(
+    initialValues,
+    initialValid,
+  );
 
   const router = useRouter();
   const searchParams = useSearchParams();

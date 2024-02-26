@@ -11,6 +11,21 @@ import {
 } from '@/utils/constants';
 import Link from 'next/link';
 
+const initialValues = {
+  name: '',
+  email: '',
+  tel: '',
+  message: '',
+  checkbox: '',
+};
+const initialValid = {
+  name: false,
+  email: false,
+  tel: false,
+  message: false,
+  checkbox: false,
+};
+
 export default function ContactForm({ onClose, setMessage, openNotification }) {
   const {
     values,
@@ -19,9 +34,9 @@ export default function ContactForm({ onClose, setMessage, openNotification }) {
     isFormValid,
     handleInput,
     handleChangeValidation,
-  } = useValidationForm();
+  } = useValidationForm(initialValues, initialValid);
 
-  const onSubmitForm = async e => {
+  const onSubmitForm = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if (values.name && values.email && values.tel && values.message) {
@@ -110,7 +125,7 @@ export default function ContactForm({ onClose, setMessage, openNotification }) {
               value={values.message || ''}
               onChange={handleChangeValidation}
               className={styles.inputField}
-              rows="5"
+              rows={5}
               required
             />
             <span className={styles.error} role="alert">
@@ -122,7 +137,7 @@ export default function ContactForm({ onClose, setMessage, openNotification }) {
               type="checkbox"
               name="checkbox"
               className={styles.checkbox}
-              onClick={handleChangeValidation}
+              onChange={handleChangeValidation}
               required
             />
             <span className={styles.subtitle}>
