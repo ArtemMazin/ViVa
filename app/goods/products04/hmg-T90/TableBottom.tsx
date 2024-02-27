@@ -1,5 +1,5 @@
 import Htag from '@/components/Htag/Htag';
-import styles from './hmg090.module.css';
+import styles from './hmgT90.module.css';
 import React from 'react';
 
 const TableBottom = () => {
@@ -7,12 +7,12 @@ const TableBottom = () => {
     <table className={styles.table}>
       <caption className={styles.caption}>
         <Htag tag="h2" border="left">
-          Сводная таблица технических данных материала HMG-090
+          Сводная таблица технических данных материала HMG-T90
         </Htag>
       </caption>
       <tbody>
         <tr>
-          <td rowSpan="2" style={{ width: '16%' }} className={styles.cell}>
+          <td rowSpan={2} style={{ width: '16%' }} className={styles.cell}>
             Макс. нагрузка
           </td>
           <td style={{ width: '16%' }} className={styles.cell}>
@@ -23,7 +23,7 @@ const TableBottom = () => {
               120 Н/мм<sup>2</sup>
             </span>
           </td>
-          <td rowSpan="6" className={styles.cell}>
+          <td rowSpan={6} className={styles.cell}>
             &nbsp;
           </td>
           <td style={{ width: '16%' }} className={styles.cell}>
@@ -44,7 +44,7 @@ const TableBottom = () => {
           <td className={styles.cell}>-100℃~+200℃</td>
         </tr>
         <tr>
-          <td colSpan="2" className={styles.cell}>
+          <td colSpan={2} className={styles.cell}>
             Макс. скорость (со смазкой)
           </td>
           <td className={styles.cell}>2 м/с</td>
@@ -52,7 +52,7 @@ const TableBottom = () => {
           <td className={styles.cell}>0.08~0.25</td>
         </tr>
         <tr>
-          <td colSpan="2" className={styles.cell}>
+          <td colSpan={2} className={styles.cell}>
             Макс. PV
           </td>
           <td className={styles.cell}>
@@ -64,7 +64,7 @@ const TableBottom = () => {
           </td>
         </tr>
         <tr>
-          <td colSpan="2" className={styles.cell}>
+          <td colSpan={2} className={styles.cell}>
             Предел прочности
           </td>
           <td className={styles.cell}>
@@ -76,7 +76,7 @@ const TableBottom = () => {
           </td>
         </tr>
         <tr>
-          <td colSpan="2" className={styles.cell}>
+          <td colSpan={2} className={styles.cell}>
             Твердость сплава
           </td>
           <td className={styles.cell}>HB 110-150</td>

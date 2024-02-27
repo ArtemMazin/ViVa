@@ -1,5 +1,5 @@
 import Htag from '@/components/Htag/Htag';
-import styles from './hmg11.module.css';
+import styles from './hmg50.module.css';
 import React from 'react';
 
 const Table = () => {
@@ -7,12 +7,12 @@ const Table = () => {
     <table className={styles.table}>
       <caption className={styles.caption}>
         <Htag tag="h2" border="left">
-          Сводная таблица технических данных материала HMG-11
+          Сводная таблица технических данных материала HMG-50
         </Htag>
       </caption>
       <tbody>
         <tr>
-          <td rowSpan="3" style={{ width: '16%' }} className={styles.cell}>
+          <td rowSpan={3} style={{ width: '16%' }} className={styles.cell}>
             <span style={{ width: '33%' }}>Макс. нагрузка</span>
           </td>
           <td style={{ width: '16%' }} className={styles.cell}>
@@ -21,10 +21,10 @@ const Table = () => {
           <td style={{ width: '16%' }} className={styles.cell}>
             250 Н/мм<sup>2</sup>
           </td>
-          <td rowSpan="6" className={styles.cell}>
+          <td rowSpan={6} className={styles.cell}>
             &nbsp;
           </td>
-          <td colSpan="2" style={{ width: '28%' }} className={styles.cell}>
+          <td colSpan={2} style={{ width: '28%' }} className={styles.cell}>
             <span style={{ width: '33%' }}>Коэффициент трения</span>
           </td>
           <td style={{ width: '20%' }} className={styles.cell}>
@@ -38,7 +38,7 @@ const Table = () => {
           <td className={styles.cell}>
             140 Н/мм<sup>2</sup>
           </td>
-          <td rowSpan="2" className={styles.cell}>
+          <td rowSpan={2} className={styles.cell}>
             Макс.<span style={{ fontSize: '12pt' }}>скорость</span>
           </td>
           <td className={styles.cell}>
@@ -61,7 +61,7 @@ const Table = () => {
           <td className={styles.cell}>&gt;2 м/с</td>
         </tr>
         <tr>
-          <td rowSpan="2" className={styles.cell}>
+          <td rowSpan={2} className={styles.cell}>
             <span style={{ width: '33%' }}>Макс. PV Сухой режим</span>
           </td>
           <td className={styles.cell}>
@@ -70,11 +70,11 @@ const Table = () => {
           <td className={styles.cell}>
             3.6 Н/мм<sup>2</sup>*м/с
           </td>
-          <td colSpan="2" className={styles.cell}>
+          <td colSpan={2} className={styles.cell}>
             <span style={{ width: '33%' }}>Теплопроводность</span>
           </td>
           <td className={styles.cell}>
-            60 Вт(м*K)<sup>-1</sup>
+            42 Вт(м*K)<sup>-1</sup>
           </td>
         </tr>
         <tr>
@@ -84,7 +84,7 @@ const Table = () => {
           <td className={styles.cell}>
             1.8 Н/мм<sup>2</sup>*м/с
           </td>
-          <td colSpan="2" className={styles.cell}>
+          <td colSpan={2} className={styles.cell}>
             <span style={{ width: '33%' }}>
               Коэффициент температурного расширения
             </span>
@@ -94,11 +94,11 @@ const Table = () => {
           </td>
         </tr>
         <tr>
-          <td colSpan="2" className={styles.cell}>
+          <td colSpan={2} className={styles.cell}>
             <span style={{ width: '33%' }}>Диапазон рабочих температур</span>
           </td>
           <td className={styles.cell}>-195℃～+280℃</td>
-          <td colSpan="2" className={styles.cell}>
+          <td colSpan={2} className={styles.cell}>
             &nbsp;
           </td>
           <td className={styles.cell}>&nbsp;</td>

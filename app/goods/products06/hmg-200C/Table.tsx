@@ -12,7 +12,7 @@ const Table = () => {
       </caption>
       <tbody>
         <tr>
-          <td rowSpan="2" style={{ width: '16%' }} className={styles.cell}>
+          <td rowSpan={2} style={{ width: '16%' }} className={styles.cell}>
             Макс. нагрузка
           </td>
           <td style={{ width: '16%' }} className={styles.cell}>
@@ -23,13 +23,13 @@ const Table = () => {
               250 Н/мм<sup>2</sup>
             </span>
           </td>
-          <td rowSpan="6" className={styles.cell}>
+          <td rowSpan={6} className={styles.cell}>
             &nbsp;
           </td>
           <td style={{ width: '24%' }} className={styles.cell}>
             Коэффициент температурного расширения
           </td>
-          <td colSpan="2" style={{ width: '24%' }} className={styles.cell}>
+          <td colSpan={2} style={{ width: '24%' }} className={styles.cell}>
             1.1*10<sup>-5 </sup>℃
           </td>
         </tr>
@@ -41,7 +41,7 @@ const Table = () => {
             </span>
           </td>
           <td className={styles.cell}>Диапазон рабочих температур</td>
-          <td colSpan="2" className={styles.cell}>
+          <td colSpan={2} className={styles.cell}>
             -400℃~+120℃
           </td>
         </tr>
@@ -59,7 +59,7 @@ const Table = () => {
           <td className={styles.cell}>
             1.5 Н/мм<sup>2</sup>*м/с
           </td>
-          <td rowSpan="2" className={styles.cell}>
+          <td rowSpan={2} className={styles.cell}>
             Прочность соединения сплавов
           </td>
           <td className={styles.cell}>Шероховатость</td>
@@ -67,7 +67,7 @@ const Table = () => {
         </tr>
         <tr>
           <td className={styles.cell}>Плотность</td>
-          <td colSpan="2" className={styles.cell}>
+          <td colSpan={2} className={styles.cell}>
             7.8 г/мм<sup>3</sup>
           </td>
           <td className={styles.cell}>Твердость</td>
@@ -75,10 +75,10 @@ const Table = () => {
         </tr>
         <tr>
           <td className={styles.cell}>Твердость</td>
-          <td colSpan="2" className={styles.cell}>
+          <td colSpan={2} className={styles.cell}>
             HB ≥40
           </td>
-          <td colSpan="3" className={styles.cell}>
+          <td colSpan={3} className={styles.cell}>
             Рекомендуется добавление консистентной смазки каждые 8 часов.
           </td>
         </tr>

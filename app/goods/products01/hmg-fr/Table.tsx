@@ -24,7 +24,7 @@ const Table = () => {
           <td style={{ width: '16%' }} className={styles.cell}>
             HMG-FRS / Сетка из нержавеющей стали
           </td>
-          <td rowSpan="4" style={{ width: '4%' }} className={styles.cell}>
+          <td rowSpan={4} style={{ width: '4%' }} className={styles.cell}>
             &nbsp;
           </td>
           <td style={{ width: '16%' }} className={styles.cell}>
@@ -51,7 +51,7 @@ const Table = () => {
           <td className={styles.cell}>
             <span>*</span>
           </td>
-          <td colSpan="2" className={styles.cell}>
+          <td colSpan={2} className={styles.cell}>
             Диапазон рабочих температур
           </td>
           <td className={styles.cell}>-195℃~+260℃</td>
@@ -60,7 +60,7 @@ const Table = () => {
           <td className={styles.cell}>0.98</td>
           <td className={styles.cell}>*</td>
           <td className={styles.cell}>&nbsp;</td>
-          <td colSpan="2" className={styles.cell}>
+          <td colSpan={2} className={styles.cell}>
             Коэффициент трения
           </td>
           <td className={styles.cell}>0.03~0.20</td>

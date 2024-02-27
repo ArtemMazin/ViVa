@@ -1,5 +1,5 @@
 import Htag from '@/components/Htag/Htag';
-import styles from './hmg20.module.css';
+import styles from './hmg22.module.css';
 import React from 'react';
 
 const Table = () => {
@@ -7,30 +7,28 @@ const Table = () => {
     <table className={styles.table}>
       <caption className={styles.caption}>
         <Htag tag="h2" border="left">
-          Сводная таблица технических данных материала HMG-20
+          Сводная таблица технических данных материала HMG-22
         </Htag>
       </caption>
       <tbody>
         <tr>
-          <td rowSpan="3" style={{ width: '16%' }} className={styles.cell}>
+          <td rowSpan={3} style={{ width: '16%' }} className={styles.cell}>
             <span style={{ width: '33%' }}>Макс. нагрузка</span>
           </td>
           <td style={{ width: '16%' }} className={styles.cell}>
             <span style={{ width: '33%' }}>Статический режим</span>
           </td>
           <td style={{ width: '16%' }} className={styles.cell}>
-            <span>
-              250 Н/мм<sup>2</sup>
-            </span>
+            250 Н/мм<sup>2</sup>
           </td>
-          <td rowSpan="5" className={styles.cell}>
+          <td rowSpan={5} className={styles.cell}>
             &nbsp;
           </td>
-          <td colSpan="2" style={{ width: '24%' }} className={styles.cell}>
+          <td colSpan={2} style={{ width: '24%' }} className={styles.cell}>
             <span style={{ width: '33%' }}>Диапазон рабочих температур</span>
           </td>
           <td style={{ width: '24%' }} className={styles.cell}>
-            <span>-40℃~+110℃</span>
+            -50°C~+130°C
           </td>
         </tr>
         <tr>
@@ -38,19 +36,15 @@ const Table = () => {
             <span style={{ width: '33%' }}>Низкоскоростной режим</span>
           </td>
           <td className={styles.cell}>
-            <span>
-              140 Н/мм<sup>2</sup>
-            </span>
+            140 Н/мм<sup>2</sup>
           </td>
-          <td rowSpan="2" className={styles.cell}>
+          <td rowSpan={2} className={styles.cell}>
             <span style={{ width: '33%' }}>Макс. скорость</span>
           </td>
           <td className={styles.cell}>
-            <span style={{ width: '33%' }}>Сухой рехим</span>
+            <span style={{ width: '33%' }}>Со смазкой</span>
           </td>
-          <td className={styles.cell}>
-            <span>2м/с</span>
-          </td>
+          <td className={styles.cell}>2 м/с</td>
         </tr>
         <tr>
           <td className={styles.cell}>
@@ -59,25 +53,21 @@ const Table = () => {
             </span>
           </td>
           <td className={styles.cell}>
-            <span>70 Н/мм²</span>
+            70 Н/мм<sup>2</sup>
           </td>
           <td className={styles.cell}>
             <span style={{ width: '33%' }}>Непрерывная смазка</span>
           </td>
-          <td className={styles.cell}>
-            <span>&gt;2м/с</span>
-          </td>
+          <td className={styles.cell}>&gt;3 м/с</td>
         </tr>
         <tr>
-          <td colSpan="2" className={styles.cell}>
+          <td colSpan={2} className={styles.cell}>
             <span style={{ width: '33%' }}>Макс. PV Режим со смазкой</span>
           </td>
           <td className={styles.cell}>
-            <span>
-              3 Н/мм<sup>2</sup>*м/с
-            </span>
+            3.6 Н/мм<sup>2</sup>*м/с
           </td>
-          <td colSpan="2" className={styles.cell}>
+          <td colSpan={2} className={styles.cell}>
             <span style={{ width: '33%' }}>Теплопроводность</span>
           </td>
           <td className={styles.cell}>
@@ -87,7 +77,7 @@ const Table = () => {
           </td>
         </tr>
         <tr>
-          <td colSpan="2" className={styles.cell}>
+          <td colSpan={2} className={styles.cell}>
             <span style={{ width: '33%' }}>
               Коэффициент температурного расширения
             </span>
@@ -97,15 +87,13 @@ const Table = () => {
               11*10<sup>-6</sup>*К<sup>-1</sup>
             </span>
           </td>
-          <td colSpan="2" className={styles.cell}>
+          <td colSpan={2} className={styles.cell}>
             <span style={{ width: '33%' }}>Коэффициент трения</span>
           </td>
-          <td className={styles.cell}>
-            <span>0,05~0,20</span>
-          </td>
+          <td className={styles.cell}>0.03~0.20</td>
         </tr>
         <tr>
-          <td colSpan="7" className={styles.cell}>
+          <td colSpan={7} className={styles.cell}>
             <span style={{ width: '33%' }}>
               Перед сборкой подшипника масляные кармашки должны быть заполнены
               смазкой.

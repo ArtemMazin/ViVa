@@ -11,11 +11,10 @@ const Footer = () => {
     <footer className={styles.footer}>
       <div className={styles.mapContainer}>
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4494.215626507461!2d37.6640177!3d55.7218785!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54b2849646c27%3A0xf832286d4ecfc2e2!2z0J_RgNC-0LPRgNC10YHRgS3Qn9C70LDQt9Cw!5e0!3m2!1sru!2sru!4v1697799578951!5m2!1sru!2sru"
-          height="200"
-          style={{ border: 0, width: '100%' }}
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
+          src="https://yandex.ru/map-widget/v1/?um=constructor%3A778ecc0b2189d3f08dc38c79e91971f31d7cbf00bd0f8e98abad39ff995a7272&amp;source=constructor"
+          width="100%"
+          height="240"
+          frameBorder="0"
         ></iframe>
       </div>
 

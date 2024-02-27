@@ -184,7 +184,7 @@ const Table = () => {
           <td className={styles.cell}>40</td>
         </tr>
         <tr>
-          <td colSpan="3" className={styles.cell}>
+          <td colSpan={3} className={styles.cell}>
             Цвет
           </td>
           <td className={styles.cell}>

@@ -12,7 +12,7 @@ const Table = () => {
       </caption>
       <tbody>
         <tr>
-          <td colSpan="2" className={styles.cell}>
+          <td colSpan={2} className={styles.cell}>
             Типы материалов
           </td>
           <td className={styles.cell}>HMG-320</td>
@@ -20,7 +20,7 @@ const Table = () => {
           <td className={styles.cell}>HMG-265</td>
         </tr>
         <tr>
-          <td rowSpan="2" className={styles.cell}>
+          <td rowSpan={2} className={styles.cell}>
             Макс. нагрузка
           </td>
           <td className={styles.cell}>Статический режим</td>
@@ -35,7 +35,7 @@ const Table = () => {
           <td className={styles.cell}>150 МПа</td>
         </tr>
         <tr>
-          <td colSpan="2" className={styles.cell}>
+          <td colSpan={2} className={styles.cell}>
             Макс. скорость
           </td>
           <td className={styles.cell}>10 м/с</td>
@@ -43,7 +43,7 @@ const Table = () => {
           <td className={styles.cell}>10 м/с</td>
         </tr>
         <tr>
-          <td colSpan="2" className={styles.cell}>
+          <td colSpan={2} className={styles.cell}>
             Макс. PV
           </td>
           <td className={styles.cell}>
@@ -57,7 +57,7 @@ const Table = () => {
           </td>
         </tr>
         <tr>
-          <td colSpan="2" className={styles.cell}>
+          <td colSpan={2} className={styles.cell}>
             Плотность
           </td>
           <td className={styles.cell}>
@@ -71,7 +71,7 @@ const Table = () => {
           </td>
         </tr>
         <tr>
-          <td colSpan="2" className={styles.cell}>
+          <td colSpan={2} className={styles.cell}>
             Твердость
           </td>
           <td className={styles.cell}>≥550 HV1</td>
@@ -79,7 +79,7 @@ const Table = () => {
           <td className={styles.cell}>≥550 HV1</td>
         </tr>
         <tr>
-          <td colSpan="2" className={styles.cell}>
+          <td colSpan={2} className={styles.cell}>
             Коэффициент температурного расширения
           </td>
           <td className={styles.cell}>0.05~0.2</td>
@@ -94,7 +94,7 @@ const Table = () => {
           <td className={styles.cell}>0.05~0.2</td>
         </tr>
         <tr>
-          <td colSpan="2" className={styles.cell}>
+          <td colSpan={2} className={styles.cell}>
             Диапазон рабочих температур
           </td>
           <td className={styles.cell}> -40~+250°C</td>
@@ -102,7 +102,7 @@ const Table = () => {
           <td className={styles.cell}> -40~+250°C</td>
         </tr>
         <tr>
-          <td rowSpan="2" className={styles.cell}>
+          <td rowSpan={2} className={styles.cell}>
             Сопряженный вал
           </td>
           <td className={styles.cell}>Шероховатость</td>
@@ -117,7 +117,7 @@ const Table = () => {
           <td className={styles.cell}>HRC 58-62</td>
         </tr>
         <tr>
-          <td colSpan="2" className={styles.cell}>
+          <td colSpan={2} className={styles.cell}>
             Рекомендуемый период смазки
           </td>
           <td className={styles.cell}>＜50 часов</td>
@@ -125,7 +125,7 @@ const Table = () => {
           <td className={styles.cell}>250 часов</td>
         </tr>
         <tr>
-          <td colSpan="5" className={styles.cell}>
+          <td colSpan={5} className={styles.cell}>
             Рекомендуемый допуск / Корпус: H7, Вал: f7
           </td>
         </tr>

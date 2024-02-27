@@ -12,7 +12,7 @@ const Table = () => {
       </caption>
       <tbody>
         <tr>
-          <td rowSpan="2" className={styles.cell}>
+          <td rowSpan={2} className={styles.cell}>
             Макс. нагрузка
           </td>
           <td className={styles.cell}>Статическая</td>
@@ -21,7 +21,7 @@ const Table = () => {
               250 Н/мм<sup>2</sup>
             </span>
           </td>
-          <td rowSpan="6" className={styles.cell}>
+          <td rowSpan={6} className={styles.cell}>
             &nbsp;
           </td>
           <td className={styles.cell}>Диапазон рабочих температур</td>
@@ -38,7 +38,7 @@ const Table = () => {
           <td className={styles.cell}>0.03~0.20</td>
         </tr>
         <tr>
-          <td rowSpan="2" className={styles.cell}>
+          <td rowSpan={2} className={styles.cell}>
             Максимальная скорость
           </td>
           <td className={styles.cell}>Сухой режим</td>
@@ -57,7 +57,7 @@ const Table = () => {
           </td>
         </tr>
         <tr>
-          <td colSpan="2" className={styles.cell}>
+          <td colSpan={2} className={styles.cell}>
             Макс. PV
           </td>
           <td className={styles.cell}>
@@ -69,7 +69,7 @@ const Table = () => {
           </td>
         </tr>
         <tr>
-          <td colSpan="2" className={styles.cell}>
+          <td colSpan={2} className={styles.cell}>
             Твердость сплава
           </td>
           <td className={styles.cell}>HB＞210</td>
