@@ -1,23 +1,23 @@
 import React from 'react';
-import { slideList, item, slideImage } from './SlidesList.module.css';
+import styles from './SlidesList.module.css';
 import Image from 'next/image';
 import { sliderImages } from '@/utils/constants';
 
-const SlidesList = ({ slideNumber }) => {
+const SlidesList = ({ slideNumber }: { slideNumber: number }) => {
   return (
     <div
-      className={slideList}
+      className={styles.slideList}
       style={{ transform: `translateX(-${slideNumber * 100}%)` }}
     >
       {sliderImages.map(({ img, name }) => (
-        <div className={item} key={img}>
+        <div className={styles.item} key={img}>
           <Image
             src={img}
             fill
             sizes="(max-width: 520px) 60vw, (max-width: 920px) 75vw, 100vw"
             alt={name}
             priority={true}
-            className={slideImage}
+            className={styles.slideImage}
           />
         </div>
       ))}

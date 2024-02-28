@@ -1,13 +1,13 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import { slider } from './Slider.module.css';
+import styles from './Slider.module.css';
 import SlidesList from './SlidesList/SlidesList';
 import { sliderImages } from '@/utils/constants';
 import Dots from './Dots/Dots';
 
 const Slider = () => {
-  const [items, setItems] = useState([]);
+  const [items, setItems] = useState<{ img: string; name: string }[]>([]);
   const [slide, setSlide] = useState(0);
   const [touchPosition, setTouchPosition] = useState(null);
   const [mousePosition, setMousePosition] = useState(null);
@@ -28,22 +28,22 @@ const Slider = () => {
     setSlide(slideNumber);
   };
 
-  const goToSlide = number => {
+  const goToSlide = (number: number) => {
     setSlide(number % items.length);
   };
 
-  const handleTouchStart = e => {
+  const handleTouchStart = (e: React.TouchEvent) => {
     const touchDown = e.touches[0].clientX;
 
     setTouchPosition(touchDown);
   };
-  const handleMouseDown = e => {
+  const handleMouseDown = (e: React.MouseEvent) => {
     const mouseDown = e.clientX;
 
     setMousePosition(mouseDown);
   };
 
-  const handleTouchMove = e => {
+  const handleTouchMove = (e: React.TouchEvent) => {
     if (touchPosition === null) {
       return;
     }
@@ -62,7 +62,7 @@ const Slider = () => {
     setTouchPosition(null);
   };
 
-  const handleMouseMove = e => {
+  const handleMouseMove = (e: React.MouseEvent) => {
     if (mousePosition === null) {
       return;
     }
@@ -94,13 +94,13 @@ const Slider = () => {
   return (
     <section>
       <div
-        className={`${slider} container`}
+        className={`${styles.slider} container`}
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onMouseDown={handleMouseDown}
         onMouseMove={handleMouseMove}
       >
-        <SlidesList slideNumber={slide} items={items} />
+        <SlidesList slideNumber={slide} />
         <Dots
           slidesCount={items.length}
           goToSlide={goToSlide}

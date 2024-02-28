@@ -1,8 +1,14 @@
 import React from 'react';
 import Dot from './Dot/Dot';
-import { dotsWrapper, dots } from './Dots.module.css';
+import styles from './Dots.module.css';
 
-const Dots = ({ slidesCount, goToSlide, slideNumber }) => {
+type DotsProps = {
+  slidesCount: number;
+  goToSlide: (slideNumber: number) => void;
+  slideNumber: number;
+};
+
+const Dots = ({ slidesCount, goToSlide, slideNumber }: DotsProps) => {
   const renderDots = () => {
     const dots = [];
     for (let i = 0; i < slidesCount; i++) {
@@ -12,7 +18,7 @@ const Dots = ({ slidesCount, goToSlide, slideNumber }) => {
           number={i}
           goToSlide={goToSlide}
           slideNumber={slideNumber}
-        />
+        />,
       );
     }
 
@@ -20,8 +26,8 @@ const Dots = ({ slidesCount, goToSlide, slideNumber }) => {
   };
 
   return (
-    <div className={dotsWrapper}>
-      <div className={dots}>{renderDots()}</div>
+    <div className={styles.dotsWrapper}>
+      <div className={styles.dots}>{renderDots()}</div>
     </div>
   );
 };

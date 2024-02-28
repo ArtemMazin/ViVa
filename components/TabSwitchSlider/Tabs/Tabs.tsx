@@ -3,7 +3,12 @@ import Image from 'next/image';
 import styles from './Tabs.module.css';
 import { tabSwitchSlides } from '@/utils/tabSwitchSlides';
 
-function Tabs({ tabActive, toggleTab }) {
+type TabProps = {
+  tabActive: string;
+  toggleTab: (tabName: string) => void;
+};
+
+function Tabs({ tabActive, toggleTab }: TabProps) {
   return (
     <ul className={`${styles.tabs} container`}>
       {tabSwitchSlides.map(item => (

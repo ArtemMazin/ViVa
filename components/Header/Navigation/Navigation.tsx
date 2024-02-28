@@ -11,7 +11,7 @@ const Navigation = () => {
   const pathname = usePathname();
   const { isScreenXl } = useResize();
 
-  const onMouseEnterHandler = href => {
+  const onMouseEnterHandler = (href: string) => {
     isScreenXl && href === '/goods' && setShowGoodsSideMenu(true);
   };
 

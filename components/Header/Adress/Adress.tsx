@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Adress.module.css';
 import { MapPinned } from 'lucide-react';
-import MailLink from '@/components/Links/Mail/MailLink';
+import MailLink from '../../../components/Links/Mail/MailLink';
 
 const Adress = () => {
   return (

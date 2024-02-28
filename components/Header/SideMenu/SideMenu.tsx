@@ -3,7 +3,12 @@ import { products } from '@/utils/products';
 import styles from './SideMenu.module.css';
 import Link from 'next/link';
 
-const SideMenu = ({ showGoodsSideMenu, href }) => {
+type SideMenuProps = {
+  showGoodsSideMenu: boolean;
+  href: string;
+};
+
+const SideMenu = ({ showGoodsSideMenu, href }: SideMenuProps) => {
   return (
     <>
       {href === '/goods' && (

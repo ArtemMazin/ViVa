@@ -1,15 +1,19 @@
-import { ChangeEvent, createContext } from 'react';
+import React from 'react';
 
 type SearchContextType = {
   handleKeyDown: (e: React.KeyboardEvent<HTMLElement>) => void;
-  goToSearch: (e: Event) => void;
-  values: object;
-  handleChangeValidation: (e: ChangeEvent<HTMLInputElement>) => void;
+  goToSearch: (e: React.FormEvent) => void;
+  values: {
+    search: string;
+  };
+  handleChangeValidation: (e: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
-export const SearchContext = createContext<SearchContextType>({
+export const SearchContext = React.createContext<SearchContextType>({
   handleKeyDown: () => {},
   goToSearch: () => {},
-  values: {},
+  values: {
+    search: '',
+  },
   handleChangeValidation: () => {},
 });
