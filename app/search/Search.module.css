@@ -1,1 +1,3 @@
-
+.main_title {
+  text-shadow: var(--text-shadow-title);
+}

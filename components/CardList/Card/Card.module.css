@@ -41,6 +41,10 @@
   transition: var(--transition);
 }
 
+.card_title {
+  text-shadow: var(--text-shadow-text);
+}
+
 @media (any-hover: hover) {
   .link:hover::before {
     background-color: var(--color-bg-blue);

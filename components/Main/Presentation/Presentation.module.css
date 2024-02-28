@@ -7,6 +7,10 @@
   text-align: center;
 }
 
+.main_title {
+  text-shadow: var(--text-shadow-title);
+}
+
 @media (width <= 768px) {
   .presentation {
     padding: 0;

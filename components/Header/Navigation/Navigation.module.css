@@ -65,3 +65,9 @@
     width: 100%;
   }
 }
+
+@media (width<=768px) {
+  .row {
+    display: none;
+  }
+}

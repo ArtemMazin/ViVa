@@ -13,6 +13,10 @@
   object-fit: contain;
 }
 
+.main_title {
+  text-shadow: var(--text-shadow-title);
+}
+
 @media (width<=768px) {
   .image {
     height: 280px;
