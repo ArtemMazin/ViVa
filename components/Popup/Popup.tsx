@@ -1,15 +1,22 @@
 'use client';
 
-import { useContext, useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
 import styles from './Popup.module.css';
 import { X } from 'lucide-react';
 import cn from 'classnames';
 import { PopupContext } from '@/contexts/PopupContext';
 
-const PopupCompound = ({ isOpen, onClose, style, children }) => {
+type PopupProps = {
+  isOpen: boolean;
+  onClose: () => void;
+  style?: string;
+  children: React.ReactNode;
+};
+
+const PopupCompound = ({ isOpen, onClose, style, children }: PopupProps) => {
   useEffect(() => {
     if (!isOpen) return;
-    const closeByEscape = e => {
+    const closeByEscape = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
         onClose();
       }
@@ -19,7 +26,7 @@ const PopupCompound = ({ isOpen, onClose, style, children }) => {
     return () => document.removeEventListener('keydown', closeByEscape);
   }, [isOpen, onClose]);
 
-  const handleOverlay = e => {
+  const handleOverlay = (e: React.MouseEvent<HTMLElement>) => {
     if (e.target === e.currentTarget) {
       onClose();
     }
@@ -65,7 +72,7 @@ PopupCompound.ButtonClose = function ButtonClose() {
   );
 };
 
-const Popup = ({ isOpen, onClose, children, style = '' }) => {
+const Popup = ({ isOpen, onClose, children, style = '' }: PopupProps) => {
   return (
     <PopupCompound isOpen={isOpen} onClose={onClose} style={style}>
       <PopupCompound.Overlay>

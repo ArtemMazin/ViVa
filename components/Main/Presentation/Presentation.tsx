@@ -1,5 +1,4 @@
 import React from 'react';
-import { presentation } from './Presentation.module.css';
 import { products } from '@/utils/products';
 import Htag from '@/components/Htag/Htag';
 import CardList from '@/components/CardList/CardList';
@@ -7,7 +6,7 @@ import styles from './Presentation.module.css';
 
 const Presentation = () => {
   return (
-    <section className={`${presentation} container`}>
+    <section className={`${styles.presentation} container`}>
       <Htag tag="h2" border="down" className={styles.main_title}>
         НАША ПРОДУКЦИЯ
       </Htag>

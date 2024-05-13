@@ -24,7 +24,7 @@ const SearchCompound = ({ children }) => {
   const searchParams = useSearchParams();
 
   const createQueryString = useCallback(
-    (name, value) => {
+    (name: string, value: string) => {
       const params = new URLSearchParams(searchParams);
       params.set(name, value);
 
@@ -33,13 +33,13 @@ const SearchCompound = ({ children }) => {
     [searchParams],
   );
 
-  const handleKeyDown = e => {
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLElement>) => {
     if (e.key === 'Enter') {
       goToSearch(e);
     }
   };
 
-  const goToSearch = e => {
+  const goToSearch = (e: React.FormEvent) => {
     e.preventDefault();
     router.push('/search' + '?' + createQueryString('filter', values.search));
     resetForm();

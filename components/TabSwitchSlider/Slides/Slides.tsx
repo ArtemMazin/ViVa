@@ -3,7 +3,7 @@ import styles from './Slides.module.css';
 import { tabSwitchSlides } from '@/utils/tabSwitchSlides';
 import Image from 'next/image';
 
-function Slides({ tabActive }) {
+function Slides({ tabActive }: { tabActive: string }) {
   return (
     <ul className={styles.slides}>
       {tabSwitchSlides.map(item => (

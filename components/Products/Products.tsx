@@ -4,13 +4,21 @@ import styles from './Products.module.css';
 import Htag from '../Htag/Htag';
 import Ptag from '../Ptag/Ptag';
 import CardList from '../CardList/CardList';
+import { TCard } from '@/utils/types';
+
+type ProductsProps = {
+  titleProducts: string;
+  descriptionProducts: string;
+  productsImage: string;
+  materialsList: TCard[];
+};
 
 const Products = ({
   titleProducts,
   descriptionProducts,
   productsImage,
   materialsList,
-}) => {
+}: ProductsProps) => {
   return (
     <div className={styles.main}>
       <div className={styles.imageContainer}>

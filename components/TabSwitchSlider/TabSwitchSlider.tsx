@@ -7,10 +7,10 @@ import Tabs from './Tabs/Tabs';
 import Slides from './Slides/Slides';
 import Htag from '../Htag/Htag';
 
-function TabSwitchSlider(props) {
+function TabSwitchSlider() {
   const [tabActive, setTabActive] = useState(tabSwitchSlides[0].name);
 
-  const toggleTab = tabName => {
+  const toggleTab = (tabName: string) => {
     setTabActive(tabName);
   };
 
