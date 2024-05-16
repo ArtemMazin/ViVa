@@ -3,10 +3,25 @@ import BreadCrumbs from '@/components/BreadCrumbs/BreadCrumbs';
 import Htag from '@/components/Htag/Htag';
 import MailLink from '@/components/Links/Mail/MailLink';
 import TelLink from '@/components/Links/Tel/TelLink';
+import Ptag from '@/components/Ptag/Ptag';
 
 export const metadata = {
-  title: 'Контакты ООО "ВиВа Групп"',
-  description: 'Контакты ООО "ВиВа Групп"',
+  title: 'Контакты ООО "ВиВа Групп" | Подшипники скольжения',
+  description:
+    'Контактная информация компании ВиВа Групп - ведущего поставщика подшипников скольжения в России, СНГ и Восточной Европе. Адрес, телефон, email.',
+  openGraph: {
+    title: 'Контакты ООО "ВиВа Групп" | Подшипники скольжения',
+    description:
+      'Контактная информация компании ВиВа Групп - ведущего поставщика подшипников скольжения в России, СНГ и Восточной Европе. Адрес, телефон, email.',
+    url: process.env.URL,
+    images: [
+      {
+        url: '/image/products03/pro03.jpg',
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
 };
 
 export default function Contacts() {
@@ -14,11 +29,17 @@ export default function Contacts() {
     <main className={`${styles.contacts} container`}>
       <BreadCrumbs
         currentLink="Контакты"
-        links={[{ href: process.env.URL, name: 'Главнaя' }]}
+        links={[{ href: process.env.URL, name: 'Главная' }]}
       />
       <Htag tag="h1" border="left" className={styles.main_title}>
         Контакты
       </Htag>
+
+      <Ptag>
+        Если у вас есть вопросы или предложения, свяжитесь с нами любым удобным
+        для Вас способом. Мы будем рады помочь и проконсультировать вас по любым
+        вопросам, касающимся подшипников скольжения.
+      </Ptag>
 
       <ul className={styles.contactList}>
         <li className={styles.item}>
@@ -27,9 +48,7 @@ export default function Contacts() {
         <li className={styles.item}>
           <span>
             <strong>Адрес:</strong> 115088 г. Москва, ул. Шарикоподшипниковская,
-            д.1,
-            <br />
-            БЦ «Прогресс Плаза», 7 этаж
+            д.1, БЦ «Прогресс Плаза», 7 этаж
           </span>
         </li>
         <li className={styles.item}>
@@ -61,7 +80,7 @@ export default function Contacts() {
             <br />
             БИК 044525593
             <br />
-            Кор.счет 30101810200000000593
+            Корр. счет 30101810200000000593
             <br />
             <a
               href={'/download/cardViVa.doc'}

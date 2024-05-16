@@ -1,10 +1,25 @@
 import Htag from '@/components/Htag/Htag';
 import BreadCrumbs from '@/components/BreadCrumbs/BreadCrumbs';
 import styles from './delivery.module.css';
+import Ptag from '@/components/Ptag/Ptag';
 
 export const metadata = {
-  title: 'Доставка',
-  description: 'Доставка',
+  title: 'Доставка подшипников скольжения | ВиВа Групп',
+  description:
+    'Информация о способах доставки подшипников скольжения от компании ВиВа Групп. Самовывоз, доставка транспортными компаниями по России и СНГ.',
+  openGraph: {
+    title: 'Доставка подшипников скольжения | ВиВа Групп',
+    description:
+      'Информация о способах доставки подшипников скольжения от компании ВиВа Групп. Самовывоз, доставка транспортными компаниями по России и СНГ.',
+    url: process.env.URL,
+    images: [
+      {
+        url: '/image/products03/pro03.jpg',
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
 };
 
 export default function Delivery() {
@@ -12,15 +27,20 @@ export default function Delivery() {
     <main className={`container ${styles.delivery}`}>
       <BreadCrumbs
         currentLink="Доставка"
-        links={[{ href: process.env.URL, name: 'Главнaя' }]}
+        links={[{ href: process.env.URL, name: 'Главная' }]}
       />
       <Htag tag="h1" border="left" className={styles.main_title}>
-        Доставка
+        Доставка подшипников скольжения
       </Htag>
       <Htag tag="h2">Способы доставки:</Htag>
       <Htag tag="h3" border="down">
         Самовывоз
       </Htag>
+      <Ptag>
+        Вы можете забрать заказанные подшипники скольжения со склада компании,
+        расположенного в Московской области. Для удобства клиентов предусмотрена
+        бесплатная парковка.
+      </Ptag>
       <ul className={styles.places}>
         <li>
           <span className={styles.text}>
@@ -50,8 +70,14 @@ export default function Delivery() {
       </ul>
 
       <Htag tag="h3" border="down">
-        Транспортной компанией
+        Доставка транспортной компанией
       </Htag>
+      <Ptag>
+        Мы сотрудничаем с ведущими транспортными компаниями России и СНГ для
+        быстрой и надежной доставки подшипников скольжения в любой регион.
+        Стоимость доставки рассчитывается индивидуально в зависимости от веса,
+        габаритов груза и пункта назначения.
+      </Ptag>
       <ul className={styles.companies}>
         <li>
           <span className={styles.text}>Деловые Линии</span>
@@ -59,7 +85,22 @@ export default function Delivery() {
         <li>
           <span className={styles.text}>СДЭК</span>
         </li>
+        <li>
+          <span className={styles.text}>ПЭК</span>
+        </li>
+        <li>
+          <span className={styles.text}>Желдорэкспедиция</span>
+        </li>
       </ul>
+
+      <Htag tag="h3" border="down">
+        Международная доставка
+      </Htag>
+      <Ptag>
+        Для клиентов из стран СНГ и Восточной Европы мы организуем международную
+        доставку подшипников скольжения. Доставка осуществляется ведущими
+        логистическими компаниями с соблюдением всех таможенных процедур.
+      </Ptag>
     </main>
   );
 }

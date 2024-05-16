@@ -41,12 +41,12 @@ export default function Privacy() {
         данных (далее — Политика) применяется ко всей информации, которую
         Оператор может получить о посетителях веб-сайта{' '}
         <a
-          href="https://vi-va.vercel.app"
+          href={process.env.URL}
           target="_blank"
           rel="noopener noreferrer"
           className={styles.link}
         >
-          https://vi-va.vercel.app
+          https://viva-hmg.ru
         </a>
       </Ptag>
       <Ptag>
@@ -66,12 +66,12 @@ export default function Privacy() {
         также программ для ЭВМ и баз данных, обеспечивающих их доступность в
         сети интернет по сетевому адресу{' '}
         <a
-          href="https://vi-va.vercel.app"
+          href={process.env.URL}
           target="_blank"
           rel="noopener noreferrer"
           className={styles.link}
         >
-          https://vi-va.vercel.app
+          https://viva-hmg.ru
         </a>
       </Ptag>
       <Ptag>
@@ -106,12 +106,12 @@ export default function Privacy() {
         2.8. Персональные данные — любая информация, относящаяся прямо или
         косвенно к определенному или определяемому Пользователю веб-сайта{' '}
         <a
-          href="https://vi-va.vercel.app"
+          href={process.env.URL}
           target="_blank"
           rel="noopener noreferrer"
           className={styles.link}
         >
-          https://vi-va.vercel.app
+          https://viva-hmg.ru
         </a>
       </Ptag>
       <Ptag>
@@ -126,12 +126,12 @@ export default function Privacy() {
       <Ptag>
         2.10. Пользователь — любой посетитель веб-сайта{' '}
         <a
-          href="https://vi-va.vercel.app"
+          href={process.env.URL}
           target="_blank"
           rel="noopener noreferrer"
           className={styles.link}
         >
-          https://vi-va.vercel.app
+          https://viva-hmg.ru
         </a>
       </Ptag>
       <Ptag>
@@ -493,12 +493,12 @@ export default function Privacy() {
         12.3. Актуальная версия Политики в свободном доступе расположена в сети
         Интернет по адресу{' '}
         <a
-          href="https://vi-va.vercel.app"
+          href={process.env.URL}
           target="_blank"
           rel="noopener noreferrer"
           className={styles.link}
         >
-          https://vi-va.vercel.app
+          https://viva-hmg.ru
         </a>
         .
       </Ptag>
