@@ -8,6 +8,7 @@ import ContactUs from '@/components/ContactUs/ContactUs';
 import { inter } from './ui/fonts';
 
 export const metadata = {
+  metadataBase: new URL('https://viva-hmg.ru'),
   title:
     'Подшипники скольжения HMG в Москве | Самосмазывающиеся и металлополимерные',
   description:
