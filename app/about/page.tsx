@@ -17,7 +17,7 @@ export const metadata = {
     url: process.env.URL,
     images: [
       {
-        url: '/image/products03/pro03.jpg',
+        url: '/image/metalicheskie_samosmazivayushiesya_podshipniki/pro03.jpg',
         width: 1200,
         height: 630,
       },

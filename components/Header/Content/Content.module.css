@@ -6,6 +6,14 @@
   gap: 28px;
 }
 
+.right_box {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 28px;
+  justify-self: flex-end;
+}
+
 .contacts {
   display: flex;
   min-width: 155px;

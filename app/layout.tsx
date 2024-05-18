@@ -24,7 +24,7 @@ export const metadata = {
       'Подшипники скольжения HMG в Москве | Самосмазывающиеся и металлополимерные',
     images: [
       {
-        url: '/image/products03/pro03.jpg',
+        url: '/image/metalicheskie_samosmazivayushiesya_podshipniki/pro03.jpg',
         width: 1200,
         height: 630,
       },

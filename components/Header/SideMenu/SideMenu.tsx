@@ -4,15 +4,19 @@ import styles from './SideMenu.module.css';
 import Link from 'next/link';
 
 type SideMenuProps = {
-  showGoodsSideMenu: boolean;
+  showPodshipnikiSideMenu: boolean;
   href: string;
 };
 
-const SideMenu = ({ showGoodsSideMenu, href }: SideMenuProps) => {
+const SideMenu = ({ showPodshipnikiSideMenu, href }: SideMenuProps) => {
   return (
     <>
-      {href === '/goods' && (
-        <ul className={`${styles.side} ${showGoodsSideMenu && styles.active} `}>
+      {href === '/podshipniki' && (
+        <ul
+          className={`${styles.side} ${
+            showPodshipnikiSideMenu && styles.active
+          } `}
+        >
           {products.map(({ name, href }) => {
             return (
               <li key={name} className={styles.item}>

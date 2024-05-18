@@ -15,7 +15,7 @@ const messages = {
 const navLinks = [
   { name: 'Главная', href: '/' },
   { name: 'О компании', href: '/about' },
-  { name: 'Товары', href: '/goods' },
+  { name: 'Подшипники', href: '/podshipniki' },
   { name: 'Доставка', href: '/delivery' },
   { name: 'Каталог', href: '/catalog' },
   { name: 'Контакты', href: '/contacts' },

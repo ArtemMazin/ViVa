@@ -7,16 +7,16 @@ import SideMenu from '../SideMenu/SideMenu';
 import { useResize } from '@/hooks/useResize';
 
 const Navigation = () => {
-  const [showGoodsSideMenu, setShowGoodsSideMenu] = useState(false);
+  const [showPodshipnikiSideMenu, setShowPodshipnikiSideMenu] = useState(false);
   const pathname = usePathname();
   const { isScreenXl } = useResize();
 
   const onMouseEnterHandler = (href: string) => {
-    isScreenXl && href === '/goods' && setShowGoodsSideMenu(true);
+    isScreenXl && href === '/podshipniki' && setShowPodshipnikiSideMenu(true);
   };
 
   const onMouseLeaveHandler = () => {
-    setShowGoodsSideMenu(false);
+    setShowPodshipnikiSideMenu(false);
   };
 
   return (
@@ -34,7 +34,10 @@ const Navigation = () => {
               <Link className={styles.link} href={href}>
                 <span className={`${isActive && styles.active}`}>{name}</span>
               </Link>
-              <SideMenu showGoodsSideMenu={showGoodsSideMenu} href={href} />
+              <SideMenu
+                showPodshipnikiSideMenu={showPodshipnikiSideMenu}
+                href={href}
+              />
             </li>
           );
         })}

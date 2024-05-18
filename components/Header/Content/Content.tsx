@@ -13,24 +13,26 @@ const Content = ({ toggleHideMenu, isMenuOpen }) => {
       <Suspense>
         <Search />
       </Suspense>
-      <div className={styles.row}>
-        <span>Офис продаж:</span>
-        <div className={styles.adress}>
-          <span>г.Москва, ул.Шарикоподшипниковская, д.1</span>
+      <div className={styles.right_box}>
+        <div className={styles.row}>
+          <span>Офис продаж:</span>
+          <div className={styles.adress}>
+            <span>г.Москва, ул.Шарикоподшипниковская, д.1</span>
+          </div>
         </div>
-      </div>
 
-      <div className={styles.contacts}>
-        <TelLink color="black" />
-        <MailLink color="black" />
-      </div>
+        <div className={styles.contacts}>
+          <TelLink color="black" />
+          <MailLink color="black" />
+        </div>
 
-      <button className={styles.button} onClick={toggleHideMenu}>
-        <Menu
-          size={32}
-          className={`${styles.icon} ${isMenuOpen ? styles.active : ''}`}
-        />
-      </button>
+        <button className={styles.button} onClick={toggleHideMenu}>
+          <Menu
+            size={32}
+            className={`${styles.icon} ${isMenuOpen ? styles.active : ''}`}
+          />
+        </button>
+      </div>
     </div>
   );
 };
