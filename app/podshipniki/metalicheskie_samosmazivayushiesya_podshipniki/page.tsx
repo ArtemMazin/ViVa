@@ -5,8 +5,25 @@ import Products from '@/components/Products/Products';
 import BreadCrumbs from '@/components/BreadCrumbs/BreadCrumbs';
 
 export const metadata = {
-  title: products[2].name,
-  description: products[2].name,
+  metadataBase: new URL(process.env.URL),
+  title: 'Металлические самосмазывающиеся подшипники скольжения | ВиВа Групп',
+  description:
+    'Купите высококачественные металлические самосмазывающиеся подшипники скольжения от надежного поставщика ВиВа Групп. Обладают высокой износостойкостью, низким коэффициентом трения и длительным сроком службы без смазки.',
+  openGraph: {
+    title: 'Металлические самосмазывающиеся подшипники скольжения | ВиВа Групп',
+    description:
+      'Купите высококачественные металлические самосмазывающиеся подшипники скольжения от надежного поставщика ВиВа Групп. Обладают высокой износостойкостью, низким коэффициентом трения и длительным сроком службы без смазки.',
+    url:
+      process.env.URL +
+      '/podshipniki/metalicheskie_samosmazivayushiesya_podshipniki',
+    images: [
+      {
+        url: '/image/metalicheskie_samosmazivayushiesya_podshipniki/pro01.jpg',
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
 };
 
 const Metalicheskie_samosmazivayushiesya_podshipniki = () => {

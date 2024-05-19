@@ -5,8 +5,23 @@ import Products from '@/components/Products/Products';
 import BreadCrumbs from '@/components/BreadCrumbs/BreadCrumbs';
 
 export const metadata = {
-  title: products[3].name,
-  description: products[3].name,
+  metadataBase: new URL(process.env.URL),
+  title: 'Металлические подшипники скольжения высокого качества | ВиВа Групп',
+  description:
+    'Купите высококачественные металлические подшипники скольжения от надежного поставщика ВиВа Групп. Широкий ассортимент материалов и размеров для различных отраслей промышленности. Обеспечивают высокую износостойкость и длительный срок службы.',
+  openGraph: {
+    title: 'Металлические подшипники скольжения высокого качества | ВиВа Групп',
+    description:
+      'Купите высококачественные металлические подшипники скольжения от надежного поставщика ВиВа Групп. Широкий ассортимент материалов и размеров для различных отраслей промышленности. Обеспечивают высокую износостойкость и длительный срок службы.',
+    url: process.env.URL + '/podshipniki/metalicheskie_podshipniki',
+    images: [
+      {
+        url: '/image/metalicheskie_podshipniki/pro01.jpg',
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
 };
 
 const Metalicheskie_podshipniki = () => {

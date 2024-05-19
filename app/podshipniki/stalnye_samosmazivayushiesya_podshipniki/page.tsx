@@ -5,8 +5,25 @@ import Products from '@/components/Products/Products';
 import BreadCrumbs from '@/components/BreadCrumbs/BreadCrumbs';
 
 export const metadata = {
-  title: products[5].name,
-  description: products[5].name,
+  metadataBase: new URL(process.env.URL),
+  title: 'Стальные самосмазывающиеся подшипники высокого качества | ВиВа Групп',
+  description:
+    'Купите высококачественные стальные самосмазывающиеся подшипники от надежного поставщика ВиВа Групп. Широкий ассортимент моделей с различными типами смазочных материалов для различных отраслей промышленности. Обеспечивают длительный срок службы и низкий коэффициент трения.',
+  openGraph: {
+    title:
+      'Стальные самосмазывающиеся подшипники высокого качества | ВиВа Групп',
+    description:
+      'Купите высококачественные стальные самосмазывающиеся подшипники от надежного поставщика ВиВа Групп. Широкий ассортимент моделей с различными типами смазочных материалов для различных отраслей промышленности. Обеспечивают длительный срок службы и низкий коэффициент трения.',
+    url:
+      process.env.URL + '/podshipniki/stalnye_samosmazivayushiesya_podshipniki',
+    images: [
+      {
+        url: '/image/stalnye_samosmazivayushiesya_podshipniki/pro01.jpg',
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
 };
 
 const Stalnye_samosmazivayushiesya_podshipniki = () => {

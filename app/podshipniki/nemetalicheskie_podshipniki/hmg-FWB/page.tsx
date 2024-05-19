@@ -6,6 +6,28 @@ import Ptag from '@/components/Ptag/Ptag';
 import BreadCrumbs from '@/components/BreadCrumbs/BreadCrumbs';
 import Table from './Table';
 
+export const metadata = {
+  metadataBase: new URL(process.env.URL),
+  title:
+    'Композитный подшипник HMG-FWB для низких оборотов и высоких нагрузок | ВиВа Групп',
+  description:
+    'Купите высококачественный композитный подшипник HMG-FWB от ВиВа Групп. Изготовлен из стекловолокна с эпоксидной смолой, что обеспечивает высокую химическую стойкость. Идеален для применения при низких скоростях вращения и высоких нагрузках.',
+  openGraph: {
+    title:
+      'Композитный подшипник HMG-FWB для низких оборотов и высоких нагрузок | ВиВа Групп',
+    description:
+      'Купите высококачественный композитный подшипник HMG-FWB от ВиВа Групп. Изготовлен из стекловолокна с эпоксидной смолой, что обеспечивает высокую химическую стойкость. Идеален для применения при низких скоростях вращения и высоких нагрузках.',
+    url: process.env.URL + '/podshipniki/nemetalicheskie_podshipniki/hmg-FWB',
+    images: [
+      {
+        url: '/image/nemetalicheskie_podshipniki/hmg-FWB.jpg',
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+};
+
 const page = () => {
   return (
     <main className={`${styles.section} container`}>
@@ -78,7 +100,7 @@ const page = () => {
         <Htag tag="h2" border="left">
           Типичные области применения
         </Htag>
-        <Ptag>
+        <Ptag margin="bottom">
           Данный тип материалов разработан для вращательного и
           возвратно-поступательного движения, а также для условий, требующих
           частых пусков и остановок. Они широко применяются в

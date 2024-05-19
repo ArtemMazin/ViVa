@@ -5,8 +5,24 @@ import Products from '@/components/Products/Products';
 import BreadCrumbs from '@/components/BreadCrumbs/BreadCrumbs';
 
 export const metadata = {
-  title: products[4].name,
-  description: products[4].name,
+  metadataBase: new URL(process.env.URL),
+  title: 'Неметаллические подшипники скольжения высокого качества | ВиВа Групп',
+  description:
+    'Купите высококачественные неметаллические подшипники скольжения от надежного поставщика ВиВа Групп. Широкий ассортимент полимерных и композитных материалов для различных отраслей промышленности. Обеспечивают низкий коэффициент трения и высокую износостойкость.',
+  openGraph: {
+    title:
+      'Неметаллические подшипники скольжения высокого качества | ВиВа Групп',
+    description:
+      'Купите высококачественные неметаллические подшипники скольжения от надежного поставщика ВиВа Групп. Широкий ассортимент полимерных и композитных материалов для различных отраслей промышленности. Обеспечивают низкий коэффициент трения и высокую износостойкость.',
+    url: process.env.URL + '/podshipniki/nemetalicheskie_podshipniki',
+    images: [
+      {
+        url: '/image/nemetalicheskie_podshipniki/pro01.jpg',
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
 };
 
 const Nemetalicheskie_podshipniki = () => {

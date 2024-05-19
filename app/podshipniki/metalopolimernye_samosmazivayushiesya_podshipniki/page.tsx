@@ -5,8 +5,25 @@ import Products from '@/components/Products/Products';
 import BreadCrumbs from '@/components/BreadCrumbs/BreadCrumbs';
 
 export const metadata = {
-  title: products[0].name,
-  description: products[0].name,
+  metadataBase: new URL(process.env.URL),
+  title: 'Металополимерные самосмазывающиеся подшипники HMG | ВиВа Групп',
+  description:
+    'Купите высококачественные металополимерные самосмазывающиеся подшипники HMG от надежного поставщика ВиВа Групп. Широкий ассортимент износостойких и долговечных подшипников для различных отраслей промышленности.',
+  openGraph: {
+    title: 'Металополимерные самосмазывающиеся подшипники HMG | ВиВа Групп',
+    description:
+      'Купите высококачественные металополимерные самосмазывающиеся подшипники HMG от надежного поставщика ВиВа Групп. Широкий ассортимент износостойких и долговечных подшипников для различных отраслей промышленности.',
+    url:
+      process.env.URL +
+      '/podshipniki/metalopolimernye_samosmazivayushiesya_podshipniki',
+    images: [
+      {
+        url: '/image/metalopolimernye_samosmazivayushiesya_podshipniki/pro01.jpg',
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
 };
 
 const Metalopolimernye_samosmazivayushiesya_podshipniki = () => {

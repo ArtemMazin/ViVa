@@ -6,6 +6,28 @@ import Ptag from '@/components/Ptag/Ptag';
 import BreadCrumbs from '@/components/BreadCrumbs/BreadCrumbs';
 import Table from './Table';
 
+export const metadata = {
+  metadataBase: new URL(process.env.URL),
+  title:
+    'Износостойкий металополимерный подшипник HMG-22 для высоких нагрузок | ВиВа Групп',
+  description:
+    'Купите высококачественный металополимерный подшипник HMG-22 от ВиВа Групп. Обладает высокой износостойкостью, что делает его пригодным для применения в условиях средних и высоких нагрузок, ударных воздействий и запыленной среды.',
+  openGraph: {
+    title:
+      'Износостойкий металополимерный подшипник HMG-22 для высоких нагрузок | ВиВа Групп',
+    description:
+      'Купите высококачественный металополимерный подшипник HMG-22 от ВиВа Групп. Обладает высокой износостойкостью, что делает его пригодным для применения в условиях средних и высоких нагрузок, ударных воздействий и запыленной среды.',
+    url: process.env.URL + '/podshipniki/metalopolimernye_podshipniki/hmg-22',
+    images: [
+      {
+        url: '/image/metalopolimernye_podshipniki/hmg-22.jpg',
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+};
+
 const page = () => {
   return (
     <main className={`${styles.section} container`}>
@@ -84,7 +106,7 @@ const page = () => {
         <Htag tag="h2" border="left">
           Типичные области применения
         </Htag>
-        <Ptag>
+        <Ptag margin="bottom">
           Этот материал отличается высокой износостойкостью, что делает его
           пригодным для применения в условиях средних и высоких нагрузок,
           ударных воздействий и запыленной среды. Перед сборкой обязательно

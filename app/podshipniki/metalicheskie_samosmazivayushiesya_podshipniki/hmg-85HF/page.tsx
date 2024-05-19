@@ -6,6 +6,30 @@ import Image from 'next/image';
 import React from 'react';
 import Table from './Table';
 
+export const metadata = {
+  metadataBase: new URL(process.env.URL),
+  title:
+    'Самосмазывающийся подшипник HMG-85HF для низких нагрузок и высоких скоростей вращения | ВиВа Групп',
+  description:
+    'Купите высококачественный самосмазывающийся подшипник HMG-85HF от ВиВа Групп. Рекомендуется использовать данный материал в условиях низких нагрузок и средних-высоких скоростей вращения. Обладает высокой стойкостью к коррозии и агрессивным средам.',
+  openGraph: {
+    title:
+      'Самосмазывающийся подшипник HMG-85HF для низких нагрузок и высоких скоростей вращения | ВиВа Групп',
+    description:
+      'Купите высококачественный самосмазывающийся подшипник HMG-85HF от ВиВа Групп. Рекомендуется использовать данный материал в условиях низких нагрузок и средних-высоких скоростей вращения. Обладает высокой стойкостью к коррозии и агрессивным средам.',
+    url:
+      process.env.URL +
+      '/podshipniki/metalicheskie_samosmazivayushiesya_podshipniki/hmg-85HF',
+    images: [
+      {
+        url: '/image/metalicheskie_samosmazivayushiesya_podshipniki/hmg-85HF.jpg',
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+};
+
 const page = () => {
   return (
     <main className={`${styles.section} container`}>
@@ -89,7 +113,7 @@ const page = () => {
         <Htag tag="h2" border="left">
           Типичные области применения
         </Htag>
-        <Ptag>
+        <Ptag margin="bottom">
           Высокопроизводительные подшипники из данного сплава Fe-Cu оптимальны
           для применения в условиях высоких нагрузок и низких скоростей
           вращения, таких как стрелы экскаваторов, проушины штоков

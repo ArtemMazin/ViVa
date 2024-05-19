@@ -7,6 +7,28 @@ import BreadCrumbs from '@/components/BreadCrumbs/BreadCrumbs';
 import TableTop from './TableTop';
 import TableBottom from './TableBottom';
 
+export const metadata = {
+  metadataBase: new URL(process.env.URL),
+  title:
+    'Бронзовый подшипник HMG-090 для низких нагрузок и оборотов | ВиВа Групп',
+  description:
+    'Купите высококачественный бронзовый подшипник HMG-090 от ВиВа Групп. Бронзовый сплав обеспечивает хорошую коррозионную стойкость, эффективный отвод тепла и оптимален для применения при средних и низких нагрузках, а также низких скоростях вращения.',
+  openGraph: {
+    title:
+      'Бронзовый подшипник HMG-090 для низких нагрузок и оборотов | ВиВа Групп',
+    description:
+      'Купите высококачественный бронзовый подшипник HMG-090 от ВиВа Групп. Бронзовый сплав обеспечивает хорошую коррозионную стойкость, эффективный отвод тепла и оптимален для применения при средних и низких нагрузках, а также низких скоростях вращения.',
+    url: process.env.URL + '/podshipniki/metalicheskie_podshipniki/hmg-090',
+    images: [
+      {
+        url: '/image/metalicheskie_podshipniki/hmg-090.jpg',
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+};
+
 const page = () => {
   return (
     <main className={`${styles.section} container`}>
@@ -86,7 +108,7 @@ const page = () => {
         <Htag tag="h2" border="left">
           Типичные области применения
         </Htag>
-        <Ptag>
+        <Ptag margin="bottom">
           Типичные области применения данного материала включают подъемное
           оборудование, строительную технику, автомобильную промышленность,
           тракторы, грузовики, сельскохозяйственные и горнодобывающие машины.

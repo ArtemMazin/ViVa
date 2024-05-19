@@ -6,6 +6,28 @@ import Ptag from '@/components/Ptag/Ptag';
 import BreadCrumbs from '@/components/BreadCrumbs/BreadCrumbs';
 import Table from './Table';
 
+export const metadata = {
+  metadataBase: new URL(process.env.URL),
+  title:
+    'Металополимерный подшипник HMG-20 с низким коэффициентом трения и высокой грузоподъемностью | ВиВа Групп',
+  description:
+    'Купите высококачественный металополимерный подшипник HMG-20 от ВиВа Групп. Обладает низким коэффициентом трения, высокой износостойкостью и грузоподъемностью. Идеален для тяжелонагруженных узлов оборудования.',
+  openGraph: {
+    title:
+      'Металополимерный подшипник HMG-20 с низким коэффициентом трения и высокой грузоподъемностью | ВиВа Групп',
+    description:
+      'Купите высококачественный металополимерный подшипник HMG-20 от ВиВа Групп. Обладает низким коэффициентом трения, высокой износостойкостью и грузоподъемностью. Идеален для тяжелонагруженных узлов оборудования.',
+    url: process.env.URL + '/podshipniki/metalopolimernye_podshipniki/hmg-20',
+    images: [
+      {
+        url: '/image/metalopolimernye_podshipniki/hmg-20.jpg',
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+};
+
 const page = () => {
   return (
     <main className={`${styles.section} container`}>
@@ -89,7 +111,7 @@ const page = () => {
         <Htag tag="h2" border="left">
           Типичные области применения
         </Htag>
-        <Ptag>
+        <Ptag margin="bottom">
           Данный материал обладает высокой износостойкостью, что делает его
           пригодным для применения в условиях средних и высоких нагрузок,
           ударных воздействий и запыленной среды. Перед сборкой обязательно

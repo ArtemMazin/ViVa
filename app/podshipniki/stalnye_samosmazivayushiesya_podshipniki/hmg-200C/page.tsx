@@ -6,6 +6,30 @@ import Image from 'next/image';
 import React from 'react';
 import Table from './Table';
 
+export const metadata = {
+  metadataBase: new URL(process.env.URL),
+  title:
+    'Стальной самосмазывающийся подшипник HMG-200C для высоких ударных нагрузок | ВиВа Групп',
+  description:
+    'Купите стальной самосмазывающийся подшипник HMG-200C от ВиВа Групп. Оптимален для применения при высоких нагрузках, низких скоростях вращения в условиях ударных нагрузок и запыленной среды. Обеспечивает длительный срок службы.',
+  openGraph: {
+    title:
+      'Стальной самосмазывающийся подшипник HMG-200C для высоких ударных нагрузок | ВиВа Групп',
+    description:
+      'Купите стальной самосмазывающийся подшипник HMG-200C от ВиВа Групп. Оптимален для применения при высоких нагрузках, низких скоростях вращения в условиях ударных нагрузок и запыленной среды. Обеспечивает длительный срок службы.',
+    url:
+      process.env.URL +
+      '/podshipniki/stalnye_samosmazivayushiesya_podshipniki/hmg-200C',
+    images: [
+      {
+        url: '/image/stalnye_samosmazivayushiesya_podshipniki/hmg-200C.jpg',
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+};
+
 const page = () => {
   return (
     <main className={`${styles.section} container`}>
@@ -52,7 +76,7 @@ const page = () => {
           <Htag tag="h2" border="left">
             Структура
           </Htag>
-          <Ptag>
+          <Ptag margin="bottom">
             Подшипники из закаленной стали S45C. Термическая обработка повышает
             износостойкость и ударную вязкость материала. Масляные канавки и
             отверстия доступны в зависимости от требований. Конструкция масляных

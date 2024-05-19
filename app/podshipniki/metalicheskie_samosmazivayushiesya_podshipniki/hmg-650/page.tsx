@@ -7,6 +7,30 @@ import React from 'react';
 import TableTop from './TableTop';
 import TableBottom from './TableBottom';
 
+export const metadata = {
+  metadataBase: new URL(process.env.URL),
+  title:
+    'Самосмазывающийся бронзовый подшипник HMG-650 с высокой грузоподъемностью | ВиВа Групп',
+  description:
+    'Купите высококачественный самосмазывающийся бронзовый подшипник HMG-650 от ВиВа Групп. Бронзовый сплав придает подшипнику необходимую механическую прочность и высокую грузоподъемность, а диспергированные твердые смазочные компоненты обеспечивают непрерывный источник смазки.',
+  openGraph: {
+    title:
+      'Самосмазывающийся бронзовый подшипник HMG-650 с высокой грузоподъемностью | ВиВа Групп',
+    description:
+      'Купите высококачественный самосмазывающийся бронзовый подшипник HMG-650 от ВиВа Групп. Бронзовый сплав придает подшипнику необходимую механическую прочность и высокую грузоподъемность, а диспергированные твердые смазочные компоненты обеспечивают непрерывный источник смазки.',
+    url:
+      process.env.URL +
+      '/podshipniki/metalicheskie_samosmazivayushiesya_podshipniki/hmg-650',
+    images: [
+      {
+        url: '/image/metalicheskie_samosmazivayushiesya_podshipniki/hmg-650.jpg',
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+};
+
 const page = () => {
   return (
     <main className={`${styles.section} container`}>

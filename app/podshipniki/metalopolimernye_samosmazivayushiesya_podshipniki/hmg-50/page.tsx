@@ -6,6 +6,29 @@ import Ptag from '@/components/Ptag/Ptag';
 import BreadCrumbs from '@/components/BreadCrumbs/BreadCrumbs';
 import Table from './Table';
 
+export const metadata = {
+  metadataBase: new URL(process.env.URL),
+  title: 'Металополимерный подшипник HMG-50 для высоких нагрузок | ВиВа Групп',
+  description:
+    'Купите высококачественный металополимерный самосмазывающийся подшипник HMG-50 от ВиВа Групп. Идеален для узлов с высокими нагрузками и агрессивными средами. Износостойкий и долговечный.',
+  openGraph: {
+    title:
+      'Металополимерный подшипник HMG-50 для высоких нагрузок | ВиВа Групп',
+    description:
+      'Купите высококачественный металополимерный самосмазывающийся подшипник HMG-50 от ВиВа Групп. Идеален для узлов с высокими нагрузками и агрессивными средами. Износостойкий и долговечный.',
+    url:
+      process.env.URL +
+      '/podshipniki/metalopolimernye_samosmazivayushiesya_podshipniki/hmg-50',
+    images: [
+      {
+        url: '/image/metalopolimernye_samosmazivayushiesya_podshipniki/hmg-50.jpg',
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+};
+
 const page = () => {
   return (
     <main className={`${styles.section} container`}>
@@ -71,7 +94,7 @@ const page = () => {
             обеспечивает прочное механическое сцепление с основой и отличную
             теплопроводность.
           </Ptag>
-          <Ptag>
+          <Ptag margin="bottom">
             3. Стальная основа придает подшипнику необходимую механическую
             прочность.
           </Ptag>
@@ -103,7 +126,7 @@ const page = () => {
         <Htag tag="h2" border="left">
           Типичные области применения
         </Htag>
-        <Ptag>
+        <Ptag margin="bottom">
           HMG-50 применяется в автомобилестроении: системы рулевого управления,
           амортизаторы, дверные петли, механизмы наклона спинок сидений, каркасы
           сидений и магнитные клапаны. Широкое распространение этот материал

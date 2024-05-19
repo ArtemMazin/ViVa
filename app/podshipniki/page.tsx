@@ -6,8 +6,23 @@ import Htag from '@/components/Htag/Htag';
 import BreadCrumbs from '@/components/BreadCrumbs/BreadCrumbs';
 
 export const metadata = {
-  title: 'Продукция компании ООО "ВиВа Групп"',
-  description: 'Продукция компании ООО "ВиВа Групп"',
+  metadataBase: new URL(process.env.URL),
+  title: 'Подшипники скольжения HMG | ВиВа Групп',
+  description:
+    'Купите высококачественные подшипники скольжения HMG от надежного поставщика ВиВа Групп. Широкий ассортимент бронзовых, полимерных и металлических подшипников для различных отраслей промышленности.',
+  openGraph: {
+    title: 'Подшипники скольжения HMG | ВиВа Групп',
+    description:
+      'Купите высококачественные подшипники скольжения HMG от надежного поставщика ВиВа Групп. Широкий ассортимент бронзовых, полимерных и металлических подшипников для различных отраслей промышленности.',
+    url: process.env.URL + '/podshipniki',
+    images: [
+      {
+        url: '/image/metalicheskie_samosmazivayushiesya_podshipniki/pro03.jpg',
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
 };
 
 export default function Podshipniki() {

@@ -5,6 +5,27 @@ import Htag from '@/components/Htag/Htag';
 import Ptag from '@/components/Ptag/Ptag';
 import BreadCrumbs from '@/components/BreadCrumbs/BreadCrumbs';
 
+export const metadata = {
+  metadataBase: new URL(process.env.URL),
+  title: 'Полимерный подшипник HMG-EPB с высокой износостойкостью | ВиВа Групп',
+  description:
+    'Купите высококачественный полимерный подшипник HMG-EPB от ВиВа Групп. Изготовлен из специального термопластичного полимера, что обеспечивает высокую износостойкость, низкий коэффициент трения и возможность работы без смазки.',
+  openGraph: {
+    title:
+      'Полимерный подшипник HMG-EPB с высокой износостойкостью | ВиВа Групп',
+    description:
+      'Купите высококачественный полимерный подшипник HMG-EPB от ВиВа Групп. Изготовлен из специального термопластичного полимера, что обеспечивает высокую износостойкость, низкий коэффициент трения и возможность работы без смазки.',
+    url: process.env.URL + '/podshipniki/nemetalicheskie_podshipniki/hmg-EPB',
+    images: [
+      {
+        url: '/image/nemetalicheskie_podshipniki/hmg-EPB.jpg',
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+};
+
 const page = () => {
   return (
     <main className={`${styles.section} container`}>
@@ -64,7 +85,7 @@ const page = () => {
         <Htag tag="h2" border="left">
           Типичные области применения
         </Htag>
-        <Ptag>
+        <Ptag margin="bottom">
           Этот тип материалов разработан для применения в условиях сухого трения
           и обеспечивает высокую химическую стойкость. Такие подшипники широко
           используются в офисном оборудовании, текстильных машинах,

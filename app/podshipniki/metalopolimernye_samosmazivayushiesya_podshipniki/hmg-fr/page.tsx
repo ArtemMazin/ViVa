@@ -6,6 +6,30 @@ import Ptag from '@/components/Ptag/Ptag';
 import BreadCrumbs from '@/components/BreadCrumbs/BreadCrumbs';
 import Table from './Table';
 
+export const metadata = {
+  metadataBase: new URL(process.env.URL),
+  title:
+    'Металополимерный подшипник HMG-FR с повышенной стойкостью к коррозии | ВиВа Групп',
+  description:
+    'Купите высококачественный металополимерный самосмазывающийся подшипник HMG-FR от ВиВа Групп. Обладает повышенной стойкостью к коррозии и агрессивным средам, идеален для влажных условий эксплуатации.',
+  openGraph: {
+    title:
+      'Металополимерный подшипник HMG-FR с повышенной стойкостью к коррозии | ВиВа Групп',
+    description:
+      'Купите высококачественный металополимерный самосмазывающийся подшипник HMG-FR от ВиВа Групп. Обладает повышенной стойкостью к коррозии и агрессивным средам, идеален для влажных условий эксплуатации.',
+    url:
+      process.env.URL +
+      '/podshipniki/metalopolimernye_samosmazivayushiesya_podshipniki/hmg-fr',
+    images: [
+      {
+        url: '/image/metalopolimernye_samosmazivayushiesya_podshipniki/hmg-fr.jpg',
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+};
+
 const page = () => {
   return (
     <main className={`${styles.section} container`}>
@@ -79,7 +103,7 @@ const page = () => {
         <Htag tag="h2" border="left">
           Типичные области применения
         </Htag>
-        <Ptag>
+        <Ptag margin="bottom">
           Этот материал подходит для применения в петлях дверей, клапанах,
           офисной технике и текстильной промышленности. Он легкий и обладает
           рядом преимуществ, включая износостойкость, хорошую теплопроводность и

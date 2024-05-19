@@ -6,6 +6,30 @@ import Image from 'next/image';
 import React from 'react';
 import Table from './Table';
 
+export const metadata = {
+  metadataBase: new URL(process.env.URL),
+  title:
+    'Самосмазывающийся бронзовый подшипник HMG-650GT для высоких температур | ВиВа Групп',
+  description:
+    'Купите высококачественный самосмазывающийся бронзовый подшипник HMG-650GT от ВиВа Групп. Специальный состав материала обеспечивает высокую термостойкость и возможность эксплуатации при повышенных температурах до 300°C.',
+  openGraph: {
+    title:
+      'Самосмазывающийся бронзовый подшипник HMG-650GT для высоких температур | ВиВа Групп',
+    description:
+      'Купите высококачественный самосмазывающийся бронзовый подшипник HMG-650GT от ВиВа Групп. Специальный состав материала обеспечивает высокую термостойкость и возможность эксплуатации при повышенных температурах до 300°C.',
+    url:
+      process.env.URL +
+      '/podshipniki/metalicheskie_samosmazivayushiesya_podshipniki/hmg-650GT',
+    images: [
+      {
+        url: '/image/metalicheskie_samosmazivayushiesya_podshipniki/hmg-650GT.jpg',
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+};
+
 const page = () => {
   return (
     <main className={`${styles.section} container`}>
@@ -84,7 +108,7 @@ const page = () => {
         <Htag tag="h2" border="left">
           Типичные области применения
         </Htag>
-        <Ptag>
+        <Ptag margin="bottom">
           Данный композитный материал широко применяется в машинах для литья
           пластмасс под давлением, портовом оборудовании, горнодобывающей
           технике, направляющих втулках для пресс-форм и т.д. Он оптимален для

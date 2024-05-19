@@ -142,7 +142,7 @@ export default function ContactForm({ onClose, setMessage, openNotification }) {
             />
             <span className={styles.subtitle}>
               Нажимая кнопку &quot;Отправить&quot;, Вы даете согласие на{' '}
-              <Link href="/privacy" className={styles.link} onClick={onClose}>
+              <Link href="/policy" className={styles.link} onClick={onClose}>
                 обработку ваших персональных данных.
               </Link>
             </span>

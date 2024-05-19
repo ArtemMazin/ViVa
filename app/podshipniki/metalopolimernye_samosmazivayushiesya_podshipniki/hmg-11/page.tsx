@@ -6,6 +6,30 @@ import Ptag from '@/components/Ptag/Ptag';
 import BreadCrumbs from '@/components/BreadCrumbs/BreadCrumbs';
 import Table from './Table';
 
+export const metadata = {
+  metadataBase: new URL(process.env.URL),
+  title:
+    'Металополимерный подшипник HMG-11 с низким коэффициентом трения | ВиВа Групп',
+  description:
+    'Купите высококачественный металополимерный самосмазывающийся подшипник HMG-11 от ВиВа Групп. Обладает низким коэффициентом трения и высокой износостойкостью для различных отраслей.',
+  openGraph: {
+    title:
+      'Металополимерный подшипник HMG-11 с низким коэффициентом трения | ВиВа Групп',
+    description:
+      'Купите высококачественный металополимерный самосмазывающийся подшипник HMG-11 от ВиВа Групп. Обладает низким коэффициентом трения и высокой износостойкостью для различных отраслей.',
+    url:
+      process.env.URL +
+      '/podshipniki/metalopolimernye_samosmazivayushiesya_podshipniki/hmg-11',
+    images: [
+      {
+        url: '/image/metalopolimernye_samosmazivayushiesya_podshipniki/hmg-11.jpg',
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+};
+
 const page = () => {
   return (
     <main className={`${styles.section} container`}>
@@ -71,7 +95,7 @@ const page = () => {
             3. Бронзовая основа обеспечивает механическую прочность и
             корозионную стойкость.
           </Ptag>
-          <Ptag>
+          <Ptag margin="bottom">
             Такая трехслойная конструкция позволяет объединить преимущества
             различных материалов. Тонкий полимерный слой ПТФЭ обладает низким
             коэффициентом трения и выполняет роль сухой смазки. Бронзовый
@@ -99,7 +123,7 @@ const page = () => {
         <Htag tag="h2" border="left">
           Типичные области применения
         </Htag>
-        <Ptag>
+        <Ptag margin="bottom">
           Данный материал идеально подходит для применения в следующих областях:
           изготовление дверных петель, петель капота и багажника автомобилей,
           механизмов стеклоочистителей, сцепных устройств для прицепов,

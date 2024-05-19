@@ -35,7 +35,7 @@ const Products = ({
         <Htag tag="h1" border="left">
           {titleProducts}
         </Htag>
-        <Ptag>{descriptionProducts}</Ptag>
+        <Ptag margin="bottom">{descriptionProducts}</Ptag>
       </div>
       <CardList array={materialsList} />
     </div>

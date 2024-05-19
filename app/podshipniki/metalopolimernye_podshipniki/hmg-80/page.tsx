@@ -6,6 +6,28 @@ import Ptag from '@/components/Ptag/Ptag';
 import BreadCrumbs from '@/components/BreadCrumbs/BreadCrumbs';
 import Table from './Table';
 
+export const metadata = {
+  metadataBase: new URL(process.env.URL),
+  title:
+    'Металополимерный подшипник HMG-80 для высоких PV и температур | ВиВа Групп',
+  description:
+    'Купите высококачественный металополимерный подшипник HMG-80 от ВиВа Групп. Данный композитный материал имеет широкий диапазон рабочих температур и может эксплуатироваться в условиях высоких значений PV (произведения давления на скорость).',
+  openGraph: {
+    title:
+      'Металополимерный подшипник HMG-80 для высоких PV и температур | ВиВа Групп',
+    description:
+      'Купите высококачественный металополимерный подшипник HMG-80 от ВиВа Групп. Данный композитный материал имеет широкий диапазон рабочих температур и может эксплуатироваться в условиях высоких значений PV (произведения давления на скорость).',
+    url: process.env.URL + '/podshipniki/metalopolimernye_podshipniki/hmg-80',
+    images: [
+      {
+        url: '/image/metalopolimernye_podshipniki/hmg-80.jpg',
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+};
+
 const page = () => {
   return (
     <main className={`${styles.section} container`}>
@@ -92,7 +114,7 @@ const page = () => {
         <Htag tag="h2" border="left">
           Типичные области применения
         </Htag>
-        <Ptag>
+        <Ptag margin="bottom">
           Данный композитный материал имеет широкий диапазон рабочих температур
           и может эксплуатироваться в условиях высоких значений PV (произведения
           давления на скорость). Он находит применение в гидравлических моторах,
