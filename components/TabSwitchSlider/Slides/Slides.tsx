@@ -2,6 +2,8 @@ import React from 'react';
 import styles from './Slides.module.css';
 import { tabSwitchSlides } from '@/utils/tabSwitchSlides';
 import Image from 'next/image';
+import Ptag from '@/components/Ptag/Ptag';
+import Htag from '@/components/Htag/Htag';
 
 function Slides({ tabActive }: { tabActive: string }) {
   return (
@@ -15,11 +17,13 @@ function Slides({ tabActive }: { tabActive: string }) {
           >
             <div className={styles.description_background}>
               <div className={styles.description_container}>
-                <h2 className={styles.title}>{item.name}</h2>
-                <p className={styles.description}>{item.description}</p>
+                <Htag tag="h2">{item.name}</Htag>
+                <Ptag>{item.description}</Ptag>
                 <ul className={styles.places}>
                   {item.places.map(string => (
-                    <li key={string}>{string}</li>
+                    <li key={string}>
+                      <Ptag>{string}</Ptag>
+                    </li>
                   ))}
                 </ul>
               </div>

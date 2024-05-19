@@ -20,7 +20,7 @@ function TabSwitchSlider() {
         <Htag tag="h2" border="down" className={styles.main_title}>
           ОБЛАСТИ ПРИМЕНЕНИЯ
         </Htag>
-        <Htag tag="h3">HMG/ВТУЛКИ/ШАЙБЫ/ЛЕНТА</Htag>
+        <Htag tag="h3">ВТУЛКИ/ШАЙБЫ/ЛЕНТА</Htag>
       </div>
 
       <Tabs tabActive={tabActive} toggleTab={toggleTab} />

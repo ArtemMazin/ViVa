@@ -1,0 +1,64 @@
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+  margin-bottom: 30px;
+}
+
+.description__container {
+  padding: 0 40px;
+  background-attachment: fixed;
+  background-image: url('../../../public/image/nemetalicheskie_podshipniki/pro05.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+}
+
+.description__text {
+  padding: 40px;
+  margin-right: 20%;
+  background-color: var(--color-bg-blue);
+}
+
+.description__advantages {
+  padding: 40px;
+  margin: 20px 0 20px 20%;
+  background-color: var(--color-bg-blue);
+}
+
+.description__list {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.title {
+  text-align: center;
+}
+
+.main__title {
+  text-shadow: var(--text-shadow-title);
+}
+
+@media (width <= 768px) {
+  .main__title {
+    font-size: 25px;
+  }
+
+  .description__container {
+    padding: 0;
+  }
+
+  .description__advantages {
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-left: 0;
+  }
+
+  .description__text {
+    padding: 20px;
+    margin-right: 0;
+  }
+}

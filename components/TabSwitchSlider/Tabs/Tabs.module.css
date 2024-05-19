@@ -66,6 +66,7 @@
 
 @media (width<=768px) {
   .tab {
+    gap: 30px;
     grid-template-rows: 40px 1fr;
   }
 

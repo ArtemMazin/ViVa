@@ -10,7 +10,7 @@ const Presentation = () => {
       <Htag tag="h2" border="down" className={styles.main_title}>
         НАША ПРОДУКЦИЯ
       </Htag>
-      <Htag tag="h3">HMG/ВТУЛКИ/ШАЙБЫ/ЛЕНТА</Htag>
+      <Htag tag="h3">ВТУЛКИ/ШАЙБЫ/ЛЕНТА</Htag>
       <CardList array={products} />
     </section>
   );
