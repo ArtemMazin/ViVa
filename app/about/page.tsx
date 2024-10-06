@@ -1,13 +1,13 @@
 import React from 'react';
+import { Metadata } from 'next';
+import Image from 'next/image';
 import styles from './about.module.css';
 import Htag from '@/components/Htag/Htag';
 import Ptag from '@/components/Ptag/Ptag';
 import BreadCrumbs from '@/components/BreadCrumbs/BreadCrumbs';
-import Image from 'next/image';
 
-export const metadata = {
-  metadataBase: new URL(process.env.URL),
-  title: 'ООО "ВиВа Групп" - О компании"',
+export const metadata: Metadata = {
+  title: 'ООО "ВиВа Групп" - О компании',
   description:
     'Информация о компании ООО "ВиВа Групп" - одном из ведущих поставщиков подшипников скольжения в России, СНГ и Восточной Европе.',
   openGraph: {
@@ -20,17 +20,19 @@ export const metadata = {
         url: '/image/metalicheskie_samosmazivayushiesya_podshipniki/pro03.jpg',
         width: 1200,
         height: 630,
+        alt: 'ВиВа Групп - подшипники скольжения',
       },
     ],
+    type: 'website',
   },
 };
 
-const page = () => {
+export default function AboutPage() {
   return (
     <main className={`container ${styles.about}`}>
       <BreadCrumbs
         currentLink="О компании"
-        links={[{ href: process.env.URL, name: 'Главнaя' }]}
+        links={[{ href: process.env.URL || '/', name: 'Главная' }]}
       />
       <Htag tag="h1" border="left" className={styles.main_title}>
         О компании
@@ -45,10 +47,10 @@ const page = () => {
       </Ptag>
       <div className={styles.image}>
         <Image
-          src={'/image/timeLine.png'}
+          src="/image/timeLine.png"
+          alt="История развития компании"
           fill
           sizes="(max-width: 520px) 30vw, (max-width: 768px) 50vw, 100vw"
-          alt="История развития компании"
           priority={false}
           className={styles.timeLine}
         />
@@ -90,6 +92,4 @@ const page = () => {
       </Ptag>
     </main>
   );
-};
-
-export default page;
+}

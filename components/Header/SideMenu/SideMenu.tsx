@@ -3,32 +3,29 @@ import { products } from '@/utils/products';
 import styles from './SideMenu.module.css';
 import Link from 'next/link';
 
-type SideMenuProps = {
+interface SideMenuProps {
   showPodshipnikiSideMenu: boolean;
   href: string;
-};
+}
 
-const SideMenu = ({ showPodshipnikiSideMenu, href }: SideMenuProps) => {
+const SideMenu: React.FC<SideMenuProps> = ({
+  showPodshipnikiSideMenu,
+  href,
+}) => {
+  if (href !== '/podshipniki') return null;
+
   return (
-    <>
-      {href === '/podshipniki' && (
-        <ul
-          className={`${styles.side} ${
-            showPodshipnikiSideMenu && styles.active
-          } `}
-        >
-          {products.map(({ name, href }) => {
-            return (
-              <li key={name} className={styles.item}>
-                <Link href={href} className={styles.link}>
-                  {name}
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
-      )}
-    </>
+    <ul
+      className={`${styles.side} ${showPodshipnikiSideMenu && styles.active}`}
+    >
+      {products.map(({ name, href }) => (
+        <li key={name} className={styles.item}>
+          <Link href={href} className={styles.link}>
+            {name}
+          </Link>
+        </li>
+      ))}
+    </ul>
   );
 };
 

@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import styles from './contacts.module.css';
 import BreadCrumbs from '@/components/BreadCrumbs/BreadCrumbs';
 import Htag from '@/components/Htag/Htag';
@@ -5,7 +6,7 @@ import MailLink from '@/components/Links/Mail/MailLink';
 import TelLink from '@/components/Links/Tel/TelLink';
 import Ptag from '@/components/Ptag/Ptag';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Контакты ООО "ВиВа Групп" | Подшипники скольжения',
   description:
     'Контактная информация компании ВиВа Групп - ведущего поставщика подшипников скольжения в России, СНГ и Восточной Европе. Адрес, телефон, email.',
@@ -19,17 +20,19 @@ export const metadata = {
         url: '/image/metalicheskie_samosmazivayushiesya_podshipniki/pro03.jpg',
         width: 1200,
         height: 630,
+        alt: 'ВиВа Групп - контактная информация',
       },
     ],
+    type: 'website',
   },
 };
 
-export default function Contacts() {
+export default function ContactsPage() {
   return (
     <main className={`${styles.contacts} container`}>
       <BreadCrumbs
         currentLink="Контакты"
-        links={[{ href: process.env.URL, name: 'Главная' }]}
+        links={[{ href: process.env.URL || '/', name: 'Главная' }]}
       />
       <Htag tag="h1" border="left" className={styles.main_title}>
         Контакты
@@ -83,8 +86,8 @@ export default function Contacts() {
             Корр. счет 30101810200000000593
             <br />
             <a
-              href={'/download/cardViVa.doc'}
-              download={true}
+              href="/download/cardViVa.doc"
+              download
               className={styles.downloadLink}
             >
               Скачать карточку компании

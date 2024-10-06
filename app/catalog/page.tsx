@@ -1,9 +1,10 @@
+import { Metadata } from 'next';
 import styles from './catalog.module.css';
 import Htag from '@/components/Htag/Htag';
 import Ptag from '@/components/Ptag/Ptag';
 import BreadCrumbs from '@/components/BreadCrumbs/BreadCrumbs';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Каталог подшипников скольжения | ВиВа Групп',
   description:
     'Ознакомьтесь с каталогом подшипников скольжения от компании ВиВа Групп. Широкий ассортимент стандартных и специальных изделий.',
@@ -17,17 +18,19 @@ export const metadata = {
         url: '/image/metalicheskie_samosmazivayushiesya_podshipniki/pro03.jpg',
         width: 1200,
         height: 630,
+        alt: 'Каталог подшипников скольжения ВиВа Групп',
       },
     ],
+    type: 'website',
   },
 };
 
-export default function Catalog() {
+export default function CatalogPage() {
   return (
     <main className={`container ${styles.catalog}`}>
       <BreadCrumbs
         currentLink="Каталог"
-        links={[{ href: process.env.URL, name: 'Главная' }]}
+        links={[{ href: process.env.URL || '/', name: 'Главная' }]}
       />
 
       <Htag tag="h1" border="left" className={styles.main_title}>
@@ -51,12 +54,8 @@ export default function Catalog() {
         Ознакомиться с каталогами размеров конкретных материалов подшипников Вы
         можете здесь:
       </Ptag>
-      <a
-        href={'/download/catalog.pdf'}
-        download={true}
-        className={styles.downloadLink}
-      >
-        Скачать полный каталог подшипников скольжения (pdf 4.2 Mb)
+      <a href="/download/catalog.pdf" download className={styles.downloadLink}>
+        Скачать полный каталог подшипников скольжения (pdf 24,3 МБ)
       </a>
       <Ptag margin="bottom">
         Подшипники скольжения имеют широчайший спектр применения: от пищевой,

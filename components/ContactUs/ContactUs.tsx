@@ -4,38 +4,33 @@ import React, { useState } from 'react';
 import Popup from '@/components/Popup/Popup';
 import ContactForm from '@/components/ContactUs/ContactForm/ContactForm';
 import Button from '@/components/Button/Button';
-import styles from './ContactUs.module.css';
 import { Mail } from 'lucide-react';
 import Notification from '../Notification/Notification';
 import { useResize } from '@/hooks/useResize';
 
-const ContactUs = () => {
-  const [isFormOpen, setIsFormOpen] = useState(false);
-  const [isNotificationOpen, setIsNotificationOpen] = useState(false);
-  const [message, setMessage] = useState('');
+const ContactUs: React.FC = () => {
+  // Состояния для управления открытием/закрытием формы и уведомления
+  const [isFormOpen, setIsFormOpen] = useState<boolean>(false);
+  const [isNotificationOpen, setIsNotificationOpen] = useState<boolean>(false);
+  const [message, setMessage] = useState<string>('');
 
+  // Хук для определения размера экрана
   const { isScreenSm } = useResize();
 
-  function openForm() {
-    setIsFormOpen(true);
-  }
-  function closeForm() {
-    setIsFormOpen(false);
-  }
-  function closeNotification() {
-    setIsNotificationOpen(false);
-  }
-
-  function openNotification() {
-    setIsNotificationOpen(true);
-  }
+  // Функции для управления состоянием компонентов
+  const openForm = () => setIsFormOpen(true);
+  const closeForm = () => setIsFormOpen(false);
+  const closeNotification = () => setIsNotificationOpen(false);
+  const openNotification = () => setIsNotificationOpen(true);
 
   return (
     <>
+      {/* Кнопка для открытия формы */}
       <Button type="button" fixed onClick={openForm}>
         {isScreenSm ? <Mail size={30} /> : <span>Оставить заявку</span>}
       </Button>
 
+      {/* Попап с формой обратной связи */}
       <Popup isOpen={isFormOpen} onClose={closeForm} style="form">
         <ContactForm
           onClose={closeForm}
@@ -43,6 +38,8 @@ const ContactUs = () => {
           openNotification={openNotification}
         />
       </Popup>
+
+      {/* Попап с уведомлением */}
       <Popup isOpen={isNotificationOpen} onClose={closeNotification}>
         <Notification message={message} />
       </Popup>

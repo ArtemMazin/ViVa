@@ -1,4 +1,6 @@
-const materialsList01 = [
+import { TCard } from './types';
+
+const materialsList01: TCard[] = [
   {
     name: 'Подшипники HMG-50',
     img: '/image/metalopolimernye_samosmazivayushiesya_podshipniki/hmg-50.jpg',
@@ -96,7 +98,7 @@ const materialsList06 = [
   },
 ];
 
-const allProducts = materialsList01.concat(
+const allProducts: TCard[] = materialsList01.concat(
   materialsList02,
   materialsList03,
   materialsList04,

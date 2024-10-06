@@ -3,7 +3,11 @@ import React from 'react';
 import styles from './Logo.module.css';
 import Link from 'next/link';
 
-const Logo = ({ src }: { src: string }) => {
+interface LogoProps {
+  src: string;
+}
+
+const Logo: React.FC<LogoProps> = ({ src }) => {
   return (
     <Link href="/">
       <Image

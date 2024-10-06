@@ -7,16 +7,14 @@ type CardListProps = {
   array: TCard[];
 };
 
-const CardList = ({ array }: CardListProps) => {
+const CardList: React.FC<CardListProps> = ({ array }) => {
   return (
     <ul className={styles.images}>
-      {array.map(({ name, img, href }) => {
-        return (
-          <li key={name} className={styles.item}>
-            <Card href={href} img={img} name={name} />
-          </li>
-        );
-      })}
+      {array.map(({ name, img, href }) => (
+        <li key={name} className={styles.item}>
+          <Card href={href} img={img} name={name} />
+        </li>
+      ))}
     </ul>
   );
 };

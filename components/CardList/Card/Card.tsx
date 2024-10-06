@@ -5,7 +5,7 @@ import Htag from '../../Htag/Htag';
 import styles from './Card.module.css';
 import { TCard } from '@/utils/types';
 
-const Card = ({ href, img, name }: TCard) => {
+const Card: React.FC<TCard> = ({ href, img, name }) => {
   return (
     <Link className={styles.link} href={href}>
       <Image

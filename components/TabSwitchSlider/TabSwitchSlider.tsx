@@ -7,9 +7,11 @@ import Tabs from './Tabs/Tabs';
 import Slides from './Slides/Slides';
 import Htag from '../Htag/Htag';
 
-function TabSwitchSlider() {
+const TabSwitchSlider: React.FC = () => {
+  // Состояние для отслеживания активной вкладки
   const [tabActive, setTabActive] = useState(tabSwitchSlides[0].name);
 
+  // Функция для переключения активной вкладки
   const toggleTab = (tabName: string) => {
     setTabActive(tabName);
   };
@@ -27,6 +29,6 @@ function TabSwitchSlider() {
       <Slides tabActive={tabActive} />
     </section>
   );
-}
+};
 
 export default TabSwitchSlider;

@@ -5,7 +5,11 @@ import Image from 'next/image';
 import Ptag from '@/components/Ptag/Ptag';
 import Htag from '@/components/Htag/Htag';
 
-function Slides({ tabActive }: { tabActive: string }) {
+interface SlidesProps {
+  tabActive: string;
+}
+
+const Slides: React.FC<SlidesProps> = ({ tabActive }) => {
   return (
     <ul className={styles.slides}>
       {tabSwitchSlides.map(item => (
@@ -45,6 +49,6 @@ function Slides({ tabActive }: { tabActive: string }) {
       ))}
     </ul>
   );
-}
+};
 
 export default Slides;

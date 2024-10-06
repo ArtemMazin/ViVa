@@ -1,4 +1,6 @@
-const products = [
+import { TProduct } from './types';
+
+const products: TProduct[] = [
   {
     name: 'Металлополимерные самосмазывающиеся подшипники',
     img: '/image/metalopolimernye_samosmazivayushiesya_podshipniki/pro01.jpg',

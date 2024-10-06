@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './Button.module.css';
 import cn from 'classnames';
 
+// Определение типов пропсов для компонента Button
 type ButtonProps = {
   type?: 'button' | 'submit' | 'reset';
   size?: 's' | 'm' | 'l';
@@ -13,18 +14,19 @@ type ButtonProps = {
   onClick?: () => void;
 };
 
-const Button = ({
-  type,
+const Button: React.FC<ButtonProps> = ({
+  type = 'button',
   size = 's',
   isDisable,
   fixed,
   children,
+  className,
   ...props
-}: ButtonProps) => {
+}) => {
   return (
     <button
       type={type}
-      className={cn(styles.button, {
+      className={cn(styles.button, className, {
         [styles.fixed]: fixed,
         [styles.disable]: isDisable,
         [styles.s]: size === 's',

@@ -1,24 +1,28 @@
-import React from 'react';
+import React, { Suspense } from 'react';
+import { Metadata } from 'next';
 import Header from '@/components/Header/Header';
-import './globals.css';
 import Footer from '@/components/Footer/Footer';
-import { Suspense } from 'react';
 import { Metrika } from '@/components/metrika';
-import ContactUs from '@/components/ContactUs/ContactUs';
+import dynamic from 'next/dynamic';
 import { inter } from './ui/fonts';
+import './globals.css';
 
-export const metadata = {
-  metadataBase: new URL(process.env.URL),
+// Динамический импорт компонента ContactUs
+const ContactUs = dynamic(() => import('@/components/ContactUs/ContactUs'));
+
+// Метаданные для SEO и Open Graph
+export const metadata: Metadata = {
+  metadataBase: new URL(process.env.URL || 'https://viva-hmg.ru'),
   title:
     'Подшипники скольжения HMG в Москве | Самосмазывающиеся и металлополимерные',
   description:
-    'Подшипники скольжения HMG - высококачественные самосмазывающиеся и металлополимерные подшипники от ведущего мирового производителя. Широкий ассортимент подшипников для различных областей применения: промышленное оборудование, строительная техника, автомобильная промышленность, сельхозтехника и многое другое. Долговечные, износостойкие, коррозионностойкие подшипники с низким коэффициентом трения. Купить подшипники HMG в Москве по выгодным ценам.',
+    'Подшипники скольжения HMG - высококачественные самосмазывающиеся и металлополимерные подшипники от ведущего мирового производителя...',
   keywords:
-    'подшипники скольжения, втулки, кольца, лента, шайбы,металлополимерные подшипники, металлофторопластовые подшипники, самосмазывающиеся подшипники',
+    'подшипники скольжения, втулки, кольца, лента, шайбы, металлополимерные подшипники, металлофторопластовые подшипники, самосмазывающиеся подшипники',
   openGraph: {
     title: 'Самосмазывающиеся подшипники HMG - купить в Москве с доставкой',
     description:
-      'Купить высококачественные самосмазывающиеся и металлополимерные подшипники скольжения HMG от ведущего мирового производителя. Широкий ассортимент долговечных, износостойких, коррозионностойких подшипников с низким коэффициентом трения для промышленного оборудования, строительной техники, автомобильной промышленности, сельхозтехники и других областей применения. Выгодные цены в Москве.',
+      'Купить высококачественные самосмазывающиеся и металлополимерные подшипники скольжения HMG...',
     url: process.env.URL,
     siteName:
       'Подшипники скольжения HMG в Москве | Самосмазывающиеся и металлополимерные',
@@ -38,8 +42,11 @@ export const metadata = {
   verification: {
     yandex: 'e7d67b374d5f946f',
   },
+  robots: 'index, follow',
+  alternates: {
+    canonical: process.env.URL,
+  },
 };
-
 export default function RootLayout({
   children,
 }: {
@@ -52,7 +59,7 @@ export default function RootLayout({
         {children}
         <Footer />
         <ContactUs />
-        <Suspense>
+        <Suspense fallback={<div>Загрузка...</div>}>
           <Metrika />
         </Suspense>
       </body>

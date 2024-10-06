@@ -6,7 +6,7 @@ import { navLinks } from '@/utils/constants';
 import SideMenu from '../SideMenu/SideMenu';
 import { useResize } from '@/hooks/useResize';
 
-const Navigation = () => {
+const Navigation: React.FC = () => {
   const [showPodshipnikiSideMenu, setShowPodshipnikiSideMenu] = useState(false);
   const pathname = usePathname();
   const { isScreenXl } = useResize();

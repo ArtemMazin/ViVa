@@ -3,7 +3,6 @@ import Slider from './Slider/Slider';
 import Presentation from './Presentation/Presentation';
 import TabSwitchSlider from '../TabSwitchSlider/TabSwitchSlider';
 import styles from './Main.module.css';
-import Htag from '../Htag/Htag';
 import Description from './Description/Description';
 
 const Main = () => {

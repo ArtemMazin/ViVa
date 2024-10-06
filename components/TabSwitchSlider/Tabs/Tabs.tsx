@@ -3,12 +3,12 @@ import Image from 'next/image';
 import styles from './Tabs.module.css';
 import { tabSwitchSlides } from '@/utils/tabSwitchSlides';
 
-type TabProps = {
+interface TabProps {
   tabActive: string;
   toggleTab: (tabName: string) => void;
-};
+}
 
-function Tabs({ tabActive, toggleTab }: TabProps) {
+const Tabs: React.FC<TabProps> = ({ tabActive, toggleTab }) => {
   return (
     <ul className={`${styles.tabs} container`}>
       {tabSwitchSlides.map(item => (
@@ -44,6 +44,6 @@ function Tabs({ tabActive, toggleTab }: TabProps) {
       ))}
     </ul>
   );
-}
+};
 
 export default Tabs;

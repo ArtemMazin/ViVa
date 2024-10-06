@@ -1,4 +1,6 @@
-export const tabSwitchSlides = [
+import { TTabSwitchSlide } from './types';
+
+export const tabSwitchSlides: TTabSwitchSlide[] = [
   {
     name: 'АВТОПРОМ',
     icon: '/tab-switch-slider/icons/iapp_001.png',

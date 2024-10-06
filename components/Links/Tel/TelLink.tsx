@@ -2,11 +2,11 @@ import React from 'react';
 import cn from 'classnames';
 import styles from './TelLink.module.css';
 
-type TelLinkProps = {
+interface TelLinkProps {
   color?: 'white' | 'black';
-};
+}
 
-const TelLink = ({ color = 'white' }: TelLinkProps) => {
+const TelLink: React.FC<TelLinkProps> = ({ color = 'white' }) => {
   return (
     <a
       href="tel:+74959260774"

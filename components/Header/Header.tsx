@@ -6,12 +6,12 @@ import Content from './Content/Content';
 import Navigation from './Navigation/Navigation';
 import MobileMenu from './MobileMenu/MobileMenu';
 
-const Header = () => {
+const Header: React.FC = () => {
+  // Состояние для управления открытием/закрытием мобильного меню
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  function toggleHideMenu() {
-    setIsMenuOpen(!isMenuOpen);
-  }
+  // Функция для переключения состояния мобильного меню
+  const toggleHideMenu = () => setIsMenuOpen(prev => !prev);
 
   return (
     <header className={styles.wrapper}>
