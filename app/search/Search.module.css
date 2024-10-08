@@ -1,3 +1,21 @@
+.searchPage {
+  width: 100%;
+}
+
 .main_title {
+  margin-bottom: 30px;
   text-shadow: var(--text-shadow-title);
+}
+
+.loading {
+  padding: 20px;
+  color: var(--color-gray-text);
+  font-size: 18px;
+  text-align: center;
+}
+
+@media (width <= 768px) {
+  .main_title {
+    margin-bottom: 20px;
+  }
 }

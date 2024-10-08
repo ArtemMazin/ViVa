@@ -1,19 +1,19 @@
 .presentation {
-  display: flex;
   width: 100%;
-  flex-direction: column;
-  align-items: center;
-  padding: 40px 0;
   text-align: center;
 }
 
 .main_title {
+  margin-bottom: 20px;
   text-shadow: var(--text-shadow-title);
 }
 
+.subtitle {
+  margin-bottom: 40px;
+}
+
 @media (width <= 768px) {
-  .presentation {
-    padding: 0;
-    margin: 0;
+  .subtitle {
+    margin-bottom: 30px;
   }
 }

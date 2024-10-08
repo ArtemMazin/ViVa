@@ -17,9 +17,9 @@ const FilteredCards = () => {
   const filteredCards = filterCards(search);
 
   return (
-    <div className={isScreenXl ? 'container' : ''}>
+    <div className={`${styles.filteredCards} ${isScreenXl ? 'container' : ''}`}>
       {filteredCards.length === 0 ? (
-        <Htag tag="h2" className={styles.text}>
+        <Htag tag="h2" className={styles.noResults}>
           Ничего не найдено
         </Htag>
       ) : (

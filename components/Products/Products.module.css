@@ -1,29 +1,38 @@
 .main {
   width: 100%;
-  padding: 0 0 30px;
   text-align: center;
 }
 
 .imageContainer {
   position: relative;
-  height: 276px;
+  height: 0;
   padding-top: 33.3%;
-  margin: 0 0 30px;
+  margin: 0 0 40px;
 }
 
 .image {
   object-fit: cover;
 }
 
+.content {
+  margin-bottom: 40px;
+}
+
+.cardListWrapper {
+  padding: 0 20px;
+}
+
 @media (width <= 768px) {
   .main {
-    padding: 0;
-    margin: 0;
+    padding: 0 0 30px;
   }
 
-  .image {
-    width: 100%;
-    padding-left: 0;
-    margin: 0 0 20px;
+  .imageContainer {
+    padding-top: 50%;
+    margin: 0 0 30px;
+  }
+
+  .content {
+    margin-bottom: 30px;
   }
 }

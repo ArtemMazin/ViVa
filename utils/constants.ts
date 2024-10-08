@@ -16,6 +16,7 @@ const navLinks = [
   { name: 'Главная', href: '/' },
   { name: 'О компании', href: '/about' },
   { name: 'Подшипники', href: '/podshipniki' },
+  { name: 'Подбор подшипников', href: '/filters' },
   { name: 'Доставка', href: '/delivery' },
   { name: 'Каталог', href: '/catalog' },
   { name: 'Контакты', href: '/contacts' },

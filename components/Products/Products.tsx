@@ -20,24 +20,26 @@ const Products: React.FC<ProductsProps> = ({
   materialsList,
 }) => {
   return (
-    <div className={styles.main}>
+    <div className={`container ${styles.main}`}>
       <div className={styles.imageContainer}>
         <Image
           src={productsImage}
           fill
-          sizes="(max-width: 1280px) 60vw, 100vw"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 60vw, 100vw"
           priority={true}
           alt={titleProducts}
           className={styles.image}
         />
       </div>
-      <div className="container">
+      <div className={`${styles.content} container`}>
         <Htag tag="h1" border="left">
           {titleProducts}
         </Htag>
         <Ptag margin="bottom">{descriptionProducts}</Ptag>
       </div>
-      <CardList array={materialsList} />
+      <div className={styles.cardListWrapper}>
+        <CardList array={materialsList} />
+      </div>
     </div>
   );
 };

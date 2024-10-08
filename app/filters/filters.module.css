@@ -1,0 +1,7 @@
+.filters {
+  width: 100%;
+}
+
+.main_title {
+  text-shadow: var(--text-shadow-title);
+}

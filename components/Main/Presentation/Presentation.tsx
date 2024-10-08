@@ -6,11 +6,13 @@ import styles from './Presentation.module.css';
 
 const Presentation = () => {
   return (
-    <section className={`${styles.presentation} container`}>
+    <section className={`container ${styles.presentation}`}>
       <Htag tag="h2" border="down" className={styles.main_title}>
         НАША ПРОДУКЦИЯ
       </Htag>
-      <Htag tag="h3">ВТУЛКИ/ШАЙБЫ/ЛЕНТА</Htag>
+      <Htag tag="h3" className={styles.subtitle}>
+        ВТУЛКИ/ШАЙБЫ/ЛЕНТА
+      </Htag>
       <CardList array={products} />
     </section>
   );

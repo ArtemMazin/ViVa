@@ -1,0 +1,29 @@
+.filteredProducts {
+  display: flex;
+  gap: 20px;
+}
+
+.filterColumn {
+  max-width: 250px;
+  flex: 0 0 250px;
+}
+
+.productColumn {
+  flex: 1;
+}
+
+.text {
+  text-align: center;
+}
+
+@media (width <= 768px) {
+  .filteredProducts {
+    flex-direction: column;
+  }
+
+  .filterColumn {
+    width: 100%;
+    max-width: none;
+    flex: none;
+  }
+}
