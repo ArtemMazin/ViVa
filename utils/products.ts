@@ -1,6 +1,6 @@
-import { TProduct } from './types';
+import { TCard } from './types';
 
-const products: TProduct[] = [
+const products: Partial<TCard>[] = [
   {
     name: 'Металлополимерные самосмазывающиеся подшипники',
     img: '/image/metalopolimernye_samosmazivayushiesya_podshipniki/pro01.jpg',

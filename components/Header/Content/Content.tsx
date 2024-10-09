@@ -16,7 +16,7 @@ interface ContentProps {
 
 const Content: React.FC<ContentProps> = ({ toggleHideMenu, isMenuOpen }) => {
   return (
-    <div className={`${styles.container} container`}>
+    <div className={`container ${styles.container}`}>
       <Logo src="/image/logo-black.svg" />
       <Suspense fallback={<div>Загрузка...</div>}>
         <Search />

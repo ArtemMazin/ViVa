@@ -32,11 +32,3 @@ export type TTabSwitchSlide = {
   image: string;
   number: string;
 };
-
-// Определение типа для продукта
-export type TProduct = {
-  name: string;
-  img: string;
-  href: string;
-  description: string;
-};

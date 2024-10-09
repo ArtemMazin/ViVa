@@ -1,15 +1,16 @@
 .footer {
+  padding-top: 20px;
   margin-top: auto;
 }
 
 .contentContainer {
+  padding: 20px;
   background: var(--color-gradient);
 }
 
 .content {
   display: flex;
   justify-content: space-between;
-  padding: 20px;
   margin: 0 auto;
   gap: 30px;
 }

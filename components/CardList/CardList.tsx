@@ -4,7 +4,7 @@ import styles from './CardList.module.css';
 import { TCard } from '@/utils/types';
 
 type CardListProps = {
-  array: TCard[];
+  array: Partial<TCard>[];
 };
 
 const CardList: React.FC<CardListProps> = ({ array }) => {
