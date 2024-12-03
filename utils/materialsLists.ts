@@ -3,8 +3,8 @@ import { TCard } from './types';
 const materialsList01: TCard[] = [
   {
     name: 'Подшипники HMG-50',
-    img: '/image/metalopolimernye_samosmazivayushiesya_podshipniki/hmg-50.jpg',
-    href: '/podshipniki/metalopolimernye_samosmazivayushiesya_podshipniki/hmg-50',
+    img: '/image/metalopolimernye_samosmazivayushiesya/hmg-50.jpg',
+    href: '/podshipniki/metalopolimernye_samosmazivayushiesya/hmg-50',
     maxLoad: 250, // Статический режим
     maxSpeed: 2, // Сухой режим
     frictionCoefficient: [0.03, 0.2],
@@ -16,8 +16,8 @@ const materialsList01: TCard[] = [
   },
   {
     name: 'Подшипники HMG-11',
-    img: '/image/metalopolimernye_samosmazivayushiesya_podshipniki/hmg-11.jpg',
-    href: '/podshipniki/metalopolimernye_samosmazivayushiesya_podshipniki/hmg-11',
+    img: '/image/metalopolimernye_samosmazivayushiesya/hmg-11.jpg',
+    href: '/podshipniki/metalopolimernye_samosmazivayushiesya/hmg-11',
     maxLoad: 250, // Статический режим
     maxSpeed: 2, // Сухой режим
     frictionCoefficient: [0.03, 0.2],
@@ -29,8 +29,8 @@ const materialsList01: TCard[] = [
   },
   {
     name: 'Подшипники HMG-FR',
-    img: '/image/metalopolimernye_samosmazivayushiesya_podshipniki/hmg-fr.jpg',
-    href: '/podshipniki/metalopolimernye_samosmazivayushiesya_podshipniki/hmg-fr',
+    img: '/image/metalopolimernye_samosmazivayushiesya/hmg-fr.jpg',
+    href: '/podshipniki/metalopolimernye_samosmazivayushiesya/hmg-fr',
     maxLoad: 80, // При комнатной температуре
     maxSpeed: 1, // Сухой ход
     frictionCoefficient: [0.03, 0.2],
@@ -44,8 +44,8 @@ const materialsList01: TCard[] = [
 const materialsList02: TCard[] = [
   {
     name: 'Подшипники HMG-20',
-    img: '/image/metalopolimernye_podshipniki/hmg-20.jpg',
-    href: '/podshipniki/metalopolimernye_podshipniki/hmg-20',
+    img: '/image/metalopolimernye/hmg-20.jpg',
+    href: '/podshipniki/metalopolimernye/hmg-20',
     maxLoad: 250, // Статический режим
     maxSpeed: 2, // Сухой режим
     frictionCoefficient: [0.05, 0.2],
@@ -57,8 +57,8 @@ const materialsList02: TCard[] = [
   },
   {
     name: 'Подшипники HMG-22',
-    img: '/image/metalopolimernye_podshipniki/hmg-22.jpg',
-    href: '/podshipniki/metalopolimernye_podshipniki/hmg-22',
+    img: '/image/metalopolimernye/hmg-22.jpg',
+    href: '/podshipniki/metalopolimernye/hmg-22',
     maxLoad: 250, // Статический режим
     maxSpeed: 2, // Со смазкой
     frictionCoefficient: [0.03, 0.2],
@@ -70,8 +70,8 @@ const materialsList02: TCard[] = [
   },
   {
     name: 'Подшипники HMG-80',
-    img: '/image/metalopolimernye_podshipniki/hmg-80.jpg',
-    href: '/podshipniki/metalopolimernye_podshipniki/hmg-80',
+    img: '/image/metalopolimernye/hmg-80.jpg',
+    href: '/podshipniki/metalopolimernye/hmg-80',
     maxLoad: 250, // Статический режим
     maxSpeed: 2, // Сухой режим
     frictionCoefficient: [0.08, 0.15],
@@ -86,8 +86,8 @@ const materialsList02: TCard[] = [
 const materialsList03: TCard[] = [
   {
     name: 'Подшипники HMG-650',
-    img: '/image/metalicheskie_samosmazivayushiesya_podshipniki/hmg-650.jpg',
-    href: '/podshipniki/metalicheskie_samosmazivayushiesya_podshipniki/hmg-650',
+    img: '/image/metalicheskie_samosmazivayushiesya/hmg-650.jpg',
+    href: '/podshipniki/metalicheskie_samosmazivayushiesya/hmg-650',
     maxLoad: 100, // Максимальное значение для HMG-650W3
     maxSpeed: 1, // Максимальная скорость в смазанном состоянии
     frictionCoefficient: [0.03, 0.2], // Предполагаемое значение
@@ -99,8 +99,8 @@ const materialsList03: TCard[] = [
   },
   {
     name: 'Подшипники HMG-650GT',
-    img: '/image/metalicheskie_samosmazivayushiesya_podshipniki/hmg-650GT.jpg',
-    href: '/podshipniki/metalicheskie_samosmazivayushiesya_podshipniki/hmg-650GT',
+    img: '/image/metalicheskie_samosmazivayushiesya/hmg-650gt.jpg',
+    href: '/podshipniki/metalicheskie_samosmazivayushiesya/hmg-650gt',
     maxLoad: 250, // Статическая нагрузка
     maxSpeed: 1.0, // Максимальная скорость со смазкой
     frictionCoefficient: [0.03, 0.2],
@@ -113,8 +113,8 @@ const materialsList03: TCard[] = [
   },
   {
     name: 'Подшипники HMG-85HF',
-    img: '/image/metalicheskie_samosmazivayushiesya_podshipniki/hmg-85HF.jpg',
-    href: '/podshipniki/metalicheskie_samosmazivayushiesya_podshipniki/hmg-85HF',
+    img: '/image/metalicheskie_samosmazivayushiesya/hmg-85hf.jpg',
+    href: '/podshipniki/metalicheskie_samosmazivayushiesya/hmg-85hf',
     maxLoad: 150, // Максимальное статическое значение для HMG85HHFH
     maxSpeed: 1.5, // Максимальное значение со смазкой
     frictionCoefficient: [0.03, 0.2], // Предполагаемое значение
@@ -129,8 +129,8 @@ const materialsList03: TCard[] = [
 const materialsList04: TCard[] = [
   {
     name: 'Подшипники HMG-800/815',
-    img: '/image/metalicheskie_podshipniki/hmg-800.jpg',
-    href: '/podshipniki/metalicheskie_podshipniki/hmg-800',
+    img: '/image/metalicheskie/hmg-800.jpg',
+    href: '/podshipniki/metalicheskie/hmg-800',
     description: null,
     maxLoad: 250, // Статическая нагрузка
     maxSpeed: 2.5, // Максимальная скорость со смазкой
@@ -146,8 +146,8 @@ const materialsList04: TCard[] = [
   },
   {
     name: 'Подшипники HMG-090',
-    img: '/image/metalicheskie_podshipniki/hmg-090.jpg',
-    href: '/podshipniki/metalicheskie_podshipniki/hmg-090',
+    img: '/image/metalicheskie/hmg-090.jpg',
+    href: '/podshipniki/metalicheskie/hmg-090',
     description: null,
     maxLoad: 120, // Статическая нагрузка
     maxSpeed: 2,
@@ -163,8 +163,8 @@ const materialsList04: TCard[] = [
   },
   {
     name: 'Подшипники HMG-T90',
-    img: '/image/metalicheskie_podshipniki/hmg-T90.jpg',
-    href: '/podshipniki/metalicheskie_podshipniki/hmg-T90',
+    img: '/image/metalicheskie/hmg-t90.jpg',
+    href: '/podshipniki/metalicheskie/hmg-t90',
     description: null,
     maxLoad: 120, // Статическая нагрузка
     maxSpeed: 2,
@@ -180,8 +180,8 @@ const materialsList04: TCard[] = [
   },
   {
     name: 'Подшипники HMG-600',
-    img: '/image/metalicheskie_podshipniki/hmg-600.jpg',
-    href: '/podshipniki/metalicheskie_podshipniki/hmg-600',
+    img: '/image/metalicheskie/hmg-600.jpg',
+    href: '/podshipniki/metalicheskie/hmg-600',
     description: null,
     maxLoad: 50, // Для типа 650
     maxSpeed: 1, // Максимальная скорость со смазкой для типа 650
@@ -200,8 +200,8 @@ const materialsList04: TCard[] = [
 const materialsList05: TCard[] = [
   {
     name: 'Подшипники HMG-EPB',
-    img: '/image/nemetalicheskie_podshipniki/hmg-EPB.jpg',
-    href: '/podshipniki/nemetalicheskie_podshipniki/hmg-EPB',
+    img: '/image/nemetalicheskie/hmg-epb.jpg',
+    href: '/podshipniki/nemetalicheskie/hmg-epb',
     description:
       'Материал из инженерного пластика с высокой износостойкостью и самосмазывающимися свойствами.',
     maxLoad: 35,
@@ -218,8 +218,8 @@ const materialsList05: TCard[] = [
   },
   {
     name: 'Подшипники HMG-FWB',
-    img: '/image/nemetalicheskie_podshipniki/hmg-FWB.jpg',
-    href: '/podshipniki/nemetalicheskie_podshipniki/hmg-FWB',
+    img: '/image/nemetalicheskie/hmg-fwb.jpg',
+    href: '/podshipniki/nemetalicheskie/hmg-fwb',
     description:
       'Высокопроизводительный полимерный материал для подшипников с различными характеристиками в зависимости от типа.',
     maxLoad: 240, // Максимальная статическая нагрузка для большинства типов
@@ -239,8 +239,8 @@ const materialsList05: TCard[] = [
 const materialsList06: TCard[] = [
   {
     name: 'Подшипники HMG-200C',
-    img: '/image/stalnye_samosmazivayushiesya_podshipniki/hmg-200C.jpg',
-    href: '/podshipniki/stalnye_samosmazivayushiesya_podshipniki/hmg-200C',
+    img: '/image/stalnye_samosmazivayushiesya/hmg-200c.jpg',
+    href: '/podshipniki/stalnye_samosmazivayushiesya/hmg-200c',
     description:
       'Стальные самосмазывающиеся подшипники для различных применений.',
     maxLoad: 250, // Максимальная статическая нагрузка
@@ -257,8 +257,8 @@ const materialsList06: TCard[] = [
   },
   {
     name: 'Подшипники HMG-260',
-    img: '/image/stalnye_samosmazivayushiesya_podshipniki/hmg-260.jpg',
-    href: '/podshipniki/stalnye_samosmazivayushiesya_podshipniki/hmg-260',
+    img: '/image/stalnye_samosmazivayushiesya/hmg-260.jpg',
+    href: '/podshipniki/stalnye_samosmazivayushiesya/hmg-260',
     description:
       'Стальные самосмазывающиеся подшипники с различными характеристиками в зависимости от типа.',
     maxLoad: 300, // Максимальная статическая нагрузка для типов HMG-262 и HMG-265

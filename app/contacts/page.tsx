@@ -7,23 +7,28 @@ import TelLink from '@/components/Links/Tel/TelLink';
 import Ptag from '@/components/Ptag/Ptag';
 
 export const metadata: Metadata = {
-  title: 'Контакты ООО "ВиВа Групп" | Подшипники скольжения',
+  title: 'Контакты ООО "ВиВа Групп" | Официальный поставщик подшипников HMG',
   description:
-    'Контактная информация компании ВиВа Групп - ведущего поставщика подшипников скольжения в России, СНГ и Восточной Европе. Адрес, телефон, email.',
+    'Свяжитесь с официальным поставщиком подшипников HMG в России. Наш офис в Москве, консультации специалистов, техническая поддержка. Телефон: +7 (495) 926-07-74, email: info@gidmash.ru. Оперативные ответы на все запросы.',
   openGraph: {
-    title: 'Контакты ООО "ВиВа Групп" | Подшипники скольжения',
+    title: 'Контакты ООО "ВиВа Групп" | Подшипники скольжения HMG',
     description:
-      'Контактная информация компании ВиВа Групп - ведущего поставщика подшипников скольжения в России, СНГ и Восточной Европе. Адрес, телефон, email.',
-    url: process.env.URL,
+      'Контакты официального поставщика подшипников HMG в России. Профессиональные консультации, индивидуальный подход к каждому клиенту. Офис в Москве, доставка по всей России. Оперативные ответы на все запросы.',
+    url: process.env.URL + '/contacts',
     images: [
       {
-        url: '/image/metalicheskie_samosmazivayushiesya_podshipniki/pro03.jpg',
+        url: '/image/metalicheskie_samosmazivayushiesya/pro03.jpg',
         width: 1200,
         height: 630,
         alt: 'ВиВа Групп - контактная информация',
       },
     ],
+    locale: 'ru-RU',
     type: 'website',
+    siteName: 'ВиВа Групп',
+  },
+  alternates: {
+    canonical: process.env.URL + '/contacts',
   },
 };
 
