@@ -163,7 +163,7 @@ const materialsList04: TCard[] = [
   },
   {
     name: 'Подшипники HMG-T90',
-    img: '/image/metalicheskie/hmg-t90.jpg',
+    img: '/image/metalicheskie/hmg-T90.jpg',
     href: '/podshipniki/metalicheskie/hmg-t90',
     description: null,
     maxLoad: 120, // Статическая нагрузка

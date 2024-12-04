@@ -6,21 +6,21 @@ import MailLink from '@/components/Links/Mail/MailLink';
 import TelLink from '@/components/Links/Tel/TelLink';
 import Ptag from '@/components/Ptag/Ptag';
 
-export const metadata: Metadata = {
-  title: 'Контакты ООО "ВиВа Групп" | Официальный поставщик подшипников HMG',
+export const metadata = {
+  title: 'Контакты | ВиВа Групп | Техническая поддержка | Офис в Москве',
   description:
-    'Свяжитесь с официальным поставщиком подшипников HMG в России. Наш офис в Москве, консультации специалистов, техническая поддержка. Телефон: +7 (495) 926-07-74, email: info@gidmash.ru. Оперативные ответы на все запросы.',
+    'Свяжитесь с нами: +7 (495) 926-07-74, info@gidmash.ru. Консультации специалистов, техническая поддержка. Оперативные ответы на все запросы.',
   openGraph: {
-    title: 'Контакты ООО "ВиВа Групп" | Подшипники скольжения HMG',
+    title: 'Контакты | ВиВа Групп | Официальный поставщик HMG',
     description:
-      'Контакты официального поставщика подшипников HMG в России. Профессиональные консультации, индивидуальный подход к каждому клиенту. Офис в Москве, доставка по всей России. Оперативные ответы на все запросы.',
+      'Офис в Москве, профессиональные консультации, индивидуальный подход. Оперативная связь по телефону и email. Доставка по всей России.',
     url: process.env.URL + '/contacts',
     images: [
       {
         url: '/image/metalicheskie_samosmazivayushiesya/pro03.jpg',
         width: 1200,
         height: 630,
-        alt: 'ВиВа Групп - контактная информация',
+        alt: 'Контакты ВиВа Групп - официального поставщика HMG',
       },
     ],
     locale: 'ru-RU',
@@ -30,6 +30,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: process.env.URL + '/contacts',
   },
+  keywords:
+    'контакты ВиВа Групп, техподдержка HMG, консультации по подшипникам',
 };
 
 export default function ContactsPage() {

@@ -8,14 +8,14 @@ import Table from './Table';
 
 export const metadata = {
   metadataBase: new URL(process.env.URL),
-  title: 'Металополимерный подшипник HMG-FR | ВиВа Групп',
+  title:
+    'Подшипник HMG-FR | Сетчатая бронзовая основа | Самосмазка | ВиВа Групп',
   description:
-    'Купите высококачественный металополимерный самосмазывающийся подшипник HMG-FR от ВиВа Групп. Обладает повышенной стойкостью к коррозии и агрессивным средам, идеален для влажных условий эксплуатации.',
+    'Металополимерный подшипник HMG-FR: сетчатая бронзовая основа с ПТФЭ, легкий монтаж, защита от коррозии. Для влажных условий. Доставка по России.',
   openGraph: {
-    title:
-      'Металополимерный подшипник HMG-FR с повышенной стойкостью к коррозии | ВиВа Групп',
+    title: 'Подшипник HMG-FR | Сетчатый антикоррозийный | ВиВа Групп',
     description:
-      'Купите высококачественный металополимерный самосмазывающийся подшипник HMG-FR от ВиВа Групп. Обладает повышенной стойкостью к коррозии и агрессивным средам, идеален для влажных условий эксплуатации.',
+      'Металополимерный подшипник HMG-FR: бронзовая сетка с ПТФЭ покрытием, простая калибровка, высокая коррозионная стойкость. Техническая поддержка.',
     url:
       process.env.URL +
       '/podshipniki/metalopolimernye_samosmazivayushiesya/hmg-fr',
@@ -24,14 +24,24 @@ export const metadata = {
         url: '/image/metalopolimernye_samosmazivayushiesya/hmg-fr.jpg',
         width: 1200,
         height: 630,
+        alt: 'Сетчатый подшипник HMG-FR с ПТФЭ покрытием',
       },
     ],
+    locale: 'ru-RU',
+    type: 'website',
+    siteName: 'ВиВа Групп',
   },
   alternates: {
     canonical:
       process.env.URL +
       '/podshipniki/metalopolimernye_samosmazivayushiesya/hmg-fr',
   },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  keywords:
+    'HMG-FR, сетчатый подшипник, бронзовая сетка, ПТФЭ покрытие, антикоррозийный подшипник',
 };
 
 const page = () => {
