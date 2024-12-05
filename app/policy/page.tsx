@@ -4,9 +4,13 @@ import Ptag from '@/components/Ptag/Ptag';
 import BreadCrumbs from '@/components/BreadCrumbs/BreadCrumbs';
 
 export const metadata = {
-  title: 'Политика в отношении обработки персональных данных',
+  title: 'Политика конфиденциальности | ВиВа Групп',
   description:
     'Политика в отношении обработки персональных данных ООО "ВиВа Групп"',
+  robots: {
+    index: false,
+    follow: true,
+  },
 };
 
 export default function Policy() {

@@ -4,6 +4,13 @@ import BreadCrumbs from '@/components/BreadCrumbs/BreadCrumbs';
 import styles from './Search.module.css';
 import Htag from '@/components/Htag/Htag';
 
+export const metadata = {
+  robots: {
+    index: false,
+    follow: true,
+  },
+};
+
 const SearchPage = () => {
   return (
     <main className={`container ${styles.searchPage}`}>

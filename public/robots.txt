@@ -1,8 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /search
-Disallow: /policy
-Disallow: /filters
 Disallow: /goods
 
 Sitemap: https://viva-hmg.ru/sitemap.xml

@@ -4,6 +4,16 @@ import Htag from '@/components/Htag/Htag';
 import FilteredProducts from './FilteredProducts/FilteredProducts';
 import styles from './filters.module.css';
 
+export const metadata = {
+  title: 'Подбор подшипников | ВиВа Групп',
+  description:
+    'Удобный подбор подшипников по параметрам. Биметаллические и металлические подшипники с доставкой по России.',
+  robots: {
+    index: false,
+    follow: true,
+  },
+};
+
 const ProductsPage = () => {
   return (
     <main className={`container ${styles.filters}`}>
