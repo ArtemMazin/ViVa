@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { products } from '@/utils/products';
 import Htag from '@/components/Htag/Htag';
 import BreadCrumbs from '@/components/BreadCrumbs/BreadCrumbs';
+import JsonLd from '@/components/JsonLd/JsonLd';
 
 export const metadata = {
   metadataBase: new URL(process.env.URL),
@@ -40,42 +41,70 @@ export const metadata = {
 };
 
 export default function Podshipniki() {
+  const productListJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    numberOfItems: products.length,
+    itemListElement: products.map((product, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      item: {
+        '@type': 'Product',
+        name: product.name,
+        image: `${process.env.URL}${product.img}`,
+        url: `${process.env.URL}${product.href}`,
+        description: product.description,
+        brand: {
+          '@type': 'Brand',
+          name: 'HMG',
+        },
+        manufacturer: {
+          '@type': 'Organization',
+          name: 'ВиВа Групп',
+        },
+      },
+    })),
+  };
+
   return (
-    <main className={`container ${styles.podshipniki}`}>
-      <BreadCrumbs
-        currentLink="Подшипники"
-        links={[{ href: process.env.URL, name: 'Главнaя' }]}
-      />
-      <Htag tag="h1" border="left" className={styles.main_title}>
-        Наша продукция
-      </Htag>
-      <ul className={styles.items}>
-        {products.map(({ name, img, href }) => {
-          return (
-            <li key={name} className={styles.item}>
-              <div className={styles.row}>
-                <Link className={styles.imageContainer} href={href}>
-                  <Image
-                    src={img}
-                    fill
-                    sizes="(max-width: 520px) 60vw, (max-width: 768px) 50vw, (max-width: 1280px) 40vw, 100vw"
-                    alt={name}
-                    className={styles.image}
-                    priority={true}
-                  />
-                </Link>
-                <div className={styles.titleContainer}>
-                  <Link href={href} className={styles.link}>
-                    <Htag tag="h2" className={styles.title}>
-                      {name}
-                    </Htag>
+    <>
+      <JsonLd data={productListJsonLd} />
+      <main className={`container ${styles.podshipniki}`}>
+        <BreadCrumbs
+          currentLink="Подшипники"
+          links={[{ href: process.env.URL, name: 'Главнaя' }]}
+        />
+        <Htag tag="h1" border="left" className={styles.main_title}>
+          Наша продукция
+        </Htag>
+        <ul className={styles.items}>
+          {products.map(({ name, img, href }) => {
+            return (
+              <li key={name} className={styles.item}>
+                <div className={styles.row}>
+                  <Link className={styles.imageContainer} href={href}>
+                    <Image
+                      src={img}
+                      fill
+                      sizes="(max-width: 520px) 60vw, (max-width: 768px) 50vw, (max-width: 1280px) 40vw, 100vw"
+                      alt={name}
+                      className={styles.image}
+                      priority={true}
+                    />
                   </Link>
+                  <div className={styles.titleContainer}>
+                    <Link href={href} className={styles.link}>
+                      <Htag tag="h2" className={styles.title}>
+                        {name}
+                      </Htag>
+                    </Link>
+                  </div>
                 </div>
-              </div>
-            </li>
-          );
-        })}
-      </ul>
-    </main>
+              </li>
+            );
+          })}
+        </ul>
+      </main>{' '}
+    </>
   );
 }

@@ -3,6 +3,7 @@ import { materialsList02 } from '@/utils/materialsLists';
 import { products } from '@/utils/products';
 import Products from '@/components/Products/Products';
 import BreadCrumbs from '@/components/BreadCrumbs/BreadCrumbs';
+import JsonLd from '@/components/JsonLd/JsonLd';
 
 export const metadata = {
   metadataBase: new URL(process.env.URL),
@@ -38,24 +39,60 @@ const Metalopolimernye_podshipniki = () => {
   const description = products[1].description;
   const image = products[1].img;
 
-  return (
-    <main>
-      <BreadCrumbs
-        className={'container'}
-        currentLink={title}
-        links={[
-          { href: process.env.URL, name: 'Главнaя' },
-          { href: `${process.env.URL}/podshipniki`, name: 'Подшипники' },
-        ]}
-      />
+  const productJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: title,
+    image: `${process.env.URL}${image}`,
+    description: description,
+    brand: {
+      '@type': 'Brand',
+      name: 'HMG',
+    },
+    manufacturer: {
+      '@type': 'Organization',
+      name: 'ВиВа Групп',
+      url: process.env.URL,
+    },
+    category: 'Подшипники скольжения',
+    material: 'Металлополимерный композит',
+    additionalProperty: {
+      '@type': 'PropertyValue',
+      name: 'Тип смазки',
+      value: 'Консистентная смазка',
+    },
+    offers: {
+      '@type': 'AggregateOffer',
+      availability: 'https://schema.org/InStock',
+      priceCurrency: 'RUB',
+      seller: {
+        '@type': 'Organization',
+        name: 'ВиВа Групп',
+      },
+    },
+  };
 
-      <Products
-        titleProducts={title}
-        descriptionProducts={description}
-        productsImage={image}
-        materialsList={materialsList02}
-      />
-    </main>
+  return (
+    <>
+      <JsonLd data={productJsonLd} />
+      <main>
+        <BreadCrumbs
+          className={'container'}
+          currentLink={title}
+          links={[
+            { href: process.env.URL, name: 'Главнaя' },
+            { href: `${process.env.URL}/podshipniki`, name: 'Подшипники' },
+          ]}
+        />
+
+        <Products
+          titleProducts={title}
+          descriptionProducts={description}
+          productsImage={image}
+          materialsList={materialsList02}
+        />
+      </main>
+    </>
   );
 };
 

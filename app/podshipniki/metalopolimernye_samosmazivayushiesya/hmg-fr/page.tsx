@@ -8,8 +8,7 @@ import Table from './Table';
 
 export const metadata = {
   metadataBase: new URL(process.env.URL),
-  title:
-    'Подшипник HMG-FR | Сетчатая бронзовая основа | Самосмазка | ВиВа Групп',
+  title: 'Подшипник HMG-FR | Сетчатая бронзовая основа | ВиВа Групп',
   description:
     'Металополимерный подшипник HMG-FR: сетчатая бронзовая основа с ПТФЭ, легкий монтаж, защита от коррозии. Для влажных условий. Доставка по России.',
   openGraph: {
