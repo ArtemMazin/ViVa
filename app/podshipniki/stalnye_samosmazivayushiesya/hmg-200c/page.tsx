@@ -5,6 +5,7 @@ import styles from './hmg200C.module.css';
 import Image from 'next/image';
 import React from 'react';
 import Table from './Table';
+import JsonLd from '@/components/JsonLd/JsonLd';
 
 export const metadata = {
   metadataBase: new URL(process.env.URL),
@@ -42,80 +43,129 @@ export const metadata = {
 };
 
 const page = () => {
+  const productJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: 'HMG-200C',
+    image: `${process.env.URL}/image/pages/hmg200C/hmg200C.jpg`,
+    description:
+      'Стальной подшипник из закаленной стали S45C с системой масляных канавок. Для работы при высоких нагрузках и низких скоростях.',
+    brand: {
+      '@type': 'Brand',
+      name: 'HMG',
+    },
+    manufacturer: {
+      '@type': 'Organization',
+      name: 'ВиВа Групп',
+      url: process.env.URL,
+    },
+    category: 'Высокопроизводительные стальные самосмазывающиеся подшипники',
+    material: 'Закаленная сталь S45C',
+    additionalProperty: [
+      {
+        '@type': 'PropertyValue',
+        name: 'Особенности',
+        value: 'Масляные канавки, термообработка, высокая ударопрочность',
+      },
+      {
+        '@type': 'PropertyValue',
+        name: 'Требования',
+        value: 'Необходима периодическая смазка',
+      },
+      {
+        '@type': 'PropertyValue',
+        name: 'Рекомендуемые условия',
+        value: 'Высокие нагрузки, низкие скорости',
+      },
+    ],
+    offers: {
+      '@type': 'Offer',
+      availability: 'https://schema.org/InStock',
+      seller: {
+        '@type': 'Organization',
+        name: 'ВиВа Групп',
+      },
+    },
+  };
+
   return (
-    <main className={`${styles.section} container`}>
-      <BreadCrumbs
-        currentLink="Подшипники HMG-200C"
-        links={[
-          { href: process.env.URL, name: 'Главнaя' },
-          { href: `${process.env.URL}/podshipniki`, name: 'Подшипники' },
-          {
-            href: `${process.env.URL}/podshipniki/stalnye_samosmazivayushiesya`,
-            name: 'Высокопроизводительные стальные самосмазывающиеся подшипники',
-          },
-        ]}
-      />
-      <section className={styles.flex}>
-        <Image
-          src="/image/pages/hmg200C/hmg200C.jpg"
-          width={600}
-          height={450}
-          sizes="(max-width: 520px) 45vw, (max-width: 768px) 50vw, (max-width: 1280px) 25vw, 40vw"
-          priority={true}
-          alt="Подшипники HMG-200C"
-          className={styles.image}
+    <>
+      <JsonLd data={productJsonLd} />
+      <main className={`${styles.section} container`}>
+        <BreadCrumbs
+          currentLink="Подшипники HMG-200C"
+          links={[
+            { href: process.env.URL, name: 'Главнaя' },
+            { href: `${process.env.URL}/podshipniki`, name: 'Подшипники' },
+            {
+              href: `${process.env.URL}/podshipniki/stalnye_samosmazivayushiesya`,
+              name: 'Высокопроизводительные стальные самосмазывающиеся подшипники',
+            },
+          ]}
         />
-        <div>
-          <Htag tag="h1">HMG-200C</Htag>
+        <section className={styles.flex}>
+          <Image
+            src="/image/pages/hmg200C/hmg200C.jpg"
+            width={600}
+            height={450}
+            sizes="(max-width: 520px) 45vw, (max-width: 768px) 50vw, (max-width: 1280px) 25vw, 40vw"
+            priority={true}
+            alt="Подшипники HMG-200C"
+            className={styles.image}
+          />
+          <div>
+            <Htag tag="h1">HMG-200C</Htag>
+            <Htag tag="h2" border="left">
+              Описание
+            </Htag>
+            <Ptag>
+              Это наиболее экономичное решение для подшипников скольжения
+              подобного типа. Оно оптимально для применения при высоких
+              нагрузках и низких скоростях вращения в условиях ударных нагрузок
+              и запыленной среды. Помимо начальной смазки, необходима
+              периодическая подача смазки, поскольку недостаточная смазка может
+              привести к преждевременному выходу подшипников из строя. Не
+              рекомендуется эксплуатация в сухих условиях, при использовании
+              данного типа подшипников необходимо предусмотреть надлежащую
+              систему смазки.
+            </Ptag>
+          </div>
+        </section>
+        <section className={styles.flex}>
+          <div>
+            <Htag tag="h2" border="left">
+              Структура
+            </Htag>
+            <Ptag margin="bottom">
+              Подшипники из закаленной стали S45C. Термическая обработка
+              повышает износостойкость и ударную вязкость материала. Масляные
+              канавки и отверстия доступны в зависимости от требований.
+              Конструкция масляных канавок и отверстий обеспечивает равномерное
+              распределение масла или смазки по рабочей поверхности подшипника
+              для улучшения смазочных свойств. Рабочая поверхность подшипника
+              может быть покрыта или содержать твердые смазочные материалы для
+              дополнительного повышения смазывающей способности.
+            </Ptag>
+          </div>
+        </section>
+        <section>
+          <div className={styles.scroll}>
+            <Table />
+          </div>
+        </section>
+        <section>
           <Htag tag="h2" border="left">
-            Описание
+            Типичные области применения
           </Htag>
           <Ptag>
-            Это наиболее экономичное решение для подшипников скольжения
-            подобного типа. Оно оптимально для применения при высоких нагрузках
-            и низких скоростях вращения в условиях ударных нагрузок и запыленной
-            среды. Помимо начальной смазки, необходима периодическая подача
-            смазки, поскольку недостаточная смазка может привести к
-            преждевременному выходу подшипников из строя. Не рекомендуется
-            эксплуатация в сухих условиях, при использовании данного типа
-            подшипников необходимо предусмотреть надлежащую систему смазки.
+            Типичные области применения данного материала включают портовое
+            оборудование, лесную технику, строительную технику, оси грузовиков,
+            погрузочно-разгрузочное оборудование, а также проушины штоков
+            гидроцилиндров и соединительные подшипниковые узлы.
           </Ptag>
-        </div>
-      </section>
-      <section className={styles.flex}>
-        <div>
-          <Htag tag="h2" border="left">
-            Структура
-          </Htag>
-          <Ptag margin="bottom">
-            Подшипники из закаленной стали S45C. Термическая обработка повышает
-            износостойкость и ударную вязкость материала. Масляные канавки и
-            отверстия доступны в зависимости от требований. Конструкция масляных
-            канавок и отверстий обеспечивает равномерное распределение масла или
-            смазки по рабочей поверхности подшипника для улучшения смазочных
-            свойств. Рабочая поверхность подшипника может быть покрыта или
-            содержать твердые смазочные материалы для дополнительного повышения
-            смазывающей способности.
-          </Ptag>
-        </div>
-      </section>
-      <section>
-        <div className={styles.scroll}>
-          <Table />
-        </div>
-      </section>
-      <section>
-        <Htag tag="h2" border="left">
-          Типичные области применения
-        </Htag>
-        <Ptag>
-          Типичные области применения данного материала включают портовое
-          оборудование, лесную технику, строительную технику, оси грузовиков,
-          погрузочно-разгрузочное оборудование, а также проушины штоков
-          гидроцилиндров и соединительные подшипниковые узлы.
-        </Ptag>
-      </section>
-    </main>
+        </section>
+      </main>
+    </>
   );
 };
 
